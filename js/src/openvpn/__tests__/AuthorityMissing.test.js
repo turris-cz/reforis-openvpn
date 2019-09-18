@@ -33,7 +33,7 @@ describe("<AuthorityMissing />", () => {
 
     it("should send request when button is clicked", () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
-        expect(mockAxios.post).toHaveBeenCalledTimes(1);
+        expect(mockAxios.post).toBeCalledWith("/reforis/openvpn/api/authority", undefined, expect.anything());
     });
 
     it("should handle error", async () => {

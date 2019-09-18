@@ -20,10 +20,12 @@ describe("<OpenVPN />", () => {
 
         expect(getByText("OpenVPN")).toBeDefined();
 
+        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
         mockAxios.mockResponse({data: {status: "ready"}});
         await waitForElement(() => getByText("Certificate authority"));
 
         fireEvent.click(getByText("Delete CA"));
+        expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
         mockAxios.mockError({response: {}});
         await waitForElement(() => getByText("Cannot delete certificate authority"));
         expect(container).toMatchSnapshot();

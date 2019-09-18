@@ -28,6 +28,7 @@ describe("<AuthorityStatus />", () => {
     });
 
     it("should handle missing CA", async () => {
+        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
         mockAxios.mockResponse({data: {status: "missing"}});
         await waitForElement(() => getByText(componentContainer, "No certification authority"));
         expect(componentContainer).toMatchSnapshot();

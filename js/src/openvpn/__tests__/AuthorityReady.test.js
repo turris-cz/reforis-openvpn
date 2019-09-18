@@ -34,7 +34,7 @@ describe("<AuthorityReady />", () => {
 
     it("should send request when button is clicked", () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
-        expect(mockAxios.delete).toHaveBeenCalledTimes(1);
+        expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
     });
 
     it("should handle error", async () => {

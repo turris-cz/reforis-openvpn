@@ -1,0 +1,73 @@
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-09-11 15:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: js/src/app.js:11 js/src/openvpn/OpenVPN.js:21
+msgid "OpenVPN"
+msgstr ""
+
+#: js/src/openvpn/AuthorityBeingGenerated.js:28
+msgid "Generating certification authority"
+msgstr ""
+
+#: js/src/openvpn/AuthorityBeingGenerated.js:30
+msgid ""
+"Your certification authority is now being generated. It usually takes a "
+"few minutes. Settings will appear here automatically when the authority "
+"is ready."
+msgstr ""
+
+#: js/src/openvpn/AuthorityMissing.js:28
+msgid "Cannot generate certificate authority"
+msgstr ""
+
+#: js/src/openvpn/AuthorityMissing.js:34
+msgid "No certification authority"
+msgstr ""
+
+#: js/src/openvpn/AuthorityMissing.js:35
+msgid ""
+"Currently there is no OpenVPN certificate authority (CA). A CA is "
+"required to generate client certificates to authenticate to the OpenVPN "
+"server. To proceed you need to generate it first."
+msgstr ""
+
+#: js/src/openvpn/AuthorityMissing.js:36
+msgid "Generate CA"
+msgstr ""
+
+#: js/src/openvpn/AuthorityReady.js:28
+msgid "Cannot delete certificate authority"
+msgstr ""
+
+#: js/src/openvpn/AuthorityReady.js:34
+msgid "Certificate authority"
+msgstr ""
+
+#: js/src/openvpn/AuthorityReady.js:35
+msgid "Your certificate authority (CA) is set up properly."
+msgstr ""
+
+#: js/src/openvpn/AuthorityReady.js:36
+msgid "Delete CA"
+msgstr ""
+
+#: reforis_openvpn/__init__.py:30
+msgid "Certificate authority already exists"
+msgstr ""
+

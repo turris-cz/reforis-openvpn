@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AuthorityStatus /> should display spinner on loading 1`] = `
+<div>
+  <div
+    class="spinner-wrapper my-3 text-center"
+  >
+    <div
+      class="spinner-border "
+      role="status"
+    >
+      <span
+        class="sr-only"
+      />
+    </div>
+    <div
+      class="spinner-text"
+    />
+  </div>
+</div>
+`;
+
+exports[`<AuthorityStatus /> should handle generating CA 1`] = `
+<div>
+  <h3>
+    Generating certification authority
+  </h3>
+  <div
+    class="spinner-wrapper my-3 text-center"
+  >
+    <div
+      class="spinner-border "
+      role="status"
+    >
+      <span
+        class="sr-only"
+      />
+    </div>
+    <div
+      class="spinner-text"
+    />
+  </div>
+  <p>
+    Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically when the authority is ready.
+  </p>
+</div>
+`;
+
+exports[`<AuthorityStatus /> should handle missing CA 1`] = `
+<div>
+  <h3>
+    No certification authority
+  </h3>
+  <p>
+    Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.
+  </p>
+  <button
+    class="btn btn-primary "
+    type="button"
+  >
+     
+     
+    Generate CA
+  </button>
+</div>
+`;
+
+exports[`<AuthorityStatus /> should handle ready CA 1`] = `
+<div>
+  <h3>
+    Certificate authority
+  </h3>
+  <p>
+    Your certificate authority (CA) is set up properly.
+  </p>
+  <button
+    class="btn btn-primary "
+    type="button"
+  >
+     
+     
+    Delete CA
+  </button>
+</div>
+`;

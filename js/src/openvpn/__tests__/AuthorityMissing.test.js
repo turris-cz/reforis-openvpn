@@ -9,8 +9,9 @@ import React from "react";
 import { render, getByText, fireEvent, wait } from "customTestRender";
 import mockAxios from 'jest-mock-axios';
 
+import { AlertContext } from "foris";
+
 import AuthorityMissing from "../AuthorityMissing";
-import AlertContext from "../AlertContext";
 
 describe("<AuthorityMissing />", () => {
     let componentContainer;

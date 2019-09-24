@@ -8,10 +8,9 @@
 import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIPost } from "foris";
+import { Button, useAPIPost, AlertContext } from "foris";
 
 import API_URLs from "API";
-import AlertContext from "./AlertContext";
 
 AuthorityMissing.propTypes = {
     onSuccess: PropTypes.func.isRequired,

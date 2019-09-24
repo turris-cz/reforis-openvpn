@@ -8,7 +8,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { AlertContextProvider } from "./AlertContext";
+import { AlertContextProvider } from "foris";
+
 import AuthorityStatus from "./AuthorityStatus";
 
 OpenVPN.propTypes = {

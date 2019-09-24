@@ -8,10 +8,9 @@
 import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIDelete } from "foris";
+import { Button, useAPIDelete, AlertContext } from "foris";
 
 import API_URLs from "API";
-import AlertContext from "./AlertContext";
 
 AuthorityReady.propTypes = {
     onSuccess: PropTypes.func.isRequired,

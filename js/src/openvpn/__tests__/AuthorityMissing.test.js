@@ -15,13 +15,13 @@ import AuthorityMissing from "../AuthorityMissing";
 
 describe("<AuthorityMissing />", () => {
     let componentContainer;
-    const handleSuccess = jest.fn(),
+    const handleReload = jest.fn(),
         setAlert = jest.fn();
 
     beforeEach(() => {
         const { container } = render(
             <AlertContext.Provider value={setAlert}>
-                <AuthorityMissing onSuccess={handleSuccess} />
+                <AuthorityMissing onReload={handleReload} />
             </AlertContext.Provider>
         );
         componentContainer = container;
@@ -48,7 +48,7 @@ describe("<AuthorityMissing />", () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
         mockAxios.mockResponse({});
         await wait(() => {
-            expect(handleSuccess).toHaveBeenCalledTimes(1);
+            expect(handleReload).toHaveBeenCalledTimes(1);
         });
     });
 });

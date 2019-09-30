@@ -10,6 +10,7 @@ const API_URL_PREFIX = "/reforis/openvpn/api";
 const API_URLs = new Proxy(
     {
         authority: "/authority",
+        serverSettings: "/server-settings",
     },
     {
         get: (target, name) => `${API_URL_PREFIX}${target[name]}`,

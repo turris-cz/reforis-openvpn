@@ -16,13 +16,13 @@ import AuthorityReady from "../AuthorityReady";
 
 describe("<AuthorityReady />", () => {
     let componentContainer;
-    const handleSuccess = jest.fn(),
+    const handleReload = jest.fn(),
         setAlert = jest.fn();
 
     beforeEach(() => {
         const { container } = render(
             <AlertContext.Provider value={setAlert}>
-                <AuthorityReady onSuccess={handleSuccess} />
+                <AuthorityReady onReload={handleReload} serverEnabled={false} />
             </AlertContext.Provider>
         );
         componentContainer = container;
@@ -49,7 +49,12 @@ describe("<AuthorityReady />", () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
         mockAxios.mockResponse({});
         await wait(() => {
-            expect(handleSuccess).toHaveBeenCalledTimes(1);
+            expect(handleReload).toHaveBeenCalledTimes(1);
         });
+    });
+
+    it("should prevent deletion when server is enabled", () => {
+        const { container } = render(<AuthorityReady onReload={handleReload} serverEnabled={true} />);
+        expect(container).toMatchSnapshot();
     });
 });

@@ -16,6 +16,53 @@ exports[`<OpenVPN /> should render child and alert 1`] = `
     </button>
     Cannot delete certificate authority
   </div>
+  <h3
+    class="mb-3"
+  >
+    Server settings
+  </h3>
+  <p>
+    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+  </p>
+  <form
+    class="mb-3"
+  >
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          class="custom-control-input"
+          id="1"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="1"
+        >
+          Server enabled
+        </label>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
+      type="submit"
+    >
+       
+       
+      Save
+    </button>
+  </form>
+  <p>
+    <strong>
+      Advanced users:
+    </strong>
+     if you already configured OpenVPN server manually your config will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+  </p>
   <h3>
     Certificate authority
   </h3>

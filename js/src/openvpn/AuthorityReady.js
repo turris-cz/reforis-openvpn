@@ -13,26 +13,33 @@ import { Button, useAPIDelete, AlertContext } from "foris";
 import API_URLs from "API";
 
 AuthorityReady.propTypes = {
-    onSuccess: PropTypes.func.isRequired,
+    serverEnabled: PropTypes.bool.isRequired,
+    onReload: PropTypes.func.isRequired,
 };
 
-export default function AuthorityReady({ onSuccess }) {
+export default function AuthorityReady({ serverEnabled, onReload }) {
     const setAlert = useContext(AlertContext);
 
     const [deleteResponse, deleteCA] = useAPIDelete(API_URLs.authority);
     useEffect(() => {
         if (deleteResponse.isSuccess) {
-            onSuccess();
+            onReload();
         } else if (deleteResponse.isError) {
             setAlert(_("Cannot delete certificate authority"));
         }
-    }, [deleteResponse, onSuccess, setAlert]);
+    }, [deleteResponse, onReload, setAlert]);
 
     return (
         <>
             <h3>{_("Certificate authority")}</h3>
-            <p>{_("Your certificate authority (CA) is set up properly.")}</p>
-            <Button onClick={() => deleteCA()}>{_("Delete CA")}</Button>
+            {serverEnabled
+                ? <p>{_("You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first.")}</p>
+                : (
+                    <>
+                        <p>{_("Your certificate authority (CA) is set up properly.")}</p>
+                        <Button onClick={() => deleteCA()}>{_("Delete CA")}</Button>
+                    </>
+                )}
         </>
     );
 }

@@ -5,8 +5,10 @@
 
 from http import HTTPStatus
 
-from flask import Blueprint, current_app, jsonify
+from flask import Blueprint, current_app, jsonify, request
 from flask_babel import gettext as _
+
+from .utils import OpenVPNAPIError, validate_json
 
 # pylint: disable=invalid-name
 blueprint = Blueprint('OpenVPN', __name__, url_prefix='/openvpn/api')
@@ -35,3 +37,17 @@ def post_certificate():
 def delete_certificate():
     current_app.backend.perform('openvpn', 'delete_ca')
     return '', HTTPStatus.NO_CONTENT
+
+
+@blueprint.route('/server-settings', methods=['GET'])
+def get_server_settings():
+    return jsonify(current_app.backend.perform('openvpn', 'get_settings'))
+
+
+@blueprint.route('/server-settings', methods=['PATCH'])
+def patch_server_settings():
+    try:
+        validate_json(request.json)
+    except OpenVPNAPIError as error:
+        return error.data, error.status_code
+    return jsonify(current_app.backend.perform('openvpn', 'update_settings', request.json))

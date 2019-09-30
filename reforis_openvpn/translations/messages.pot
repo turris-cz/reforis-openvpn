@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-11 15:37+0200\n"
+"POT-Creation-Date: 2019-09-25 17:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 
-#: js/src/app.js:11 js/src/openvpn/OpenVPN.js:21
+#: js/src/app.js:11 js/src/openvpn/OpenVPN.js:66
 msgid "OpenVPN"
 msgstr ""
 
@@ -32,22 +32,22 @@ msgid ""
 "is ready."
 msgstr ""
 
-#: js/src/openvpn/AuthorityMissing.js:28
+#: js/src/openvpn/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
 msgstr ""
 
-#: js/src/openvpn/AuthorityMissing.js:34
+#: js/src/openvpn/AuthorityMissing.js:33
 msgid "No certification authority"
 msgstr ""
 
-#: js/src/openvpn/AuthorityMissing.js:35
+#: js/src/openvpn/AuthorityMissing.js:34
 msgid ""
 "Currently there is no OpenVPN certificate authority (CA). A CA is "
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
 
-#: js/src/openvpn/AuthorityMissing.js:36
+#: js/src/openvpn/AuthorityMissing.js:35
 msgid "Generate CA"
 msgstr ""
 
@@ -59,15 +59,114 @@ msgstr ""
 msgid "Certificate authority"
 msgstr ""
 
-#: js/src/openvpn/AuthorityReady.js:35
+#: js/src/openvpn/AuthorityReady.js:36
+msgid ""
+"You can't delete the CA while the OpenVPN server is enabled. To delete "
+"the CA you need to disable the server configuration first."
+msgstr ""
+
+#: js/src/openvpn/AuthorityReady.js:39
 msgid "Your certificate authority (CA) is set up properly."
 msgstr ""
 
-#: js/src/openvpn/AuthorityReady.js:36
+#: js/src/openvpn/AuthorityReady.js:40
 msgid "Delete CA"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:30
+#: js/src/openvpn/OpenVPN.js:45
+msgid "An error occurred during loading certificate authority details"
+msgstr ""
+
+#: js/src/openvpn/OpenVPN.js:46
+msgid "An error occurred during loading OpenVPN settings"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:29
+msgid "Cannot save server settings"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:56 js/src/openvpn/ServerSettings.js:64
+msgid "Server settings"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:65
+msgid ""
+"Please note that you need a public (preferably static) IP address and "
+"your network configured to make use of VPN server."
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:68
+msgid "Server enabled"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:74
+msgid "Device"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:76
+msgid "Listen on IPv6"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:79
+msgid ""
+"Useful if you don't have public IPv4 address. Disable if your IPv6 "
+"connection is broken."
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:82
+msgid "Protocol"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:86
+msgid ""
+"Clients will connect to the VPN server via this protocol. Use TCP if your"
+" ISP blocks UDP."
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:89
+msgid "VPN network address"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:93
+msgid ""
+"This network should be different than any network directly reachable by "
+"the router and the clients."
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:96
+msgid "VPN network mask"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:103
+msgid "Port"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:105
+msgid "Route all traffic via VPN"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:110
+msgid "Clients will access the Internet via VPN"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:113
+msgid "Use DNS via VPN"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:116
+msgid ""
+"Clients will resolve addresses using router's DNS. Required when "
+"accessing local servers like my-nas.lan"
+msgstr ""
+
+#: js/src/openvpn/ServerSettings.js:122
+msgid ""
+"<strong>Advanced users:</strong> if you already configured OpenVPN server"
+" manually your config will be extended (rather than  overwritten). In "
+"case of conflict you must fix previous settings by yourself."
+msgstr ""
+
+#: reforis_openvpn/__init__.py:32
 msgid "Certificate authority already exists"
 msgstr ""
 

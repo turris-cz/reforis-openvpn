@@ -6,43 +6,43 @@
  */
 
 import React from "react";
-import { render, waitForElement, getByText } from "customTestRender";
-import mockAxios from 'jest-mock-axios';
+import { render } from "customTestRender";
 
 import { WebSockets } from "foris";
 
 import AuthorityStatus from "../AuthorityStatus";
 
 describe("<AuthorityStatus />", () => {
-    let webSockets,
-        componentContainer;
+    const webSockets = new WebSockets();
 
-    beforeEach(() => {
-        webSockets = new WebSockets();
-        const { container } = render(<AuthorityStatus ws={webSockets} />);
-        componentContainer = container;
+    function renderAuthorityStatus(status) {
+        const { container } = render(
+            <AuthorityStatus ws={webSockets} status={status} serverEnabled={false} onReload={jest.fn()} />,
+        );
+        return container;
+    }
+
+    it("should handle missing CA", () => {
+        const container = renderAuthorityStatus("missing");
+        expect(container).toMatchSnapshot();
     });
 
-    it("should display spinner on loading", () => {
-        expect(componentContainer).toMatchSnapshot();
+    it("should handle ready CA", () => {
+        const container = renderAuthorityStatus("ready");
+        expect(container).toMatchSnapshot();
     });
 
-    it("should handle missing CA", async () => {
-        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
-        mockAxios.mockResponse({data: {status: "missing"}});
-        await waitForElement(() => getByText(componentContainer, "No certification authority"));
-        expect(componentContainer).toMatchSnapshot();
+    it("should handle generating CA", () => {
+        const container = renderAuthorityStatus("generating");
+        expect(container).toMatchSnapshot();
     });
 
-    it("should handle ready CA", async () => {
-        mockAxios.mockResponse({data: {status: "ready"}});
-        await waitForElement(() => getByText(componentContainer, "Certificate authority"));
-        expect(componentContainer).toMatchSnapshot();
-    });
-
-    it("should handle generating CA", async () => {
-        mockAxios.mockResponse({data: {status: "generating"}});
-        await waitForElement(() => getByText(componentContainer, "Generating certification authority"));
-        expect(componentContainer).toMatchSnapshot();
+    it("should render children if status is ready", () => {
+        const { getByTestId } = render(
+            <AuthorityStatus ws={webSockets} status={"ready"} serverEnabled={false} onReload={jest.fn()}>
+                <div data-testid="some-child">Status is "ready" so I should be visible!</div>
+            </AuthorityStatus>
+        );
+        expect(getByTestId("some-child")).toBeDefined();
     });
 });

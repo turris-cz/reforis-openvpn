@@ -18,3 +18,14 @@ exports[`<AuthorityReady /> should match snapshot 1`] = `
   </button>
 </div>
 `;
+
+exports[`<AuthorityReady /> should prevent deletion when server is enabled 1`] = `
+<div>
+  <h3>
+    Certificate authority
+  </h3>
+  <p>
+    You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first.
+  </p>
+</div>
+`;

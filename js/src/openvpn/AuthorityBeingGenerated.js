@@ -12,16 +12,16 @@ import { useWSForisModule, Spinner } from "foris";
 
 AuthorityBeingGenerated.propTypes = {
     ws: PropTypes.object.isRequired,
-    onSuccess: PropTypes.func.isRequired,
+    onReload: PropTypes.func.isRequired,
 };
 
-export default function AuthorityBeingGenerated({ ws, onSuccess }) {
+export default function AuthorityBeingGenerated({ ws, onReload }) {
     const [generateCA] = useWSForisModule(ws, "openvpn", "generate_ca");
     useEffect(() => {
         if (generateCA && generateCA.status === "succeeded") {
-            onSuccess();
+            onReload();
         }
-    }, [generateCA, onSuccess]);
+    }, [generateCA, onReload]);
 
     return (
         <>

@@ -13,20 +13,20 @@ import { Button, useAPIPost, AlertContext } from "foris";
 import API_URLs from "API";
 
 AuthorityMissing.propTypes = {
-    onSuccess: PropTypes.func.isRequired,
+    onReload: PropTypes.func.isRequired,
 };
 
-export default function AuthorityMissing({ onSuccess }) {
+export default function AuthorityMissing({ onReload }) {
     const setAlert = useContext(AlertContext);
 
     const [createResponse, createCA] = useAPIPost(API_URLs.authority);
     useEffect(() => {
         if (createResponse.isSuccess) {
-            onSuccess();
+            onReload();
         } else if (createResponse.isError) {
             setAlert(_("Cannot generate certificate authority"));
         }
-    }, [createResponse, onSuccess, setAlert]);
+    }, [createResponse, onReload, setAlert]);
 
     return (
         <>

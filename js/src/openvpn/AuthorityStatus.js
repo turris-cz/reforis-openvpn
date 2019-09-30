@@ -5,37 +5,41 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import { useAPIGet, Spinner } from "foris";
-
-import API_URLs from "API";
 import AuthorityMissing from "./AuthorityMissing";
 import AuthorityReady from "./AuthorityReady";
 import AuthorityBeingGenerated from "./AuthorityBeingGenerated";
 
-AuthorityStatus.propTypes = {
-    ws: PropTypes.object.isRequired,
+const CA_STATUS = {
+    MISSING: "missing",
+    READY: "ready",
+    GENERATING: "generating",
 };
 
-export default function AuthorityStatus({ ws }) {
-    const [authority, getAuthority] = useAPIGet(API_URLs.authority);
-    useEffect(() => {
-        getAuthority();
-    }, [getAuthority]);
+AuthorityStatus.propTypes = {
+    ws: PropTypes.object.isRequired,
+    status: PropTypes.oneOf(Object.values(CA_STATUS)).isRequired,
+    serverEnabled: PropTypes.bool.isRequired,
+    onReload: PropTypes.func.isRequired,
+};
 
-    if (authority.isLoading || !authority.data) {
-        return <Spinner className="my-3 text-center" />;
+export default function AuthorityStatus({
+    children, ws, status, serverEnabled, onReload,
+}) {
+    if (status === CA_STATUS.MISSING) {
+        return <AuthorityMissing onReload={onReload} />;
     }
-
-    if (authority.data.status === "missing") {
-        return <AuthorityMissing onSuccess={getAuthority} />;
+    if (status === CA_STATUS.READY) {
+        return (
+            <>
+                {children}
+                <AuthorityReady serverEnabled={serverEnabled} onReload={onReload} />
+            </>
+        );
     }
-    if (authority.data.status === "ready") {
-        return <AuthorityReady onSuccess={getAuthority} />;
-    }
-    if (authority.data.status === "generating") {
-        return <AuthorityBeingGenerated ws={ws} onSuccess={getAuthority} />;
+    if (status === CA_STATUS.GENERATING) {
+        return <AuthorityBeingGenerated ws={ws} onReload={onReload} />;
     }
 }

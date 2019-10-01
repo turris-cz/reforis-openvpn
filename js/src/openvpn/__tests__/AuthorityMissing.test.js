@@ -38,7 +38,7 @@ describe("<AuthorityMissing />", () => {
 
     it("should handle error", async () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
-        mockAxios.mockError({response: {}});
+        mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
         await wait(() => {
             expect(setAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
         });

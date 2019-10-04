@@ -4,7 +4,7 @@ from utils import get_mocked_client
 
 
 def test_get_authority(app):
-    backend_response = {'key': 'value'}
+    backend_response = {'status': 'whatever'}
     with get_mocked_client(app, backend_response) as client:
         response = client.get('/openvpn/api/authority')
     assert response.status_code == HTTPStatus.OK
@@ -27,7 +27,21 @@ def test_post_authority_already_exists(app):
 
 
 def test_delete_authority(app):
-    with get_mocked_client(app, {'key': 'value'}) as client:
+    with get_mocked_client(app, {'result': True}) as client:
         response = client.delete('/openvpn/api/authority')
     assert response.status_code == HTTPStatus.NO_CONTENT
     assert response.data == b''
+
+
+def test_delete_authority_backend_error(app):
+    with get_mocked_client(app, {}) as client:
+        response = client.delete('/openvpn/api/authority')
+    assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
+    assert response.json == 'Cannot delete certificate authority'
+
+
+def test_delete_authority_backend_error(app):
+    with get_mocked_client(app, {'result': 1234}) as client:
+        response = client.delete('/openvpn/api/authority')
+    assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
+    assert response.json == 'Cannot delete certificate authority'

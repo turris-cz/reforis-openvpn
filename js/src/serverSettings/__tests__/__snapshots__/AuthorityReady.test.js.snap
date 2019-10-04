@@ -6,10 +6,10 @@ exports[`<AuthorityReady /> should match snapshot 1`] = `
     Certificate authority
   </h3>
   <p>
-    Your certificate authority (CA) is set up properly.
+    Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
   </p>
   <button
-    class="btn btn-primary "
+    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
     type="button"
   >
      

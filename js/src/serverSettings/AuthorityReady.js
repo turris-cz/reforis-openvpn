@@ -36,8 +36,8 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
                 ? <p>{_("You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first.")}</p>
                 : (
                     <>
-                        <p>{_("Your certificate authority (CA) is set up properly.")}</p>
-                        <Button onClick={() => deleteCA()}>{_("Delete CA")}</Button>
+                        <p>{_("Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.")}</p>
+                        <Button onClick={() => deleteCA()} forisFormSize>{_("Delete CA")}</Button>
                     </>
                 )}
         </>

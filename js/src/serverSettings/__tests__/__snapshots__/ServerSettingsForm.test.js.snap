@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ServerSettings /> should render form 1`] = `
+exports[`<ServerSettingsForm /> should render form 1`] = `
 <div>
   <h3
     class="mb-3"
@@ -264,7 +264,7 @@ exports[`<ServerSettings /> should render form 1`] = `
 </div>
 `;
 
-exports[`<ServerSettings /> should render form partially when disabled 1`] = `
+exports[`<ServerSettingsForm /> should render form partially when disabled 1`] = `
 <div>
   <h3
     class="mb-3"

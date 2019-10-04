@@ -11,9 +11,9 @@ import mockAxios from 'jest-mock-axios';
 
 import { AlertContext } from "foris";
 
-import ServerSettings from "../ServerSettings";
+import ServerSettingsForm from "../ServerSettingsForm";
 
-describe("<ServerSettings />", () => {
+describe("<ServerSettingsForm />", () => {
     const setAlert = jest.fn();
     const enabledFormData = {
         enabled: true,
@@ -29,7 +29,7 @@ describe("<ServerSettings />", () => {
     const disabledFormData = { enabled: false };
 
     function renderSettings(formData) {
-        const { container } = render(<ServerSettings settingsData={formData} />);
+        const { container } = render(<ServerSettingsForm settingsData={formData} />);
         return container;
     }
 
@@ -95,11 +95,11 @@ describe("<ServerSettings />", () => {
         submitForm(container);
         expect(mockAxios.patch).toBeCalledWith("/reforis/openvpn/api/server-settings", disabledFormData, expect.anything());
     });
-    
+
     it("should handle API error", async () => {
         const { container } = render(
             <AlertContext.Provider value={setAlert}>
-                <ServerSettings settingsData={disabledFormData} />
+                <ServerSettingsForm settingsData={disabledFormData} />
             </AlertContext.Provider>
         );
         submitForm(container);

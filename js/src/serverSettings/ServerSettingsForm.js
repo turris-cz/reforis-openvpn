@@ -16,11 +16,11 @@ import {
 
 import API_URLs from "API";
 
-ServerSettings.propTypes = {
+ServerSettingsForm.propTypes = {
     settingsData: PropTypes.object.isRequired,
 };
 
-export default function ServerSettings({ settingsData }) {
+export default function ServerSettingsForm({ settingsData }) {
     const setAlert = useContext(AlertContext);
 
     const [patchSettingsResponse, patchSettings] = useAPIPatch(API_URLs.serverSettings);

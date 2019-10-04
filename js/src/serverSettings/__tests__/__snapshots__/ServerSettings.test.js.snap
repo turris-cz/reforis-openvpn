@@ -1,9 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OpenVPN /> should render child and alert 1`] = `
+exports[`<ServerSettings /> should display spinner 1`] = `
 <div>
   <h1>
-    OpenVPN
+    Server Settings
+  </h1>
+  <div
+    class="spinner-wrapper my-3 text-center"
+  >
+    <div
+      class="spinner-border "
+      role="status"
+    >
+      <span
+        class="sr-only"
+      />
+    </div>
+    <div
+      class="spinner-text"
+    />
+  </div>
+</div>
+`;
+
+exports[`<ServerSettings /> should render child and alert 1`] = `
+<div>
+  <h1>
+    Server Settings
   </h1>
   <div
     class="alert alert-dismissible alert-danger"
@@ -67,10 +90,10 @@ exports[`<OpenVPN /> should render child and alert 1`] = `
     Certificate authority
   </h3>
   <p>
-    Your certificate authority (CA) is set up properly.
+    Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
   </p>
   <button
-    class="btn btn-primary "
+    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
     type="button"
   >
      

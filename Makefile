@@ -52,8 +52,10 @@ prepare-dev:
 	make venv
 
 install:
+	opkg update
+	opkg install git git-http
 	$(ROUTER_PYTHON) -m pip install -e .
-	ln -sf /tmp/reforis_openvpn/reforis_static/openvpn /tmp/reforis/reforis_static/
+	ln -sf /tmp/reforis_openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
 install-js: js/package.json
 	cd $(JS_DIR); npm install --save-dev
 
@@ -83,10 +85,8 @@ create-messages:
 	$(VENV_BIN)/pybabel extract -F babel.cfg -o ./reforis_openvpn/translations/messages.pot .
 update-messages:
 	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/messages.pot -d ./reforis_openvpn/translations
-	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/tzinfo.pot -d ./reforis_openvpn/translations -D tzinfo
 compile-messages:
 	$(VENV_BIN)/pybabel compile -f -d ./reforis_openvpn/translations
-	$(VENV_BIN)/pybabel compile -f -d ./reforis_openvpn/translations -D tzinfo
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +

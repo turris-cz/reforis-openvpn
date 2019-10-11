@@ -4,6 +4,7 @@
 #  See /LICENSE for more information.
 
 from http import HTTPStatus
+from pathlib import Path
 from copy import deepcopy
 from os.path import splitext
 
@@ -12,13 +13,16 @@ from flask_babel import gettext as _
 
 from .utils import OpenVPNAPIError, validate_json, log_error
 
+BASE_DIR = Path(__file__).parent
+
 # pylint: disable=invalid-name
 blueprint = Blueprint('OpenVPN', __name__, url_prefix='/openvpn/api')
 
 # pylint: disable=invalid-name
 openvpn = {
     'blueprint': blueprint,
-    'js_app_path': 'openvpn/app.min.js'
+    'js_app_path': 'reforis_openvpn/js/app.min.js',
+    'translations_path': BASE_DIR / 'translations',
 }
 
 

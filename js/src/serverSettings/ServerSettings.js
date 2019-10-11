@@ -36,7 +36,7 @@ export default function ServerSettings({ ws }) {
         componentContent = (
             <>
                 {authorityResponse.isError && <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>}
-                {settingsResponse.isError && <p className="text-center text-danger">{_("An error occurred during loading OpenVPN settings")}</p>}
+                {settingsResponse.isError && <p className="text-center text-danger">{_("An error occurred during loading OpenVPN server settings")}</p>}
             </>
         );
     } else if (

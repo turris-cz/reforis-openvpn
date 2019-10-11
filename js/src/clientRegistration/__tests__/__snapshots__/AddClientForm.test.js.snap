@@ -7,37 +7,33 @@ exports[`<AddClientForm /> should be rendered 1`] = `
   </h3>
   <form>
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
-      <div
-        class="form-group"
+      <label
+        for="1"
       >
-        <label
-          for="1"
-        >
-          Client name
-        </label>
-        <div
-          class="input-group"
-        >
-          <input
-            class="form-control  is-invalid"
-            id="1"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="invalid-feedback"
-        >
-          Name cannot be empty
-        </div>
-        <small
-          class="form-text text-muted"
-        >
-          Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.
-        </small>
+        Client name
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control  is-invalid"
+          id="1"
+          type="text"
+          value=""
+        />
       </div>
+      <div
+        class="invalid-feedback"
+      >
+        Name cannot be empty
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.
+      </small>
     </div>
     <button
       class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"

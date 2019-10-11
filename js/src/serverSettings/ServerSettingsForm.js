@@ -9,7 +9,7 @@ import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 import {
-    CheckBox, Button, Spinner, useForm, useAPIPatch, Select, TextInput,
+    CheckBox, Button, useForm, useAPIPatch, Select, TextInput,
     validateIPv4Address, AlertContext, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
     Input,
 } from "foris";
@@ -31,13 +31,16 @@ export default function ServerSettingsForm({ settingsData }) {
         }
     }, [patchSettingsResponse, setAlert]);
 
-    const [formState, formChangeHandler] = useForm(validator);
+    const [formState, formChangeHandler, reloadForm] = useForm(validator);
     const formData = formState.data;
     const formErrors = formState.errors || {};
     useEffect(() => {
-        const eventHandler = formChangeHandler((value) => ({ $set: { ...value } }));
-        eventHandler({ target: { value: settingsData } });
-    }, [settingsData, formChangeHandler]);
+        reloadForm(settingsData);
+    }, [reloadForm, settingsData]);
+
+    if (!formData) {
+        return null;
+    }
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -49,15 +52,6 @@ export default function ServerSettingsForm({ settingsData }) {
         } else {
             patchSettings({ enabled: false });
         }
-    }
-
-    if (!formData) {
-        return (
-            <>
-                <h3 className="mb-3">{_("Server settings")}</h3>
-                <Spinner className="text-center" />
-            </>
-        );
     }
 
     return (
@@ -120,7 +114,7 @@ export default function ServerSettingsForm({ settingsData }) {
                 )}
                 <Button type="submit" forisFormSize disabled={undefinedIfEmpty(formErrors) || patchSettingsResponse.isSending}>Save</Button>
             </form>
-            <p dangerouslySetInnerHTML={{ __html: _("<strong>Advanced users:</strong> if you already configured OpenVPN server manually your config will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.") }} />
+            <p dangerouslySetInnerHTML={{ __html: _("<strong>Advanced users:</strong> if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.") }} />
         </>
     );
 }

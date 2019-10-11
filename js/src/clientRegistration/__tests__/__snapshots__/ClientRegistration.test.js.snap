@@ -6,47 +6,43 @@ exports[`<ClientRegistration /> should display clients 1`] = `
     Client Registration
   </h1>
   <p>
-    You need to generate a config for each client that you wish to connect to your OpenVPN server.
+    You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.
   </p>
   <p>
-    To apply the client configuration you need to download it and put it into the OpenVPN config directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.
+    To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.
   </p>
   <h3>
     Add new client
   </h3>
   <form>
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
-      <div
-        class="form-group"
+      <label
+        for="1"
       >
-        <label
-          for="1"
-        >
-          Client name
-        </label>
-        <div
-          class="input-group"
-        >
-          <input
-            class="form-control  is-invalid"
-            id="1"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="invalid-feedback"
-        >
-          Name cannot be empty
-        </div>
-        <small
-          class="form-text text-muted"
-        >
-          Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.
-        </small>
+        Client name
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control  is-invalid"
+          id="1"
+          type="text"
+          value=""
+        />
       </div>
+      <div
+        class="invalid-feedback"
+      >
+        Name cannot be empty
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.
+      </small>
     </div>
     <button
       class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
@@ -62,11 +58,11 @@ exports[`<ClientRegistration /> should display clients 1`] = `
     Registered clients
   </h3>
   <p>
-    Be sure to check if server's IP address provided in you configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is 
+    Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is 
     <strong>
       not
     </strong>
-     stored anywhere and is applicable only to the config being currently downloaded.
+     stored anywhere and is applicable only to the configuration being currently downloaded.
   </p>
   <div
     class="col-sm-12 offset-lg-1 col-lg-10"
@@ -124,7 +120,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
             class="btn btn-primary"
             href="/reforis/openvpn/api/clients/A1?address="
           >
-            Download config
+            Download configuration
           </a>
         </td>
         <td
@@ -176,7 +172,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
             class="btn btn-primary"
             href="/reforis/openvpn/api/clients/B1?address="
           >
-            Download config
+            Download configuration
           </a>
         </td>
         <td

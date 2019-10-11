@@ -99,7 +99,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             class="btn btn-primary"
             href="/reforis/openvpn/api/clients/A1?address="
           >
-            Download config
+            Download configuration
           </a>
         </td>
         <td
@@ -151,7 +151,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             class="btn btn-primary"
             href="/reforis/openvpn/api/clients/B1?address="
           >
-            Download config
+            Download configuration
           </a>
         </td>
         <td

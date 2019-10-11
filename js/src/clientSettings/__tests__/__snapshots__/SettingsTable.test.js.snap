@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SettingsTable /> should display spinner 1`] = `
+<div>
+  <h3>
+    Available settings
+  </h3>
+  <div
+    class="spinner-wrapper my-3 text-center"
+  >
+    <div
+      class="spinner-border "
+      role="status"
+    >
+      <span
+        class="sr-only"
+      />
+    </div>
+    <div
+      class="spinner-text"
+    />
+  </div>
+</div>
+`;
+
+exports[`<SettingsTable /> should render info when there are no clients 1`] = `
+<div>
+  <h3>
+    Available settings
+  </h3>
+  <p
+    class="text-muted text-center"
+  >
+    There are no settings added yet.
+  </p>
+</div>
+`;
+
+exports[`<SettingsTable /> should render table of settings 1`] = `
+<div>
+  <h3>
+    Available settings
+  </h3>
+  <table
+    class="table table-hover mt-3 col-sm-12 offset-lg-1 col-lg-10"
+  >
+    <tbody>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          <div
+            class="custom-control custom-switch"
+          >
+            <input
+              checked=""
+              class="custom-control-input"
+              id="1"
+              type="checkbox"
+            />
+            <label
+              class="custom-control-label"
+              for="1"
+            >
+              A1
+            </label>
+          </div>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          <div
+            class="custom-control custom-switch"
+          >
+            <input
+              class="custom-control-input"
+              id="2"
+              type="checkbox"
+            />
+            <label
+              class="custom-control-label"
+              for="2"
+            >
+              A2
+            </label>
+          </div>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          <div
+            class="custom-control custom-switch"
+          >
+            <input
+              checked=""
+              class="custom-control-input"
+              id="3"
+              type="checkbox"
+            />
+            <label
+              class="custom-control-label"
+              for="3"
+            >
+              B1
+            </label>
+          </div>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          <div
+            class="custom-control custom-switch"
+          >
+            <input
+              class="custom-control-input"
+              id="4"
+              type="checkbox"
+            />
+            <label
+              class="custom-control-label"
+              for="4"
+            >
+              B2
+            </label>
+          </div>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

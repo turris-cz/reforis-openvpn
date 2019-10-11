@@ -78,10 +78,10 @@ function ClientRow({ client, address }) {
         componentContent = <SpinnerElement />;
     } else if (client.status === "valid") {
         if (typeof address === "string") {
-            componentContent = <a href={`${API_URLs.clients}/${client.id}?address=${address}`} className="btn btn-primary">{_("Download config")}</a>;
+            componentContent = <a href={`${API_URLs.clients}/${client.id}?address=${address}`} className="btn btn-primary">{_("Download configuration")}</a>;
         } else {
             // Passed address is invalid
-            componentContent = <button type="button" className="btn btn-primary" disabled>{_("Download config")}</button>;
+            componentContent = <button type="button" className="btn btn-primary" disabled>{_("Download configuration")}</button>;
         }
     } else if (client.status === "revoked") {
         componentContent = <span>{_("Access revoked")}</span>;

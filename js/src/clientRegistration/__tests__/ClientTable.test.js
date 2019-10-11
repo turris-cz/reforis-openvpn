@@ -51,7 +51,7 @@ describe("<ClientTable />", () => {
     it("should disable download on invalid address", () => {
         const clients = [{ id: "A1", name: "First", status: "valid" }];
         const container = renderTable(clients, null);
-        expect(getByText(container, "Download config").disabled).toBeTruthy();
+        expect(getByText(container, "Download configuration").disabled).toBeTruthy();
     });
 
     it("should display spinner on delete request", () => {

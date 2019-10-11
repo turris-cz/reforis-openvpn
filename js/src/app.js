@@ -7,6 +7,7 @@
 
 import ServerSettings from "./serverSettings/ServerSettings";
 import ClientRegistration from "./clientRegistration/ClientRegistration";
+import ClientSettings from "./clientSettings/ClientSettings";
 
 const OpenVPNPlugin = {
     submenuId: "opnvpn",
@@ -24,6 +25,11 @@ const OpenVPNPlugin = {
             name: "Client Registration",
             path: "/client-registration",
             component: ClientRegistration,
+        },
+        {
+            name: "Client Settings",
+            path: "/client-settings",
+            component: ClientSettings,
         },
     ],
 };

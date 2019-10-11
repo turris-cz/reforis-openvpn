@@ -37,8 +37,8 @@ export default function ClientRegistration({ ws }) {
     } else {
         componentContent = (
             <AlertContextProvider>
-                <p>{_("You need to generate a config for each client that you wish to connect to your OpenVPN server.")}</p>
-                <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN config directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
+                <p>{_("You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.")}</p>
+                <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
                 <AddClientForm />
                 <Clients ws={ws} />
             </AlertContextProvider>
@@ -86,13 +86,12 @@ function Clients({ ws }) {
     }, [revokeCertificateNotification, getClients]);
 
     // Handle server address override form
-    const [formState, formChangeHandler] = useForm(serverAddressValidator);
+    const [formState, formChangeHandler, reloadForm] = useForm(serverAddressValidator);
     const formData = formState.data;
     const formErrors = formState.errors || {};
     useEffect(() => {
-        const eventHandler = formChangeHandler((value) => ({ $set: { ...value } }));
-        eventHandler({ target: { value: { address: "" } } });
-    }, [formChangeHandler]);
+        reloadForm({ address: "" });
+    }, [reloadForm]);
 
     let componentContent;
     if (getClientsResponse.isError) {
@@ -102,7 +101,7 @@ function Clients({ ws }) {
     } else {
         componentContent = (
             <>
-                <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in you configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the config being currently downloaded.") }} />
+                <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded.") }} />
                 <ServerOverride
                     address={formData.address}
                     error={formErrors.address}

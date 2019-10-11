@@ -32,7 +32,7 @@ describe("<ServerSettings />", () => {
         mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
         mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
         await wait(() => expect(getByText(componentContainer, "An error occurred during loading certificate authority details")).toBeDefined());
-        expect(getByText(componentContainer, "An error occurred during loading OpenVPN settings")).toBeDefined();
+        expect(getByText(componentContainer, "An error occurred during loading OpenVPN server settings")).toBeDefined();
     });
 
     it("should render child and alert", async () => {

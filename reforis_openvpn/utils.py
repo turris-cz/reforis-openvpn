@@ -23,7 +23,7 @@ def validate_json(json_data, expected_fields=None):
     errors = {}
     for field_name, field_type in expected_fields.items():
         field = json_data.get(field_name)
-        if not field:
+        if field is None:
             errors[field_name] = 'Missing data for required field.'
         elif not isinstance(field, field_type):
             errors[field_name] = f'Expected data of type: {field_type.__name__}'

@@ -84,7 +84,7 @@ exports[`<ServerSettings /> should render child and alert 1`] = `
     <strong>
       Advanced users:
     </strong>
-     if you already configured OpenVPN server manually your config will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+     if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
   </p>
   <h3>
     Certificate authority

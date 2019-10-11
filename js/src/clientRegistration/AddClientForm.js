@@ -8,7 +8,7 @@
 import React, { useEffect, useContext } from "react";
 
 import {
-    TextInput, Button, useAPIPost, Spinner, useForm, AlertContext, undefinedIfEmpty,
+    TextInput, Button, useAPIPost, useForm, AlertContext, undefinedIfEmpty,
 } from "foris";
 
 import API_URLs from "API";
@@ -23,26 +23,20 @@ export default function AddClientForm() {
         }
     }, [postClientsResponse, setAlert]);
 
-    const [formState, formChangeHandler] = useForm(AddClientFormValidator);
+    const [formState, formChangeHandler, reloadForm] = useForm(addClientFormValidator);
     const formData = formState.data;
     const formErrors = formState.errors || {};
     useEffect(() => {
-        const eventHandler = formChangeHandler((value) => ({ $set: { ...value } }));
-        eventHandler({ target: { value: { name: "" } } });
-    }, [formChangeHandler]);
+        reloadForm({ name: "" });
+    }, [reloadForm]);
 
     function handleSubmit(event) {
         event.preventDefault();
-        postClients(formState.data);
+        postClients(formData);
     }
 
     if (!formData) {
-        return (
-            <>
-                <h3 className="mb-3">{_("Add new client")}</h3>
-                <Spinner className="text-center" />
-            </>
-        );
+        return null;
     }
 
     return (
@@ -68,7 +62,7 @@ export default function AddClientForm() {
     );
 }
 
-function AddClientFormValidator(formData) {
+function addClientFormValidator(formData) {
     const { name } = formData;
     if (!name) {
         return { name: _("Name cannot be empty") };

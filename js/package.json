@@ -6,7 +6,7 @@
   "description": "",
   "main": "./src/app.js",
   "dependencies": {
-    "foris": "beta",
+    "foris": "1.1.1-1e3e9433.0",
     "prop-types": "^15.7.2",
     "react-uid": "^2.2.0"
   },

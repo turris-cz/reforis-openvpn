@@ -96,11 +96,11 @@ describe("<ClientRegistration />", () => {
         });
 
         it("should validate server address override", async () => {
-            const getFirstDownload = () => getAllByText(componentContainer, "Download config")[0];
+            const getFirstDownload = () => getAllByText(componentContainer, "Download configuration")[0];
 
             enableOverride();
             const addressInput = getByLabelText(componentContainer, "Router's public IPv4 address");
-            // Since "a" element is replaced with "button" we have to query for "Download config" anew
+            // Since "a" element is replaced with "button" we have to query for "Download configuration" anew
             expect(getFirstDownload().href).toBe(
                 `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=`,
             );
@@ -117,7 +117,7 @@ describe("<ClientRegistration />", () => {
 
         it("should add new client to the table", async () => {
             const getSpinnersNumber = () => getAllByRole(componentContainer, "status").length;
-            const getDownloadsNumber = () => getAllByText(componentContainer, "Download config").length;
+            const getDownloadsNumber = () => getAllByText(componentContainer, "Download configuration").length;
 
             const name = "user";
             submitClientForm(name);

@@ -77,7 +77,7 @@ def test_get_client(app):
     with get_mocked_client(app, backend_response) as client:
         response = client.get('/openvpn/api/clients/1234')
     assert response.status_code == HTTPStatus.OK
-    assert response.headers.get('Content-Disposition') == 'attachment; filename="turris.conf"'
+    assert response.headers.get('Content-Disposition') == 'attachment; filename=turris.conf'
     assert response.data == b'FOO=BAR'
 
 

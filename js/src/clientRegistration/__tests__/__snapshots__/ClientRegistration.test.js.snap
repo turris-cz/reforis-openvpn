@@ -118,6 +118,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
         >
           <a
             class="btn btn-primary"
+            download=""
             href="/reforis/openvpn/api/clients/A1?address="
           >
             Download configuration
@@ -170,6 +171,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
         >
           <a
             class="btn btn-primary"
+            download=""
             href="/reforis/openvpn/api/clients/B1?address="
           >
             Download configuration

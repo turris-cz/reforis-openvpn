@@ -9,7 +9,7 @@ import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 import {
-    formFieldsSize, SpinnerElement, AlertContext, useAPIDelete,
+    formFieldsSize, SpinnerElement, AlertContext, useAPIDelete, DownloadButton,
 } from "foris";
 
 import API_URLs from "API";
@@ -78,7 +78,11 @@ function ClientRow({ client, address }) {
         componentContent = <SpinnerElement />;
     } else if (client.status === "valid") {
         if (typeof address === "string") {
-            componentContent = <a href={`${API_URLs.clients}/${client.id}?address=${address}`} className="btn btn-primary">{_("Download configuration")}</a>;
+            componentContent = (
+                <DownloadButton href={`${API_URLs.clients}/${client.id}?address=${address}`}>
+                    {_("Download configuration")}
+                </DownloadButton>
+            );
         } else {
             // Passed address is invalid
             componentContent = <button type="button" className="btn btn-primary" disabled>{_("Download configuration")}</button>;

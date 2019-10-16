@@ -7,7 +7,7 @@
 
 import React from "react";
 import {
-    render, fireEvent, wait, getByText, waitForElement,
+    render, fireEvent, wait, getByText, waitForElement, getByLabelText,
 } from "customTestRender";
 import mockAxios from "jest-mock-axios";
 
@@ -17,7 +17,7 @@ import SettingsTable from "../SettingsTable";
 
 describe("<SettingsTable />", () => {
     const setAlert = jest.fn();
-    const singleClient = { id: "A1", enabled: true };
+    const singleClient = { id: "A1", enabled: true, running: true };
 
     async function renderTable(clients = []) {
         const { container } = render(
@@ -52,10 +52,10 @@ describe("<SettingsTable />", () => {
 
     it("should render table of settings", async () => {
         const settings = [
-            { id: "A1", enabled: true },
-            { id: "A2", enabled: false },
-            { id: "B1", enabled: true },
-            { id: "B2", enabled: false },
+            { id: "A1", enabled: true, running: true },
+            { id: "A2", enabled: false, running: false },
+            { id: "B1", enabled: true, running: true },
+            { id: "B2", enabled: false, running: false },
         ];
         const container = await renderTable(settings);
         expect(container).toMatchSnapshot();
@@ -102,5 +102,25 @@ describe("<SettingsTable />", () => {
         await wait(() => {
             expect(setAlert).toHaveBeenCalledWith(errorMessage);
         });
+    });
+
+    it("should change status of client instance after refresh", async () => {
+        const container = await renderTable([singleClient]);
+        expect(getByText(container, "Running")).toBeTruthy();
+        fireEvent.click(getByLabelText(container, "Check status"));
+        expect(mockAxios.get).toHaveBeenCalledWith(`/reforis/openvpn/api/client-settings/${singleClient.id}`, expect.anything());
+        mockAxios.mockResponse({ data: { ...singleClient, running: false }})
+        await waitForElement(() => getByText(container, "Not running"));
+    });
+
+    it("should change status of client instance after refresh", async () => {
+        const container = await renderTable([singleClient]);
+        fireEvent.click(getByLabelText(container, "Check status"));
+        expect(mockAxios.get).toHaveBeenCalledWith(`/reforis/openvpn/api/client-settings/${singleClient.id}`, expect.anything());
+        const errorMessage = "API didn't handle this well";
+        mockAxios.mockError(
+            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
+        );
+        await waitForElement(() => getByText(container, "Cannot refresh status"));
     });
 });

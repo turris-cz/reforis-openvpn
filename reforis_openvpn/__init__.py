@@ -110,7 +110,7 @@ def get_client(client_id):
 
     response = current_app.backend.perform('openvpn', 'get_client_config', config_request)
     if response.get('status') == 'not_found':
-        return jsonify('Requested client does not exist'), HTTPStatus.NOT_FOUND
+        return jsonify(_('Requested client does not exist')), HTTPStatus.NOT_FOUND
 
     config = response.get('config')
     if not config:
@@ -132,8 +132,17 @@ def delete_client(client_id):
 # /client-settings
 
 @blueprint.route('/client-settings', methods=['GET'])
-def get_client_settings():
+def get_client_settings_list():
     return jsonify(current_app.backend.perform('openvpn_client', 'list')['clients'])
+
+
+@blueprint.route('/client-settings/<settings_id>', methods=['GET'])
+def get_client_settings(settings_id):
+    settings = current_app.backend.perform('openvpn_client', 'list')['clients']
+    search_result = next((s for s in settings if s['id'] == settings_id), None)
+    if not search_result:
+        return jsonify(_('Requested settings do not exist')), HTTPStatus.NOT_FOUND
+    return jsonify(search_result)
 
 
 @blueprint.route('/client-settings', methods=['POST'])

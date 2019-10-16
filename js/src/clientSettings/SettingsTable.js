@@ -5,12 +5,13 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { useUID } from "react-uid";
 
 import {
-    useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, AlertContext,
+    useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, AlertContext, Button,
+    SpinnerElement,
 } from "foris";
 
 import API_URLs from "API";
@@ -42,6 +43,7 @@ export default function SettingsTable() {
     return (
         <>
             <h3>{_("Available settings")}</h3>
+            <p>{_("For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.")}</p>
             {componentContent}
         </>
     );
@@ -51,6 +53,7 @@ ClientRow.propTypes = {
     client: PropTypes.shape({
         id: PropTypes.string.isRequired,
         enabled: PropTypes.bool.isRequired,
+        running: PropTypes.bool.isRequired,
     }).isRequired,
 };
 
@@ -86,9 +89,48 @@ function ClientRow({ client }) {
                     <label className="custom-control-label" htmlFor={uid}>{client.id}</label>
                 </div>
             </td>
+            <td className="align-middle text-center">
+                {client.enabled && <ClientStatus id={client.id} defaultStatus={client.running} />}
+            </td>
             <td className="text-right">
-                <button type="button" className="btn btn-danger" onClick={deleteClient}>{_("Delete")}</button>
+                <button type="button" className="btn btn-danger" onClick={deleteClient}>
+                    <i className="fa fa-trash-alt mr-2" />
+                    {_("Delete")}
+                </button>
             </td>
         </tr>
+    );
+}
+
+ClientStatus.propTypes = {
+    id: PropTypes.string.isRequired,
+    defaultStatus: PropTypes.bool.isRequired,
+};
+
+function ClientStatus({ id, defaultStatus }) {
+    // No need to worry about default state from props as any update will reload whole table
+    const [status, setStatus] = useState(defaultStatus);
+
+    const [response, getSettings] = useAPIGet(`${API_URLs.clientSettings}/${id}`);
+    useEffect(() => {
+        if (!response.isLoading && !response.isError && response.data) {
+            setStatus(response.data.running);
+        }
+    }, [response]);
+
+    if (response.isLoading) {
+        return <SpinnerElement />;
+    }
+    if (response.isError) {
+        return <span className="text-danger">{_("Cannot refresh status")}</span>;
+    }
+
+    return (
+        <>
+            {status ? _("Running") : <span className="text-danger">{_("Not running")}</span>}
+            <Button className="btn" aria-label={_("Check status")} onClick={getSettings}>
+                <i className="fa fa-redo" />
+            </Button>
+        </>
     );
 }

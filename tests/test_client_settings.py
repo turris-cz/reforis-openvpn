@@ -12,6 +12,22 @@ def test_get_client_settings(app):
     assert response.json == backend_response['clients']
 
 
+def test_get_client_settings(app):
+    backend_response = {'clients': [{'id': 'foobar'}]}
+    with get_mocked_client(app, backend_response) as client:
+        response = client.get('/openvpn/api/client-settings/foobar')
+    assert response.status_code == HTTPStatus.OK
+    assert response.json == backend_response['clients'][0]
+
+
+def test_get_client_settings_not_found(app):
+    backend_response = {'clients': [{'id': 'barfoo'}]}
+    with get_mocked_client(app, backend_response) as client:
+        response = client.get('/openvpn/api/client-settings/foobar')
+    assert response.status_code == HTTPStatus.NOT_FOUND
+    assert response.json == 'Requested settings do not exist'
+
+
 def test_post_client_settings(app):
     backend_response = {
         'openvpn_client': {

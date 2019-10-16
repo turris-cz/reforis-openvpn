@@ -5,6 +5,9 @@ exports[`<SettingsTable /> should display spinner 1`] = `
   <h3>
     Available settings
   </h3>
+  <p>
+    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+  </p>
   <div
     class="spinner-wrapper my-3 text-center"
   >
@@ -28,6 +31,9 @@ exports[`<SettingsTable /> should render info when there are no clients 1`] = `
   <h3>
     Available settings
   </h3>
+  <p>
+    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+  </p>
   <p
     class="text-muted text-center"
   >
@@ -41,6 +47,9 @@ exports[`<SettingsTable /> should render table of settings 1`] = `
   <h3>
     Available settings
   </h3>
+  <p>
+    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+  </p>
   <table
     class="table table-hover mt-3 col-sm-12 offset-lg-1 col-lg-10"
   >
@@ -67,12 +76,31 @@ exports[`<SettingsTable /> should render table of settings 1`] = `
           </div>
         </td>
         <td
+          class="align-middle text-center"
+        >
+          Running
+          <button
+            aria-label="Check status"
+            class="btn btn"
+            type="button"
+          >
+             
+             
+            <i
+              class="fa fa-redo"
+            />
+          </button>
+        </td>
+        <td
           class="text-right"
         >
           <button
             class="btn btn-danger"
             type="button"
           >
+            <i
+              class="fa fa-trash-alt mr-2"
+            />
             Delete
           </button>
         </td>
@@ -98,12 +126,18 @@ exports[`<SettingsTable /> should render table of settings 1`] = `
           </div>
         </td>
         <td
+          class="align-middle text-center"
+        />
+        <td
           class="text-right"
         >
           <button
             class="btn btn-danger"
             type="button"
           >
+            <i
+              class="fa fa-trash-alt mr-2"
+            />
             Delete
           </button>
         </td>
@@ -130,12 +164,31 @@ exports[`<SettingsTable /> should render table of settings 1`] = `
           </div>
         </td>
         <td
+          class="align-middle text-center"
+        >
+          Running
+          <button
+            aria-label="Check status"
+            class="btn btn"
+            type="button"
+          >
+             
+             
+            <i
+              class="fa fa-redo"
+            />
+          </button>
+        </td>
+        <td
           class="text-right"
         >
           <button
             class="btn btn-danger"
             type="button"
           >
+            <i
+              class="fa fa-trash-alt mr-2"
+            />
             Delete
           </button>
         </td>
@@ -161,12 +214,18 @@ exports[`<SettingsTable /> should render table of settings 1`] = `
           </div>
         </td>
         <td
+          class="align-middle text-center"
+        />
+        <td
           class="text-right"
         >
           <button
             class="btn btn-danger"
             type="button"
           >
+            <i
+              class="fa fa-trash-alt mr-2"
+            />
             Delete
           </button>
         </td>

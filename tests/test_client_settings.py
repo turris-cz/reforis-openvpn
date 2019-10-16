@@ -1,12 +1,12 @@
 from http import HTTPStatus
 from io import BytesIO
 
-from utils import get_mocked_client
+from .utils import get_mocked_openvpn_client
 
 
 def test_get_client_settings(app):
     backend_response = {'clients': []}
-    with get_mocked_client(app, backend_response) as client:
+    with get_mocked_openvpn_client(app, backend_response) as client:
         response = client.get('/openvpn/api/client-settings')
     assert response.status_code == HTTPStatus.OK
     assert response.json == backend_response['clients']
@@ -14,7 +14,7 @@ def test_get_client_settings(app):
 
 def test_get_client_settings(app):
     backend_response = {'clients': [{'id': 'foobar'}]}
-    with get_mocked_client(app, backend_response) as client:
+    with get_mocked_openvpn_client(app, backend_response) as client:
         response = client.get('/openvpn/api/client-settings/foobar')
     assert response.status_code == HTTPStatus.OK
     assert response.json == backend_response['clients'][0]
@@ -22,7 +22,7 @@ def test_get_client_settings(app):
 
 def test_get_client_settings_not_found(app):
     backend_response = {'clients': [{'id': 'barfoo'}]}
-    with get_mocked_client(app, backend_response) as client:
+    with get_mocked_openvpn_client(app, backend_response) as client:
         response = client.get('/openvpn/api/client-settings/foobar')
     assert response.status_code == HTTPStatus.NOT_FOUND
     assert response.json == 'Requested settings do not exist'
@@ -35,7 +35,7 @@ def test_post_client_settings(app):
             'add': {'result': True}
         }
     }
-    with get_mocked_client(app, backend_response, mock_specific_calls=True) as client:
+    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
         response = client.post(
             '/openvpn/api/client-settings',
             data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
@@ -52,7 +52,7 @@ def test_post_client_settings_backend_error(app):
             'add': {}
         }
     }
-    with get_mocked_client(app, backend_response, mock_specific_calls=True) as client:
+    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
         response = client.post(
             '/openvpn/api/client-settings',
             data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
@@ -70,7 +70,7 @@ def test_post_client_settings_duplicate(app):
             'add': {}
         }
     }
-    with get_mocked_client(app, backend_response, mock_specific_calls=True) as client:
+    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
         response = client.post(
             '/openvpn/api/client-settings',
             data={"settings": (BytesIO(b'foo=bar'), f'{existing_client}.conf')},
@@ -87,7 +87,7 @@ def test_post_client_settings_missing_file(app):
             'add': {'result': True}
         }
     }
-    with get_mocked_client(app, backend_response, mock_specific_calls=True) as client:
+    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
         response = client.post(
             '/openvpn/api/client-settings',
             content_type='multipart/form-data'
@@ -98,55 +98,55 @@ def test_post_client_settings_missing_file(app):
 
 def test_patch_client_settings(app):
     backend_response = {'result': True}
-    with get_mocked_client(app, backend_response) as client:
+    with get_mocked_openvpn_client(app, backend_response) as client:
         response = client.patch('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
     assert response.status_code == HTTPStatus.OK
     assert response.json == backend_response
 
 
 def test_patch_client_settings_backend_error(app):
-    with get_mocked_client(app, {'result': False}) as client:
+    with get_mocked_openvpn_client(app, {'result': False}) as client:
         response = client.patch('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot change OpenVPN client settings'
 
 
 def test_patch_client_settings_invalid_json(app):
-    with get_mocked_client(app, {}) as client:
+    with get_mocked_openvpn_client(app, {}) as client:
         response = client.patch('/openvpn/api/client-settings/A1A2B1B2')
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Invalid JSON'
 
 
 def test_patch_client_settings_missing_data(app):
-    with get_mocked_client(app, {}) as client:
+    with get_mocked_openvpn_client(app, {}) as client:
         response = client.patch('/openvpn/api/client-settings/A1A2B1B2', json={'foo': 'bar'})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == {'enabled': 'Missing data for required field.'}
 
 
 def test_patch_client_settings_invalid_data(app):
-    with get_mocked_client(app, {}) as client:
+    with get_mocked_openvpn_client(app, {}) as client:
         response = client.patch('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': 'bar'})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == {'enabled': 'Expected data of type: bool'}
 
 
 def test_delete_client_settings(app):
-    with get_mocked_client(app, {'result': True}) as client:
+    with get_mocked_openvpn_client(app, {'result': True}) as client:
         response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.NO_CONTENT
 
 
 def test_delete_client_settings_backend_error(app):
-    with get_mocked_client(app, {}) as client:
+    with get_mocked_openvpn_client(app, {}) as client:
         response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot delete OpenVPN client settings'
 
 
 def test_delete_client_settings_unexpected_result(app):
-    with get_mocked_client(app, {'result': 1234}) as client:
+    with get_mocked_openvpn_client(app, {'result': 1234}) as client:
         response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot delete OpenVPN client settings'

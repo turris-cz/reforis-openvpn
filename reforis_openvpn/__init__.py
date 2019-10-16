@@ -11,7 +11,9 @@ from os.path import splitext
 from flask import Blueprint, current_app, jsonify, request, make_response
 from flask_babel import gettext as _
 
-from .utils import OpenVPNAPIError, validate_json, log_error
+from reforis.foris_controller_api import APIError
+from reforis.foris_controller_api.utils import log_error, validate_json
+
 
 BASE_DIR = Path(__file__).parent
 
@@ -62,8 +64,8 @@ def get_server_settings():
 def patch_server_settings():
     try:
         validate_json(request.json)
-    except OpenVPNAPIError as error:
-        return error.data, error.status_code
+    except APIError as error:
+        return jsonify(error.data), error.status_code
 
     response = current_app.backend.perform('openvpn', 'update_settings', request.json)
     if response.get('result') is not True:
@@ -84,8 +86,8 @@ def get_clients():
 def post_clients():
     try:
         validate_json(request.json, {'name': str})
-    except OpenVPNAPIError as error:
-        return error.data, error.status_code
+    except APIError as error:
+        return jsonify(error.data), error.status_code
 
     # Check for conflict (name)
     clients = current_app.backend.perform('openvpn', 'get_status')['clients']
@@ -174,8 +176,8 @@ def post_client_settings():
 def patch_client_settings(settings_id):
     try:
         validate_json(request.json, {'enabled': bool})
-    except OpenVPNAPIError as error:
-        return error.data, error.status_code
+    except APIError as error:
+        return jsonify(error.data), error.status_code
 
     settings = deepcopy(request.json)
     settings['id'] = settings_id

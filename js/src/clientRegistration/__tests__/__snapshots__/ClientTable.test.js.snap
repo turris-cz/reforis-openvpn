@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClientTable /> should display spinner on delete request 1`] = `
+<div>
+  <table
+    class="table table-hover col-sm-12 offset-lg-1 col-lg-10"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Client name
+        </th>
+        <th
+          aria-label="Download"
+          scope="col"
+        />
+        <th
+          aria-label="Revoke access"
+          scope="col"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          First
+        </td>
+        <td
+          class="text-center align-middle"
+        >
+          <div
+            class="spinner-border "
+            role="status"
+          >
+            <span
+              class="sr-only"
+            />
+          </div>
+          <div
+            class="spinner-text"
+          />
+        </td>
+        <td
+          class="text-right"
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<ClientTable /> should render info when there are no clients 1`] = `
+<div>
+  <p
+    class="text-muted text-center"
+  >
+    There are no clients registered.
+  </p>
+</div>
+`;
+
+exports[`<ClientTable /> should render table of clients 1`] = `
+<div>
+  <table
+    class="table table-hover col-sm-12 offset-lg-1 col-lg-10"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Client name
+        </th>
+        <th
+          aria-label="Download"
+          scope="col"
+        />
+        <th
+          aria-label="Revoke access"
+          scope="col"
+        />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          First
+        </td>
+        <td
+          class="text-center align-middle"
+        >
+          <a
+            class="btn btn-primary"
+            download=""
+            href="/reforis/openvpn/api/clients/A1?address="
+          >
+            Download configuration
+          </a>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Revoke access
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          Second
+        </td>
+        <td
+          class="text-center align-middle"
+        >
+          <div
+            class="spinner-border "
+            role="status"
+          >
+            <span
+              class="sr-only"
+            />
+          </div>
+          <div
+            class="spinner-text"
+          />
+        </td>
+        <td
+          class="text-right"
+        />
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          Third
+        </td>
+        <td
+          class="text-center align-middle"
+        >
+          <a
+            class="btn btn-primary"
+            download=""
+            href="/reforis/openvpn/api/clients/B1?address="
+          >
+            Download configuration
+          </a>
+        </td>
+        <td
+          class="text-right"
+        >
+          <button
+            class="btn btn-danger"
+            type="button"
+          >
+            Revoke access
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="align-middle"
+        >
+          Last
+        </td>
+        <td
+          class="text-center align-middle"
+        />
+        <td
+          class="text-right"
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AuthorityStatus /> should display spinner on loading 1`] = `
-<div>
-  <div
-    class="spinner-wrapper my-3 text-center"
-  >
-    <div
-      class="spinner-border "
-      role="status"
-    >
-      <span
-        class="sr-only"
-      />
-    </div>
-    <div
-      class="spinner-text"
-    />
-  </div>
-</div>
-`;
-
 exports[`<AuthorityStatus /> should handle generating CA 1`] = `
 <div>
   <h3>
@@ -41,7 +21,7 @@ exports[`<AuthorityStatus /> should handle generating CA 1`] = `
     />
   </div>
   <p>
-    Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically when the authority is ready.
+    Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready.
   </p>
 </div>
 `;
@@ -71,10 +51,10 @@ exports[`<AuthorityStatus /> should handle ready CA 1`] = `
     Certificate authority
   </h3>
   <p>
-    Your certificate authority (CA) is set up properly.
+    Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
   </p>
   <button
-    class="btn btn-primary "
+    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
     type="button"
   >
      

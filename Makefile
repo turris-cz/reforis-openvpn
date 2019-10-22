@@ -3,7 +3,7 @@
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
 
-.PHONY: all prepare-dev install install-js watch-js build-js lint lint-js lint-web test test-js test-web test-js-update-snapshots create-messages update-messages compile-messages clean
+.PHONY: all venv prepare-dev install install-js install-local-reforis watch-js build-js lint lint-js lint-js-fix lint-web test test-js test-web test-js-update-snapshots create-messages update-messages compile-messages clean
 
 DEV_PYTHON=python3.7
 ROUTER_PYTHON=python3.6
@@ -15,16 +15,16 @@ JS_DIR=./js
 all:
 	@echo "make prepare-dev"
 	@echo "    Create python virtual environment and install dependencies."
-	@echo "make lint"
-	@echo "    Run list on project."
 	@echo "make install"
 	@echo "    Install package in your system (for running on router)."
-	@echo "make install-js"
-	@echo "    Install dependencies"
-	@echo "make build-js:"
-	@echo "    Compile JS."
-	@echo "make watch-js:"
+	@echo "make watch-js"
 	@echo "    Compile JS in watch mode."
+	@echo "make build-js"
+	@echo "    Compile JS."
+	@echo "make lint"
+	@echo "    Run lint on project."
+	@echo "make test"
+	@echo "    Run tests on project."
 	@echo "make create-messages"
 	@echo "    Create locale messages (.pot)."
 	@echo "make update-messages"
@@ -52,10 +52,14 @@ prepare-dev:
 	make venv
 
 install:
+	opkg update
+	opkg install git git-http
 	$(ROUTER_PYTHON) -m pip install -e .
-	ln -sf /tmp/reforis_openvpn/reforis_static/openvpn /tmp/reforis/reforis_static/
+	ln -sf /tmp/reforis_openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
 install-js: js/package.json
 	cd $(JS_DIR); npm install --save-dev
+install-local-reforis:
+	$(VENV_BIN)/$(DEV_PYTHON) -m pip install -e ../reforis
 
 watch-js:
 	cd $(JS_DIR); npm run-script watch
@@ -83,10 +87,8 @@ create-messages:
 	$(VENV_BIN)/pybabel extract -F babel.cfg -o ./reforis_openvpn/translations/messages.pot .
 update-messages:
 	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/messages.pot -d ./reforis_openvpn/translations
-	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/tzinfo.pot -d ./reforis_openvpn/translations -D tzinfo
 compile-messages:
 	$(VENV_BIN)/pybabel compile -f -d ./reforis_openvpn/translations
-	$(VENV_BIN)/pybabel compile -f -d ./reforis_openvpn/translations -D tzinfo
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +

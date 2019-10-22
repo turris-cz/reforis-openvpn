@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerSettingsForm /> should render form 1`] = `
+<div>
+  <h3
+    class="mb-3"
+  >
+    Server settings
+  </h3>
+  <p>
+    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+  </p>
+  <form
+    class="mb-3"
+  >
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          checked=""
+          class="custom-control-input"
+          id="1"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="1"
+        >
+          Server enabled
+        </label>
+      </div>
+    </div>
+    <div
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    >
+      <label
+        for="2"
+      >
+        Device
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          disabled=""
+          id="2"
+          type="text"
+          value="my_device"
+        />
+      </div>
+    </div>
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          class="custom-control-input"
+          id="3"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="3"
+          style="margin-bottom: 0px;"
+        >
+          Listen on IPv6
+        </label>
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
+      </small>
+    </div>
+    <div
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    >
+      <label
+        for="4"
+      >
+        Protocol
+      </label>
+      <select
+        class="custom-select"
+        id="4"
+      >
+        <option
+          value="udp"
+        >
+          UDP
+        </option>
+        <option
+          value="tcp"
+        >
+          TCP
+        </option>
+      </select>
+      <small
+        class="form-text text-muted"
+      >
+        Clients will connect to the VPN server via this protocol. Use TCP if your ISP blocks UDP.
+      </small>
+    </div>
+    <div
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    >
+      <label
+        for="5"
+      >
+        VPN network address
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          id="5"
+          type="text"
+          value="10.111.111.0"
+        />
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        This network should be different than any network directly reachable by the router and the clients.
+      </small>
+    </div>
+    <div
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    >
+      <label
+        for="6"
+      >
+        VPN network mask
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          id="6"
+          type="text"
+          value="255.255.255.0"
+        />
+      </div>
+    </div>
+    <div
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    >
+      <label
+        for="7"
+      >
+        Port
+      </label>
+      <div
+        class="input-group"
+      >
+        <input
+          class="form-control"
+          disabled=""
+          id="7"
+          type="text"
+          value="1194"
+        />
+      </div>
+    </div>
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          checked=""
+          class="custom-control-input"
+          id="8"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="8"
+          style="margin-bottom: 0px;"
+        >
+          Route all traffic via VPN
+        </label>
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        Clients will access the Internet via VPN
+      </small>
+    </div>
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          checked=""
+          class="custom-control-input"
+          id="9"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="9"
+          style="margin-bottom: 0px;"
+        >
+          Use DNS via VPN
+        </label>
+      </div>
+      <small
+        class="form-text text-muted"
+      >
+        Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
+      </small>
+    </div>
+    <button
+      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
+      type="submit"
+    >
+       
+       
+      Save
+    </button>
+  </form>
+  <p>
+    <strong>
+      Advanced users:
+    </strong>
+     if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+  </p>
+</div>
+`;
+
+exports[`<ServerSettingsForm /> should render form partially when disabled 1`] = `
+<div>
+  <h3
+    class="mb-3"
+  >
+    Server settings
+  </h3>
+  <p>
+    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+  </p>
+  <form
+    class="mb-3"
+  >
+    <div
+      class="col-sm-12 offset-lg-1 col-lg-10"
+      style="margin-bottom: 1rem;"
+    >
+      <div
+        class="custom-control custom-checkbox"
+        style="margin-bottom: 0px;"
+      >
+        <input
+          class="custom-control-input"
+          id="1"
+          type="checkbox"
+        />
+        <label
+          class="custom-control-label"
+          for="1"
+        >
+          Server enabled
+        </label>
+      </div>
+    </div>
+    <button
+      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
+      type="submit"
+    >
+       
+       
+      Save
+    </button>
+  </form>
+  <p>
+    <strong>
+      Advanced users:
+    </strong>
+     if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+  </p>
+</div>
+`;

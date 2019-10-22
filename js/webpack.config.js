@@ -12,7 +12,7 @@ module.exports = () => ({
     entry: "./src/app.js",
     output: {
         filename: "app.min.js",
-        path: path.join(__dirname, "../reforis_static/openvpn/"),
+        path: path.join(__dirname, "../reforis_static/reforis_openvpn/js"),
     },
     resolve: {
         modules: [
@@ -21,11 +21,17 @@ module.exports = () => ({
         ],
     },
     module: {
-        rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-        }],
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
     },
     externals: {
         react: "React",

@@ -1,18 +1,4 @@
-from unittest import mock
+from reforis.test_utils import get_mocked_client
 
-from contextlib import contextmanager
-
-
-@contextmanager
-def get_mocked_client(app, backend_response):
-    backend_mock = mock.Mock()
-    backend_mock.perform = mock.Mock(return_value=backend_response)
-    patcher = mock.patch("reforis_openvpn.current_app.backend", backend_mock)
-
-    with app.app_context():
-        patcher.start()
-
-    yield app.test_client()
-
-    with app.app_context():
-        patcher.stop()
+def get_mocked_openvpn_client(*args, **kwargs):
+    return get_mocked_client('reforis_openvpn', *args, *kwargs)

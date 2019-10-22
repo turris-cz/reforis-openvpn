@@ -9,18 +9,19 @@ import React from "react";
 import { render, getByText, fireEvent, wait } from "customTestRender";
 import mockAxios from 'jest-mock-axios';
 
-import AuthorityReady from "../AuthorityReady";
-import AlertContext from "../AlertContext";
+import { AlertContext } from "foris";
 
-describe("<AuthorityReady />", () => {
+import AuthorityMissing from "../AuthorityMissing";
+
+describe("<AuthorityMissing />", () => {
     let componentContainer;
-    const handleSuccess = jest.fn(),
+    const handleReload = jest.fn(),
         setAlert = jest.fn();
 
     beforeEach(() => {
         const { container } = render(
             <AlertContext.Provider value={setAlert}>
-                <AuthorityReady onSuccess={handleSuccess} />
+                <AuthorityMissing onReload={handleReload} />
             </AlertContext.Provider>
         );
         componentContainer = container;
@@ -31,23 +32,23 @@ describe("<AuthorityReady />", () => {
     });
 
     it("should send request when button is clicked", () => {
-        fireEvent.click(getByText(componentContainer, "Delete CA"));
-        expect(mockAxios.delete).toHaveBeenCalledTimes(1);
+        fireEvent.click(getByText(componentContainer, "Generate CA"));
+        expect(mockAxios.post).toBeCalledWith("/reforis/openvpn/api/authority", undefined, expect.anything());
     });
 
     it("should handle error", async () => {
-        fireEvent.click(getByText(componentContainer, "Delete CA"));
-        mockAxios.mockError({response: {}});
+        fireEvent.click(getByText(componentContainer, "Generate CA"));
+        mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith("Cannot delete certificate authority");
+            expect(setAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
         });
     });
 
     it("should handle success", async () => {
-        fireEvent.click(getByText(componentContainer, "Delete CA"));
+        fireEvent.click(getByText(componentContainer, "Generate CA"));
         mockAxios.mockResponse({});
         await wait(() => {
-            expect(handleSuccess).toHaveBeenCalledTimes(1);
+            expect(handleReload).toHaveBeenCalledTimes(1);
         });
     });
 });

@@ -13,13 +13,13 @@ import { WebSockets } from "foris";
 import AuthorityBeingGenerated from "../AuthorityBeingGenerated";
 
 describe("<AuthorityBeingGenerated />", () => {
-    const handleSuccess = jest.fn();
+    const handleReload = jest.fn();
     let webSockets,
         componentContainer;
 
     beforeEach(() => {
         webSockets = new WebSockets();
-        const { container } = render(<AuthorityBeingGenerated ws={webSockets} onSuccess={handleSuccess} />);
+        const { container } = render(<AuthorityBeingGenerated ws={webSockets} onReload={handleReload} />);
         componentContainer = container;
     });
 
@@ -27,10 +27,10 @@ describe("<AuthorityBeingGenerated />", () => {
         expect(componentContainer).toMatchSnapshot();
     });
 
-    it("should call onSuccess when CA is ready", () => {
-        expect(handleSuccess).not.toBeCalled();
+    it("should call onReload when CA is ready", () => {
+        expect(handleReload).not.toBeCalled();
         const wsMessage = { module: "openvpn", action: "generate_ca", data: {status: "succeeded"} };
         act(() => webSockets.dispatch(wsMessage));
-        expect(handleSuccess).toHaveBeenCalledTimes(1);
+        expect(handleReload).toHaveBeenCalledTimes(1);
     });
 });

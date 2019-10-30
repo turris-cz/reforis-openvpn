@@ -22,7 +22,7 @@ blueprint = Blueprint('OpenVPN', __name__, url_prefix='/openvpn/api')
 # pylint: disable=invalid-name
 openvpn = {
     'blueprint': blueprint,
-    'js_app_path': 'reforis_openvpn/js/app.min.js',
+    'js_app_path': 'reforis_openvpn/app.min.js',
     'translations_path': BASE_DIR / 'translations',
 }
 

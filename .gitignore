@@ -109,4 +109,4 @@ venv.bak/
 ## mypy
 .mypy_cache/
 
-reforis_static/reforis_openvpn/js/app.min.js
+reforis_static/reforis_openvpn/app.min.js

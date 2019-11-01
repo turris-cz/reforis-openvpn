@@ -9,7 +9,8 @@ import React from "react";
 import {
     render, wait, getByText, getAllByText, getByLabelText, getAllByRole, queryByText,
     queryByLabelText, fireEvent, act,
-} from "customTestRender";
+} from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
 
 import { WebSockets } from "foris";
@@ -190,7 +191,9 @@ describe("<ClientRegistration />", () => {
             mockAxios.mockError(
                 { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
             );
-            await wait(() => getByText(componentContainer, "Something went wrong"));
+            await wait(() => {
+                expect(mockSetAlert).toBeCalledWith(errorMessage)
+            });
         });
     });
 });

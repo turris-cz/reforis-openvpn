@@ -27,11 +27,6 @@ module.exports = {
         "react/prop-types": "warn",
         "react/no-array-index-key": "warn",
         "react/button-has-type": "warn",
-        "import/no-unresolved": [
-            "error",
-            // Ignore imports used only in tests
-            {ignore: ["customTestRender"]}
-        ],
         "import/no-cycle": "warn",
         "no-console": "error",
         "no-use-before-define": ["error", {

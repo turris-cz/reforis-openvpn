@@ -9,7 +9,6 @@
 module.exports = {
     moduleDirectories: [
         "node_modules",
-        "<rootDir>/src/testUtils",
         "<rootDir>/src/",
     ],
     moduleNameMapper: {
@@ -22,8 +21,7 @@ module.exports = {
     verbose: false,
     setupFilesAfterEnv: [
         "@testing-library/react/cleanup-after-each",
-        "<rootDir>/src/testUtils/setup",
-        "foris/dist/testUtils/setup",
+        "foris/testUtils/setup",
     ],
     globals: {
         TZ: "utc",

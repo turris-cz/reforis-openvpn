@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { useAPIGet, Spinner, AlertContextProvider } from "foris";
+import { useAPIGet, Spinner } from "foris";
 
 import API_URLs from "API";
 import AuthorityStatus from "./AuthorityStatus";
@@ -48,25 +48,21 @@ export default function ServerSettings({ ws }) {
         componentContent = <Spinner className="my-3 text-center" />;
     } else {
         componentContent = (
-            <>
-                <AuthorityStatus
-                    ws={ws}
-                    status={authorityData.status}
-                    serverEnabled={settingsData.enabled}
-                    onReload={getAuthority}
-                >
-                    <ServerSettingsForm settingsData={settingsData} />
-                </AuthorityStatus>
-            </>
+            <AuthorityStatus
+                ws={ws}
+                status={authorityData.status}
+                serverEnabled={settingsData.enabled}
+                onReload={getAuthority}
+            >
+                <ServerSettingsForm settingsData={settingsData} />
+            </AuthorityStatus>
         );
     }
 
     return (
         <>
             <h1>{_("Server Settings")}</h1>
-            <AlertContextProvider>
-                {componentContent}
-            </AlertContextProvider>
+            {componentContent}
         </>
     );
 }

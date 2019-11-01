@@ -6,24 +6,18 @@
  */
 
 import React from "react";
-import { render, getByText, fireEvent, wait } from "customTestRender";
+import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from 'jest-mock-axios';
-
-import { AlertContext } from "foris";
 
 import AuthorityMissing from "../AuthorityMissing";
 
 describe("<AuthorityMissing />", () => {
     let componentContainer;
-    const handleReload = jest.fn(),
-        setAlert = jest.fn();
+    const handleReload = jest.fn();
 
     beforeEach(() => {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <AuthorityMissing onReload={handleReload} />
-            </AlertContext.Provider>
-        );
+        const { container } = render(<AuthorityMissing onReload={handleReload} />);
         componentContainer = container;
     });
 
@@ -40,7 +34,7 @@ describe("<AuthorityMissing />", () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
         mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
+            expect(mockSetAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
         });
     });
 

@@ -5,12 +5,12 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useUID } from "react-uid";
 
 import {
-    useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, AlertContext, Button,
+    useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, useAlert, Button,
     SpinnerElement,
 } from "foris";
 
@@ -59,7 +59,7 @@ ClientRow.propTypes = {
 
 function ClientRow({ client }) {
     const uid = useUID();
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [patchClientResponse, patchClient] = useAPIPatch(`${API_URLs.clientSettings}/${client.id}`);
     useEffect(() => {

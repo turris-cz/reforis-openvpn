@@ -7,8 +7,6 @@
 
 import React from "react";
 
-import { AlertContextProvider } from "foris";
-
 import AddSettingsForm from "./AddSettingsForm";
 import SettingsTable from "./SettingsTable";
 
@@ -17,10 +15,8 @@ export default function ClientSettings() {
         <>
             <h1>{_("Client Settings")}</h1>
             <p>{_("In order to use OpenVPN client you need to prepare text file with client settings. If you want to connect to another Turris device, download appropriate file from \"Client Registration\" page.")}</p>
-            <AlertContextProvider>
-                <AddSettingsForm />
-                <SettingsTable />
-            </AlertContextProvider>
+            <AddSettingsForm />
+            <SettingsTable />
         </>
     );
 }

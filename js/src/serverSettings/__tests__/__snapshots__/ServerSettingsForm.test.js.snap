@@ -14,12 +14,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
     class="mb-3"
   >
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
-      style="margin-bottom: 1rem;"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
       <div
-        class="custom-control custom-checkbox"
-        style="margin-bottom: 0px;"
+        class="custom-control custom-checkbox "
       >
         <input
           checked=""
@@ -56,12 +54,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
-      style="margin-bottom: 1rem;"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
       <div
-        class="custom-control custom-checkbox"
-        style="margin-bottom: 0px;"
+        class="custom-control custom-checkbox "
       >
         <input
           class="custom-control-input"
@@ -71,16 +67,15 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         <label
           class="custom-control-label"
           for="3"
-          style="margin-bottom: 0px;"
         >
           Listen on IPv6
         </label>
+        <small
+          class="form-text text-muted"
+        >
+          Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
+        </small>
       </div>
-      <small
-        class="form-text text-muted"
-      >
-        Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
-      </small>
     </div>
     <div
       class="form-group col-sm-12 offset-lg-1 col-lg-10"
@@ -175,12 +170,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
-      style="margin-bottom: 1rem;"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
       <div
-        class="custom-control custom-checkbox"
-        style="margin-bottom: 0px;"
+        class="custom-control custom-checkbox "
       >
         <input
           checked=""
@@ -191,24 +184,21 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         <label
           class="custom-control-label"
           for="8"
-          style="margin-bottom: 0px;"
         >
           Route all traffic via VPN
         </label>
+        <small
+          class="form-text text-muted"
+        >
+          Clients will access the Internet via VPN
+        </small>
       </div>
-      <small
-        class="form-text text-muted"
-      >
-        Clients will access the Internet via VPN
-      </small>
     </div>
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
-      style="margin-bottom: 1rem;"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
       <div
-        class="custom-control custom-checkbox"
-        style="margin-bottom: 0px;"
+        class="custom-control custom-checkbox "
       >
         <input
           checked=""
@@ -219,16 +209,15 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         <label
           class="custom-control-label"
           for="9"
-          style="margin-bottom: 0px;"
         >
           Use DNS via VPN
         </label>
+        <small
+          class="form-text text-muted"
+        >
+          Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
+        </small>
       </div>
-      <small
-        class="form-text text-muted"
-      >
-        Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
-      </small>
     </div>
     <button
       class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
@@ -262,12 +251,10 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
     class="mb-3"
   >
     <div
-      class="col-sm-12 offset-lg-1 col-lg-10"
-      style="margin-bottom: 1rem;"
+      class="form-group col-sm-12 offset-lg-1 col-lg-10"
     >
       <div
-        class="custom-control custom-checkbox"
-        style="margin-bottom: 0px;"
+        class="custom-control custom-checkbox "
       >
         <input
           class="custom-control-input"

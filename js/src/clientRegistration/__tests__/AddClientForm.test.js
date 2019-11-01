@@ -8,10 +8,9 @@
 import React from "react";
 import {
     render, fireEvent, wait, getByText, getByLabelText,
-} from "customTestRender";
+} from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
-
-import { AlertContext } from "foris";
 
 import AddClientForm from "../AddClientForm";
 
@@ -23,15 +22,10 @@ function getFormElements(componentContainer) {
 }
 
 describe("<AddClientForm />", () => {
-    const setAlert = jest.fn();
     let componentContainer;
 
     beforeEach(() => {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <AddClientForm />
-            </AlertContext.Provider>,
-        );
+        const { container } = render(<AddClientForm />);
         componentContainer = container;
     });
 
@@ -85,7 +79,7 @@ describe("<AddClientForm />", () => {
             { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
         );
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith(errorMessage);
+            expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
     });
 });

@@ -9,7 +9,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    AlertContextProvider, TextInput, CheckBox, useAPIGet, useForm, Spinner, useWSForisModule,
+    TextInput, CheckBox, useAPIGet, useForm, Spinner, useWSForisModule,
     validateIPv4Address,
 } from "foris";
 
@@ -36,12 +36,12 @@ export default function ClientRegistration({ ws }) {
         componentContent = <p>{_("You need to generate certificate authority in order to register clients.")}</p>;
     } else {
         componentContent = (
-            <AlertContextProvider>
+            <>
                 <p>{_("You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.")}</p>
                 <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
                 <AddClientForm />
                 <Clients ws={ws} />
-            </AlertContextProvider>
+            </>
         );
     }
 

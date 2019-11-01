@@ -5,12 +5,12 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
     CheckBox, Button, useForm, useAPIPatch, Select, TextInput,
-    validateIPv4Address, AlertContext, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
+    validateIPv4Address, useAlert, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
     Input,
 } from "foris";
 
@@ -21,11 +21,11 @@ ServerSettingsForm.propTypes = {
 };
 
 export default function ServerSettingsForm({ settingsData }) {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [patchSettingsResponse, patchSettings] = useAPIPatch(API_URLs.serverSettings);
     useEffect(() => {
-        // Happy path is omited since network restart causes the page to reload
+        // Happy path is omitted since network restart causes the page to reload
         if (patchSettingsResponse.isError) {
             setAlert(_("Cannot save server settings"));
         }

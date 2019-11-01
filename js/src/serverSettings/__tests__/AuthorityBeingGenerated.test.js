@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import { render, act } from "customTestRender";
+import { render, act } from "foris/testUtils/customTestRender";
 
 import { WebSockets } from "foris";
 

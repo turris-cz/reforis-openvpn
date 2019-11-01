@@ -5,16 +5,16 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 
 import {
-    useAPIPost, Button, AlertContext, FileInput, useForm,
+    useAPIPost, Button, useAlert, FileInput, useForm,
 } from "foris";
 
 import API_URLs from "API";
 
 export default function AddSettingsForm() {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [postSettingsResponse, postSettings] = useAPIPost(
         API_URLs.clientSettings,

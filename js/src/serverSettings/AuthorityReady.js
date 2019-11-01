@@ -5,10 +5,10 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIDelete, AlertContext } from "foris";
+import { Button, useAPIDelete, useAlert } from "foris";
 
 import API_URLs from "API";
 
@@ -18,7 +18,7 @@ AuthorityReady.propTypes = {
 };
 
 export default function AuthorityReady({ serverEnabled, onReload }) {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [deleteResponse, deleteCA] = useAPIDelete(API_URLs.authority);
     useEffect(() => {

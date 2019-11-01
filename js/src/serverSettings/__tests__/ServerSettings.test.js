@@ -8,7 +8,8 @@
 import React from "react";
 import {
     render, waitForElement, fireEvent, wait, getByText,
-} from "customTestRender";
+} from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
 
 import { WebSockets } from "foris";
@@ -35,7 +36,7 @@ describe("<ServerSettings />", () => {
         expect(getByText(componentContainer, "An error occurred during loading OpenVPN server settings")).toBeDefined();
     });
 
-    it("should render child and alert", async () => {
+    it("should render child and set alert", async () => {
         expect(getByText(componentContainer, "Server Settings")).toBeDefined();
 
         expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
@@ -47,7 +48,9 @@ describe("<ServerSettings />", () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
         expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
         mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
-        await waitForElement(() => getByText(componentContainer, "Cannot delete certificate authority"));
+        await wait(() => {
+            expect(mockSetAlert).toBeCalledWith("Cannot delete certificate authority");
+        });
         expect(componentContainer).toMatchSnapshot();
     });
 });

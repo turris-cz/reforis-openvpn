@@ -5,11 +5,11 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    formFieldsSize, SpinnerElement, AlertContext, useAPIDelete, DownloadButton,
+    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, DownloadButton,
 } from "foris";
 
 import API_URLs from "API";
@@ -64,7 +64,7 @@ ClientRow.propTypes = {
 };
 
 function ClientRow({ client, address }) {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [deleteClientResponse, deleteClient] = useAPIDelete(`${API_URLs.clients}/${client.id}`);
     useEffect(() => {

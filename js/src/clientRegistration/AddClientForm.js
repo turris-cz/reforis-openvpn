@@ -5,16 +5,16 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 
 import {
-    TextInput, Button, useAPIPost, useForm, AlertContext, undefinedIfEmpty,
+    TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty,
 } from "foris";
 
 import API_URLs from "API";
 
 export default function AddClientForm() {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [postClientsResponse, postClients] = useAPIPost(API_URLs.clients);
     useEffect(() => {

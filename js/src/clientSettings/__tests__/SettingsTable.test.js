@@ -8,23 +8,17 @@
 import React from "react";
 import {
     render, fireEvent, wait, getByText, waitForElement, getByLabelText,
-} from "customTestRender";
+} from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
-
-import { AlertContext } from "foris";
 
 import SettingsTable from "../SettingsTable";
 
 describe("<SettingsTable />", () => {
-    const setAlert = jest.fn();
     const singleClient = { id: "A1", enabled: true, running: true };
 
     async function renderTable(clients = []) {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <SettingsTable />
-            </AlertContext.Provider>,
-        );
+        const { container } = render(<SettingsTable />);
         mockAxios.mockResponse({ data: clients });
         await waitForElement(() => getByText(container, "Available settings"));
         return container;
@@ -79,7 +73,7 @@ describe("<SettingsTable />", () => {
             { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
         );
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith(errorMessage);
+            expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
     });
 
@@ -100,7 +94,7 @@ describe("<SettingsTable />", () => {
             { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
         );
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith(errorMessage);
+            expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
     });
 

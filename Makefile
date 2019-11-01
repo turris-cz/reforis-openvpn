@@ -55,7 +55,7 @@ install:
 	opkg update
 	opkg install git git-http
 	$(ROUTER_PYTHON) -m pip install -e .
-	ln -sf /tmp/reforis_openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
+	ln -sf /tmp/reforis-openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
 install-js: js/package.json
 	cd $(JS_DIR); npm install --save-dev
 install-local-reforis:

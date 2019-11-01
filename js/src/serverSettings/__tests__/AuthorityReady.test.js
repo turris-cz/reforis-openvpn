@@ -6,25 +6,19 @@
  */
 
 import React from "react";
-import { render, getByText, fireEvent, wait } from "customTestRender";
+import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
 import mockAxios from 'jest-mock-axios';
-
-import { AlertContext } from "foris";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 
 import AuthorityReady from "../AuthorityReady";
 
 
 describe("<AuthorityReady />", () => {
     let componentContainer;
-    const handleReload = jest.fn(),
-        setAlert = jest.fn();
+    const handleReload = jest.fn();
 
     beforeEach(() => {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <AuthorityReady onReload={handleReload} serverEnabled={false} />
-            </AlertContext.Provider>
-        );
+        const { container } = render(<AuthorityReady onReload={handleReload} serverEnabled={false} />);
         componentContainer = container;
     });
 
@@ -41,7 +35,7 @@ describe("<AuthorityReady />", () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
         mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith("Cannot delete certificate authority");
+            expect(mockSetAlert).toHaveBeenCalledWith("Cannot delete certificate authority");
         });
     });
 

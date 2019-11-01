@@ -8,10 +8,9 @@
 import React from "react";
 import {
     render, fireEvent, wait, getByText, getByLabelText,
-} from "customTestRender";
+} from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
-
-import { AlertContext } from "foris";
 
 import AddSettingsForm from "../AddSettingsForm";
 
@@ -32,15 +31,10 @@ function setFilesProperty(input, files) {
 }
 
 describe("<AddSettingsForm />", () => {
-    const setAlert = jest.fn();
     let componentContainer;
 
     beforeEach(() => {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <AddSettingsForm />
-            </AlertContext.Provider>,
-        );
+        const { container } = render(<AddSettingsForm />);
         componentContainer = container;
     });
 
@@ -98,7 +92,7 @@ describe("<AddSettingsForm />", () => {
             { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
         );
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith(errorMessage);
+            expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
     });
 });

@@ -5,10 +5,10 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIPost, AlertContext } from "foris";
+import { Button, useAPIPost, useAlert } from "foris";
 
 import API_URLs from "API";
 
@@ -17,7 +17,7 @@ AuthorityMissing.propTypes = {
 };
 
 export default function AuthorityMissing({ onReload }) {
-    const setAlert = useContext(AlertContext);
+    const [setAlert] = useAlert();
 
     const [createResponse, createCA] = useAPIPost(API_URLs.authority);
     useEffect(() => {

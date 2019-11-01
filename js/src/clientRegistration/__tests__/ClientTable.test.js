@@ -6,25 +6,17 @@
  */
 
 import React from "react";
-import {
-    render, fireEvent, wait, getByText,
-} from "customTestRender";
+import { render, fireEvent, wait, getByText } from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from "jest-mock-axios";
-
-import { AlertContext } from "foris";
 
 import ClientTable from "../ClientTable";
 
 describe("<ClientTable />", () => {
-    const setAlert = jest.fn();
     const singleClient = [{ id: "A1", name: "First", status: "valid" }];
 
     function renderTable(clients = [], address = "") {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <ClientTable clients={clients} address={address} />
-            </AlertContext.Provider>,
-        );
+        const { container } = render(<ClientTable clients={clients} address={address} />);
         return container;
     }
 
@@ -77,7 +69,7 @@ describe("<ClientTable />", () => {
             { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
         );
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith(errorMessage);
+            expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
     });
 });

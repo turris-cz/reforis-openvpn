@@ -6,15 +6,13 @@
  */
 
 import React from "react";
-import { render, wait, fireEvent, getByLabelText, getByText } from "customTestRender";
+import { render, wait, fireEvent, getByLabelText, getByText } from "foris/testUtils/customTestRender";
+import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import mockAxios from 'jest-mock-axios';
-
-import { AlertContext } from "foris";
 
 import ServerSettingsForm from "../ServerSettingsForm";
 
 describe("<ServerSettingsForm />", () => {
-    const setAlert = jest.fn();
     const enabledFormData = {
         enabled: true,
         device: "my_device",
@@ -97,15 +95,11 @@ describe("<ServerSettingsForm />", () => {
     });
 
     it("should handle API error", async () => {
-        const { container } = render(
-            <AlertContext.Provider value={setAlert}>
-                <ServerSettingsForm settingsData={disabledFormData} />
-            </AlertContext.Provider>
-        );
+        const { container } = render(<ServerSettingsForm settingsData={disabledFormData} />);
         submitForm(container);
         mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
         await wait(() => {
-            expect(setAlert).toHaveBeenCalledWith("Cannot save server settings");
+            expect(mockSetAlert).toHaveBeenCalledWith("Cannot save server settings");
         });
     });
 });

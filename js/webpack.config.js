@@ -39,6 +39,5 @@ module.exports = () => ({
         "prop-types": "PropTypes",
         react: "React",
         "react-dom": "ReactDOM",
-        "react-uid": "react-uid",
     },
 });

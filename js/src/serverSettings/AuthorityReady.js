@@ -8,7 +8,9 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIDelete, useAlert } from "foris";
+import {
+    Button, useAPIDelete, useAlert, API_STATE,
+} from "foris";
 
 import API_URLs from "API";
 
@@ -22,9 +24,9 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
 
     const [deleteResponse, deleteCA] = useAPIDelete(API_URLs.authority);
     useEffect(() => {
-        if (deleteResponse.isSuccess) {
+        if (deleteResponse.state === API_STATE.SUCCESS) {
             onReload();
-        } else if (deleteResponse.isError) {
+        } else if (deleteResponse.state === API_STATE.ERROR) {
             setAlert(_("Cannot delete certificate authority"));
         }
     }, [deleteResponse, onReload, setAlert]);

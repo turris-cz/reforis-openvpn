@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 import {
     CheckBox, Button, useForm, useAPIPatch, Select, TextInput,
     validateIPv4Address, useAlert, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
-    Input,
+    Input, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -26,7 +26,7 @@ export default function ServerSettingsForm({ settingsData }) {
     const [patchSettingsResponse, patchSettings] = useAPIPatch(API_URLs.serverSettings);
     useEffect(() => {
         // Happy path is omitted since network restart causes the page to reload
-        if (patchSettingsResponse.isError) {
+        if (patchSettingsResponse.state === API_STATE.ERROR) {
             setAlert(_("Cannot save server settings"));
         }
     }, [patchSettingsResponse, setAlert]);
@@ -54,6 +54,8 @@ export default function ServerSettingsForm({ settingsData }) {
         }
     }
 
+    const saveButtonDisabled = (undefinedIfEmpty(formErrors)
+        || patchSettingsResponse.state === API_STATE.SENDING);
     return (
         <>
             <h3 className="mb-3">{_("Server settings")}</h3>
@@ -112,7 +114,9 @@ export default function ServerSettingsForm({ settingsData }) {
                         />
                     </>
                 )}
-                <Button type="submit" forisFormSize disabled={undefinedIfEmpty(formErrors) || patchSettingsResponse.isSending}>Save</Button>
+                <Button type="submit" forisFormSize disabled={saveButtonDisabled}>
+                    Save
+                </Button>
             </form>
             <p dangerouslySetInnerHTML={{ __html: _("<strong>Advanced users:</strong> if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.") }} />
         </>

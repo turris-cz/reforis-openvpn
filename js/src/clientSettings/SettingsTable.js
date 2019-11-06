@@ -11,7 +11,7 @@ import { useUID } from "react-uid";
 
 import {
     useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, useAlert, Button,
-    SpinnerElement,
+    SpinnerElement, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -24,9 +24,9 @@ export default function SettingsTable() {
     }, [getSettings]);
 
     let componentContent;
-    if (getSettingsResponse.isLoading) {
+    if ([API_STATE.INIT, API_STATE.SENDING].includes(getSettingsResponse.state)) {
         componentContent = <Spinner className="my-3 text-center" />;
-    } else if (getSettingsResponse.isError) {
+    } else if (getSettingsResponse.state === API_STATE.ERROR) {
         componentContent = <p className="text-center text-danger">{_("An error occurred during loading OpenVPN client settings")}</p>;
     } else if (!settingsData || settingsData.length === 0) {
         componentContent = <p className="text-muted text-center">{_("There are no settings added yet.")}</p>;
@@ -63,14 +63,14 @@ function ClientRow({ client }) {
 
     const [patchClientResponse, patchClient] = useAPIPatch(`${API_URLs.clientSettings}/${client.id}`);
     useEffect(() => {
-        if (patchClientResponse.isError) {
+        if (patchClientResponse.state === API_STATE.ERROR) {
             setAlert(patchClientResponse.data);
         }
     }, [patchClientResponse, setAlert]);
 
     const [deleteClientResponse, deleteClient] = useAPIDelete(`${API_URLs.clientSettings}/${client.id}`);
     useEffect(() => {
-        if (deleteClientResponse.isError) {
+        if (deleteClientResponse.state === API_STATE.ERROR) {
             setAlert(deleteClientResponse.data);
         }
     }, [deleteClientResponse, setAlert]);
@@ -113,15 +113,16 @@ function ClientStatus({ id, defaultStatus }) {
 
     const [response, getSettings] = useAPIGet(`${API_URLs.clientSettings}/${id}`);
     useEffect(() => {
-        if (!response.isLoading && !response.isError && response.data) {
+        if (response.state === API_STATE.SUCCESS) {
             setStatus(response.data.running);
         }
     }, [response]);
 
-    if (response.isLoading) {
+    // GET is sent on demand hence INIT is not checked
+    if (response.state === API_STATE.SENDING) {
         return <SpinnerElement />;
     }
-    if (response.isError) {
+    if (response.state === API_STATE.ERROR) {
         return <span className="text-danger">{_("Cannot refresh status")}</span>;
     }
 

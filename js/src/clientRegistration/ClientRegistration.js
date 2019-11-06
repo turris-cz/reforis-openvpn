@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 import {
     TextInput, CheckBox, useAPIGet, useForm, Spinner, useWSForisModule,
     validateIPv4Address,
+    API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -28,9 +29,9 @@ export default function ClientRegistration({ ws }) {
     }, [getAuthority]);
 
     let componentContent;
-    if (authority.isError) {
+    if (authority.state === API_STATE.ERROR) {
         componentContent = <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>;
-    } else if (authority.isLoading || !authority.data) {
+    } else if ([API_STATE.INIT, API_STATE.SENDING].includes(authority.state)) {
         componentContent = <Spinner className="my-3 text-center" />;
     } else if (authority.data.status !== "ready") {
         componentContent = <p>{_("You need to generate certificate authority in order to register clients.")}</p>;
@@ -94,11 +95,9 @@ function Clients({ ws }) {
     }, [reloadForm]);
 
     let componentContent;
-    if (getClientsResponse.isError) {
+    if (getClientsResponse.state === API_STATE.ERROR) {
         componentContent = <p className="text-center text-danger">{_("An error occurred during loading OpenVPN clients")}</p>;
-    } else if (getClientsResponse.isLoading || !formData) {
-        componentContent = <Spinner className="text-center" />;
-    } else {
+    } else if (getClientsResponse.state === API_STATE.SUCCESS) {
         componentContent = (
             <>
                 <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded.") }} />
@@ -113,6 +112,8 @@ function Clients({ ws }) {
                 />
             </>
         );
+    } else {
+        componentContent = <Spinner className="text-center" />;
     }
 
     return (

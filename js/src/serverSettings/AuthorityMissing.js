@@ -8,7 +8,9 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIPost, useAlert } from "foris";
+import {
+    Button, useAPIPost, useAlert, API_STATE,
+} from "foris";
 
 import API_URLs from "API";
 
@@ -21,9 +23,9 @@ export default function AuthorityMissing({ onReload }) {
 
     const [createResponse, createCA] = useAPIPost(API_URLs.authority);
     useEffect(() => {
-        if (createResponse.isSuccess) {
+        if (createResponse.state === API_STATE.SUCCESS) {
             onReload();
-        } else if (createResponse.isError) {
+        } else if (createResponse.state === API_STATE.ERROR) {
             setAlert(_("Cannot generate certificate authority"));
         }
     }, [createResponse, onReload, setAlert]);

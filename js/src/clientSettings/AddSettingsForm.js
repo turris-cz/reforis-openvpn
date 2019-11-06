@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 
 import {
-    useAPIPost, Button, useAlert, FileInput, useForm,
+    useAPIPost, Button, useAlert, FileInput, useForm, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -21,7 +21,7 @@ export default function AddSettingsForm() {
         "multipart/form-data",
     );
     useEffect(() => {
-        if (postSettingsResponse.isError) {
+        if (postSettingsResponse.state === API_STATE.ERROR) {
             setAlert(postSettingsResponse.data);
         }
     }, [postSettingsResponse, setAlert]);

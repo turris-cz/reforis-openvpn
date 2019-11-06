@@ -9,7 +9,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, DownloadButton,
+    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, DownloadButton, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -68,13 +68,13 @@ function ClientRow({ client, address }) {
 
     const [deleteClientResponse, deleteClient] = useAPIDelete(`${API_URLs.clients}/${client.id}`);
     useEffect(() => {
-        if (deleteClientResponse.isError) {
+        if (deleteClientResponse.state === API_STATE.ERROR) {
             setAlert(deleteClientResponse.data);
         }
     }, [deleteClientResponse, setAlert]);
 
     let componentContent;
-    if (deleteClientResponse.isSending || client.status === "generating") {
+    if (deleteClientResponse.state === API_STATE.SENDING || client.status === "generating") {
         componentContent = <SpinnerElement />;
     } else if (client.status === "valid") {
         if (typeof address === "string") {
@@ -96,7 +96,7 @@ function ClientRow({ client, address }) {
             <td className="align-middle">{client.name}</td>
             <td className="text-center align-middle">{componentContent}</td>
             <td className="text-right">
-                {!deleteClientResponse.isSending && client.status === "valid"
+                {deleteClientResponse.state !== API_STATE.SENDING && client.status === "valid"
                     && <button type="button" className="btn btn-danger" onClick={deleteClient}>{_("Revoke access")}</button>}
             </td>
         </tr>

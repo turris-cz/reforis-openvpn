@@ -10,6 +10,7 @@ import {
     render, fireEvent, wait, getByText, waitForElement, getByLabelText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
 import SettingsTable from "../SettingsTable";
@@ -35,7 +36,7 @@ describe("<SettingsTable />", () => {
 
     it("should handle GET error", async () => {
         const { container } = render(<SettingsTable />);
-        mockAxios.mockError({response: {}});
+        mockJSONError();
         await waitForElement(() => getByText(container, "An error occurred during loading OpenVPN client settings"));
     });
 
@@ -69,9 +70,7 @@ describe("<SettingsTable />", () => {
         const container = await renderTable([singleClient]);
         fireEvent.click(getByText(container, singleClient.id));
         const errorMessage = "API didn't handle this well";
-        mockAxios.mockError(
-            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-        );
+        mockJSONError(errorMessage);
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
@@ -90,9 +89,7 @@ describe("<SettingsTable />", () => {
         const container = await renderTable([singleClient]);
         fireEvent.click(getDelete(container));
         const errorMessage = "API didn't handle this well";
-        mockAxios.mockError(
-            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-        );
+        mockJSONError(errorMessage);
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
@@ -112,9 +109,7 @@ describe("<SettingsTable />", () => {
         fireEvent.click(getByLabelText(container, "Check status"));
         expect(mockAxios.get).toHaveBeenCalledWith(`/reforis/openvpn/api/client-settings/${singleClient.id}`, expect.anything());
         const errorMessage = "API didn't handle this well";
-        mockAxios.mockError(
-            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-        );
+        mockJSONError(errorMessage);
         await waitForElement(() => getByText(container, "Cannot refresh status"));
     });
 });

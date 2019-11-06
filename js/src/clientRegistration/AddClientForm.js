@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 
 import {
-    TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty,
+    TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -18,7 +18,7 @@ export default function AddClientForm() {
 
     const [postClientsResponse, postClients] = useAPIPost(API_URLs.clients);
     useEffect(() => {
-        if (postClientsResponse.isError) {
+        if (postClientsResponse.state === API_STATE.ERROR) {
             setAlert(postClientsResponse.data);
         }
     }, [postClientsResponse, setAlert]);
@@ -39,6 +39,8 @@ export default function AddClientForm() {
         return null;
     }
 
+    const addButtonDisabled = (undefinedIfEmpty(formErrors)
+        || postClientsResponse.state === API_STATE.SENDING);
     return (
         <>
             <h3>{_("Add new client")}</h3>
@@ -50,11 +52,7 @@ export default function AddClientForm() {
                     error={formErrors.name}
                     onChange={formChangeHandler((value) => ({ name: { $set: value } }))}
                 />
-                <Button
-                    type="submit"
-                    forisFormSize
-                    disabled={undefinedIfEmpty(formErrors) || postClientsResponse.isSending}
-                >
+                <Button type="submit" forisFormSize disabled={addButtonDisabled}>
                     Add
                 </Button>
             </form>

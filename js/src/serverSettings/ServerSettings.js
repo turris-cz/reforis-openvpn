@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { useAPIGet, Spinner } from "foris";
+import { useAPIGet, Spinner, API_STATE } from "foris";
 
 import API_URLs from "API";
 import AuthorityStatus from "./AuthorityStatus";
@@ -32,21 +32,17 @@ export default function ServerSettings({ ws }) {
     let componentContent;
     const authorityData = authorityResponse.data;
     const settingsData = settingsResponse.data;
-    if (authorityResponse.isError || settingsResponse.isError) {
+    if (authorityResponse.state === API_STATE.ERROR || settingsResponse.state === API_STATE.ERROR) {
         componentContent = (
             <>
-                {authorityResponse.isError && <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>}
-                {settingsResponse.isError && <p className="text-center text-danger">{_("An error occurred during loading OpenVPN server settings")}</p>}
+                {authorityResponse.state === API_STATE.ERROR && <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>}
+                {settingsResponse.state === API_STATE.ERROR && <p className="text-center text-danger">{_("An error occurred during loading OpenVPN server settings")}</p>}
             </>
         );
     } else if (
-        authorityResponse.isLoading
-        || settingsResponse.isLoading
-        || !authorityData
-        || !settingsData
+        authorityResponse.state === API_STATE.SUCCESS
+        && settingsResponse.state === API_STATE.SUCCESS
     ) {
-        componentContent = <Spinner className="my-3 text-center" />;
-    } else {
         componentContent = (
             <AuthorityStatus
                 ws={ws}
@@ -57,6 +53,8 @@ export default function ServerSettings({ ws }) {
                 <ServerSettingsForm settingsData={settingsData} />
             </AuthorityStatus>
         );
+    } else {
+        componentContent = <Spinner className="my-3 text-center" />;
     }
 
     return (

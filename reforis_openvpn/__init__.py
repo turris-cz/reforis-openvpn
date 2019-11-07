@@ -58,8 +58,8 @@ def get_server_settings():
     return jsonify(current_app.backend.perform('openvpn', 'get_settings'))
 
 
-@blueprint.route('/server-settings', methods=['PATCH'])
-def patch_server_settings():
+@blueprint.route('/server-settings', methods=['PUT'])
+def put_server_settings():
     validate_json(request.json)
     response = current_app.backend.perform('openvpn', 'update_settings', request.json)
     if response.get('result') is not True:
@@ -156,8 +156,8 @@ def post_client_settings():
     return jsonify(response), HTTPStatus.CREATED
 
 
-@blueprint.route('/client-settings/<settings_id>', methods=['PATCH'])
-def patch_client_settings(settings_id):
+@blueprint.route('/client-settings/<settings_id>', methods=['PUT'])
+def put_client_settings(settings_id):
     validate_json(request.json, {'enabled': bool})
 
     settings = deepcopy(request.json)

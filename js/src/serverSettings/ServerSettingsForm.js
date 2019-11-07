@@ -9,7 +9,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    CheckBox, Button, useForm, useAPIPatch, Select, TextInput,
+    CheckBox, Button, useForm, useAPIPut, Select, TextInput,
     validateIPv4Address, useAlert, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
     Input, API_STATE,
 } from "foris";
@@ -23,13 +23,13 @@ ServerSettingsForm.propTypes = {
 export default function ServerSettingsForm({ settingsData }) {
     const [setAlert] = useAlert();
 
-    const [patchSettingsResponse, patchSettings] = useAPIPatch(API_URLs.serverSettings);
+    const [putSettingsResponse, putSettings] = useAPIPut(API_URLs.serverSettings);
     useEffect(() => {
         // Happy path is omitted since network restart causes the page to reload
-        if (patchSettingsResponse.state === API_STATE.ERROR) {
+        if (putSettingsResponse.state === API_STATE.ERROR) {
             setAlert(_("Cannot save server settings"));
         }
-    }, [patchSettingsResponse, setAlert]);
+    }, [putSettingsResponse, setAlert]);
 
     const [formState, formChangeHandler, reloadForm] = useForm(validator);
     const formData = formState.data;
@@ -45,17 +45,17 @@ export default function ServerSettingsForm({ settingsData }) {
     function handleSubmit(event) {
         event.preventDefault();
         if (formData.enabled) {
-            patchSettings(onlySpecifiedKeys(
+            putSettings(onlySpecifiedKeys(
                 formData,
                 ["enabled", "ipv6", "protocol", "network", "network_netmask", "route_all", "use_dns"],
             ));
         } else {
-            patchSettings({ enabled: false });
+            putSettings({ enabled: false });
         }
     }
 
     const saveButtonDisabled = (undefinedIfEmpty(formErrors)
-        || patchSettingsResponse.state === API_STATE.SENDING);
+        || putSettingsResponse.state === API_STATE.SENDING);
     return (
         <>
             <h3 className="mb-3">{_("Server settings")}</h3>

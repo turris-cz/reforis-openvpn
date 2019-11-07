@@ -72,7 +72,7 @@ describe("<ServerSettingsForm />", () => {
     it("should update settings", async () => {
         const container = renderSettings(enabledFormData);
         submitForm(container);
-        expect(mockAxios.patch).toBeCalledWith(
+        expect(mockAxios.put).toBeCalledWith(
             "/reforis/openvpn/api/server-settings",
             {
                 enabled: true,
@@ -91,7 +91,7 @@ describe("<ServerSettingsForm />", () => {
         const container = renderSettings(enabledFormData);
         fireEvent.click(getByLabelText(container, "Server enabled"));
         submitForm(container);
-        expect(mockAxios.patch).toBeCalledWith("/reforis/openvpn/api/server-settings", disabledFormData, expect.anything());
+        expect(mockAxios.put).toBeCalledWith("/reforis/openvpn/api/server-settings", disabledFormData, expect.anything());
     });
 
     it("should handle API error", async () => {

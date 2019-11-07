@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { useUID } from "react-uid";
 
 import {
-    useAPIGet, useAPIPatch, useAPIDelete, Spinner, formFieldsSize, useAlert, Button,
+    useAPIGet, useAPIPut, useAPIDelete, Spinner, formFieldsSize, useAlert, Button,
     SpinnerElement, API_STATE,
 } from "foris";
 
@@ -61,12 +61,12 @@ function ClientRow({ client }) {
     const uid = useUID();
     const [setAlert] = useAlert();
 
-    const [patchClientResponse, patchClient] = useAPIPatch(`${API_URLs.clientSettings}/${client.id}`);
+    const [putClientResponse, putClient] = useAPIPut(`${API_URLs.clientSettings}/${client.id}`);
     useEffect(() => {
-        if (patchClientResponse.state === API_STATE.ERROR) {
-            setAlert(patchClientResponse.data);
+        if (putClientResponse.state === API_STATE.ERROR) {
+            setAlert(putClientResponse.data);
         }
-    }, [patchClientResponse, setAlert]);
+    }, [putClientResponse, setAlert]);
 
     const [deleteClientResponse, deleteClient] = useAPIDelete(`${API_URLs.clientSettings}/${client.id}`);
     useEffect(() => {
@@ -84,7 +84,7 @@ function ClientRow({ client }) {
                         className="custom-control-input"
                         id={uid}
                         defaultChecked={client.enabled}
-                        onChange={(event) => patchClient({ enabled: event.target.checked })}
+                        onChange={(event) => putClient({ enabled: event.target.checked })}
                     />
                     <label className="custom-control-label" htmlFor={uid}>{client.id}</label>
                 </div>

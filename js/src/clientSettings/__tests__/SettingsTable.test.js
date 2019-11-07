@@ -56,17 +56,17 @@ describe("<SettingsTable />", () => {
         expect(container).toMatchSnapshot();
     });
 
-    it("should send PATCH request", async () => {
+    it("should send PUT request", async () => {
         const container = await renderTable([singleClient]);
         fireEvent.click(getByText(container, singleClient.id));
-        expect(mockAxios.patch).toBeCalledWith(
+        expect(mockAxios.put).toBeCalledWith(
             `/reforis/openvpn/api/client-settings/${singleClient.id}`,
             { enabled: false },
             expect.anything(),
         );
     });
 
-    it("should handle PATCH error", async () => {
+    it("should handle PUT error", async () => {
         const container = await renderTable([singleClient]);
         fireEvent.click(getByText(container, singleClient.id));
         const errorMessage = "API didn't handle this well";

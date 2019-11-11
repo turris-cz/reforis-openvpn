@@ -5,18 +5,14 @@
  * See /LICENSE for more information.
  */
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import {
-    TextInput, CheckBox, useAPIGet, useForm, Spinner, useWSForisModule,
-    validateIPv4Address,
-    API_STATE,
-} from "foris";
+import { useAPIGet, withErrorMessage, withSpinnerOnSending } from "foris";
 
 import API_URLs from "API";
+import Clients from "./Clients";
 import AddClientForm from "./AddClientForm";
-import ClientTable from "./ClientTable";
 
 ClientRegistration.propTypes = {
     ws: PropTypes.object.isRequired,
@@ -28,134 +24,35 @@ export default function ClientRegistration({ ws }) {
         getAuthority();
     }, [getAuthority]);
 
-    let componentContent;
-    if (authority.state === API_STATE.ERROR) {
-        componentContent = <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>;
-    } else if ([API_STATE.INIT, API_STATE.SENDING].includes(authority.state)) {
-        componentContent = <Spinner className="my-3 text-center" />;
-    } else if (authority.data.status !== "ready") {
-        componentContent = <p>{_("You need to generate certificate authority in order to register clients.")}</p>;
-    } else {
-        componentContent = (
-            <>
-                <p>{_("You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.")}</p>
-                <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
-                <AddClientForm />
-                <Clients ws={ws} />
-            </>
-        );
-    }
-
     return (
         <>
             <h1>{_("Client Registration")}</h1>
-            {componentContent}
-        </>
-    );
-}
-
-Clients.propTypes = {
-    ws: PropTypes.object.isRequired,
-};
-
-function Clients({ ws }) {
-    const [getClientsResponse, getClients] = useAPIGet(API_URLs.clients);
-    useEffect(() => {
-        getClients();
-    }, [getClients]);
-
-    // Refresh list of clients when certificate is being generated
-    const [generateClientNotification] = useWSForisModule(ws, "openvpn", "generate_client");
-    useEffect(() => {
-        if (!generateClientNotification) {
-            return;
-        }
-        if (["client_generating", "succeeded"].includes(generateClientNotification.status)) {
-            getClients();
-        }
-    }, [generateClientNotification, getClients]);
-
-    // Refresh list of clients after certificate is revoked
-    const [revokeCertificateNotification] = useWSForisModule(ws, "openvpn", "revoke");
-    useEffect(() => {
-        if (!revokeCertificateNotification) {
-            return;
-        }
-        if (revokeCertificateNotification.id) {
-            getClients();
-        }
-    }, [revokeCertificateNotification, getClients]);
-
-    // Handle server address override form
-    const [formState, formChangeHandler, reloadForm] = useForm(serverAddressValidator);
-    const formData = formState.data;
-    const formErrors = formState.errors || {};
-    useEffect(() => {
-        reloadForm({ address: "" });
-    }, [reloadForm]);
-
-    let componentContent;
-    if (getClientsResponse.state === API_STATE.ERROR) {
-        componentContent = <p className="text-center text-danger">{_("An error occurred during loading OpenVPN clients")}</p>;
-    } else if (getClientsResponse.state === API_STATE.SUCCESS) {
-        componentContent = (
-            <>
-                <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded.") }} />
-                <ServerOverride
-                    address={formData.address}
-                    error={formErrors.address}
-                    handleChange={formChangeHandler}
-                />
-                <ClientTable
-                    clients={getClientsResponse.data}
-                    address={formErrors.address ? undefined : formData.address}
-                />
-            </>
-        );
-    } else {
-        componentContent = <Spinner className="text-center" />;
-    }
-
-    return (
-        <>
-            <h3>{_("Registered clients")}</h3>
-            {componentContent}
-        </>
-    );
-}
-
-function serverAddressValidator(formData) {
-    const error = validateIPv4Address(formData.address);
-    if (error) {
-        return { address: error };
-    }
-    return undefined;
-}
-
-ServerOverride.propTypes = {
-    address: PropTypes.string.isRequired,
-    error: PropTypes.string,
-    handleChange: PropTypes.func.isRequired,
-};
-
-function ServerOverride({ address, error, handleChange }) {
-    const [serverOverride, setServerOverride] = useState(false);
-
-    return (
-        <>
-            <CheckBox
-                label={_("Override server address")}
-                value={serverOverride}
-                onChange={(event) => setServerOverride(event.target.checked)}
+            <RegistrationWithErrorAndSpinner
+                apiState={authority.state}
+                ws={ws}
+                certificateAuthority={authority.data}
             />
-            {serverOverride && (
-                <TextInput
-                    label={_("Router's public IPv4 address")}
-                    value={address}
-                    error={error}
-                    onChange={handleChange((value) => ({ address: { $set: value } }))}
-                />
-            )}
+        </>
+    );
+}
+
+const RegistrationWithErrorAndSpinner = withErrorMessage(withSpinnerOnSending(Registration));
+
+Registration.propTypes = {
+    ws: PropTypes.object.isRequired,
+    certificateAuthority: PropTypes.object.isRequired,
+};
+
+function Registration({ ws, certificateAuthority }) {
+    if (certificateAuthority.status !== "ready") {
+        return <p>{_("You need to generate certificate authority in order to register clients.")}</p>;
+    }
+    return (
+        <>
+            <p>{_("You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.")}</p>
+            <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
+            <AddClientForm />
+            <Clients ws={ws} />
         </>
     );
 }

@@ -10,6 +10,7 @@ import {
     render, fireEvent, wait, getByText, getByLabelText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
 import AddSettingsForm from "../AddSettingsForm";
@@ -88,9 +89,7 @@ describe("<AddSettingsForm />", () => {
         fireEvent.click(submitButton);
 
         const errorMessage = "API didn't handle this well";
-        mockAxios.mockError(
-            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-        );
+        mockJSONError(errorMessage);
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });

@@ -11,6 +11,7 @@ import {
     queryByLabelText, fireEvent, act,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
 import { WebSockets } from "foris";
@@ -38,16 +39,16 @@ describe("<ClientRegistration />", () => {
     });
 
     it("should handle API error - authority", async () => {
-        mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
-        await wait(() => getByText(componentContainer, "An error occurred during loading certificate authority details"));
+        mockJSONError();
+        await wait(() => getByText(componentContainer, "An error occurred while fetching data."));
     });
 
     it("should handle API error - clients", async () => {
         // Response to GET authority
         mockAxios.mockResponse({ data: { status: "ready" } });
         await wait(() => getByText(componentContainer, "Client Registration"));
-        mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
-        await wait(() => getByText(componentContainer, "An error occurred during loading OpenVPN clients"));
+        mockJSONError();
+        await wait(() => getByText(componentContainer, "An error occurred while fetching data."));
     });
 
     it("should handle invalid CA", async () => {
@@ -188,9 +189,7 @@ describe("<ClientRegistration />", () => {
                 expect.anything(),
             );
             const errorMessage = "Something went wrong";
-            mockAxios.mockError(
-                { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-            );
+            mockJSONError(errorMessage);
             await wait(() => {
                 expect(mockSetAlert).toBeCalledWith(errorMessage)
             });

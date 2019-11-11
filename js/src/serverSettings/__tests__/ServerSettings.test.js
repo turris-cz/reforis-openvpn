@@ -10,6 +10,7 @@ import {
     render, waitForElement, fireEvent, wait, getByText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
 import { WebSockets } from "foris";
@@ -30,10 +31,8 @@ describe("<ServerSettings />", () => {
     });
 
     it("should handle API error", async () => {
-        mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
-        mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
-        await wait(() => expect(getByText(componentContainer, "An error occurred during loading certificate authority details")).toBeDefined());
-        expect(getByText(componentContainer, "An error occurred during loading OpenVPN server settings")).toBeDefined();
+        mockJSONError();
+        await wait(() => expect(getByText(componentContainer, "An error occurred while fetching data.")).toBeDefined());
     });
 
     it("should render child and set alert", async () => {
@@ -47,7 +46,7 @@ describe("<ServerSettings />", () => {
 
         fireEvent.click(getByText(componentContainer, "Delete CA"));
         expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
-        mockAxios.mockError({ response: { headers: { "content-type": "application/json" } } });
+        mockJSONError();
         await wait(() => {
             expect(mockSetAlert).toBeCalledWith("Cannot delete certificate authority");
         });

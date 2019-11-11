@@ -8,6 +8,7 @@
 import React from "react";
 import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from 'jest-mock-axios';
 
 import AuthorityMissing from "../AuthorityMissing";
@@ -32,7 +33,7 @@ describe("<AuthorityMissing />", () => {
 
     it("should handle error", async () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
-        mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
+        mockJSONError();
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
         });

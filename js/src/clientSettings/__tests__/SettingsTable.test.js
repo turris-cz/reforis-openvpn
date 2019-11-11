@@ -37,7 +37,7 @@ describe("<SettingsTable />", () => {
     it("should handle GET error", async () => {
         const { container } = render(<SettingsTable />);
         mockJSONError();
-        await waitForElement(() => getByText(container, "An error occurred during loading OpenVPN client settings"));
+        await waitForElement(() => getByText(container, "An error occurred while fetching data."));
     });
 
     it("should render info when there are no clients", async () => {

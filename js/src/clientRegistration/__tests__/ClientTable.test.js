@@ -8,6 +8,7 @@
 import React from "react";
 import { render, fireEvent, wait, getByText } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
 import ClientTable from "../ClientTable";
@@ -65,9 +66,7 @@ describe("<ClientTable />", () => {
         const container = renderTable(singleClient);
         fireEvent.click(getRevokeButton(container));
         const errorMessage = "API didn't handle this well";
-        mockAxios.mockError(
-            { response: { data: errorMessage, headers: { "content-type": "application/json" } } },
-        );
+        mockJSONError(errorMessage);
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });

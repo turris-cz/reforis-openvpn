@@ -9,6 +9,7 @@ import React from "react";
 import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
 import mockAxios from 'jest-mock-axios';
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 
 import AuthorityReady from "../AuthorityReady";
 
@@ -33,7 +34,7 @@ describe("<AuthorityReady />", () => {
 
     it("should handle error", async () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
-        mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
+        mockJSONError();
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith("Cannot delete certificate authority");
         });

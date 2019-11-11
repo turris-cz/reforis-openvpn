@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { useAPIGet, Spinner, API_STATE } from "foris";
+import { useAPIGet, withErrorMessage, withSpinnerOnSending } from "foris";
 
 import API_URLs from "API";
 import AuthorityStatus from "./AuthorityStatus";
@@ -29,38 +29,40 @@ export default function ServerSettings({ ws }) {
         getSettings();
     }, [getSettings]);
 
-    let componentContent;
-    const authorityData = authorityResponse.data;
-    const settingsData = settingsResponse.data;
-    if (authorityResponse.state === API_STATE.ERROR || settingsResponse.state === API_STATE.ERROR) {
-        componentContent = (
-            <>
-                {authorityResponse.state === API_STATE.ERROR && <p className="text-center text-danger">{_("An error occurred during loading certificate authority details")}</p>}
-                {settingsResponse.state === API_STATE.ERROR && <p className="text-center text-danger">{_("An error occurred during loading OpenVPN server settings")}</p>}
-            </>
-        );
-    } else if (
-        authorityResponse.state === API_STATE.SUCCESS
-        && settingsResponse.state === API_STATE.SUCCESS
-    ) {
-        componentContent = (
-            <AuthorityStatus
-                ws={ws}
-                status={authorityData.status}
-                serverEnabled={settingsData.enabled}
-                onReload={getAuthority}
-            >
-                <ServerSettingsForm settingsData={settingsData} />
-            </AuthorityStatus>
-        );
-    } else {
-        componentContent = <Spinner className="my-3 text-center" />;
-    }
-
     return (
         <>
             <h1>{_("Server Settings")}</h1>
-            {componentContent}
+            <SettingsWithErrorAndSpinner
+                apiState={[authorityResponse.state, settingsResponse.state]}
+                ws={ws}
+                authorityData={authorityResponse.data}
+                settingsData={settingsResponse.data}
+                onReload={getAuthority}
+            />
         </>
+    );
+}
+
+const SettingsWithErrorAndSpinner = withErrorMessage(withSpinnerOnSending(Settings));
+
+Settings.propTypes = {
+    ws: PropTypes.object.isRequired,
+    authorityData: PropTypes.object.isRequired,
+    settingsData: PropTypes.object.isRequired,
+    onReload: PropTypes.func.isRequired,
+};
+
+function Settings({
+    ws, authorityData, settingsData, onReload,
+}) {
+    return (
+        <AuthorityStatus
+            ws={ws}
+            status={authorityData.status}
+            serverEnabled={settingsData.enabled}
+            onReload={onReload}
+        >
+            <ServerSettingsForm settingsData={settingsData} />
+        </AuthorityStatus>
     );
 }

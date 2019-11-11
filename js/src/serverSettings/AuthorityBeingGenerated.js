@@ -26,7 +26,7 @@ export default function AuthorityBeingGenerated({ ws, onReload }) {
     return (
         <>
             <h3>{_("Generating certification authority")}</h3>
-            <Spinner className="my-3 text-center" />
+            <Spinner />
             <p>{_("Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready.")}</p>
         </>
     );

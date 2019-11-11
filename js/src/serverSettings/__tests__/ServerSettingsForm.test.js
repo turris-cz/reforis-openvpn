@@ -8,6 +8,7 @@
 import React from "react";
 import { render, wait, fireEvent, getByLabelText, getByText } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
+import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from 'jest-mock-axios';
 
 import ServerSettingsForm from "../ServerSettingsForm";
@@ -97,7 +98,7 @@ describe("<ServerSettingsForm />", () => {
     it("should handle API error", async () => {
         const { container } = render(<ServerSettingsForm settingsData={disabledFormData} />);
         submitForm(container);
-        mockAxios.mockError({response: {headers: {"content-type": "application/json"}}});
+        mockJSONError();
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith("Cannot save server settings");
         });

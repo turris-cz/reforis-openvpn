@@ -10,42 +10,47 @@ import PropTypes from "prop-types";
 import { useUID } from "react-uid";
 
 import {
-    useAPIGet, useAPIPut, useAPIDelete, Spinner, formFieldsSize, useAlert, Button,
-    SpinnerElement, API_STATE,
+    useAPIGet, useAPIDelete, formFieldsSize, useAlert, Button, SpinnerElement,
+    API_STATE, withErrorMessage, withSpinnerOnSending, useAPIPut,
 } from "foris";
 
 import API_URLs from "API";
 
 export default function SettingsTable() {
     const [getSettingsResponse, getSettings] = useAPIGet(API_URLs.clientSettings);
-    const settingsData = getSettingsResponse.data;
     useEffect(() => {
         getSettings();
     }, [getSettings]);
-
-    let componentContent;
-    if ([API_STATE.INIT, API_STATE.SENDING].includes(getSettingsResponse.state)) {
-        componentContent = <Spinner className="my-3 text-center" />;
-    } else if (getSettingsResponse.state === API_STATE.ERROR) {
-        componentContent = <p className="text-center text-danger">{_("An error occurred during loading OpenVPN client settings")}</p>;
-    } else if (!settingsData || settingsData.length === 0) {
-        componentContent = <p className="text-muted text-center">{_("There are no settings added yet.")}</p>;
-    } else {
-        componentContent = (
-            <table className={`table table-hover mt-3 ${formFieldsSize}`}>
-                <tbody>
-                    {settingsData.map((client) => <ClientRow key={client.id} client={client} />)}
-                </tbody>
-            </table>
-        );
-    }
 
     return (
         <>
             <h3>{_("Available settings")}</h3>
             <p>{_("For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.")}</p>
-            {componentContent}
+            <ClientTableWithErrorAndSpinner
+                apiState={getSettingsResponse.state}
+                settingsData={getSettingsResponse.data}
+            />
         </>
+    );
+}
+
+const ClientTableWithErrorAndSpinner = withErrorMessage(withSpinnerOnSending(ClientTable));
+
+ClientTable.propTypes = {
+    settingsData: PropTypes.array.isRequired,
+};
+
+function ClientTable({ settingsData }) {
+    if (!settingsData || settingsData.length === 0) {
+        return <p className="text-muted text-center">{_("There are no settings added yet.")}</p>;
+    }
+
+    return (
+        <table className={`table table-hover mt-3 ${formFieldsSize}`}>
+            <tbody>
+                {settingsData.map((client) => <ClientRow key={client.id} client={client} />)}
+            </tbody>
+        </table>
     );
 }
 

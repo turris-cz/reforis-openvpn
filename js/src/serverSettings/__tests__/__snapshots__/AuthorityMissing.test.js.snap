@@ -9,7 +9,7 @@ exports[`<AuthorityMissing /> should match snapshot 1`] = `
     Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.
   </p>
   <button
-    class="btn btn-primary "
+    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
     type="button"
   >
      

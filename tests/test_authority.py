@@ -33,14 +33,14 @@ def test_delete_authority(app):
     assert response.data == b''
 
 
-def test_delete_authority_backend_error(app):
+def test_delete_authority_error_no_result(app):
     with get_mocked_openvpn_client(app, {}) as client:
         response = client.delete('/openvpn/api/authority')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot delete certificate authority'
 
 
-def test_delete_authority_backend_error(app):
+def test_delete_authority_error_bad_result(app):
     with get_mocked_openvpn_client(app, {'result': 1234}) as client:
         response = client.delete('/openvpn/api/authority')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR

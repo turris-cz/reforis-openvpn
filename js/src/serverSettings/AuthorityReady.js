@@ -39,7 +39,13 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
                 : (
                     <>
                         <p>{_("Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.")}</p>
-                        <Button onClick={() => deleteCA()} forisFormSize>{_("Delete CA")}</Button>
+                        <Button
+                            onClick={() => deleteCA()}
+                            forisFormSize
+                            loading={deleteResponse.state === API_STATE.SENDING}
+                        >
+                            {_("Delete CA")}
+                        </Button>
                     </>
                 )}
         </>

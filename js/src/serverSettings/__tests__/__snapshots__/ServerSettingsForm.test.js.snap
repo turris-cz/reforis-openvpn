@@ -69,12 +69,12 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
           for="3"
         >
           Listen on IPv6
+          <small
+            class="form-text text-muted"
+          >
+            Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
+          </small>
         </label>
-        <small
-          class="form-text text-muted"
-        >
-          Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
-        </small>
       </div>
     </div>
     <div
@@ -186,12 +186,12 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
           for="8"
         >
           Route all traffic via VPN
+          <small
+            class="form-text text-muted"
+          >
+            Clients will access the Internet via VPN
+          </small>
         </label>
-        <small
-          class="form-text text-muted"
-        >
-          Clients will access the Internet via VPN
-        </small>
       </div>
     </div>
     <div
@@ -211,12 +211,12 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
           for="9"
         >
           Use DNS via VPN
+          <small
+            class="form-text text-muted"
+          >
+            Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
+          </small>
         </label>
-        <small
-          class="form-text text-muted"
-        >
-          Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
-        </small>
       </div>
     </div>
     <button

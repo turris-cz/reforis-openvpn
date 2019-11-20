@@ -34,7 +34,13 @@ export default function AuthorityMissing({ onReload }) {
         <>
             <h3>{_("No certification authority")}</h3>
             <p>{_("Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.")}</p>
-            <Button onClick={() => createCA()} forisFormSize>{_("Generate CA")}</Button>
+            <Button
+                onClick={() => createCA()}
+                forisFormSize
+                loading={createResponse.state === API_STATE.SENDING}
+            >
+                {_("Generate CA")}
+            </Button>
         </>
     );
 }

@@ -54,8 +54,8 @@ export default function ServerSettingsForm({ settingsData }) {
         }
     }
 
-    const saveButtonDisabled = (undefinedIfEmpty(formErrors)
-        || putSettingsResponse.state === API_STATE.SENDING);
+    const isSending = putSettingsResponse.state === API_STATE.SENDING;
+    const saveButtonDisabled = !!undefinedIfEmpty(formErrors) || isSending;
     return (
         <>
             <h3 className="mb-3">{_("Server settings")}</h3>
@@ -114,8 +114,13 @@ export default function ServerSettingsForm({ settingsData }) {
                         />
                     </>
                 )}
-                <Button type="submit" forisFormSize disabled={saveButtonDisabled}>
-                    Save
+                <Button
+                    type="submit"
+                    forisFormSize
+                    disabled={saveButtonDisabled}
+                    loading={isSending}
+                >
+                    {_("Save")}
                 </Button>
             </form>
             <p dangerouslySetInnerHTML={{ __html: _("<strong>Advanced users:</strong> if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.") }} />

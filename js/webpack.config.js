@@ -12,7 +12,7 @@ module.exports = () => ({
     entry: "./src/app.js",
     output: {
         filename: "app.min.js",
-        path: path.join(__dirname, "../reforis_static/reforis_openvpn/"),
+        path: path.join(__dirname, "../reforis_static/reforis_openvpn/js/"),
     },
     resolve: {
         modules: [

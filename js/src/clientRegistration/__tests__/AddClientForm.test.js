@@ -24,9 +24,12 @@ function getFormElements(componentContainer) {
 
 describe("<AddClientForm />", () => {
     let componentContainer;
+    const setGenerating = jest.fn();
 
     beforeEach(() => {
-        const { container } = render(<AddClientForm />);
+        const { container } = render(
+            <AddClientForm generating={false} setGenerating={setGenerating} />
+        );
         componentContainer = container;
     });
 
@@ -67,6 +70,7 @@ describe("<AddClientForm />", () => {
             { name: "propername" },
             expect.anything(),
         );
+        expect(setGenerating).toBeCalledWith(true);
     });
 
     it("should handle API error", async () => {
@@ -74,11 +78,13 @@ describe("<AddClientForm />", () => {
 
         fireEvent.change(nameInput, { target: { value: "propername" } });
         fireEvent.click(submitButton);
+        expect(setGenerating).toBeCalledWith(true);
 
         const errorMessage = "API didn't handle this well";
         mockJSONError(errorMessage);
         await wait(() => {
             expect(mockSetAlert).toHaveBeenCalledWith(errorMessage);
         });
+        expect(setGenerating).toBeCalledWith(false);
     });
 });

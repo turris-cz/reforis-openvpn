@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import {
     TextInput, CheckBox, useAPIGet, useForm, useWSForisModule, validateIPv4Address,
-    withErrorMessage, withSpinnerOnSending,
+    withErrorMessage, withSpinnerOnSending, API_STATE,
 } from "foris";
 
 import API_URLs from "API";
@@ -18,13 +18,22 @@ import ClientTable from "./ClientTable";
 
 Clients.propTypes = {
     ws: PropTypes.object.isRequired,
+    setGenerating: PropTypes.func.isRequired,
 };
 
-export default function Clients({ ws }) {
+export default function Clients({ ws, setGenerating }) {
     const [getClientsResponse, getClients] = useAPIGet(API_URLs.clients);
     useEffect(() => {
         getClients();
     }, [getClients]);
+
+    const [clients, setClients] = useState([]);
+    // Update list of clients when GET request is successful
+    useEffect(() => {
+        if (getClientsResponse.state === API_STATE.SUCCESS) {
+            setClients(getClientsResponse.data);
+        }
+    }, [getClientsResponse]);
 
     // Refresh list of clients when certificate is being generated
     const [generateClientNotification] = useWSForisModule(ws, "openvpn", "generate_client");
@@ -34,8 +43,11 @@ export default function Clients({ ws }) {
         }
         if (["client_generating", "succeeded"].includes(generateClientNotification.status)) {
             getClients();
+            if (generateClientNotification.status === "succeeded") {
+                setGenerating(false);
+            }
         }
-    }, [generateClientNotification, getClients]);
+    }, [generateClientNotification, getClients, setGenerating]);
 
     // Refresh list of clients after certificate is revoked
     const [revokeCertificateNotification] = useWSForisModule(ws, "openvpn", "revoke");
@@ -44,16 +56,23 @@ export default function Clients({ ws }) {
             return;
         }
         if (revokeCertificateNotification.id) {
-            getClients();
+            setClients((clientsList) => {
+                const clientsAfterRevoke = [...clientsList];
+                const revokedClientIdx = clientsAfterRevoke.findIndex(
+                    (client) => client.id === revokeCertificateNotification.id,
+                );
+                clientsAfterRevoke[revokedClientIdx].status = "revoked";
+                return clientsAfterRevoke;
+            });
         }
-    }, [revokeCertificateNotification, getClients]);
+    }, [revokeCertificateNotification]);
 
     return (
         <>
-            <h3>{_("Registered clients")}</h3>
+            <h3>{_("Client configurations")}</h3>
             <ConfigurationsWithErrorAndSpinner
                 apiState={getClientsResponse.state}
-                clients={getClientsResponse.data}
+                clients={clients}
             />
         </>
     );

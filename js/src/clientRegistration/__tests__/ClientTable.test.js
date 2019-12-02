@@ -17,12 +17,14 @@ describe("<ClientTable />", () => {
     const singleClient = [{ id: "A1", name: "First", status: "valid" }];
 
     function renderTable(clients = [], address = "") {
-        const { container } = render(<ClientTable clients={clients} address={address} />);
+        const { container } = render(
+            <ClientTable clients={clients} address={address} />
+        );
         return container;
     }
 
     function getRevokeButton(container) {
-        return getByText(container, "Revoke access");
+        return getByText(container, "Revoke");
     }
 
     it("should render info when there are no clients", () => {
@@ -44,7 +46,8 @@ describe("<ClientTable />", () => {
     it("should disable download on invalid address", () => {
         const clients = [{ id: "A1", name: "First", status: "valid" }];
         const container = renderTable(clients, null);
-        expect(getByText(container, "Download configuration").disabled).toBeTruthy();
+        const downloadButton = getByText(container, "Download");
+        expect(downloadButton.classList.contains("disabled")).toBe(true);
     });
 
     it("should display spinner on delete request", () => {
@@ -62,7 +65,7 @@ describe("<ClientTable />", () => {
         );
     });
 
-    it("should handle api error", async () => {
+    it("should handle revoke api error", async () => {
         const container = renderTable(singleClient);
         fireEvent.click(getRevokeButton(container));
         const errorMessage = "API didn't handle this well";

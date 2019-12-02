@@ -55,7 +55,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
     </button>
   </form>
   <h3>
-    Registered clients
+    Client configurations
   </h3>
   <p>
     Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is 
@@ -95,11 +95,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           Client name
         </th>
         <th
-          aria-label="Download"
-          scope="col"
-        />
-        <th
-          aria-label="Revoke access"
+          aria-label="Actions"
           scope="col"
         />
       </tr>
@@ -112,25 +108,28 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           First
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
-          <a
-            class="btn btn-primary"
-            download=""
-            href="/reforis/openvpn/api/clients/A1?address="
+          <div
+            class="btn-group"
+            role="group"
           >
-            Download configuration
-          </a>
-        </td>
-        <td
-          class="text-right"
-        >
-          <button
-            class="btn btn-danger"
-            type="button"
-          >
-            Revoke access
-          </button>
+            <a
+              class="btn btn-primary btn-sm"
+              download=""
+              href="/reforis/openvpn/api/clients/A1?address="
+            >
+              Download
+            </a>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+            >
+               
+               
+              Revoke
+            </button>
+          </div>
         </td>
       </tr>
       <tr>
@@ -140,7 +139,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           Second
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
           <div
             class="spinner-border "
@@ -154,9 +153,6 @@ exports[`<ClientRegistration /> should display clients 1`] = `
             class="spinner-text"
           />
         </td>
-        <td
-          class="text-right"
-        />
       </tr>
       <tr>
         <td
@@ -165,25 +161,28 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           Third
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
-          <a
-            class="btn btn-primary"
-            download=""
-            href="/reforis/openvpn/api/clients/B1?address="
+          <div
+            class="btn-group"
+            role="group"
           >
-            Download configuration
-          </a>
-        </td>
-        <td
-          class="text-right"
-        >
-          <button
-            class="btn btn-danger"
-            type="button"
-          >
-            Revoke access
-          </button>
+            <a
+              class="btn btn-primary btn-sm"
+              download=""
+              href="/reforis/openvpn/api/clients/B1?address="
+            >
+              Download
+            </a>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+            >
+               
+               
+              Revoke
+            </button>
+          </div>
         </td>
       </tr>
       <tr>
@@ -193,15 +192,12 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           Last
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
           <span>
             Access revoked
           </span>
         </td>
-        <td
-          class="text-right"
-        />
       </tr>
     </tbody>
   </table>

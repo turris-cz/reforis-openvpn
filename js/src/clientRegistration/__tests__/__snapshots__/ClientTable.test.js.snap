@@ -13,11 +13,7 @@ exports[`<ClientTable /> should display spinner on delete request 1`] = `
           Client name
         </th>
         <th
-          aria-label="Download"
-          scope="col"
-        />
-        <th
-          aria-label="Revoke access"
+          aria-label="Actions"
           scope="col"
         />
       </tr>
@@ -30,7 +26,7 @@ exports[`<ClientTable /> should display spinner on delete request 1`] = `
           First
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
           <div
             class="spinner-border "
@@ -44,9 +40,6 @@ exports[`<ClientTable /> should display spinner on delete request 1`] = `
             class="spinner-text"
           />
         </td>
-        <td
-          class="text-right"
-        />
       </tr>
     </tbody>
   </table>
@@ -76,11 +69,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           Client name
         </th>
         <th
-          aria-label="Download"
-          scope="col"
-        />
-        <th
-          aria-label="Revoke access"
+          aria-label="Actions"
           scope="col"
         />
       </tr>
@@ -93,25 +82,28 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           First
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
-          <a
-            class="btn btn-primary"
-            download=""
-            href="/reforis/openvpn/api/clients/A1?address="
+          <div
+            class="btn-group"
+            role="group"
           >
-            Download configuration
-          </a>
-        </td>
-        <td
-          class="text-right"
-        >
-          <button
-            class="btn btn-danger"
-            type="button"
-          >
-            Revoke access
-          </button>
+            <a
+              class="btn btn-primary btn-sm"
+              download=""
+              href="/reforis/openvpn/api/clients/A1?address="
+            >
+              Download
+            </a>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+            >
+               
+               
+              Revoke
+            </button>
+          </div>
         </td>
       </tr>
       <tr>
@@ -121,7 +113,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           Second
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
           <div
             class="spinner-border "
@@ -135,9 +127,6 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             class="spinner-text"
           />
         </td>
-        <td
-          class="text-right"
-        />
       </tr>
       <tr>
         <td
@@ -146,25 +135,28 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           Third
         </td>
         <td
-          class="text-center align-middle"
+          class="text-center"
         >
-          <a
-            class="btn btn-primary"
-            download=""
-            href="/reforis/openvpn/api/clients/B1?address="
+          <div
+            class="btn-group"
+            role="group"
           >
-            Download configuration
-          </a>
-        </td>
-        <td
-          class="text-right"
-        >
-          <button
-            class="btn btn-danger"
-            type="button"
-          >
-            Revoke access
-          </button>
+            <a
+              class="btn btn-primary btn-sm"
+              download=""
+              href="/reforis/openvpn/api/clients/B1?address="
+            >
+              Download
+            </a>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+            >
+               
+               
+              Revoke
+            </button>
+          </div>
         </td>
       </tr>
       <tr>
@@ -174,11 +166,29 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           Last
         </td>
         <td
-          class="text-center align-middle"
-        />
-        <td
-          class="text-right"
-        />
+          class="text-center"
+        >
+          <div
+            class="btn-group"
+            role="group"
+          >
+            <a
+              class="btn btn-primary btn-sm"
+              download=""
+              href="/reforis/openvpn/api/clients/B2?address="
+            >
+              Download
+            </a>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+            >
+               
+               
+              Revoke
+            </button>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

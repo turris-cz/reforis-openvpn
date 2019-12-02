@@ -5,7 +5,7 @@
  * See /LICENSE for more information.
  */
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import { useAPIGet, withErrorMessage, withSpinnerOnSending } from "foris";
@@ -44,6 +44,8 @@ Registration.propTypes = {
 };
 
 function Registration({ ws, certificateAuthority }) {
+    const [generating, setGenerating] = useState(false);
+
     if (certificateAuthority.status !== "ready") {
         return <p>{_("You need to generate certificate authority in order to register clients.")}</p>;
     }
@@ -51,8 +53,8 @@ function Registration({ ws, certificateAuthority }) {
         <>
             <p>{_("You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.")}</p>
             <p>{_("To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.")}</p>
-            <AddClientForm />
-            <Clients ws={ws} />
+            <AddClientForm generating={generating} setGenerating={setGenerating} />
+            <Clients ws={ws} setGenerating={setGenerating} />
         </>
     );
 }

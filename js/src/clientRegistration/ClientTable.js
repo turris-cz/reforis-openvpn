@@ -9,10 +9,11 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, DownloadButton, API_STATE,
+    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, API_STATE, Button, withEither,
 } from "foris";
 
 import API_URLs from "API";
+import { DownloadButton } from "foris/bootstrap/DownloadButton";
 
 const clientShape = PropTypes.shape({
     id: PropTypes.string.isRequired,
@@ -47,8 +48,7 @@ export default function ClientTable({ clients, address }) {
             <thead>
                 <tr>
                     <th scope="col">{_("Client name")}</th>
-                    <th scope="col" aria-label={_("Download")} />
-                    <th scope="col" aria-label={_("Revoke access")} />
+                    <th scope="col" aria-label={_("Actions")} />
                 </tr>
             </thead>
             <tbody>
@@ -73,32 +73,61 @@ function ClientRow({ client, address }) {
         }
     }, [deleteClientResponse, setAlert]);
 
-    let componentContent;
-    if (deleteClientResponse.state === API_STATE.SENDING || client.status === "generating") {
-        componentContent = <SpinnerElement />;
-    } else if (client.status === "valid") {
-        if (typeof address === "string") {
-            componentContent = (
-                <DownloadButton href={`${API_URLs.clients}/${client.id}?address=${address}`}>
-                    {_("Download configuration")}
-                </DownloadButton>
-            );
-        } else {
-            // Passed address is invalid
-            componentContent = <button type="button" className="btn btn-primary" disabled>{_("Download configuration")}</button>;
-        }
-    } else if (client.status === "revoked") {
-        componentContent = <span>{_("Access revoked")}</span>;
-    }
-
     return (
         <tr>
             <td className="align-middle">{client.name}</td>
-            <td className="text-center align-middle">{componentContent}</td>
-            <td className="text-right">
-                {deleteClientResponse.state !== API_STATE.SENDING && client.status === "valid"
-                    && <button type="button" className="btn btn-danger" onClick={deleteClient}>{_("Revoke access")}</button>}
+            <td className="text-center">
+                <ActionsWithGeneratingAndRevoked
+                    apiState={deleteClientResponse.state}
+                    client={client}
+                    address={address}
+                    onRevoke={deleteClient}
+                />
             </td>
         </tr>
+    );
+}
+
+const withGenerating = withEither(
+    (props) => props.apiState === API_STATE.SENDING || props.client.status === "generating",
+    SpinnerElement,
+);
+const withRevoked = withEither(
+    (props) => props.client.status === "revoked",
+    () => <span>{_("Access revoked")}</span>,
+);
+const ActionsWithGeneratingAndRevoked = withGenerating(withRevoked(Actions));
+
+Actions.propTypes = {
+    client: clientShape.isRequired,
+    address: PropTypes.string,
+    onRevoke: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+};
+
+Actions.defaultProps = {
+    disabled: false,
+};
+
+function Actions({
+    client, address, onRevoke, disabled,
+}) {
+    const downloadDisabled = disabled || typeof address !== "string";
+    return (
+        <div className="btn-group" role="group">
+            <DownloadButton
+                href={`${API_URLs.clients}/${client.id}?address=${address}`}
+                className={`btn-primary btn-sm ${downloadDisabled ? "disabled" : ""}`.trim()}
+            >
+                {_("Download")}
+            </DownloadButton>
+            <Button
+                onClick={onRevoke}
+                className="btn-danger btn-sm"
+                disabled={disabled}
+            >
+                {_("Revoke")}
+            </Button>
+        </div>
     );
 }

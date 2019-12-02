@@ -72,10 +72,14 @@ describe("<ClientRegistration />", () => {
     });
 
     describe("with mocked clients and authority initial requests", () => {
+        function getAddButton() {
+            return getByText(componentContainer, "Add");
+        }
+
         function submitClientForm(name) {
             const clientNameInput = getByLabelText(componentContainer, "Client name");
             fireEvent.change(clientNameInput, { target: { value: name } });
-            const addButton = getByText(componentContainer, "Add");
+            const addButton = getAddButton();
             fireEvent.click(addButton);
         }
 
@@ -98,17 +102,17 @@ describe("<ClientRegistration />", () => {
         });
 
         it("should validate server address override", async () => {
-            const getFirstDownload = () => getAllByText(componentContainer, "Download configuration")[0];
+            const getFirstDownload = () => getAllByText(componentContainer, "Download")[0];
 
             enableOverride();
             const addressInput = getByLabelText(componentContainer, "Router's public IPv4 address");
-            // Since "a" element is replaced with "button" we have to query for "Download configuration" anew
+            // Since "a" element is replaced with "button" we have to query for "Download" anew
             expect(getFirstDownload().href).toBe(
                 `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=`,
             );
             // Test invalid value
             fireEvent.change(addressInput, { target: { value: "999.888.999.888" } });
-            expect(getFirstDownload().disabled).toBeTruthy();
+            expect(getFirstDownload().classList.contains("disabled")).toBe(true);
             // Test valid value
             const address = "9.8.9.8";
             fireEvent.change(addressInput, { target: { value: address } });
@@ -119,10 +123,11 @@ describe("<ClientRegistration />", () => {
 
         it("should add new client to the table", async () => {
             const getSpinnersNumber = () => getAllByRole(componentContainer, "status").length;
-            const getDownloadsNumber = () => getAllByText(componentContainer, "Download configuration").length;
+            const getDownloadsNumber = () => getAllByText(componentContainer, "Download").length;
 
             const name = "user";
             submitClientForm(name);
+            expect(getAddButton().disabled).toBe(true);
             // Handle request
             expect(mockAxios.post).toBeCalledWith(
                 "/reforis/openvpn/api/clients",
@@ -161,27 +166,24 @@ describe("<ClientRegistration />", () => {
             expect(getSpinnersNumber()).toBe(spinners);
             // Download is available
             expect(getDownloadsNumber()).toBe(downloads + 1);
+            // Add button is enabled again
+            expect(getAddButton().disabled).toBe(false);
         });
 
-        it("should reload clients when one is revoked", async () => {
+        it("should update clients table when one is revoked", async () => {
             const getRevokedNumber = () => getAllByText(componentContainer, "Access revoked").length;
-
             const revoked = getRevokedNumber();
             // Client is revoked
             act(() => webSockets.dispatch(
                 { module: "openvpn", action: "revoke", data: { id: clients[0].id } },
             ));
-            expect(mockAxios.get).toHaveBeenNthCalledWith(3, "/reforis/openvpn/api/clients", expect.anything());
-            const updatedClients = [...clients];
-            updatedClients[0].status = "revoked";
-            mockAxios.mockResponse({ data: updatedClients });
-            await wait(() => getByText(componentContainer, "First"));
             expect(getRevokedNumber()).toBe(revoked + 1);
         });
 
         it("should render alerts", async () => {
             const name = "user";
             submitClientForm(name);
+            expect(getAddButton().disabled).toBe(true);
             // Handle request
             expect(mockAxios.post).toBeCalledWith(
                 "/reforis/openvpn/api/clients",
@@ -193,6 +195,7 @@ describe("<ClientRegistration />", () => {
             await wait(() => {
                 expect(mockSetAlert).toBeCalledWith(errorMessage)
             });
+            expect(getAddButton().disabled).toBe(false);
         });
     });
 });

@@ -6,6 +6,7 @@
  */
 
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 
 import {
     TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty, API_STATE,
@@ -13,15 +14,21 @@ import {
 
 import API_URLs from "API";
 
-export default function AddClientForm() {
+AddClientForm.propTypes = {
+    generating: PropTypes.bool.isRequired,
+    setGenerating: PropTypes.func.isRequired,
+};
+
+export default function AddClientForm({ generating, setGenerating }) {
     const [setAlert] = useAlert();
 
     const [postClientsResponse, postClients] = useAPIPost(API_URLs.clients);
     useEffect(() => {
         if (postClientsResponse.state === API_STATE.ERROR) {
             setAlert(postClientsResponse.data);
+            setGenerating(false);
         }
-    }, [postClientsResponse, setAlert]);
+    }, [postClientsResponse, setAlert, setGenerating]);
 
     const [formState, formChangeHandler, reloadForm] = useForm(addClientFormValidator);
     const formData = formState.data;
@@ -33,6 +40,7 @@ export default function AddClientForm() {
     function handleSubmit(event) {
         event.preventDefault();
         postClients(formData);
+        setGenerating(true);
     }
 
     if (!formData) {
@@ -40,7 +48,7 @@ export default function AddClientForm() {
     }
 
     const addButtonDisabled = (undefinedIfEmpty(formErrors)
-        || postClientsResponse.state === API_STATE.SENDING);
+        || generating);
     return (
         <>
             <h3>{_("Add new client")}</h3>
@@ -53,7 +61,7 @@ export default function AddClientForm() {
                     onChange={formChangeHandler((value) => ({ name: { $set: value } }))}
                 />
                 <Button type="submit" forisFormSize disabled={addButtonDisabled}>
-                    Add
+                    {_("Add")}
                 </Button>
             </form>
         </>

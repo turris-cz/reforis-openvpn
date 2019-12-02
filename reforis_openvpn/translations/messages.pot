@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-11-20 15:32+0100\n"
+"POT-Creation-Date: 2019-12-02 11:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,30 +21,34 @@ msgstr ""
 msgid "OpenVPN"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:46
+#: js/src/clientRegistration/AddClientForm.js:54
 msgid "Add new client"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:49
-#: js/src/clientRegistration/ClientTable.js:49
+#: js/src/clientRegistration/AddClientForm.js:57
+#: js/src/clientRegistration/ClientTable.js:50
 msgid "Client name"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:50
+#: js/src/clientRegistration/AddClientForm.js:58
 msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:66
+#: js/src/clientRegistration/AddClientForm.js:64
+msgid "Add"
+msgstr ""
+
+#: js/src/clientRegistration/AddClientForm.js:74
 msgid "Name cannot be empty"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:69
+#: js/src/clientRegistration/AddClientForm.js:77
 msgid "Name is too long"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:72
+#: js/src/clientRegistration/AddClientForm.js:80
 msgid "Name contains invalid characters"
 msgstr ""
 
@@ -52,50 +56,48 @@ msgstr ""
 msgid "Client Registration"
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:48
+#: js/src/clientRegistration/ClientRegistration.js:50
 msgid "You need to generate certificate authority in order to register clients."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:52
+#: js/src/clientRegistration/ClientRegistration.js:54
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:53
+#: js/src/clientRegistration/ClientRegistration.js:55
 msgid ""
 "To apply the client configuration you need to download it and put it into"
 " the OpenVPN configuration directory or alternatively open it using your "
 "OpenVPN client. You might need to restart your client afterwards."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:34
+#: js/src/clientRegistration/ClientTable.js:35
 msgid "There are no clients registered."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:50
-msgid "Download"
-msgstr ""
-
 #: js/src/clientRegistration/ClientTable.js:51
-#: js/src/clientRegistration/ClientTable.js:100
-msgid "Revoke access"
+msgid "Actions"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:83
-#: js/src/clientRegistration/ClientTable.js:88
-msgid "Download configuration"
-msgstr ""
-
-#: js/src/clientRegistration/ClientTable.js:91
+#: js/src/clientRegistration/ClientTable.js:97
 msgid "Access revoked"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:53
-msgid "Registered clients"
+#: js/src/clientRegistration/ClientTable.js:122
+msgid "Download"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:83
+#: js/src/clientRegistration/ClientTable.js:129
+msgid "Revoke"
+msgstr ""
+
+#: js/src/clientRegistration/Clients.js:72
+msgid "Client configurations"
+msgstr ""
+
+#: js/src/clientRegistration/Clients.js:102
 msgid ""
 "Be sure to check if server's IP address provided in configuration file "
 "actually matches the public IP address of your router. You can set this "
@@ -104,11 +106,11 @@ msgid ""
 "configuration being currently downloaded."
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:117
+#: js/src/clientRegistration/Clients.js:136
 msgid "Override server address"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:123
+#: js/src/clientRegistration/Clients.js:142
 msgid "Router's public IPv4 address"
 msgstr ""
 

@@ -1,33 +1,31 @@
 from http import HTTPStatus
 
-from .utils import get_mocked_openvpn_client
+from reforis.test_utils import mock_backend_response
 
 
-def test_get_server_settings(app):
-    backend_response = {'key': 'value'}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.get('/openvpn/api/server-settings')
+@mock_backend_response({'openvpn': {'get_settings': {'key': 'value'}}})
+def test_get_server_settings(client):
+    response = client.get('/openvpn/api/server-settings')
     assert response.status_code == HTTPStatus.OK
-    assert response.json == backend_response
+    assert response.json == {'key': 'value'}
 
 
-def test_put_server_settings(app):
-    backend_response = {'result': True}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.put('/openvpn/api/server-settings', json={'foo': 'bar'})
+@mock_backend_response({'openvpn': {'update_settings': {'result': True}}})
+def test_put_server_settings(client):
+    response = client.put('/openvpn/api/server-settings', json={'foo': 'bar'})
     assert response.status_code == HTTPStatus.OK
-    assert response.json == backend_response
+    assert response.json == {'result': True}
 
 
-def test_put_server_settings_invalid_json(app):
-    with get_mocked_openvpn_client(app, {}) as client:
-        response = client.put('/openvpn/api/server-settings')
+@mock_backend_response({'openvpn': {'update_settings': {}}})
+def test_put_server_settings_invalid_json(client):
+    response = client.put('/openvpn/api/server-settings')
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Invalid JSON'
 
 
-def test_put_server_settings_backend_error(app):
-    with get_mocked_openvpn_client(app, {'result': False}) as client:
-        response = client.put('/openvpn/api/server-settings', json={'foo': 'bar'})
+@mock_backend_response({'openvpn': {'update_settings': {'result': False}}})
+def test_put_server_settings_backend_error(client):
+    response = client.put('/openvpn/api/server-settings', json={'foo': 'bar'})
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot change OpenVPN server settings'

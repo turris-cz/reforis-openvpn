@@ -1,152 +1,148 @@
+#  Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+#
+#  This is free software, licensed under the GNU General Public License v3.
+#  See /LICENSE for more information.
+
 from http import HTTPStatus
 from io import BytesIO
 
-from .utils import get_mocked_openvpn_client
+from reforis.test_utils import mock_backend_response
 
 
-def test_get_client_settings_list(app):
-    backend_response = {'clients': []}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.get('/openvpn/api/client-settings')
+@mock_backend_response({'openvpn_client': {'list': {'clients': []}}})
+def test_get_client_settings_list(client):
+    response = client.get('/openvpn/api/client-settings')
     assert response.status_code == HTTPStatus.OK
-    assert response.json == backend_response['clients']
+    assert response.json == []
 
 
-def test_get_client_settings(app):
-    backend_response = {'clients': [{'id': 'foobar'}]}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.get('/openvpn/api/client-settings/foobar')
+@mock_backend_response({'openvpn_client': {'list': {'clients': [{'id': 'foobar'}]}}})
+def test_get_client_settings(client):
+    response = client.get('/openvpn/api/client-settings/foobar')
     assert response.status_code == HTTPStatus.OK
-    assert response.json == backend_response['clients'][0]
+    assert response.json == {'id': 'foobar'}
 
 
-def test_get_client_settings_not_found(app):
-    backend_response = {'clients': [{'id': 'barfoo'}]}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.get('/openvpn/api/client-settings/foobar')
+@mock_backend_response({'openvpn_client': {'list': {'clients': [{'id': 'barfoo'}]}}})
+def test_get_client_settings_not_found(client):
+    response = client.get('/openvpn/api/client-settings/foobar')
     assert response.status_code == HTTPStatus.NOT_FOUND
     assert response.json == 'Requested settings do not exist'
 
 
-def test_post_client_settings(app):
-    backend_response = {
-        'openvpn_client': {
-            'list': {'clients': []},
-            'add': {'result': True}
-        }
+@mock_backend_response({
+    'openvpn_client': {
+        'list': {'clients': []},
+        'add': {'result': True},
     }
-    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
-        response = client.post(
-            '/openvpn/api/client-settings',
-            data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
-            content_type='multipart/form-data'
-        )
+})
+def test_post_client_settings(client):
+    response = client.post(
+        '/openvpn/api/client-settings',
+        data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
+        content_type='multipart/form-data'
+    )
     assert response.status_code == HTTPStatus.CREATED
-    assert response.json == backend_response['openvpn_client']['add']
+    assert response.json == {'result': True}
 
 
-def test_post_client_settings_backend_error(app):
-    backend_response = {
-        'openvpn_client': {
-            'list': {'clients': []},
-            'add': {}
-        }
+@mock_backend_response({
+    'openvpn_client': {
+        'list': {'clients': []},
+        'add': {},
     }
-    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
-        response = client.post(
-            '/openvpn/api/client-settings',
-            data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
-            content_type='multipart/form-data'
-        )
+})
+def test_post_client_settings_backend_error(client):
+    response = client.post(
+        '/openvpn/api/client-settings',
+        data={"settings": (BytesIO(b'foo=bar'), 'client.conf')},
+        content_type='multipart/form-data'
+    )
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot add OpenVPN client settings'
 
 
-def test_post_client_settings_duplicate(app):
-    existing_client = "jdoe"
-    backend_response = {
-        'openvpn_client': {
-            'list': {'clients': [{'id': existing_client}]},
-            'add': {}
-        }
+@mock_backend_response({
+    'openvpn_client': {
+        'list': {'clients': [{'id': 'jdoe'}]},
+        'add': {}
     }
-    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
-        response = client.post(
-            '/openvpn/api/client-settings',
-            data={"settings": (BytesIO(b'foo=bar'), f'{existing_client}.conf')},
-            content_type='multipart/form-data'
-        )
+})
+def test_post_client_settings_duplicate(client):
+    response = client.post(
+        '/openvpn/api/client-settings',
+        data={"settings": (BytesIO(b'foo=bar'), f'jdoe.conf')},
+        content_type='multipart/form-data'
+    )
     assert response.status_code == HTTPStatus.CONFLICT
-    assert response.json == f'Client settings \'{existing_client}\' already exist'
+    assert response.json == f'Client settings \'jdoe\' already exist'
 
 
-def test_post_client_settings_missing_file(app):
-    backend_response = {
-        'openvpn_client': {
-            'list': {'clients': []},
-            'add': {'result': True}
-        }
+@mock_backend_response({
+    'openvpn_client': {
+        'list': {'clients': []},
+        'add': {'result': True}
     }
-    with get_mocked_openvpn_client(app, backend_response, mock_specific_calls=True) as client:
-        response = client.post(
-            '/openvpn/api/client-settings',
-            content_type='multipart/form-data'
-        )
+})
+def test_post_client_settings_missing_file(client):
+    response = client.post(
+        '/openvpn/api/client-settings',
+        content_type='multipart/form-data'
+    )
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Missing data for \'settings\' file'
 
 
-def test_put_client_settings(app):
-    backend_response = {'result': True}
-    with get_mocked_openvpn_client(app, backend_response) as client:
-        response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
+@mock_backend_response({'openvpn_client': {'set': {'result': True}}})
+def test_put_client_settings(client):
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
     assert response.status_code == HTTPStatus.OK
-    assert response.json == backend_response
+    assert response.json == {'result': True}
 
 
-def test_put_client_settings_backend_error(app):
-    with get_mocked_openvpn_client(app, {'result': False}) as client:
-        response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
+@mock_backend_response({'openvpn_client': {'set': {'result': False}}})
+def test_put_client_settings_backend_error(client):
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': True})
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot change OpenVPN client settings'
 
 
-def test_put_client_settings_invalid_json(app):
-    with get_mocked_openvpn_client(app, {}) as client:
-        response = client.put('/openvpn/api/client-settings/A1A2B1B2')
+@mock_backend_response({'openvpn_client': {'set': {}}})
+def test_put_client_settings_invalid_json(client):
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2')
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Invalid JSON'
 
 
-def test_put_client_settings_missing_data(app):
-    with get_mocked_openvpn_client(app, {}) as client:
-        response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'foo': 'bar'})
+@mock_backend_response({'openvpn_client': {'set': {}}})
+def test_put_client_settings_missing_data(client):
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'foo': 'bar'})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == {'enabled': 'Missing data for required field.'}
 
 
-def test_put_client_settings_invalid_data(app):
-    with get_mocked_openvpn_client(app, {}) as client:
-        response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': 'bar'})
+@mock_backend_response({'openvpn_client': {'set': {}}})
+def test_put_client_settings_invalid_data(client):
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={'enabled': 'bar'})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == {'enabled': 'Expected data of type: bool'}
 
 
-def test_delete_client_settings(app):
-    with get_mocked_openvpn_client(app, {'result': True}) as client:
-        response = client.delete('/openvpn/api/client-settings/1234')
+@mock_backend_response({'openvpn_client': {'del': {'result': True}}})
+def test_delete_client_settings(client):
+    response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.NO_CONTENT
 
 
-def test_delete_client_settings_backend_error(app):
-    with get_mocked_openvpn_client(app, {}) as client:
-        response = client.delete('/openvpn/api/client-settings/1234')
+@mock_backend_response({'openvpn_client': {'del': {}}})
+def test_delete_client_settings_backend_error(client):
+    response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot delete OpenVPN client settings'
 
 
-def test_delete_client_settings_unexpected_result(app):
-    with get_mocked_openvpn_client(app, {'result': 1234}) as client:
-        response = client.delete('/openvpn/api/client-settings/1234')
+@mock_backend_response({'openvpn_client': {'del': {'result': False}}})
+def test_delete_client_settings_unexpected_result(client):
+    response = client.delete('/openvpn/api/client-settings/1234')
     assert response.status_code == HTTPStatus.INTERNAL_SERVER_ERROR
     assert response.json == 'Cannot delete OpenVPN client settings'

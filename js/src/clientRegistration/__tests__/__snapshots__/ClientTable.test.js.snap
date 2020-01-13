@@ -3,7 +3,7 @@
 exports[`<ClientTable /> should display spinner on delete request 1`] = `
 <div>
   <table
-    class="table table-hover col-sm-12 offset-lg-1 col-lg-10"
+    class="table table-hover"
   >
     <thead>
       <tr>
@@ -29,16 +29,13 @@ exports[`<ClientTable /> should display spinner on delete request 1`] = `
           class="text-center"
         >
           <div
-            class="spinner-border "
+            class="spinner-border"
             role="status"
           >
             <span
               class="sr-only"
             />
           </div>
-          <div
-            class="spinner-text"
-          />
         </td>
       </tr>
     </tbody>
@@ -59,7 +56,7 @@ exports[`<ClientTable /> should render info when there are no clients 1`] = `
 exports[`<ClientTable /> should render table of clients 1`] = `
 <div>
   <table
-    class="table table-hover col-sm-12 offset-lg-1 col-lg-10"
+    class="table table-hover"
   >
     <thead>
       <tr>
@@ -116,16 +113,13 @@ exports[`<ClientTable /> should render table of clients 1`] = `
           class="text-center"
         >
           <div
-            class="spinner-border "
+            class="spinner-border"
             role="status"
           >
             <span
               class="sr-only"
             />
           </div>
-          <div
-            class="spinner-text"
-          />
         </td>
       </tr>
       <tr>

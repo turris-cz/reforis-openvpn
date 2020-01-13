@@ -8,7 +8,7 @@
 import React, { useEffect } from "react";
 
 import {
-    useAPIPost, Button, useAlert, FileInput, useForm, API_STATE,
+    useAPIPost, Button, useAlert, FileInput, useForm, API_STATE, formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -37,7 +37,7 @@ export default function AddSettingsForm() {
         event.preventDefault();
         const postData = new FormData();
         postData.append("settings", formData.settings);
-        postSettings(postData);
+        postSettings({ data: postData });
     }
 
     if (!formData) {
@@ -48,7 +48,7 @@ export default function AddSettingsForm() {
         <>
             <h3>{_("Add settings")}</h3>
             <p>{_("Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically.")}</p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={formFieldsSize}>
                 <FileInput
                     label="Settings file"
                     files={[formData.settings]}
@@ -56,13 +56,15 @@ export default function AddSettingsForm() {
                     onChange={formChangeHandler((value) => ({ settings: { $set: value } }))}
                     accept=".txt,.conf"
                 />
-                <Button
-                    type="submit"
-                    forisFormSize
-                    disabled={formErrors.settings || !formData.settings}
-                >
-                    {_("Upload settings")}
-                </Button>
+                <div className="text-right">
+                    <Button
+                        type="submit"
+                        forisFormSize
+                        disabled={formErrors.settings || !formData.settings}
+                    >
+                        {_("Upload settings")}
+                    </Button>
+                </div>
             </form>
         </>
     );

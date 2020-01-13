@@ -9,7 +9,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty, API_STATE,
+    TextInput, Button, useAPIPost, useForm, useAlert, undefinedIfEmpty, API_STATE, formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -39,7 +39,7 @@ export default function AddClientForm({ generating, setGenerating }) {
 
     function handleSubmit(event) {
         event.preventDefault();
-        postClients(formData);
+        postClients({ data: formData });
         setGenerating(true);
     }
 
@@ -52,7 +52,7 @@ export default function AddClientForm({ generating, setGenerating }) {
     return (
         <>
             <h3>{_("Add new client")}</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={formFieldsSize}>
                 <TextInput
                     label={_("Client name")}
                     helpText={_("Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.")}
@@ -60,9 +60,11 @@ export default function AddClientForm({ generating, setGenerating }) {
                     error={formErrors.name}
                     onChange={formChangeHandler((value) => ({ name: { $set: value } }))}
                 />
-                <Button type="submit" forisFormSize disabled={addButtonDisabled}>
-                    {_("Add")}
-                </Button>
+                <div className="text-right">
+                    <Button type="submit" forisFormSize disabled={addButtonDisabled}>
+                        {_("Add")}
+                    </Button>
+                </div>
             </form>
         </>
     );

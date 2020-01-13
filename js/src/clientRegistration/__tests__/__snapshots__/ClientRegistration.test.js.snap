@@ -14,9 +14,11 @@ exports[`<ClientRegistration /> should display clients 1`] = `
   <h3>
     Add new client
   </h3>
-  <form>
+  <form
+    class="col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
+  >
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="1"
@@ -44,15 +46,19 @@ exports[`<ClientRegistration /> should display clients 1`] = `
         Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores.
       </small>
     </div>
-    <button
-      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
-      disabled=""
-      type="submit"
+    <div
+      class="text-right"
     >
-       
-       
-      Add
-    </button>
+      <button
+        class="btn btn-primary  col-sm-12 col-lg-3"
+        disabled=""
+        type="submit"
+      >
+         
+         
+        Add
+      </button>
+    </div>
   </form>
   <h3>
     Client configurations
@@ -65,142 +71,143 @@ exports[`<ClientRegistration /> should display clients 1`] = `
      stored anywhere and is applicable only to the configuration being currently downloaded.
   </p>
   <div
-    class="form-group col-sm-12 offset-lg-1 col-lg-10"
+    class="col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
   >
     <div
-      class="custom-control custom-checkbox "
+      class="form-group"
     >
-      <input
-        class="custom-control-input"
-        id="2"
-        type="checkbox"
-        value="false"
-      />
-      <label
-        class="custom-control-label"
-        for="2"
+      <div
+        class="custom-control custom-checkbox "
       >
-        Override server address
-      </label>
-    </div>
-  </div>
-  <table
-    class="table table-hover col-sm-12 offset-lg-1 col-lg-10"
-  >
-    <thead>
-      <tr>
-        <th
-          scope="col"
-        >
-          Client name
-        </th>
-        <th
-          aria-label="Actions"
-          scope="col"
+        <input
+          class="custom-control-input"
+          id="2"
+          type="checkbox"
+          value="false"
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          class="align-middle"
+        <label
+          class="custom-control-label"
+          for="2"
         >
-          First
-        </td>
-        <td
-          class="text-center"
-        >
-          <div
-            class="btn-group"
-            role="group"
+          Override server address
+        </label>
+      </div>
+    </div>
+    <table
+      class="table table-hover"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
           >
-            <a
-              class="btn btn-primary btn-sm"
-              download=""
-              href="/reforis/openvpn/api/clients/A1?address="
-            >
-              Download
-            </a>
-            <button
-              class="btn btn-danger btn-sm"
-              type="button"
-            >
-               
-               
-              Revoke
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="align-middle"
-        >
-          Second
-        </td>
-        <td
-          class="text-center"
-        >
-          <div
-            class="spinner-border "
-            role="status"
-          >
-            <span
-              class="sr-only"
-            />
-          </div>
-          <div
-            class="spinner-text"
+            Client name
+          </th>
+          <th
+            aria-label="Actions"
+            scope="col"
           />
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="align-middle"
-        >
-          Third
-        </td>
-        <td
-          class="text-center"
-        >
-          <div
-            class="btn-group"
-            role="group"
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="align-middle"
           >
-            <a
-              class="btn btn-primary btn-sm"
-              download=""
-              href="/reforis/openvpn/api/clients/B1?address="
+            First
+          </td>
+          <td
+            class="text-center"
+          >
+            <div
+              class="btn-group"
+              role="group"
             >
-              Download
-            </a>
-            <button
-              class="btn btn-danger btn-sm"
-              type="button"
+              <a
+                class="btn btn-primary btn-sm"
+                download=""
+                href="/reforis/openvpn/api/clients/A1?address="
+              >
+                Download
+              </a>
+              <button
+                class="btn btn-danger btn-sm"
+                type="button"
+              >
+                 
+                 
+                Revoke
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="align-middle"
+          >
+            Second
+          </td>
+          <td
+            class="text-center"
+          >
+            <div
+              class="spinner-border"
+              role="status"
             >
-               
-               
-              Revoke
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="align-middle"
-        >
-          Last
-        </td>
-        <td
-          class="text-center"
-        >
-          <span>
-            Access revoked
-          </span>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+              <span
+                class="sr-only"
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="align-middle"
+          >
+            Third
+          </td>
+          <td
+            class="text-center"
+          >
+            <div
+              class="btn-group"
+              role="group"
+            >
+              <a
+                class="btn btn-primary btn-sm"
+                download=""
+                href="/reforis/openvpn/api/clients/B1?address="
+              >
+                Download
+              </a>
+              <button
+                class="btn btn-danger btn-sm"
+                type="button"
+              >
+                 
+                 
+                Revoke
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="align-middle"
+          >
+            Last
+          </td>
+          <td
+            class="text-center"
+          >
+            <span>
+              Access revoked
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
@@ -213,16 +220,13 @@ exports[`<ClientRegistration /> should display spinner on loading 1`] = `
     class="spinner-wrapper my-3 text-center"
   >
     <div
-      class="spinner-border "
+      class="spinner-border"
       role="status"
     >
       <span
         class="sr-only"
       />
     </div>
-    <div
-      class="spinner-text"
-    />
   </div>
 </div>
 `;

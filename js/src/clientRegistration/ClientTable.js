@@ -9,7 +9,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    formFieldsSize, SpinnerElement, useAlert, useAPIDelete, API_STATE, Button, withEither,
+    SpinnerElement, useAlert, useAPIDelete, API_STATE, Button, withEither,
 } from "foris";
 
 import API_URLs from "API";
@@ -44,7 +44,7 @@ export default function ClientTable({ clients, address }) {
     ));
 
     return (
-        <table className={`table table-hover ${formFieldsSize}`}>
+        <table className="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">{_("Client name")}</th>

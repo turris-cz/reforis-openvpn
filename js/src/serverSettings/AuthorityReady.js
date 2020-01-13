@@ -9,7 +9,7 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    Button, useAPIDelete, useAlert, API_STATE,
+    Button, useAPIDelete, useAlert, API_STATE, formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -39,13 +39,15 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
                 : (
                     <>
                         <p>{_("Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.")}</p>
-                        <Button
-                            onClick={() => deleteCA()}
-                            forisFormSize
-                            loading={deleteResponse.state === API_STATE.SENDING}
-                        >
-                            {_("Delete CA")}
-                        </Button>
+                        <div className={`${formFieldsSize} text-right`}>
+                            <Button
+                                onClick={() => deleteCA()}
+                                forisFormSize
+                                loading={deleteResponse.state === API_STATE.SENDING}
+                            >
+                                {_("Delete CA")}
+                            </Button>
+                        </div>
                     </>
                 )}
         </>

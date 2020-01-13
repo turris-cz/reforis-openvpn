@@ -9,16 +9,13 @@ exports[`<AuthorityStatus /> should handle generating CA 1`] = `
     class="spinner-wrapper my-3 text-center"
   >
     <div
-      class="spinner-border "
+      class="spinner-border"
       role="status"
     >
       <span
         class="sr-only"
       />
     </div>
-    <div
-      class="spinner-text"
-    />
   </div>
   <p>
     Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready.
@@ -34,14 +31,18 @@ exports[`<AuthorityStatus /> should handle missing CA 1`] = `
   <p>
     Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.
   </p>
-  <button
-    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
-    type="button"
+  <div
+    class="col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3 text-right"
   >
-     
-     
-    Generate CA
-  </button>
+    <button
+      class="btn btn-primary  col-sm-12 col-lg-3"
+      type="button"
+    >
+       
+       
+      Generate CA
+    </button>
+  </div>
 </div>
 `;
 
@@ -53,13 +54,17 @@ exports[`<AuthorityStatus /> should handle ready CA 1`] = `
   <p>
     Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
   </p>
-  <button
-    class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
-    type="button"
+  <div
+    class="col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3 text-right"
   >
-     
-     
-    Delete CA
-  </button>
+    <button
+      class="btn btn-primary  col-sm-12 col-lg-3"
+      type="button"
+    >
+       
+       
+      Delete CA
+    </button>
+  </div>
 </div>
 `;

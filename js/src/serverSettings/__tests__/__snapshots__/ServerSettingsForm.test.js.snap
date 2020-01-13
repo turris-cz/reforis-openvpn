@@ -11,10 +11,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
     Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
   </p>
   <form
-    class="mb-3"
+    class="mb-3 col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
   >
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <div
         class="custom-control custom-checkbox "
@@ -34,7 +34,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="2"
@@ -54,7 +54,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <div
         class="custom-control custom-checkbox "
@@ -78,7 +78,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="4"
@@ -107,7 +107,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </small>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="5"
@@ -131,7 +131,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </small>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="6"
@@ -150,7 +150,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <label
         for="7"
@@ -170,7 +170,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <div
         class="custom-control custom-checkbox "
@@ -195,7 +195,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </div>
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <div
         class="custom-control custom-checkbox "
@@ -219,14 +219,18 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         </label>
       </div>
     </div>
-    <button
-      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
-      type="submit"
+    <div
+      class="text-right"
     >
-       
-       
-      Save
-    </button>
+      <button
+        class="btn btn-primary  col-sm-12 col-lg-3"
+        type="submit"
+      >
+         
+         
+        Save
+      </button>
+    </div>
   </form>
   <p>
     <strong>
@@ -248,10 +252,10 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
     Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
   </p>
   <form
-    class="mb-3"
+    class="mb-3 col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
   >
     <div
-      class="form-group col-sm-12 offset-lg-1 col-lg-10"
+      class="form-group"
     >
       <div
         class="custom-control custom-checkbox "
@@ -269,14 +273,18 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
         </label>
       </div>
     </div>
-    <button
-      class="btn btn-primary  offset-lg-8 col-lg-3 col-sm-12"
-      type="submit"
+    <div
+      class="text-right"
     >
-       
-       
-      Save
-    </button>
+      <button
+        class="btn btn-primary  col-sm-12 col-lg-3"
+        type="submit"
+      >
+         
+         
+        Save
+      </button>
+    </div>
   </form>
   <p>
     <strong>

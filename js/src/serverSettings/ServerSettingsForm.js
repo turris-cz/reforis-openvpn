@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 import {
     CheckBox, Button, useForm, useAPIPut, Select, TextInput,
     validateIPv4Address, useAlert, undefinedIfEmpty, withoutUndefinedKeys, onlySpecifiedKeys,
-    Input, API_STATE,
+    Input, API_STATE, formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -45,12 +45,14 @@ export default function ServerSettingsForm({ settingsData }) {
     function handleSubmit(event) {
         event.preventDefault();
         if (formData.enabled) {
-            putSettings(onlySpecifiedKeys(
-                formData,
-                ["enabled", "ipv6", "protocol", "network", "network_netmask", "route_all", "use_dns"],
-            ));
+            putSettings({
+                data: onlySpecifiedKeys(
+                    formData,
+                    ["enabled", "ipv6", "protocol", "network", "network_netmask", "route_all", "use_dns"],
+                ),
+            });
         } else {
-            putSettings({ enabled: false });
+            putSettings({ data: { enabled: false } });
         }
     }
 
@@ -60,7 +62,7 @@ export default function ServerSettingsForm({ settingsData }) {
         <>
             <h3 className="mb-3">{_("Server settings")}</h3>
             <p>{_("Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.")}</p>
-            <form onSubmit={handleSubmit} className="mb-3">
+            <form onSubmit={handleSubmit} className={`mb-3 ${formFieldsSize}`}>
                 <CheckBox
                     label={_("Server enabled")}
                     checked={formData.enabled}
@@ -114,14 +116,16 @@ export default function ServerSettingsForm({ settingsData }) {
                         />
                     </>
                 )}
-                <Button
-                    type="submit"
-                    forisFormSize
-                    disabled={saveButtonDisabled}
-                    loading={isSending}
-                >
-                    {_("Save")}
-                </Button>
+                <div className="text-right">
+                    <Button
+                        type="submit"
+                        forisFormSize
+                        disabled={saveButtonDisabled}
+                        loading={isSending}
+                    >
+                        {_("Save")}
+                    </Button>
+                </div>
             </form>
             <p dangerouslySetInnerHTML={{ __html: _("<strong>Advanced users:</strong> if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.") }} />
         </>

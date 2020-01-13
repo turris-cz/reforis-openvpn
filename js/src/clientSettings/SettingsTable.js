@@ -89,7 +89,7 @@ function ClientRow({ client }) {
                         className="custom-control-input"
                         id={uid}
                         defaultChecked={client.enabled}
-                        onChange={(event) => putClient({ enabled: event.target.checked })}
+                        onChange={(event) => putClient({ data: { enabled: event.target.checked } })}
                     />
                     <label className="custom-control-label" htmlFor={uid}>{client.id}</label>
                 </div>

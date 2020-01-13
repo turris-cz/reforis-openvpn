@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import {
     TextInput, CheckBox, useAPIGet, useForm, useWSForisModule, validateIPv4Address,
-    withErrorMessage, withSpinnerOnSending, API_STATE,
+    withErrorMessage, withSpinnerOnSending, API_STATE, formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -100,15 +100,17 @@ function Configurations({ clients }) {
     return (
         <>
             <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded.") }} />
-            <ServerOverride
-                address={formData.address}
-                error={formErrors.address}
-                handleChange={formChangeHandler}
-            />
-            <ClientTable
-                clients={clients}
-                address={formErrors.address ? undefined : formData.address}
-            />
+            <div className={formFieldsSize}>
+                <ServerOverride
+                    address={formData.address}
+                    error={formErrors.address}
+                    handleChange={formChangeHandler}
+                />
+                <ClientTable
+                    clients={clients}
+                    address={formErrors.address ? undefined : formData.address}
+                />
+            </div>
         </>
     );
 }

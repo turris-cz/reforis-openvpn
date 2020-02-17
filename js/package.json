@@ -6,7 +6,7 @@
   "description": "",
   "main": "./src/app.js",
   "dependencies": {
-    "foris": "3.1.1",
+    "foris": "3.4.0",
     "react-uid": "^2.2.0"
   },
   "peerDependencies": {

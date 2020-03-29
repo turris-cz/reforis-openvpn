@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2020-03-26 19:46+0000\n"
+"PO-Revision-Date: 2020-03-30 02:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: js/src/clientSettings/SettingsTable.js:136
 msgid "Running"
-msgstr ""
+msgstr "Kjører"
 
 #: js/src/clientSettings/SettingsTable.js:136
 msgid "Not running"
@@ -270,7 +270,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:71
 msgid "Device"
-msgstr ""
+msgstr "Enhet"
 
 #: js/src/serverSettings/ServerSettingsForm.js:73
 msgid "Listen on IPv6"

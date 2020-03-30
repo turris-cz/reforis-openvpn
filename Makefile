@@ -52,6 +52,7 @@ prepare-dev:
 	make venv
 
 install:
+	opkg install foris-controller-openvpn-module foris-controller-openvpn_client-module
 	$(PYTHON) -m pip install -e .
 	ln -sf /tmp/reforis-openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
 	/etc/init.d/lighttpd restart

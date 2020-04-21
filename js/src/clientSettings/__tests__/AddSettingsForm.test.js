@@ -17,7 +17,7 @@ import AddSettingsForm from "../AddSettingsForm";
 
 function getFormElements(componentContainer) {
     return {
-        fileInput: getByLabelText(componentContainer, "Settings file"),
+        fileInput: getByLabelText(componentContainer, "Choose settings file..."),
         submitButton: getByText(componentContainer, "Upload settings"),
     };
 }

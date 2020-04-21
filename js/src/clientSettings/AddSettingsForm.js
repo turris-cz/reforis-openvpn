@@ -50,7 +50,7 @@ export default function AddSettingsForm() {
             <p>{_("Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically.")}</p>
             <form onSubmit={handleSubmit} className={formFieldsSize}>
                 <FileInput
-                    label="Settings file"
+                    label={formData.settings ? formData.settings.name : _("Choose settings file...")}
                     files={[formData.settings]}
                     error={formErrors.settings}
                     onChange={formChangeHandler((value) => ({ settings: { $set: value } }))}

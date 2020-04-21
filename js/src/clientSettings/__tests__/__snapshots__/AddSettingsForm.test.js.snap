@@ -24,7 +24,7 @@ exports[`<AddSettingsForm /> should be rendered 1`] = `
         class="input-group custom-file"
       >
         <input
-          accept=".txt,.conf"
+          accept=".conf,.ovpn"
           class="form-control custom-file-input"
           files=""
           id="1"

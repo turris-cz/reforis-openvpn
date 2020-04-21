@@ -54,7 +54,7 @@ export default function AddSettingsForm() {
                     files={[formData.settings]}
                     error={formErrors.settings}
                     onChange={formChangeHandler((value) => ({ settings: { $set: value } }))}
-                    accept=".txt,.conf"
+                    accept=".conf,.ovpn"
                 />
                 <div className="text-right">
                     <Button

@@ -8,9 +8,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import {
-    Button, useAPIPost, useAlert, API_STATE, formFieldsSize,
-} from "foris";
+import { Button, useAPIPost, useAlert, API_STATE, formFieldsSize } from "foris";
 
 import API_URLs from "API";
 
@@ -33,7 +31,11 @@ export default function AuthorityMissing({ onReload }) {
     return (
         <>
             <h3>{_("No certification authority")}</h3>
-            <p>{_("Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.")}</p>
+            <p>
+                {_(
+                    "Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first."
+                )}
+            </p>
             <div className={`${formFieldsSize} text-right`}>
                 <Button
                     onClick={() => createCA()}

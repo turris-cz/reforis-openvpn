@@ -16,7 +16,7 @@ const API_URLs = new Proxy(
     },
     {
         get: (target, name) => `${API_URL_PREFIX}${target[name]}`,
-    },
+    }
 );
 
 export default API_URLs;

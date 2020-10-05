@@ -9,7 +9,11 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    Button, useAPIDelete, useAlert, API_STATE, formFieldsSize,
+    Button,
+    useAPIDelete,
+    useAlert,
+    API_STATE,
+    formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -34,22 +38,30 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
     return (
         <>
             <h3>{_("Certificate authority")}</h3>
-            {serverEnabled
-                ? <p>{_("You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first.")}</p>
-                : (
-                    <>
-                        <p>{_("Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.")}</p>
-                        <div className={`${formFieldsSize} text-right`}>
-                            <Button
-                                onClick={() => deleteCA()}
-                                forisFormSize
-                                loading={deleteResponse.state === API_STATE.SENDING}
-                            >
-                                {_("Delete CA")}
-                            </Button>
-                        </div>
-                    </>
-                )}
+            {serverEnabled ? (
+                <p>
+                    {_(
+                        "You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first."
+                    )}
+                </p>
+            ) : (
+                <>
+                    <p>
+                        {_(
+                            "Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked."
+                        )}
+                    </p>
+                    <div className={`${formFieldsSize} text-right`}>
+                        <Button
+                            onClick={() => deleteCA()}
+                            forisFormSize
+                            loading={deleteResponse.state === API_STATE.SENDING}
+                        >
+                            {_("Delete CA")}
+                        </Button>
+                    </div>
+                </>
+            )}
         </>
     );
 }

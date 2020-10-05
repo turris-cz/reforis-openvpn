@@ -7,7 +7,11 @@
 
 import React from "react";
 import {
-    render, waitForElement, fireEvent, wait, getByText,
+    render,
+    waitForElement,
+    fireEvent,
+    wait,
+    getByText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
@@ -32,23 +36,43 @@ describe("<ServerSettings />", () => {
 
     it("should handle API error", async () => {
         mockJSONError();
-        await wait(() => expect(getByText(componentContainer, "An error occurred while fetching data.")).toBeDefined());
+        await wait(() =>
+            expect(
+                getByText(
+                    componentContainer,
+                    "An error occurred while fetching data."
+                )
+            ).toBeDefined()
+        );
     });
 
     it("should render child and set alert", async () => {
         expect(getByText(componentContainer, "Server Settings")).toBeDefined();
 
-        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
+        expect(mockAxios.get).toBeCalledWith(
+            "/reforis/openvpn/api/authority",
+            expect.anything()
+        );
         mockAxios.mockResponse({ data: { status: "ready" } });
-        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/server-settings", expect.anything());
+        expect(mockAxios.get).toBeCalledWith(
+            "/reforis/openvpn/api/server-settings",
+            expect.anything()
+        );
         mockAxios.mockResponse({ data: { enabled: false } });
-        await waitForElement(() => getByText(componentContainer, "Certificate authority"));
+        await waitForElement(() =>
+            getByText(componentContainer, "Certificate authority")
+        );
 
         fireEvent.click(getByText(componentContainer, "Delete CA"));
-        expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
+        expect(mockAxios.delete).toBeCalledWith(
+            "/reforis/openvpn/api/authority",
+            expect.anything()
+        );
         mockJSONError();
         await wait(() => {
-            expect(mockSetAlert).toBeCalledWith("Cannot delete certificate authority");
+            expect(mockSetAlert).toBeCalledWith(
+                "Cannot delete certificate authority"
+            );
         });
         expect(componentContainer).toMatchSnapshot();
     });

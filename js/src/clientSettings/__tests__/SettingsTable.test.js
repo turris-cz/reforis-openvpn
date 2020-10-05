@@ -7,7 +7,12 @@
 
 import React from "react";
 import {
-    render, fireEvent, wait, getByText, waitForElement, getByLabelText,
+    render,
+    fireEvent,
+    wait,
+    getByText,
+    waitForElement,
+    getByLabelText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
@@ -37,7 +42,9 @@ describe("<SettingsTable />", () => {
     it("should handle GET error", async () => {
         const { container } = render(<SettingsTable />);
         mockJSONError();
-        await waitForElement(() => getByText(container, "An error occurred while fetching data."));
+        await waitForElement(() =>
+            getByText(container, "An error occurred while fetching data.")
+        );
     });
 
     it("should render info when there are no clients", async () => {
@@ -62,7 +69,7 @@ describe("<SettingsTable />", () => {
         expect(mockAxios.put).toBeCalledWith(
             `/reforis/openvpn/api/client-settings/${singleClient.id}`,
             { enabled: false },
-            expect.anything(),
+            expect.anything()
         );
     });
 
@@ -81,7 +88,7 @@ describe("<SettingsTable />", () => {
         fireEvent.click(getDelete(container));
         expect(mockAxios.delete).toBeCalledWith(
             `/reforis/openvpn/api/client-settings/${singleClient.id}`,
-            expect.anything(),
+            expect.anything()
         );
     });
 
@@ -99,17 +106,25 @@ describe("<SettingsTable />", () => {
         const container = await renderTable([singleClient]);
         expect(getByText(container, "Running")).toBeTruthy();
         fireEvent.click(getByLabelText(container, "Check status"));
-        expect(mockAxios.get).toHaveBeenCalledWith(`/reforis/openvpn/api/client-settings/${singleClient.id}`, expect.anything());
-        mockAxios.mockResponse({ data: { ...singleClient, running: false }})
+        expect(mockAxios.get).toHaveBeenCalledWith(
+            `/reforis/openvpn/api/client-settings/${singleClient.id}`,
+            expect.anything()
+        );
+        mockAxios.mockResponse({ data: { ...singleClient, running: false } });
         await waitForElement(() => getByText(container, "Not running"));
     });
 
     it("should change status of client instance after refresh", async () => {
         const container = await renderTable([singleClient]);
         fireEvent.click(getByLabelText(container, "Check status"));
-        expect(mockAxios.get).toHaveBeenCalledWith(`/reforis/openvpn/api/client-settings/${singleClient.id}`, expect.anything());
+        expect(mockAxios.get).toHaveBeenCalledWith(
+            `/reforis/openvpn/api/client-settings/${singleClient.id}`,
+            expect.anything()
+        );
         const errorMessage = "API didn't handle this well";
         mockJSONError(errorMessage);
-        await waitForElement(() => getByText(container, "Cannot refresh status"));
+        await waitForElement(() =>
+            getByText(container, "Cannot refresh status")
+        );
     });
 });

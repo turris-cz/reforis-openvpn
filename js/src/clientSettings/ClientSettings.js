@@ -14,7 +14,11 @@ export default function ClientSettings() {
     return (
         <>
             <h1>{_("Client Settings")}</h1>
-            <p>{_("In order to use OpenVPN client you need to prepare text file with client settings. If you want to connect to another Turris device, download appropriate file from \"Client Registration\" page.")}</p>
+            <p>
+                {_(
+                    'In order to use OpenVPN client you need to prepare text file with client settings. If you want to connect to another Turris device, download appropriate file from "Client Registration" page.'
+                )}
+            </p>
             <AddSettingsForm />
             <SettingsTable />
         </>

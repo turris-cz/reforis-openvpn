@@ -6,20 +6,26 @@
  */
 
 import React from "react";
-import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
-import mockAxios from 'jest-mock-axios';
+import {
+    render,
+    getByText,
+    fireEvent,
+    wait,
+} from "foris/testUtils/customTestRender";
+import mockAxios from "jest-mock-axios";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
 
 import AuthorityReady from "../AuthorityReady";
-
 
 describe("<AuthorityReady />", () => {
     let componentContainer;
     const handleReload = jest.fn();
 
     beforeEach(() => {
-        const { container } = render(<AuthorityReady onReload={handleReload} serverEnabled={false} />);
+        const { container } = render(
+            <AuthorityReady onReload={handleReload} serverEnabled={false} />
+        );
         componentContainer = container;
     });
 
@@ -29,14 +35,19 @@ describe("<AuthorityReady />", () => {
 
     it("should send request when button is clicked", () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
-        expect(mockAxios.delete).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
+        expect(mockAxios.delete).toBeCalledWith(
+            "/reforis/openvpn/api/authority",
+            expect.anything()
+        );
     });
 
     it("should handle error", async () => {
         fireEvent.click(getByText(componentContainer, "Delete CA"));
         mockJSONError();
         await wait(() => {
-            expect(mockSetAlert).toHaveBeenCalledWith("Cannot delete certificate authority");
+            expect(mockSetAlert).toHaveBeenCalledWith(
+                "Cannot delete certificate authority"
+            );
         });
     });
 
@@ -49,7 +60,9 @@ describe("<AuthorityReady />", () => {
     });
 
     it("should prevent deletion when server is enabled", () => {
-        const { container } = render(<AuthorityReady onReload={handleReload} serverEnabled={true} />);
+        const { container } = render(
+            <AuthorityReady onReload={handleReload} serverEnabled={true} />
+        );
         expect(container).toMatchSnapshot();
     });
 });

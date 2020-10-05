@@ -9,8 +9,16 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    TextInput, CheckBox, useAPIGet, useForm, useWSForisModule, validateIPv4Address,
-    withErrorMessage, withSpinnerOnSending, API_STATE, formFieldsSize,
+    TextInput,
+    CheckBox,
+    useAPIGet,
+    useForm,
+    useWSForisModule,
+    validateIPv4Address,
+    withErrorMessage,
+    withSpinnerOnSending,
+    API_STATE,
+    formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -36,12 +44,20 @@ export default function Clients({ ws, setGenerating }) {
     }, [getClientsResponse]);
 
     // Refresh list of clients when certificate is being generated
-    const [generateClientNotification] = useWSForisModule(ws, "openvpn", "generate_client");
+    const [generateClientNotification] = useWSForisModule(
+        ws,
+        "openvpn",
+        "generate_client"
+    );
     useEffect(() => {
         if (!generateClientNotification) {
             return;
         }
-        if (["client_generating", "succeeded"].includes(generateClientNotification.status)) {
+        if (
+            ["client_generating", "succeeded"].includes(
+                generateClientNotification.status
+            )
+        ) {
             getClients();
             if (generateClientNotification.status === "succeeded") {
                 setGenerating(false);
@@ -50,7 +66,11 @@ export default function Clients({ ws, setGenerating }) {
     }, [generateClientNotification, getClients, setGenerating]);
 
     // Refresh list of clients after certificate is revoked
-    const [revokeCertificateNotification] = useWSForisModule(ws, "openvpn", "revoke");
+    const [revokeCertificateNotification] = useWSForisModule(
+        ws,
+        "openvpn",
+        "revoke"
+    );
     useEffect(() => {
         if (!revokeCertificateNotification) {
             return;
@@ -59,7 +79,7 @@ export default function Clients({ ws, setGenerating }) {
             setClients((clientsList) => {
                 const clientsAfterRevoke = [...clientsList];
                 const revokedClientIdx = clientsAfterRevoke.findIndex(
-                    (client) => client.id === revokeCertificateNotification.id,
+                    (client) => client.id === revokeCertificateNotification.id
                 );
                 clientsAfterRevoke[revokedClientIdx].status = "revoked";
                 return clientsAfterRevoke;
@@ -78,7 +98,9 @@ export default function Clients({ ws, setGenerating }) {
     );
 }
 
-const ConfigurationsWithErrorAndSpinner = withErrorMessage(withSpinnerOnSending(Configurations));
+const ConfigurationsWithErrorAndSpinner = withErrorMessage(
+    withSpinnerOnSending(Configurations)
+);
 
 Configurations.propTypes = {
     clients: PropTypes.array.isRequired,
@@ -86,7 +108,9 @@ Configurations.propTypes = {
 
 function Configurations({ clients }) {
     // Handle server address override form
-    const [formState, formChangeHandler, reloadForm] = useForm(serverAddressValidator);
+    const [formState, formChangeHandler, reloadForm] = useForm(
+        serverAddressValidator
+    );
     const formData = formState.data;
     const formErrors = formState.errors || {};
     useEffect(() => {
@@ -99,7 +123,13 @@ function Configurations({ clients }) {
 
     return (
         <>
-            <p dangerouslySetInnerHTML={{ __html: _("Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded.") }} />
+            <p
+                dangerouslySetInnerHTML={{
+                    __html: _(
+                        "Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded."
+                    ),
+                }}
+            />
             <div className={formFieldsSize}>
                 <ServerOverride
                     address={formData.address}
@@ -144,7 +174,9 @@ function ServerOverride({ address, error, handleChange }) {
                     label={_("Router's public IPv4 address")}
                     value={address}
                     error={error}
-                    onChange={handleChange((value) => ({ address: { $set: value } }))}
+                    onChange={handleChange((value) => ({
+                        address: { $set: value },
+                    }))}
                 />
             )}
         </>

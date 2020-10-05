@@ -7,7 +7,11 @@
 
 import React from "react";
 import {
-    render, fireEvent, wait, getByText, getByLabelText,
+    render,
+    fireEvent,
+    wait,
+    getByText,
+    getByLabelText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
@@ -42,7 +46,9 @@ describe("<AddClientForm />", () => {
 
         // Empty name
         fireEvent.change(nameInput, { target: { value: "" } });
-        expect(getByText(componentContainer, "Name cannot be empty")).toBeDefined();
+        expect(
+            getByText(componentContainer, "Name cannot be empty")
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
 
         // Name too long
@@ -52,7 +58,9 @@ describe("<AddClientForm />", () => {
 
         // Invalid characters
         fireEvent.change(nameInput, { target: { value: "!@#$%" } });
-        expect(getByText(componentContainer, "Name contains invalid characters")).toBeDefined();
+        expect(
+            getByText(componentContainer, "Name contains invalid characters")
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
     });
 
@@ -68,7 +76,7 @@ describe("<AddClientForm />", () => {
         expect(mockAxios.post).toBeCalledWith(
             "/reforis/openvpn/api/clients",
             { name: "propername" },
-            expect.anything(),
+            expect.anything()
         );
         expect(setGenerating).toBeCalledWith(true);
     });

@@ -25,72 +25,74 @@ exports[`<ServerSettings /> should render child and set alert 1`] = `
   <h1>
     Server Settings
   </h1>
-  <h3
-    class="mb-3"
+  <div
+    class="card p-4 mb-3"
   >
-    Server settings
-  </h3>
-  <p>
-    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
-  </p>
-  <form
-    class="mb-3 col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
-  >
-    <div
-      class="form-group"
+    <h2
+      class="mb-3"
     >
+      Server settings
+    </h2>
+    <p>
+      Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+    </p>
+    <form>
       <div
-        class="custom-control custom-checkbox "
+        class="form-group"
       >
-        <input
-          class="custom-control-input"
-          id="1"
-          type="checkbox"
-        />
-        <label
-          class="custom-control-label"
-          for="1"
+        <div
+          class="custom-control custom-switch custom-control-inline"
         >
-          Server enabled
-        </label>
+          <input
+            class="custom-control-input"
+            id="1"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="1"
+          >
+            Server enabled
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="text-right"
-    >
-      <button
-        class="btn btn-primary  col-sm-12 col-lg-3"
-        type="submit"
+      <div
+        class="text-right"
       >
-         
-         
-        Save
-      </button>
-    </div>
-  </form>
+        <button
+          class="btn btn-primary  col-sm-12 col-md-3 col-lg-2"
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
   <p>
     <strong>
       Advanced users:
     </strong>
      if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
   </p>
-  <h3>
-    Certificate authority
-  </h3>
-  <p>
-    Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
-  </p>
   <div
-    class="col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3 text-right"
+    class="card p-4"
   >
-    <button
-      class="btn btn-primary  col-sm-12 col-lg-3"
-      type="button"
+    <h2>
+      Certificate authority
+    </h2>
+    <p>
+      Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
+    </p>
+    <div
+      class="text-right"
     >
-       
-       
-      Delete CA
-    </button>
+      <button
+        class="btn btn-danger col-sm-12 col-md-3 col-lg-2"
+        type="button"
+      >
+        Delete CA
+      </button>
+    </div>
   </div>
 </div>
 `;

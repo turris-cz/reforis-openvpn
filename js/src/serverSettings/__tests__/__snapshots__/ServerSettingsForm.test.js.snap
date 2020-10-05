@@ -2,236 +2,236 @@
 
 exports[`<ServerSettingsForm /> should render form 1`] = `
 <div>
-  <h3
-    class="mb-3"
+  <div
+    class="card p-4 mb-3"
   >
-    Server settings
-  </h3>
-  <p>
-    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
-  </p>
-  <form
-    class="mb-3 col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
-  >
-    <div
-      class="form-group"
+    <h2
+      class="mb-3"
     >
+      Server settings
+    </h2>
+    <p>
+      Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+    </p>
+    <form>
       <div
-        class="custom-control custom-checkbox "
+        class="form-group"
       >
-        <input
-          checked=""
-          class="custom-control-input"
-          id="1"
-          type="checkbox"
-        />
-        <label
-          class="custom-control-label"
-          for="1"
+        <div
+          class="custom-control custom-switch custom-control-inline"
         >
-          Server enabled
-        </label>
-      </div>
-    </div>
-    <div
-      class="form-group"
-    >
-      <label
-        for="2"
-      >
-        Device
-      </label>
-      <div
-        class="input-group"
-      >
-        <input
-          class="form-control"
-          disabled=""
-          id="2"
-          type="text"
-          value="my_device"
-        />
-      </div>
-    </div>
-    <div
-      class="form-group"
-    >
-      <div
-        class="custom-control custom-checkbox "
-      >
-        <input
-          class="custom-control-input"
-          id="3"
-          type="checkbox"
-        />
-        <label
-          class="custom-control-label"
-          for="3"
-        >
-          Listen on IPv6
-          <small
-            class="form-text text-muted"
+          <input
+            checked=""
+            class="custom-control-input"
+            id="1"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="1"
           >
-            Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
-          </small>
-        </label>
+            Server enabled
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="form-group"
-    >
-      <label
-        for="4"
-      >
-        Protocol
-      </label>
-      <select
-        class="custom-select"
-        id="4"
-      >
-        <option
-          value="udp"
-        >
-          UDP
-        </option>
-        <option
-          value="tcp"
-        >
-          TCP
-        </option>
-      </select>
-      <small
-        class="form-text text-muted"
-      >
-        Clients will connect to the VPN server via this protocol. Use TCP if your ISP blocks UDP.
-      </small>
-    </div>
-    <div
-      class="form-group"
-    >
-      <label
-        for="5"
-      >
-        VPN network address
-      </label>
       <div
-        class="input-group"
+        class="form-group"
       >
-        <input
-          class="form-control"
-          id="5"
-          type="text"
-          value="10.111.111.0"
-        />
-      </div>
-      <small
-        class="form-text text-muted"
-      >
-        This network should be different than any network directly reachable by the router and the clients.
-      </small>
-    </div>
-    <div
-      class="form-group"
-    >
-      <label
-        for="6"
-      >
-        VPN network mask
-      </label>
-      <div
-        class="input-group"
-      >
-        <input
-          class="form-control"
-          id="6"
-          type="text"
-          value="255.255.255.0"
-        />
-      </div>
-    </div>
-    <div
-      class="form-group"
-    >
-      <label
-        for="7"
-      >
-        Port
-      </label>
-      <div
-        class="input-group"
-      >
-        <input
-          class="form-control"
-          disabled=""
-          id="7"
-          type="text"
-          value="1194"
-        />
-      </div>
-    </div>
-    <div
-      class="form-group"
-    >
-      <div
-        class="custom-control custom-checkbox "
-      >
-        <input
-          checked=""
-          class="custom-control-input"
-          id="8"
-          type="checkbox"
-        />
         <label
-          class="custom-control-label"
-          for="8"
+          for="2"
         >
-          Route all traffic via VPN
-          <small
-            class="form-text text-muted"
-          >
-            Clients will access the Internet via VPN
-          </small>
+          Device
         </label>
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control"
+            disabled=""
+            id="2"
+            type="text"
+            value="my_device"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      class="form-group"
-    >
       <div
-        class="custom-control custom-checkbox "
+        class="form-group"
       >
-        <input
-          checked=""
-          class="custom-control-input"
-          id="9"
-          type="checkbox"
-        />
-        <label
-          class="custom-control-label"
-          for="9"
+        <div
+          class="custom-control custom-checkbox "
         >
-          Use DNS via VPN
-          <small
-            class="form-text text-muted"
+          <input
+            class="custom-control-input"
+            id="3"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="3"
           >
-            Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
-          </small>
-        </label>
+            Listen on IPv6
+            <small
+              class="form-text text-muted"
+            >
+              Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
+            </small>
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="text-right"
-    >
-      <button
-        class="btn btn-primary  col-sm-12 col-lg-3"
-        type="submit"
+      <div
+        class="form-group"
       >
-         
-         
-        Save
-      </button>
-    </div>
-  </form>
+        <label
+          for="4"
+        >
+          Protocol
+        </label>
+        <select
+          class="custom-select"
+          id="4"
+        >
+          <option
+            value="tcp"
+          >
+            TCP
+          </option>
+          <option
+            value="udp"
+          >
+            UDP
+          </option>
+        </select>
+        <small
+          class="form-text text-muted"
+        >
+          Clients will connect to the VPN server via this protocol. Use TCP if your ISP blocks UDP.
+        </small>
+      </div>
+      <div
+        class="form-group"
+      >
+        <label
+          for="5"
+        >
+          VPN network address
+        </label>
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control"
+            id="5"
+            type="text"
+            value="10.111.111.0"
+          />
+        </div>
+        <small
+          class="form-text text-muted"
+        >
+          This network should be different than any network directly reachable by the router and the clients.
+        </small>
+      </div>
+      <div
+        class="form-group"
+      >
+        <label
+          for="6"
+        >
+          VPN network mask
+        </label>
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control"
+            id="6"
+            type="text"
+            value="255.255.255.0"
+          />
+        </div>
+      </div>
+      <div
+        class="form-group"
+      >
+        <label
+          for="7"
+        >
+          Port
+        </label>
+        <div
+          class="input-group"
+        >
+          <input
+            class="form-control"
+            disabled=""
+            id="7"
+            type="text"
+            value="1194"
+          />
+        </div>
+      </div>
+      <div
+        class="form-group"
+      >
+        <div
+          class="custom-control custom-checkbox "
+        >
+          <input
+            checked=""
+            class="custom-control-input"
+            id="8"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="8"
+          >
+            Route all traffic via VPN
+            <small
+              class="form-text text-muted"
+            >
+              Clients will access the Internet via VPN
+            </small>
+          </label>
+        </div>
+      </div>
+      <div
+        class="form-group"
+      >
+        <div
+          class="custom-control custom-checkbox "
+        >
+          <input
+            checked=""
+            class="custom-control-input"
+            id="9"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="9"
+          >
+            Use DNS via VPN
+            <small
+              class="form-text text-muted"
+            >
+              Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
+            </small>
+          </label>
+        </div>
+      </div>
+      <div
+        class="text-right"
+      >
+        <button
+          class="btn btn-primary  col-sm-12 col-md-3 col-lg-2"
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
   <p>
     <strong>
       Advanced users:
@@ -243,49 +243,49 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
 
 exports[`<ServerSettingsForm /> should render form partially when disabled 1`] = `
 <div>
-  <h3
-    class="mb-3"
+  <div
+    class="card p-4 mb-3"
   >
-    Server settings
-  </h3>
-  <p>
-    Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
-  </p>
-  <form
-    class="mb-3 col-sm-12 offset-lg-1 col-lg-10 p-0 mb-3"
-  >
-    <div
-      class="form-group"
+    <h2
+      class="mb-3"
     >
+      Server settings
+    </h2>
+    <p>
+      Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+    </p>
+    <form>
       <div
-        class="custom-control custom-checkbox "
+        class="form-group"
       >
-        <input
-          class="custom-control-input"
-          id="1"
-          type="checkbox"
-        />
-        <label
-          class="custom-control-label"
-          for="1"
+        <div
+          class="custom-control custom-switch custom-control-inline"
         >
-          Server enabled
-        </label>
+          <input
+            class="custom-control-input"
+            id="1"
+            type="checkbox"
+          />
+          <label
+            class="custom-control-label"
+            for="1"
+          >
+            Server enabled
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="text-right"
-    >
-      <button
-        class="btn btn-primary  col-sm-12 col-lg-3"
-        type="submit"
+      <div
+        class="text-right"
       >
-         
-         
-        Save
-      </button>
-    </div>
-  </form>
+        <button
+          class="btn btn-primary  col-sm-12 col-md-3 col-lg-2"
+          type="submit"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
   <p>
     <strong>
       Advanced users:

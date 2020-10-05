@@ -59,7 +59,7 @@ export default function AddClientForm({ generating, setGenerating }) {
     const addButtonDisabled = undefinedIfEmpty(formErrors) || generating;
     return (
         <>
-            <h3>{_("Add new client")}</h3>
+            <h2>{_("Add new client")}</h2>
             <form onSubmit={handleSubmit} className={formFieldsSize}>
                 <TextInput
                     label={_("Client name")}

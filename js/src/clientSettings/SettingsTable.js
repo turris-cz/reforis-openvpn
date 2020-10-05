@@ -34,7 +34,7 @@ export default function SettingsTable() {
 
     return (
         <>
-            <h3>{_("Available settings")}</h3>
+            <h2>{_("Available settings")}</h2>
             <p>
                 {_(
                     "For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup."

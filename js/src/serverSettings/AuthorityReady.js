@@ -37,7 +37,7 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
 
     return (
         <>
-            <h3>{_("Certificate authority")}</h3>
+            <h2>{_("Certificate authority")}</h2>
             {serverEnabled ? (
                 <p>
                     {_(

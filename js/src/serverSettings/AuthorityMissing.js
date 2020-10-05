@@ -30,7 +30,7 @@ export default function AuthorityMissing({ onReload }) {
 
     return (
         <>
-            <h3>{_("No certification authority")}</h3>
+            <h2>{_("No certification authority")}</h2>
             <p>
                 {_(
                     "Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first."

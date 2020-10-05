@@ -78,7 +78,7 @@ export default function ServerSettingsForm({ settingsData }) {
     const saveButtonDisabled = !!undefinedIfEmpty(formErrors) || isSending;
     return (
         <>
-            <h3 className="mb-3">{_("Server settings")}</h3>
+            <h2 className="mb-3">{_("Server settings")}</h2>
             <p>
                 {_(
                     "Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server."

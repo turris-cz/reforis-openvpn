@@ -52,7 +52,7 @@ export default function AddSettingsForm() {
 
     return (
         <>
-            <h3>{_("Add settings")}</h3>
+            <h2>{_("Add settings")}</h2>
             <p>
                 {_(
                     "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically."

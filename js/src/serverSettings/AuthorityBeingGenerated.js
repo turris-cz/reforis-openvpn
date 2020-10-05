@@ -25,7 +25,7 @@ export default function AuthorityBeingGenerated({ ws, onReload }) {
 
     return (
         <>
-            <h3>{_("Generating certification authority")}</h3>
+            <h2>{_("Generating certification authority")}</h2>
             <Spinner />
             <p>
                 {_(

@@ -89,7 +89,7 @@ export default function Clients({ ws, setGenerating }) {
 
     return (
         <>
-            <h3>{_("Client configurations")}</h3>
+            <h2>{_("Client configurations")}</h2>
             <ConfigurationsWithErrorAndSpinner
                 apiState={getClientsResponse.state}
                 clients={clients}

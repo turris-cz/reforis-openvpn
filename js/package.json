@@ -47,6 +47,11 @@
         "lint:fix": "eslint --fix src",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage --colors"
+        "test:coverage": "jest --coverage --colors",
+        "preinstall": "npx npm-force-resolutions"
+    },
+    "resolutions": {
+        "minimist": "1.2.3",
+        "mkdir": "0.5.3"
     }
 }

@@ -11,6 +11,8 @@ import { formFieldsSize } from "foris";
 import AddSettingsForm from "./AddSettingsForm";
 import SettingsTable from "./SettingsTable";
 
+import "./ClientSettings.css";
+
 export default function ClientSettings() {
     return (
         <>

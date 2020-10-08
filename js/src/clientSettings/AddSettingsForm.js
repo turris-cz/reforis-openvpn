@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -14,7 +14,7 @@ import {
     FileInput,
     useForm,
     API_STATE,
-    formFieldsSize,
+    buttonFormFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -58,7 +58,7 @@ export default function AddSettingsForm() {
                     "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically."
                 )}
             </p>
-            <form onSubmit={handleSubmit} className={formFieldsSize}>
+            <form onSubmit={handleSubmit} className="col px-0">
                 <FileInput
                     label={
                         formData.settings
@@ -72,7 +72,7 @@ export default function AddSettingsForm() {
                     }))}
                     accept=".conf,.ovpn"
                 />
-                <div className="text-right">
+                <div className={`${buttonFormFieldsSize} text-right`}>
                     <Button
                         type="submit"
                         forisFormSize

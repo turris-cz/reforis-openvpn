@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -12,7 +12,6 @@ import { useUID } from "react-uid";
 import {
     useAPIGet,
     useAPIDelete,
-    formFieldsSize,
     useAlert,
     Button,
     SpinnerElement,
@@ -154,7 +153,7 @@ function ClientRow({ client }) {
             <td className="text-right">
                 <button
                     type="button"
-                    className="btn btn-danger"
+                    className="btn btn-sm btn-danger"
                     onClick={deleteClient}
                 >
                     <i className="fa fa-trash-alt mr-2" />
@@ -185,7 +184,7 @@ function ClientStatus({ id, defaultStatus }) {
 
     // GET is sent on demand hence INIT is not checked
     if (response.state === API_STATE.SENDING) {
-        return <SpinnerElement />;
+        return <SpinnerElement small />;
     }
     if (response.state === API_STATE.ERROR) {
         return (
@@ -201,9 +200,10 @@ function ClientStatus({ id, defaultStatus }) {
                 <span className="text-danger">{_("Not running")}</span>
             )}
             <Button
-                className="btn"
+                className="btn btn-sm"
                 aria-label={_("Check status")}
                 onClick={getSettings}
+                title={_("Check status")}
             >
                 <i className="fa fa-redo" />
             </Button>

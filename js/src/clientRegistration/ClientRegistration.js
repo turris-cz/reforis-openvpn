@@ -8,7 +8,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import { useAPIGet, withErrorMessage, withSpinnerOnSending } from "foris";
+import {
+    formFieldsSize,
+    useAPIGet,
+    withErrorMessage,
+    withSpinnerOnSending,
+} from "foris";
 
 import API_URLs from "API";
 import Clients from "./Clients";
@@ -27,6 +32,7 @@ export default function ClientRegistration({ ws }) {
     return (
         <>
             <h1>{_("Client Registration")}</h1>
+
             <RegistrationWithErrorAndSpinner
                 apiState={authority.state}
                 ws={ws}
@@ -69,11 +75,13 @@ function Registration({ ws, certificateAuthority }) {
                     "To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards."
                 )}
             </p>
-            <AddClientForm
-                generating={generating}
-                setGenerating={setGenerating}
-            />
-            <Clients ws={ws} setGenerating={setGenerating} />
+            <div className={formFieldsSize}>
+                <AddClientForm
+                    generating={generating}
+                    setGenerating={setGenerating}
+                />
+                <Clients ws={ws} setGenerating={setGenerating} />
+            </div>
         </>
     );
 }

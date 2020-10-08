@@ -49,15 +49,17 @@ export default function ClientTable({ clients, address }) {
     ));
 
     return (
-        <table className="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">{_("Client name")}</th>
-                    <th scope="col" aria-label={_("Actions")} />
-                </tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>
+        <div className="table-responsive">
+            <table className="table table-hover">
+                <thead className="thead-light">
+                    <tr>
+                        <th scope="col">{_("Client name")}</th>
+                        <th scope="col" aria-label={_("Actions")} />
+                    </tr>
+                </thead>
+                <tbody>{rows}</tbody>
+            </table>
+        </div>
     );
 }
 
@@ -81,12 +83,13 @@ function ClientRow({ client, address }) {
     return (
         <tr>
             <td className="align-middle">{client.name}</td>
-            <td className="text-center">
+            <td className="text-right">
                 <ActionsWithGeneratingAndRevoked
                     apiState={deleteClientResponse.state}
                     client={client}
                     address={address}
                     onRevoke={deleteClient}
+                    small
                 />
             </td>
         </tr>
@@ -101,7 +104,7 @@ const withGenerating = withEither(
 );
 const withRevoked = withEither(
     (props) => props.client.status === "revoked",
-    () => <span>{_("Access revoked")}</span>
+    () => <span className="text-muted">{_("Access revoked")}</span>
 );
 const ActionsWithGeneratingAndRevoked = withGenerating(withRevoked(Actions));
 
@@ -119,7 +122,7 @@ Actions.defaultProps = {
 function Actions({ client, address, onRevoke, disabled }) {
     const downloadDisabled = disabled || typeof address !== "string";
     return (
-        <div className="btn-group" role="group">
+        <div className="btn-group mb-0" role="group">
             <DownloadButton
                 href={`${API_URLs.clients}/${client.id}?address=${address}`}
                 className={`btn-primary btn-sm ${

@@ -66,13 +66,30 @@ function ClientTable({ settingsData }) {
     }
 
     return (
-        <table className={`table table-hover mt-3 ${formFieldsSize}`}>
-            <tbody>
-                {settingsData.map((client) => (
-                    <ClientRow key={client.id} client={client} />
-                ))}
-            </tbody>
-        </table>
+        <div className="table-responsive">
+            <table className="table table-hover mb-0">
+                <thead className="thead-light">
+                    <tr>
+                        <th>{_("Instances")}</th>
+                        <th
+                            scope="col"
+                            aria-label={_("Actions")}
+                            className="text-center"
+                        />
+                        <th
+                            scope="col"
+                            aria-label={_("Actions")}
+                            className="text-right"
+                        />
+                    </tr>
+                </thead>
+                <tbody>
+                    {settingsData.map((client) => (
+                        <ClientRow key={client.id} client={client} />
+                    ))}
+                </tbody>
+            </table>
+        </div>
     );
 }
 

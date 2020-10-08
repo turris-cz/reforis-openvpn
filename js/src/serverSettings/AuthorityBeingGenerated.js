@@ -24,14 +24,14 @@ export default function AuthorityBeingGenerated({ ws, onReload }) {
     }, [generateCA, onReload]);
 
     return (
-        <>
+        <div className="card p-4">
             <h2>{_("Generating certification authority")}</h2>
-            <Spinner />
             <p>
                 {_(
                     "Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready."
                 )}
             </p>
-        </>
+            <Spinner />
+        </div>
     );
 }

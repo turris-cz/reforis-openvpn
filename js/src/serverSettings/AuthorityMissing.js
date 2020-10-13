@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -9,7 +9,11 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    Button, useAPIPost, useAlert, API_STATE, formFieldsSize,
+    Button,
+    useAPIPost,
+    useAlert,
+    API_STATE,
+    buttonFormFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -31,10 +35,14 @@ export default function AuthorityMissing({ onReload }) {
     }, [createResponse, onReload, setAlert]);
 
     return (
-        <>
-            <h3>{_("No certification authority")}</h3>
-            <p>{_("Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.")}</p>
-            <div className={`${formFieldsSize} text-right`}>
+        <div className="card p-4">
+            <h2>{_("No certification authority")}</h2>
+            <p>
+                {_(
+                    "Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first."
+                )}
+            </p>
+            <div className={`${buttonFormFieldsSize} text-right`}>
                 <Button
                     onClick={() => createCA()}
                     forisFormSize
@@ -43,6 +51,6 @@ export default function AuthorityMissing({ onReload }) {
                     {_("Generate CA")}
                 </Button>
             </div>
-        </>
+        </div>
     );
 }

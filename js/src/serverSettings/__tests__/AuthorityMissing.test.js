@@ -6,10 +6,15 @@
  */
 
 import React from "react";
-import { render, getByText, fireEvent, wait } from "foris/testUtils/customTestRender";
+import {
+    render,
+    getByText,
+    fireEvent,
+    wait,
+} from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
-import mockAxios from 'jest-mock-axios';
+import mockAxios from "jest-mock-axios";
 
 import AuthorityMissing from "../AuthorityMissing";
 
@@ -18,7 +23,9 @@ describe("<AuthorityMissing />", () => {
     const handleReload = jest.fn();
 
     beforeEach(() => {
-        const { container } = render(<AuthorityMissing onReload={handleReload} />);
+        const { container } = render(
+            <AuthorityMissing onReload={handleReload} />
+        );
         componentContainer = container;
     });
 
@@ -28,14 +35,20 @@ describe("<AuthorityMissing />", () => {
 
     it("should send request when button is clicked", () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
-        expect(mockAxios.post).toBeCalledWith("/reforis/openvpn/api/authority", undefined, expect.anything());
+        expect(mockAxios.post).toBeCalledWith(
+            "/reforis/openvpn/api/authority",
+            undefined,
+            expect.anything()
+        );
     });
 
     it("should handle error", async () => {
         fireEvent.click(getByText(componentContainer, "Generate CA"));
         mockJSONError();
         await wait(() => {
-            expect(mockSetAlert).toHaveBeenCalledWith("Cannot generate certificate authority");
+            expect(mockSetAlert).toHaveBeenCalledWith(
+                "Cannot generate certificate authority"
+            );
         });
     });
 

@@ -17,7 +17,12 @@ describe("<AuthorityStatus />", () => {
 
     function renderAuthorityStatus(status) {
         const { container } = render(
-            <AuthorityStatus ws={webSockets} status={status} serverEnabled={false} onReload={jest.fn()} />,
+            <AuthorityStatus
+                ws={webSockets}
+                status={status}
+                serverEnabled={false}
+                onReload={jest.fn()}
+            />
         );
         return container;
     }
@@ -39,8 +44,15 @@ describe("<AuthorityStatus />", () => {
 
     it("should render children if status is ready", () => {
         const { getByTestId } = render(
-            <AuthorityStatus ws={webSockets} status={"ready"} serverEnabled={false} onReload={jest.fn()}>
-                <div data-testid="some-child">Status is "ready" so I should be visible!</div>
+            <AuthorityStatus
+                ws={webSockets}
+                status={"ready"}
+                serverEnabled={false}
+                onReload={jest.fn()}
+            >
+                <div data-testid="some-child">
+                    Status is "ready" so I should be visible!
+                </div>
             </AuthorityStatus>
         );
         expect(getByTestId("some-child")).toBeDefined();

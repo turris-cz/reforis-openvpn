@@ -6,10 +6,16 @@
  */
 
 import React from "react";
-import { render, wait, fireEvent, getByLabelText, getByText } from "foris/testUtils/customTestRender";
+import {
+    render,
+    wait,
+    fireEvent,
+    getByLabelText,
+    getByText,
+} from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
-import mockAxios from 'jest-mock-axios';
+import mockAxios from "jest-mock-axios";
 
 import ServerSettingsForm from "../ServerSettingsForm";
 
@@ -28,7 +34,9 @@ describe("<ServerSettingsForm />", () => {
     const disabledFormData = { enabled: false };
 
     function renderSettings(formData) {
-        const { container } = render(<ServerSettingsForm settingsData={formData} />);
+        const { container } = render(
+            <ServerSettingsForm settingsData={formData} />
+        );
         return container;
     }
 
@@ -55,7 +63,9 @@ describe("<ServerSettingsForm />", () => {
 
         // Invalid network
         const networkInput = getByLabelText(container, "VPN network address");
-        fireEvent.change(networkInput, { target: { value: "808.909.303.606" } });
+        fireEvent.change(networkInput, {
+            target: { value: "808.909.303.606" },
+        });
         expect(submitButton.disabled).toBe(true);
         // Set valid value
         fireEvent.change(networkInput, { target: { value: "80.90.30.60" } });
@@ -63,7 +73,9 @@ describe("<ServerSettingsForm />", () => {
 
         // Invalid netmask
         const netmaskInput = getByLabelText(container, "VPN network mask");
-        fireEvent.change(netmaskInput, { target: { value: "808.909.303.606" } });
+        fireEvent.change(netmaskInput, {
+            target: { value: "808.909.303.606" },
+        });
         expect(submitButton.disabled).toBe(true);
         // Set valid value
         fireEvent.change(netmaskInput, { target: { value: "80.90.30.60" } });
@@ -92,15 +104,23 @@ describe("<ServerSettingsForm />", () => {
         const container = renderSettings(enabledFormData);
         fireEvent.click(getByLabelText(container, "Server enabled"));
         submitForm(container);
-        expect(mockAxios.put).toBeCalledWith("/reforis/openvpn/api/server-settings", disabledFormData, expect.anything());
+        expect(mockAxios.put).toBeCalledWith(
+            "/reforis/openvpn/api/server-settings",
+            disabledFormData,
+            expect.anything()
+        );
     });
 
     it("should handle API error", async () => {
-        const { container } = render(<ServerSettingsForm settingsData={disabledFormData} />);
+        const { container } = render(
+            <ServerSettingsForm settingsData={disabledFormData} />
+        );
         submitForm(container);
         mockJSONError();
         await wait(() => {
-            expect(mockSetAlert).toHaveBeenCalledWith("Cannot save server settings");
+            expect(mockSetAlert).toHaveBeenCalledWith(
+                "Cannot save server settings"
+            );
         });
     });
 });

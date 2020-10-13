@@ -7,8 +7,16 @@
 
 import React from "react";
 import {
-    render, wait, getByText, getAllByText, getByLabelText, getAllByRole, queryByText,
-    queryByLabelText, fireEvent, act,
+    render,
+    wait,
+    getByText,
+    getAllByText,
+    getByLabelText,
+    getAllByRole,
+    queryByText,
+    queryByLabelText,
+    fireEvent,
+    act,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
@@ -40,7 +48,12 @@ describe("<ClientRegistration />", () => {
 
     it("should handle API error - authority", async () => {
         mockJSONError();
-        await wait(() => getByText(componentContainer, "An error occurred while fetching data."));
+        await wait(() =>
+            getByText(
+                componentContainer,
+                "An error occurred while fetching data."
+            )
+        );
     });
 
     it("should handle API error - clients", async () => {
@@ -48,22 +61,38 @@ describe("<ClientRegistration />", () => {
         mockAxios.mockResponse({ data: { status: "ready" } });
         await wait(() => getByText(componentContainer, "Client Registration"));
         mockJSONError();
-        await wait(() => getByText(componentContainer, "An error occurred while fetching data."));
+        await wait(() =>
+            getByText(
+                componentContainer,
+                "An error occurred while fetching data."
+            )
+        );
     });
 
     it("should handle invalid CA", async () => {
         mockAxios.mockResponse({ data: { status: "whatever" } });
-        await wait(() => getByText(componentContainer, "You need to generate certificate authority in order to register clients."));
+        await wait(() =>
+            getByText(
+                componentContainer,
+                "You need to generate certificate authority in order to register clients."
+            )
+        );
     });
 
     it("should display clients", async () => {
-        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/authority", expect.anything());
+        expect(mockAxios.get).toBeCalledWith(
+            "/reforis/openvpn/api/authority",
+            expect.anything()
+        );
         // Response to GET authority
         mockAxios.mockResponse({ data: { status: "ready" } });
 
         await wait(() => getByText(componentContainer, "Client Registration"));
 
-        expect(mockAxios.get).toBeCalledWith("/reforis/openvpn/api/clients", expect.anything());
+        expect(mockAxios.get).toBeCalledWith(
+            "/reforis/openvpn/api/clients",
+            expect.anything()
+        );
         // Respose to GET clients
         mockAxios.mockResponse({ data: clients });
 
@@ -77,53 +106,81 @@ describe("<ClientRegistration />", () => {
         }
 
         function submitClientForm(name) {
-            const clientNameInput = getByLabelText(componentContainer, "Client name");
+            const clientNameInput = getByLabelText(
+                componentContainer,
+                "Client name"
+            );
             fireEvent.change(clientNameInput, { target: { value: name } });
             const addButton = getAddButton();
             fireEvent.click(addButton);
         }
 
         function enableOverride() {
-            const checkbox = getByLabelText(componentContainer, "Override server address");
+            const checkbox = getByLabelText(
+                componentContainer,
+                "Override server address"
+            );
             fireEvent.click(checkbox);
         }
 
         beforeEach(async () => {
             mockAxios.mockResponse({ data: { status: "ready" } });
-            await wait(() => getByText(componentContainer, "Client Registration"));
+            await wait(() =>
+                getByText(componentContainer, "Client Registration")
+            );
             mockAxios.mockResponse({ data: clients });
             await wait(() => getByText(componentContainer, "Add new client"));
         });
 
         it("should display address input when checkbox is selected", () => {
-            expect(queryByLabelText(componentContainer, "Router's public IPv4 address")).toBeNull();
+            expect(
+                queryByLabelText(
+                    componentContainer,
+                    "Router's public IPv4 address"
+                )
+            ).toBeNull();
             enableOverride();
-            expect(getByLabelText(componentContainer, "Router's public IPv4 address")).toBeDefined();
+            expect(
+                getByLabelText(
+                    componentContainer,
+                    "Router's public IPv4 address"
+                )
+            ).toBeDefined();
         });
 
         it("should validate server address override", async () => {
-            const getFirstDownload = () => getAllByText(componentContainer, "Download")[0];
+            const getFirstDownload = () =>
+                getAllByText(componentContainer, "Download")[0];
 
             enableOverride();
-            const addressInput = getByLabelText(componentContainer, "Router's public IPv4 address");
+            const addressInput = getByLabelText(
+                componentContainer,
+                "Router's public IPv4 address"
+            );
             // Since "a" element is replaced with "button" we have to query for "Download" anew
             expect(getFirstDownload().href).toBe(
-                `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=`,
+                `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=`
             );
             // Test invalid value
-            fireEvent.change(addressInput, { target: { value: "999.888.999.888" } });
-            expect(getFirstDownload().classList.contains("disabled")).toBe(true);
+            fireEvent.change(addressInput, {
+                target: { value: "999.888.999.888" },
+            });
+            expect(getFirstDownload().classList.contains("disabled")).toBe(
+                true
+            );
             // Test valid value
             const address = "9.8.9.8";
             fireEvent.change(addressInput, { target: { value: address } });
             expect(getFirstDownload().href).toBe(
-                `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=${address}`,
+                `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=${address}`
             );
         });
 
         it("should add new client to the table", async () => {
-            const getSpinnersNumber = () => getAllByRole(componentContainer, "status").length;
-            const getDownloadsNumber = () => getAllByText(componentContainer, "Download").length;
+            const getSpinnersNumber = () =>
+                getAllByRole(componentContainer, "status").length;
+            const getDownloadsNumber = () =>
+                getAllByText(componentContainer, "Download").length;
 
             const name = "user";
             submitClientForm(name);
@@ -132,7 +189,7 @@ describe("<ClientRegistration />", () => {
             expect(mockAxios.post).toBeCalledWith(
                 "/reforis/openvpn/api/clients",
                 { name },
-                expect.anything(),
+                expect.anything()
             );
             mockAxios.mockResponse({ data: { task_id: "1234" } });
             await wait(() => getByText(componentContainer, "Add new client"));
@@ -141,27 +198,47 @@ describe("<ClientRegistration />", () => {
             // Generating new client
             const spinners = getSpinnersNumber();
             const downloads = getDownloadsNumber();
-            act(() => webSockets.dispatch(
-                { module: "openvpn", action: "generate_client", data: { status: "client_generating" } },
-            ));
-            expect(mockAxios.get).toHaveBeenNthCalledWith(3, "/reforis/openvpn/api/clients", expect.anything());
+            act(() =>
+                webSockets.dispatch({
+                    module: "openvpn",
+                    action: "generate_client",
+                    data: { status: "client_generating" },
+                })
+            );
+            expect(mockAxios.get).toHaveBeenNthCalledWith(
+                3,
+                "/reforis/openvpn/api/clients",
+                expect.anything()
+            );
             const updatedClients = [
                 ...clients,
                 { id: "C2", name, status: "generating" },
             ];
             mockAxios.mockResponse({ data: updatedClients });
             // New client appears (with spinner)
-            await wait(() => expect(getByText(componentContainer, name)).toBeDefined());
+            await wait(() =>
+                expect(getByText(componentContainer, name)).toBeDefined()
+            );
             expect(getSpinnersNumber()).toBe(spinners + 1);
 
             // Client finished generating
-            act(() => webSockets.dispatch(
-                { module: "openvpn", action: "generate_client", data: { status: "succeeded" } },
-            ));
-            expect(mockAxios.get).toHaveBeenNthCalledWith(4, "/reforis/openvpn/api/clients", expect.anything());
+            act(() =>
+                webSockets.dispatch({
+                    module: "openvpn",
+                    action: "generate_client",
+                    data: { status: "succeeded" },
+                })
+            );
+            expect(mockAxios.get).toHaveBeenNthCalledWith(
+                4,
+                "/reforis/openvpn/api/clients",
+                expect.anything()
+            );
             updatedClients[4].status = "valid";
             mockAxios.mockResponse({ data: updatedClients });
-            await wait(() => expect(getByText(componentContainer, name)).toBeDefined());
+            await wait(() =>
+                expect(getByText(componentContainer, name)).toBeDefined()
+            );
             // Spinner disappeared
             expect(getSpinnersNumber()).toBe(spinners);
             // Download is available
@@ -171,12 +248,17 @@ describe("<ClientRegistration />", () => {
         });
 
         it("should update clients table when one is revoked", async () => {
-            const getRevokedNumber = () => getAllByText(componentContainer, "Access revoked").length;
+            const getRevokedNumber = () =>
+                getAllByText(componentContainer, "Access revoked").length;
             const revoked = getRevokedNumber();
             // Client is revoked
-            act(() => webSockets.dispatch(
-                { module: "openvpn", action: "revoke", data: { id: clients[0].id } },
-            ));
+            act(() =>
+                webSockets.dispatch({
+                    module: "openvpn",
+                    action: "revoke",
+                    data: { id: clients[0].id },
+                })
+            );
             expect(getRevokedNumber()).toBe(revoked + 1);
         });
 
@@ -188,12 +270,12 @@ describe("<ClientRegistration />", () => {
             expect(mockAxios.post).toBeCalledWith(
                 "/reforis/openvpn/api/clients",
                 { name },
-                expect.anything(),
+                expect.anything()
             );
             const errorMessage = "Something went wrong";
             mockJSONError(errorMessage);
             await wait(() => {
-                expect(mockSetAlert).toBeCalledWith(errorMessage)
+                expect(mockSetAlert).toBeCalledWith(errorMessage);
             });
             expect(getAddButton().disabled).toBe(false);
         });

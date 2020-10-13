@@ -7,7 +7,11 @@
 
 import React from "react";
 import {
-    render, fireEvent, wait, getByText, getByLabelText,
+    render,
+    fireEvent,
+    wait,
+    getByText,
+    getByLabelText,
 } from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
@@ -17,18 +21,17 @@ import AddSettingsForm from "../AddSettingsForm";
 
 function getFormElements(componentContainer) {
     return {
-        fileInput: getByLabelText(componentContainer, "Choose settings file..."),
+        fileInput: getByLabelText(
+            componentContainer,
+            "Choose settings file..."
+        ),
         submitButton: getByText(componentContainer, "Upload settings"),
     };
 }
 
 function setFilesProperty(input, files) {
     // Files can't be set by fireEvent, see https://github.com/testing-library/react-testing-library/issues/93
-    Object.defineProperty(
-        input,
-        'files',
-        { value: files, configurable: true },
-    );
+    Object.defineProperty(input, "files", { value: files, configurable: true });
 }
 
 describe("<AddSettingsForm />", () => {
@@ -47,21 +50,38 @@ describe("<AddSettingsForm />", () => {
         const { fileInput, submitButton } = getFormElements(componentContainer);
 
         // Wrong length of file name
-        setFilesProperty(fileInput, [new File([], "q".repeat(51))])
+        setFilesProperty(fileInput, [new File([], "q".repeat(51))]);
         fireEvent.change(fileInput);
-        expect(getByText(componentContainer, "Filename must be at least 1 and at most 50 characters long.")).toBeDefined();
+        expect(
+            getByText(
+                componentContainer,
+                "Filename must be at least 1 and at most 50 characters long."
+            )
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
 
         // Invalid characters
-        setFilesProperty(fileInput, [new File([], "!@#!$@%.conf")])
+        setFilesProperty(fileInput, [new File([], "!@#!$@%.conf")]);
         fireEvent.change(fileInput);
-        expect(getByText(componentContainer, "Filename can contain only alphanumeric characters, dots, dashes and underscores.")).toBeDefined();
+        expect(
+            getByText(
+                componentContainer,
+                "Filename can contain only alphanumeric characters, dots, dashes and underscores."
+            )
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
 
         // File too big
-        setFilesProperty(fileInput, [new File(["q".repeat(1024 * 1025)], "turris.conf")])
+        setFilesProperty(fileInput, [
+            new File(["q".repeat(1024 * 1025)], "turris.conf"),
+        ]);
         fireEvent.change(fileInput);
-        expect(getByText(componentContainer, "File is too big. Maximum size is 1 MB")).toBeDefined();
+        expect(
+            getByText(
+                componentContainer,
+                "File is too big. Maximum size is 1 MB"
+            )
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
     });
 
@@ -69,7 +89,7 @@ describe("<AddSettingsForm />", () => {
         const { fileInput, submitButton } = getFormElements(componentContainer);
 
         expect(submitButton.disabled).toBe(true);
-        setFilesProperty(fileInput, [new File([], "turris.conf")])
+        setFilesProperty(fileInput, [new File([], "turris.conf")]);
         fireEvent.change(fileInput);
         expect(submitButton.disabled).toBe(false);
 
@@ -77,14 +97,14 @@ describe("<AddSettingsForm />", () => {
         expect(mockAxios.post).toBeCalledWith(
             "/reforis/openvpn/api/client-settings",
             expect.anything(), // Can't compare two FormData objects
-            expect.anything(),
+            expect.anything()
         );
     });
 
     it("should handle API error", async () => {
         const { fileInput, submitButton } = getFormElements(componentContainer);
 
-        setFilesProperty(fileInput, [new File([], "turris.conf")])
+        setFilesProperty(fileInput, [new File([], "turris.conf")]);
         fireEvent.change(fileInput);
         fireEvent.click(submitButton);
 

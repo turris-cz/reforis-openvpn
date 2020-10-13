@@ -43,7 +43,9 @@ export default function ServerSettings({ ws }) {
     );
 }
 
-const SettingsWithErrorAndSpinner = withErrorMessage(withSpinnerOnSending(Settings));
+const SettingsWithErrorAndSpinner = withErrorMessage(
+    withSpinnerOnSending(Settings)
+);
 
 Settings.propTypes = {
     ws: PropTypes.object.isRequired,
@@ -52,9 +54,7 @@ Settings.propTypes = {
     onReload: PropTypes.func.isRequired,
 };
 
-function Settings({
-    ws, authorityData, settingsData, onReload,
-}) {
+function Settings({ ws, authorityData, settingsData, onReload }) {
     return (
         <AuthorityStatus
             ws={ws}

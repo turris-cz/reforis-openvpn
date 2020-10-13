@@ -26,7 +26,11 @@ AuthorityStatus.propTypes = {
 };
 
 export default function AuthorityStatus({
-    children, ws, status, serverEnabled, onReload,
+    children,
+    ws,
+    status,
+    serverEnabled,
+    onReload,
 }) {
     if (status === CA_STATUS.MISSING) {
         return <AuthorityMissing onReload={onReload} />;
@@ -35,7 +39,10 @@ export default function AuthorityStatus({
         return (
             <>
                 {children}
-                <AuthorityReady serverEnabled={serverEnabled} onReload={onReload} />
+                <AuthorityReady
+                    serverEnabled={serverEnabled}
+                    onReload={onReload}
+                />
             </>
         );
     }

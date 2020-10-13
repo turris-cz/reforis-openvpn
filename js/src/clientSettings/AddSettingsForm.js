@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -8,7 +8,13 @@
 import React, { useEffect } from "react";
 
 import {
-    useAPIPost, Button, useAlert, FileInput, useForm, API_STATE, formFieldsSize,
+    useAPIPost,
+    Button,
+    useAlert,
+    FileInput,
+    useForm,
+    API_STATE,
+    buttonFormFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
@@ -18,7 +24,7 @@ export default function AddSettingsForm() {
 
     const [postSettingsResponse, postSettings] = useAPIPost(
         API_URLs.clientSettings,
-        "multipart/form-data",
+        "multipart/form-data"
     );
     useEffect(() => {
         if (postSettingsResponse.state === API_STATE.ERROR) {
@@ -46,17 +52,27 @@ export default function AddSettingsForm() {
 
     return (
         <>
-            <h3>{_("Add settings")}</h3>
-            <p>{_("Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically.")}</p>
-            <form onSubmit={handleSubmit} className={formFieldsSize}>
+            <h2>{_("Add settings")}</h2>
+            <p>
+                {_(
+                    "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically."
+                )}
+            </p>
+            <form onSubmit={handleSubmit} className="col px-0">
                 <FileInput
-                    label={formData.settings ? formData.settings.name : _("Choose settings file...")}
+                    label={
+                        formData.settings
+                            ? formData.settings.name
+                            : _("Choose settings file...")
+                    }
                     files={[formData.settings]}
                     error={formErrors.settings}
-                    onChange={formChangeHandler((value) => ({ settings: { $set: value } }))}
+                    onChange={formChangeHandler((value) => ({
+                        settings: { $set: value },
+                    }))}
                     accept=".conf,.ovpn"
                 />
-                <div className="text-right">
+                <div className={`${buttonFormFieldsSize} text-right`}>
                     <Button
                         type="submit"
                         forisFormSize
@@ -82,10 +98,18 @@ function validator(formData) {
 
     const filename = formData.settings.name;
     if (filename.length === 0 || filename.length > 50) {
-        return { settings: _("Filename must be at least 1 and at most 50 characters long.") };
+        return {
+            settings: _(
+                "Filename must be at least 1 and at most 50 characters long."
+            ),
+        };
     }
     if (!/^[a-zA-Z0-9_.-]*$/.test(filename)) {
-        return { settings: _("Filename can contain only alphanumeric characters, dots, dashes and underscores.") };
+        return {
+            settings: _(
+                "Filename can contain only alphanumeric characters, dots, dashes and underscores."
+            ),
+        };
     }
 
     return undefined;

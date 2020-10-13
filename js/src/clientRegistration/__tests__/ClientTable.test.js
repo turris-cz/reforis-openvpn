@@ -6,7 +6,12 @@
  */
 
 import React from "react";
-import { render, fireEvent, wait, getByText } from "foris/testUtils/customTestRender";
+import {
+    render,
+    fireEvent,
+    wait,
+    getByText,
+} from "foris/testUtils/customTestRender";
 import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
@@ -61,7 +66,7 @@ describe("<ClientTable />", () => {
         fireEvent.click(getRevokeButton(container));
         expect(mockAxios.delete).toBeCalledWith(
             `/reforis/openvpn/api/clients/${singleClient[0].id}`,
-            expect.anything(),
+            expect.anything()
         );
     });
 

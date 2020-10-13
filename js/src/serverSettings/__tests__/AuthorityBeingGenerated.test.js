@@ -14,12 +14,13 @@ import AuthorityBeingGenerated from "../AuthorityBeingGenerated";
 
 describe("<AuthorityBeingGenerated />", () => {
     const handleReload = jest.fn();
-    let webSockets,
-        componentContainer;
+    let webSockets, componentContainer;
 
     beforeEach(() => {
         webSockets = new WebSockets();
-        const { container } = render(<AuthorityBeingGenerated ws={webSockets} onReload={handleReload} />);
+        const { container } = render(
+            <AuthorityBeingGenerated ws={webSockets} onReload={handleReload} />
+        );
         componentContainer = container;
     });
 
@@ -29,7 +30,11 @@ describe("<AuthorityBeingGenerated />", () => {
 
     it("should call onReload when CA is ready", () => {
         expect(handleReload).not.toBeCalled();
-        const wsMessage = { module: "openvpn", action: "generate_ca", data: {status: "succeeded"} };
+        const wsMessage = {
+            module: "openvpn",
+            action: "generate_ca",
+            data: { status: "succeeded" },
+        };
         act(() => webSockets.dispatch(wsMessage));
         expect(handleReload).toHaveBeenCalledTimes(1);
     });

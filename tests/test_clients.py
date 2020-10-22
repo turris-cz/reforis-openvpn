@@ -77,7 +77,7 @@ def test_post_client_backend_error(client):
 def test_get_client(client):
     response = client.get('/openvpn/api/clients/1234')
     assert response.status_code == HTTPStatus.OK
-    assert response.headers.get('Content-Disposition') == 'attachment; filename=turris.conf'
+    assert response.headers.get('Content-Disposition') == 'attachment; filename=turris.ovpn'
     assert response.data == b'FOO=BAR'
 
 

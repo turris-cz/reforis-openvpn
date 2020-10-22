@@ -1,4 +1,4 @@
-#  Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+#  Copyright (C) 2019-2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
 #
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
@@ -105,7 +105,7 @@ def get_client(client_id):
     if not config:
         raise APIError(_('Cannot get client'), HTTPStatus.INTERNAL_SERVER_ERROR)
 
-    return make_response((config, {'Content-Disposition': 'attachment; filename=turris.conf'}))
+    return make_response((config, {'Content-Disposition': 'attachment; filename=turris.ovpn'}))
 
 
 @blueprint.route('/clients/<client_id>', methods=['DELETE'])

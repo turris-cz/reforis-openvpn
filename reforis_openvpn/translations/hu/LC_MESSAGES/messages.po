@@ -8,19 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2019-10-22 14:40+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2020-11-05 10:26+0000\n"
+"Last-Translator: Nagy Juraj <csucsu299@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/hu/>\n"
 "Language: hu\n"
-"Language-Team: hu <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.3.2-dev\n"
 "Generated-By: Babel 2.7.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
-msgstr ""
+msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:54
 msgid "Add new client"
@@ -409,4 +411,3 @@ msgstr ""
 
 #~ msgid "An error occurred during loading OpenVPN server settings"
 #~ msgstr ""
-

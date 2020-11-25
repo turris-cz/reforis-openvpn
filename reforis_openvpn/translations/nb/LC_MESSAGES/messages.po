@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2020-03-30 02:09+0000\n"
+"PO-Revision-Date: 2020-11-27 00:29+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 "Generated-By: Babel 2.7.0\n"
 
 #: js/src/app.js:14
@@ -330,7 +330,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: js/src/serverSettings/ServerSettingsForm.js:126
 msgid ""

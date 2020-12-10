@@ -72,7 +72,7 @@ def test_post_client_backend_error(client):
 
 
 @mock_backend_response({
-    'openvpn': {'get_client_config': {'config': 'FOO=BAR'}}
+    'openvpn': {'get_client_config': {'config': 'FOO=BAR', 'name' : 'turris'}}
 })
 def test_get_client(client):
     response = client.get('/openvpn/api/clients/1234')

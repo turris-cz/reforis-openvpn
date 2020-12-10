@@ -105,7 +105,9 @@ def get_client(client_id):
     if not config:
         raise APIError(_('Cannot get client'), HTTPStatus.INTERNAL_SERVER_ERROR)
 
-    return make_response((config, {'Content-Disposition': 'attachment; filename=turris.ovpn'}))
+    name = response.get('name')
+
+    return make_response((config, {'Content-Disposition': f'attachment; filename={name}.ovpn'}))
 
 
 @blueprint.route('/clients/<client_id>', methods=['DELETE'])

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2020-11-27 00:29+0000\n"
+"PO-Revision-Date: 2020-12-14 07:29+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -38,22 +38,24 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
+"Kortere enn 64 tegn. Kun alfanumeriske tegn, punktum, bindestreker og "
+"understreker."
 
 #: js/src/clientRegistration/AddClientForm.js:64
 msgid "Add"
-msgstr ""
+msgstr "Legg til"
 
 #: js/src/clientRegistration/AddClientForm.js:74
 msgid "Name cannot be empty"
-msgstr ""
+msgstr "Navnet kan ikke stå tomt"
 
 #: js/src/clientRegistration/AddClientForm.js:77
 msgid "Name is too long"
-msgstr ""
+msgstr "Navnet er for langt"
 
 #: js/src/clientRegistration/AddClientForm.js:80
 msgid "Name contains invalid characters"
-msgstr ""
+msgstr "Navnet inneholder ugyldige tegn"
 
 #: js/src/clientRegistration/ClientRegistration.js:29
 msgid "Client Registration"
@@ -82,19 +84,19 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:51
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: js/src/clientRegistration/ClientTable.js:97
 msgid "Access revoked"
-msgstr ""
+msgstr "Tilgang tilbakekalt"
 
 #: js/src/clientRegistration/ClientTable.js:122
 msgid "Download"
-msgstr ""
+msgstr "Last ned"
 
 #: js/src/clientRegistration/ClientTable.js:129
 msgid "Revoke"
-msgstr ""
+msgstr "Tilbakekall"
 
 #: js/src/clientRegistration/Clients.js:72
 msgid "Client configurations"
@@ -308,7 +310,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:100
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Route all traffic via VPN"

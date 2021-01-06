@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2020-11-05 10:26+0000\n"
-"Last-Translator: Nagy Juraj <csucsu299@gmail.com>\n"
+"PO-Revision-Date: 2021-01-07 01:26+0000\n"
+"Last-Translator: Zoli <boritek@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.3.2-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 "Generated-By: Babel 2.7.0\n"
 
 #: js/src/app.js:14
@@ -82,7 +82,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:51
 msgid "Actions"
-msgstr ""
+msgstr "Műveletek"
 
 #: js/src/clientRegistration/ClientTable.js:97
 msgid "Access revoked"
@@ -90,7 +90,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:122
 msgid "Download"
-msgstr ""
+msgstr "Letöltés"
 
 #: js/src/clientRegistration/ClientTable.js:129
 msgid "Revoke"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: js/src/clientSettings/SettingsTable.js:103
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: js/src/clientSettings/SettingsTable.js:131
 msgid "Cannot refresh status"
@@ -270,7 +270,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:71
 msgid "Device"
-msgstr ""
+msgstr "Készülék"
 
 #: js/src/serverSettings/ServerSettingsForm.js:73
 msgid "Listen on IPv6"
@@ -330,7 +330,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: js/src/serverSettings/ServerSettingsForm.js:126
 msgid ""

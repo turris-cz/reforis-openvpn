@@ -1,4 +1,4 @@
-# Norwegian Bokmål (Norway) translations for PROJECT.
+# Norwegian Bokmål translations for PROJECT.
 # Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-12-02 11:00+0100\n"
-"PO-Revision-Date: 2019-10-22 14:40+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: nb_NO\n"
-"Language-Team: nb_NO <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2020-12-14 07:29+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/nb_NO/>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
 "Generated-By: Babel 2.7.0\n"
 
 #: js/src/app.js:14
@@ -36,22 +38,24 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
+"Kortere enn 64 tegn. Kun alfanumeriske tegn, punktum, bindestreker og "
+"understreker."
 
 #: js/src/clientRegistration/AddClientForm.js:64
 msgid "Add"
-msgstr ""
+msgstr "Legg til"
 
 #: js/src/clientRegistration/AddClientForm.js:74
 msgid "Name cannot be empty"
-msgstr ""
+msgstr "Navnet kan ikke stå tomt"
 
 #: js/src/clientRegistration/AddClientForm.js:77
 msgid "Name is too long"
-msgstr ""
+msgstr "Navnet er for langt"
 
 #: js/src/clientRegistration/AddClientForm.js:80
 msgid "Name contains invalid characters"
-msgstr ""
+msgstr "Navnet inneholder ugyldige tegn"
 
 #: js/src/clientRegistration/ClientRegistration.js:29
 msgid "Client Registration"
@@ -80,19 +84,19 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:51
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: js/src/clientRegistration/ClientTable.js:97
 msgid "Access revoked"
-msgstr ""
+msgstr "Tilgang tilbakekalt"
 
 #: js/src/clientRegistration/ClientTable.js:122
 msgid "Download"
-msgstr ""
+msgstr "Last ned"
 
 #: js/src/clientRegistration/ClientTable.js:129
 msgid "Revoke"
-msgstr ""
+msgstr "Tilbakekall"
 
 #: js/src/clientRegistration/Clients.js:72
 msgid "Client configurations"
@@ -172,7 +176,7 @@ msgstr ""
 
 #: js/src/clientSettings/SettingsTable.js:103
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: js/src/clientSettings/SettingsTable.js:131
 msgid "Cannot refresh status"
@@ -180,7 +184,7 @@ msgstr ""
 
 #: js/src/clientSettings/SettingsTable.js:136
 msgid "Running"
-msgstr ""
+msgstr "Kjører"
 
 #: js/src/clientSettings/SettingsTable.js:136
 msgid "Not running"
@@ -268,7 +272,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:71
 msgid "Device"
-msgstr ""
+msgstr "Enhet"
 
 #: js/src/serverSettings/ServerSettingsForm.js:73
 msgid "Listen on IPv6"
@@ -306,7 +310,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:100
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Route all traffic via VPN"
@@ -328,7 +332,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: js/src/serverSettings/ServerSettingsForm.js:126
 msgid ""
@@ -409,4 +413,3 @@ msgstr ""
 
 #~ msgid "An error occurred during loading OpenVPN server settings"
 #~ msgstr ""
-

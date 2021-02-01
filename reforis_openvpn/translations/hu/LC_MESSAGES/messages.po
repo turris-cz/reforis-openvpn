@@ -7,65 +7,64 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-02 11:00+0100\n"
+"POT-Creation-Date: 2021-02-01 13:15+0100\n"
 "PO-Revision-Date: 2021-01-08 16:32+0000\n"
 "Last-Translator: Zoli <boritek@gmail.com>\n"
-"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/hu/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
 msgstr "OpenVPN"
 
-#: js/src/clientRegistration/AddClientForm.js:54
+#: js/src/clientRegistration/AddClientForm.js:61
 msgid "Add new client"
 msgstr "Új ügyfél hozzáadása"
 
-#: js/src/clientRegistration/AddClientForm.js:57
-#: js/src/clientRegistration/ClientTable.js:50
+#: js/src/clientRegistration/AddClientForm.js:64
+#: js/src/clientRegistration/ClientTable.js:56
 msgid "Client name"
 msgstr "Ügyfélnév"
 
-#: js/src/clientRegistration/AddClientForm.js:58
+#: js/src/clientRegistration/AddClientForm.js:65
 msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Rövidebb, mint 64 karakter. Csak alfanumerikus karakterek, pontok, kötőjelek "
-"és aláhúzások lehetségesek."
+"Rövidebb, mint 64 karakter. Csak alfanumerikus karakterek, pontok, "
+"kötőjelek és aláhúzások lehetségesek."
 
-#: js/src/clientRegistration/AddClientForm.js:64
+#: js/src/clientRegistration/AddClientForm.js:80
 msgid "Add"
 msgstr "Hozzáad"
 
-#: js/src/clientRegistration/AddClientForm.js:74
+#: js/src/clientRegistration/AddClientForm.js:91
 msgid "Name cannot be empty"
 msgstr "A név nem lehet üres"
 
-#: js/src/clientRegistration/AddClientForm.js:77
+#: js/src/clientRegistration/AddClientForm.js:94
 msgid "Name is too long"
 msgstr "A név túl hosszú"
 
-#: js/src/clientRegistration/AddClientForm.js:80
+#: js/src/clientRegistration/AddClientForm.js:97
 msgid "Name contains invalid characters"
 msgstr "A név érvénytelen karaktereket tartalmaz"
 
-#: js/src/clientRegistration/ClientRegistration.js:29
+#: js/src/clientRegistration/ClientRegistration.js:34
 msgid "Client Registration"
 msgstr "Ügyfél regisztráció"
 
-#: js/src/clientRegistration/ClientRegistration.js:50
+#: js/src/clientRegistration/ClientRegistration.js:60
 msgid "You need to generate certificate authority in order to register clients."
 msgstr "Az ügyfelek regisztrálásához hitelesítésszolgáltatót kell létrehoznia."
 
-#: js/src/clientRegistration/ClientRegistration.js:54
+#: js/src/clientRegistration/ClientRegistration.js:69
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -73,42 +72,44 @@ msgstr ""
 "Létre kell hoznia egy konfigurációs fájlt minden egyes ügyfél számára, "
 "amelyet csatlakoztatni szeretne az OpenVPN-kiszolgálóhoz."
 
-#: js/src/clientRegistration/ClientRegistration.js:55
+#: js/src/clientRegistration/ClientRegistration.js:74
 msgid ""
 "To apply the client configuration you need to download it and put it into"
 " the OpenVPN configuration directory or alternatively open it using your "
 "OpenVPN client. You might need to restart your client afterwards."
 msgstr ""
-"Az ügyfélkonfiguráció alkalmazásához le kell töltenie, és be kell helyeznie "
-"az OpenVPN konfigurációs könyvtárba vagy meg kell nyitnia az OpenVPN "
-"ügyfélprogrammal. Előfordulhat, hogy ezt követően újra kell indítania az "
-"ügyfelet."
+"Az ügyfélkonfiguráció alkalmazásához le kell töltenie, és be kell "
+"helyeznie az OpenVPN konfigurációs könyvtárba vagy meg kell nyitnia az "
+"OpenVPN ügyfélprogrammal. Előfordulhat, hogy ezt követően újra kell "
+"indítania az ügyfelet."
 
-#: js/src/clientRegistration/ClientTable.js:35
+#: js/src/clientRegistration/ClientTable.js:42
 msgid "There are no clients registered."
 msgstr "Nincsenek regisztrált ügyfelek."
 
-#: js/src/clientRegistration/ClientTable.js:51
+#: js/src/clientRegistration/ClientTable.js:57
+#: js/src/clientSettings/SettingsTable.js:75
+#: js/src/clientSettings/SettingsTable.js:80
 msgid "Actions"
 msgstr "Műveletek"
 
-#: js/src/clientRegistration/ClientTable.js:97
+#: js/src/clientRegistration/ClientTable.js:107
 msgid "Access revoked"
 msgstr "A hozzáférés visszavonva"
 
-#: js/src/clientRegistration/ClientTable.js:122
+#: js/src/clientRegistration/ClientTable.js:132
 msgid "Download"
 msgstr "Letölt"
 
-#: js/src/clientRegistration/ClientTable.js:129
+#: js/src/clientRegistration/ClientTable.js:139
 msgid "Revoke"
 msgstr "Visszavon"
 
-#: js/src/clientRegistration/Clients.js:72
+#: js/src/clientRegistration/Clients.js:91
 msgid "Client configurations"
 msgstr "Ügyfélbeállítások"
 
-#: js/src/clientRegistration/Clients.js:102
+#: js/src/clientRegistration/Clients.js:127
 msgid ""
 "Be sure to check if server's IP address provided in configuration file "
 "actually matches the public IP address of your router. You can set this "
@@ -118,46 +119,49 @@ msgid ""
 msgstr ""
 "Ellenőrizze, hogy a kiszolgáló konfigurációs fájlban megadott IP-címe "
 "valóban megegyezik-e az útválasztó nyilvános IP-címével. Ezt a címet "
-"manuálisan is beállíthatja, ha az automatikus felismerés sikertelen. Ez a "
-"módosítás <strong>nincs</strong> tárolva sehol és csak az éppen letöltött "
-"konfigurációra vonatkozik."
+"manuálisan is beállíthatja, ha az automatikus felismerés sikertelen. Ez a"
+" módosítás <strong>nincs</strong> tárolva sehol és csak az éppen "
+"letöltött konfigurációra vonatkozik."
 
-#: js/src/clientRegistration/Clients.js:136
+#: js/src/clientRegistration/Clients.js:167
 msgid "Override server address"
 msgstr "Kiszolgálócím felülbírálása"
 
-#: js/src/clientRegistration/Clients.js:142
+#: js/src/clientRegistration/Clients.js:173
 msgid "Router's public IPv4 address"
 msgstr "Az útválasztó nyilvános IPv4-címe"
 
-#: js/src/clientSettings/AddSettingsForm.js:49
+#: js/src/clientSettings/AddSettingsForm.js:55
 msgid "Add settings"
 msgstr "Beállítások hozzáadása"
 
-#: js/src/clientSettings/AddSettingsForm.js:50
+#: js/src/clientSettings/AddSettingsForm.js:57
 msgid ""
 "Please select a file with OpenVPN client settings you wish to add. New "
 "settings will be enabled after uploading. Please note that network will "
 "be restarted automatically."
 msgstr ""
-"Válasszon egy fájlt a hozzáadni kívánt OpenVPN kliens beállításokkal. Az új "
-"beállítások a feltöltés után engedélyezésre kerülnek. Felhívjuk figyelmét, "
-"hogy a hálózat automatikusan újraindul."
+"Válasszon egy fájlt a hozzáadni kívánt OpenVPN kliens beállításokkal. Az "
+"új beállítások a feltöltés után engedélyezésre kerülnek. Felhívjuk "
+"figyelmét, hogy a hálózat automatikusan újraindul."
 
-#: js/src/clientSettings/AddSettingsForm.js:64
+#: js/src/clientSettings/AddSettingsForm.js:66
+msgid "Choose settings file..."
+msgstr ""
+
+#: js/src/clientSettings/AddSettingsForm.js:81
 msgid "Upload settings"
 msgstr "Feltöltési beállítások"
 
-#: js/src/clientSettings/AddSettingsForm.js:78
+#: js/src/clientSettings/AddSettingsForm.js:96
 msgid "File is too big. Maximum size is 1 MB"
 msgstr "A fájl túl nagy. A maximális méret 1 MB"
 
-#: js/src/clientSettings/AddSettingsForm.js:83
+#: js/src/clientSettings/AddSettingsForm.js:102
 msgid "Filename must be at least 1 and at most 50 characters long."
-msgstr ""
-"A fájlnévnek legalább 1 és legfeljebb 50 karakter hosszúnak kell lennie."
+msgstr "A fájlnévnek legalább 1 és legfeljebb 50 karakter hosszúnak kell lennie."
 
-#: js/src/clientSettings/AddSettingsForm.js:86
+#: js/src/clientSettings/AddSettingsForm.js:109
 msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
@@ -165,55 +169,61 @@ msgstr ""
 "A fájlnév csak alfanumerikus karaktereket, pontokat, kötőjeleket és "
 "aláhúzásokat tartalmazhat."
 
-#: js/src/clientSettings/ClientSettings.js:16
+#: js/src/clientSettings/ClientSettings.js:19
 msgid "Client Settings"
 msgstr "Ügyfélbeállítások"
 
-#: js/src/clientSettings/ClientSettings.js:17
+#: js/src/clientSettings/ClientSettings.js:21
 msgid ""
 "In order to use OpenVPN client you need to prepare text file with client "
 "settings. If you want to connect to another Turris device, download "
 "appropriate file from \"Client Registration\" page."
 msgstr ""
-"Az OpenVPN ügyfél használatához ügyfélbeállításokat tartalmazó szöveges fájl "
-"készítése szükséges. Ha egy másik Turris eszközhöz szeretne csatlakozni, "
-"töltse le a megfelelő fájlt az \"Ügyfélregisztráció\" oldalról."
+"Az OpenVPN ügyfél használatához ügyfélbeállításokat tartalmazó szöveges "
+"fájl készítése szükséges. Ha egy másik Turris eszközhöz szeretne "
+"csatlakozni, töltse le a megfelelő fájlt az \"Ügyfélregisztráció\" "
+"oldalról."
 
-#: js/src/clientSettings/SettingsTable.js:27
+#: js/src/clientSettings/SettingsTable.js:36
 msgid "Available settings"
 msgstr "Elérhető beállítások"
 
-#: js/src/clientSettings/SettingsTable.js:28
+#: js/src/clientSettings/SettingsTable.js:38
 msgid ""
 "For each uploaded file a new OpenVPN client instance is created. Please "
 "check settings file for errors if instance is enabled and not running few"
 " minutes after setup."
 msgstr ""
-"Minden feltöltött fájlhoz új OpenVPN ügyfélpéldány jön létre. Ellenőrizze a "
-"beállításfájlt, hogy vannak-e hibák, ha a példány engedélyezve van, és nem "
-"fut néhány perccel a beállítás után."
+"Minden feltöltött fájlhoz új OpenVPN ügyfélpéldány jön létre. Ellenőrizze"
+" a beállításfájlt, hogy vannak-e hibák, ha a példány engedélyezve van, és"
+" nem fut néhány perccel a beállítás után."
 
-#: js/src/clientSettings/SettingsTable.js:45
+#: js/src/clientSettings/SettingsTable.js:62
 msgid "There are no settings added yet."
 msgstr "Még nincsenek hozzáadva beállítások."
 
-#: js/src/clientSettings/SettingsTable.js:103
+#: js/src/clientSettings/SettingsTable.js:72
+msgid "Instances"
+msgstr ""
+
+#: js/src/clientSettings/SettingsTable.js:160
 msgid "Delete"
 msgstr "Törlés"
 
-#: js/src/clientSettings/SettingsTable.js:131
+#: js/src/clientSettings/SettingsTable.js:191
 msgid "Cannot refresh status"
 msgstr "Az állapot nem frissíthető"
 
-#: js/src/clientSettings/SettingsTable.js:136
+#: js/src/clientSettings/SettingsTable.js:198
 msgid "Running"
 msgstr "Fut"
 
-#: js/src/clientSettings/SettingsTable.js:136
+#: js/src/clientSettings/SettingsTable.js:200
 msgid "Not running"
 msgstr "Nem fut"
 
-#: js/src/clientSettings/SettingsTable.js:137
+#: js/src/clientSettings/SettingsTable.js:204
+#: js/src/clientSettings/SettingsTable.js:206
 msgid "Check status"
 msgstr "Állapot ellenőrzése"
 
@@ -228,40 +238,40 @@ msgid ""
 "is ready."
 msgstr ""
 "A hitelesítésszolgáltató létrehozása folyamatban van. Általában néhány "
-"percet vesz igénybe. A beállítások automatikusan megjelennek itt, amint a "
-"hitelesítésszolgáltató készen áll."
+"percet vesz igénybe. A beállítások automatikusan megjelennek itt, amint a"
+" hitelesítésszolgáltató készen áll."
 
-#: js/src/serverSettings/AuthorityMissing.js:29
+#: js/src/serverSettings/AuthorityMissing.js:33
 msgid "Cannot generate certificate authority"
 msgstr "Nem hozható létre hitelesítésszolgáltató"
 
-#: js/src/serverSettings/AuthorityMissing.js:35
+#: js/src/serverSettings/AuthorityMissing.js:39
 msgid "No certification authority"
 msgstr "Nincs hitelesítésszolgáltató"
 
-#: js/src/serverSettings/AuthorityMissing.js:36
+#: js/src/serverSettings/AuthorityMissing.js:41
 msgid ""
 "Currently there is no OpenVPN certificate authority (CA). A CA is "
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
-"Jelenleg nincs OpenVPN hitelesítésszolgáltató (CA). Az OpenVPN-kiszolgálón "
-"történő hitelesítéshez hitelesítésre ügyféltanúsítványokat kell létrehoznia. "
-"A folytatáshoz először létre kell hoznia."
+"Jelenleg nincs OpenVPN hitelesítésszolgáltató (CA). Az OpenVPN-"
+"kiszolgálón történő hitelesítéshez hitelesítésre ügyféltanúsítványokat "
+"kell létrehoznia. A folytatáshoz először létre kell hoznia."
 
-#: js/src/serverSettings/AuthorityMissing.js:42
+#: js/src/serverSettings/AuthorityMissing.js:51
 msgid "Generate CA"
 msgstr "CA létrehozása"
 
-#: js/src/serverSettings/AuthorityReady.js:30 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:28 reforis_openvpn/__init__.py:50
 msgid "Cannot delete certificate authority"
 msgstr "Nem törölhető a hitelesítésszolgáltató"
 
-#: js/src/serverSettings/AuthorityReady.js:36
+#: js/src/serverSettings/AuthorityReady.js:34
 msgid "Certificate authority"
 msgstr "Hitelesítésszolgáltató"
 
-#: js/src/serverSettings/AuthorityReady.js:38
+#: js/src/serverSettings/AuthorityReady.js:37
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA you need to disable the server configuration first."
@@ -269,7 +279,7 @@ msgstr ""
 "Nem törölhető a CA míg az OpenVPN kiszolgáló be van kapcsolva. A CA "
 "törléséhez előbb le kell tiltani a kiszolgáló beállítását."
 
-#: js/src/serverSettings/AuthorityReady.js:41
+#: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it all clients will have their access revoked."
@@ -278,7 +288,7 @@ msgstr ""
 "figyelembe, hogy ha törli, hogy minden ügyfél hozzáférése visszavonásra "
 "kerül."
 
-#: js/src/serverSettings/AuthorityReady.js:47
+#: js/src/serverSettings/AuthorityReady.js:56
 msgid "Delete CA"
 msgstr "CA törlése"
 
@@ -286,59 +296,60 @@ msgstr "CA törlése"
 msgid "Server Settings"
 msgstr "Kiszolgáló beállításai"
 
-#: js/src/serverSettings/ServerSettingsForm.js:30
+#: js/src/serverSettings/ServerSettingsForm.js:43
 msgid "Cannot save server settings"
 msgstr "A kiszolgáló beállításai nem menthetők"
 
-#: js/src/serverSettings/ServerSettingsForm.js:61
+#: js/src/serverSettings/ServerSettingsForm.js:82
 msgid "Server settings"
 msgstr "Kiszolgáló beállításai"
 
-#: js/src/serverSettings/ServerSettingsForm.js:62
+#: js/src/serverSettings/ServerSettingsForm.js:84
 msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of VPN server."
 msgstr ""
-"Kérjük, vegye figyelembe, hogy nyilvános (lehetőleg statikus) IP-címre van "
-"szüksége és hogy a hálózat VPN-kiszolgáló használatára legyen konfigurálva."
+"Kérjük, vegye figyelembe, hogy nyilvános (lehetőleg statikus) IP-címre "
+"van szüksége és hogy a hálózat VPN-kiszolgáló használatára legyen "
+"konfigurálva."
 
-#: js/src/serverSettings/ServerSettingsForm.js:65
+#: js/src/serverSettings/ServerSettingsForm.js:90
 msgid "Server enabled"
 msgstr "Kiszolgáló engedélyezve"
 
-#: js/src/serverSettings/ServerSettingsForm.js:71
+#: js/src/serverSettings/ServerSettingsForm.js:100
 msgid "Device"
 msgstr "Készülék"
 
-#: js/src/serverSettings/ServerSettingsForm.js:73
+#: js/src/serverSettings/ServerSettingsForm.js:105
 msgid "Listen on IPv6"
 msgstr "Figyelés IPv6 címen"
 
-#: js/src/serverSettings/ServerSettingsForm.js:76
+#: js/src/serverSettings/ServerSettingsForm.js:110
 msgid ""
 "Useful if you don't have public IPv4 address. Disable if your IPv6 "
 "connection is broken."
 msgstr ""
-"Akkor hasznos, ha nincs nyilvános IPv4-címe. Tiltsa le, ha az IPv6-kapcsolat "
-"nem működik."
+"Akkor hasznos, ha nincs nyilvános IPv4-címe. Tiltsa le, ha az "
+"IPv6-kapcsolat nem működik."
 
-#: js/src/serverSettings/ServerSettingsForm.js:79
+#: js/src/serverSettings/ServerSettingsForm.js:115
 msgid "Protocol"
 msgstr "Protokoll"
 
-#: js/src/serverSettings/ServerSettingsForm.js:83
+#: js/src/serverSettings/ServerSettingsForm.js:121
 msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
-"Az ügyfelek ezzel a protokollal csatlakoznak a VPN-kiszolgálóhoz. Használja "
-"a TCP-t, ha az internetszolgáltatója blokkolja az UDP-t."
+"Az ügyfelek ezzel a protokollal csatlakoznak a VPN-kiszolgálóhoz. "
+"Használja a TCP-t, ha az internetszolgáltatója blokkolja az UDP-t."
 
-#: js/src/serverSettings/ServerSettingsForm.js:86
+#: js/src/serverSettings/ServerSettingsForm.js:126
 msgid "VPN network address"
 msgstr "VPN-hálózati cím"
 
-#: js/src/serverSettings/ServerSettingsForm.js:90
+#: js/src/serverSettings/ServerSettingsForm.js:132
 msgid ""
 "This network should be different than any network directly reachable by "
 "the router and the clients."
@@ -346,27 +357,27 @@ msgstr ""
 "Ennek a hálózatnak különböznie kell a többi az útválasztó és az ügyfelek "
 "által közvetlenül elérhető hálózattól."
 
-#: js/src/serverSettings/ServerSettingsForm.js:93
+#: js/src/serverSettings/ServerSettingsForm.js:137
 msgid "VPN network mask"
 msgstr "VPN hálózati maszk"
 
-#: js/src/serverSettings/ServerSettingsForm.js:100
+#: js/src/serverSettings/ServerSettingsForm.js:146
 msgid "Port"
 msgstr "Port"
 
-#: js/src/serverSettings/ServerSettingsForm.js:102
+#: js/src/serverSettings/ServerSettingsForm.js:151
 msgid "Route all traffic via VPN"
 msgstr "Minden forgalom VPN-en keresztül"
 
-#: js/src/serverSettings/ServerSettingsForm.js:107
+#: js/src/serverSettings/ServerSettingsForm.js:156
 msgid "Clients will access the Internet via VPN"
 msgstr "Az ügyfelek VPN-en keresztül érik el az internetet"
 
-#: js/src/serverSettings/ServerSettingsForm.js:110
+#: js/src/serverSettings/ServerSettingsForm.js:161
 msgid "Use DNS via VPN"
 msgstr "DNS használata VPN-en keresztül"
 
-#: js/src/serverSettings/ServerSettingsForm.js:113
+#: js/src/serverSettings/ServerSettingsForm.js:166
 msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
@@ -374,19 +385,19 @@ msgstr ""
 "Az ügyfelek az útválasztó DNS-ével oldják fel a címeket. Helyi szerverek "
 "elérésekor szükséges, mint pl. my-nas.lan"
 
-#: js/src/serverSettings/ServerSettingsForm.js:123
+#: js/src/serverSettings/ServerSettingsForm.js:179
 msgid "Save"
 msgstr "Mentés"
 
-#: js/src/serverSettings/ServerSettingsForm.js:126
+#: js/src/serverSettings/ServerSettingsForm.js:186
 msgid ""
 "<strong>Advanced users:</strong> if you already configured OpenVPN server"
 " manually your configuration will be extended (rather than  overwritten)."
 " In case of conflict you must fix previous settings by yourself."
 msgstr ""
 "<strong> Haladó felhasználók:</strong> ha már manuálisan konfigurálta az "
-"OpenVPN-kiszolgálót, a konfiguráció kibővül (nem pedig felülíródik). Ütközés "
-"esetén a korábbi beállításokat egyedül kell kijavítania."
+"OpenVPN-kiszolgálót, a konfiguráció kibővül (nem pedig felülíródik). "
+"Ütközés esetén a korábbi beállításokat egyedül kell kijavítania."
 
 #: reforis_openvpn/__init__.py:42
 msgid "Certificate authority already exists"
@@ -412,31 +423,31 @@ msgstr "A kért ügyfél nem létezik"
 msgid "Cannot get client"
 msgstr "Nem lehet lekérdezni az ügyfelet"
 
-#: reforis_openvpn/__init__.py:115
+#: reforis_openvpn/__init__.py:117
 msgid "Cannot revoke certificate"
 msgstr "A tanúsítvány nem vonható vissza"
 
-#: reforis_openvpn/__init__.py:131
+#: reforis_openvpn/__init__.py:133
 msgid "Requested settings do not exist"
 msgstr "A kért beállítások nem léteznek"
 
-#: reforis_openvpn/__init__.py:138
+#: reforis_openvpn/__init__.py:140
 msgid "Missing data for 'settings' file"
 msgstr "Hiányzó adatok a \"beállítások\" fájlhoz"
 
-#: reforis_openvpn/__init__.py:146
+#: reforis_openvpn/__init__.py:148
 msgid "Client settings '{}' already exist"
 msgstr "A(z) '{}' ügyfélbeállítások már léteznek"
 
-#: reforis_openvpn/__init__.py:154
+#: reforis_openvpn/__init__.py:156
 msgid "Cannot add OpenVPN client settings"
 msgstr "Nem lehet hozzáadni az OpenVPN-ügyfélbeállításokat"
 
-#: reforis_openvpn/__init__.py:168
+#: reforis_openvpn/__init__.py:170
 msgid "Cannot change OpenVPN client settings"
 msgstr "Az OpenVPN-ügyfél beállításai nem módosíthatók"
 
-#: reforis_openvpn/__init__.py:177
+#: reforis_openvpn/__init__.py:179
 msgid "Cannot delete OpenVPN client settings"
 msgstr "Az OpenVPN-ügyfél beállításai nem törölhetők"
 
@@ -460,3 +471,4 @@ msgstr "Az OpenVPN-ügyfél beállításai nem törölhetők"
 
 #~ msgid "An error occurred during loading OpenVPN server settings"
 #~ msgstr ""
+

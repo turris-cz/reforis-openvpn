@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-12-02 11:00+0100\n"
+"POT-Creation-Date: 2021-02-01 13:15+0100\n"
 "PO-Revision-Date: 2019-10-22 14:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fo\n"
@@ -16,89 +16,91 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:54
+#: js/src/clientRegistration/AddClientForm.js:61
 msgid "Add new client"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:57
-#: js/src/clientRegistration/ClientTable.js:50
+#: js/src/clientRegistration/AddClientForm.js:64
+#: js/src/clientRegistration/ClientTable.js:56
 msgid "Client name"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:58
+#: js/src/clientRegistration/AddClientForm.js:65
 msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:64
+#: js/src/clientRegistration/AddClientForm.js:80
 msgid "Add"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:74
+#: js/src/clientRegistration/AddClientForm.js:91
 msgid "Name cannot be empty"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:77
+#: js/src/clientRegistration/AddClientForm.js:94
 msgid "Name is too long"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:80
+#: js/src/clientRegistration/AddClientForm.js:97
 msgid "Name contains invalid characters"
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:29
+#: js/src/clientRegistration/ClientRegistration.js:34
 msgid "Client Registration"
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:50
+#: js/src/clientRegistration/ClientRegistration.js:60
 msgid "You need to generate certificate authority in order to register clients."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:54
+#: js/src/clientRegistration/ClientRegistration.js:69
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:55
+#: js/src/clientRegistration/ClientRegistration.js:74
 msgid ""
 "To apply the client configuration you need to download it and put it into"
 " the OpenVPN configuration directory or alternatively open it using your "
 "OpenVPN client. You might need to restart your client afterwards."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:35
+#: js/src/clientRegistration/ClientTable.js:42
 msgid "There are no clients registered."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:51
+#: js/src/clientRegistration/ClientTable.js:57
+#: js/src/clientSettings/SettingsTable.js:75
+#: js/src/clientSettings/SettingsTable.js:80
 msgid "Actions"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:97
+#: js/src/clientRegistration/ClientTable.js:107
 msgid "Access revoked"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:122
+#: js/src/clientRegistration/ClientTable.js:132
 msgid "Download"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:129
+#: js/src/clientRegistration/ClientTable.js:139
 msgid "Revoke"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:72
+#: js/src/clientRegistration/Clients.js:91
 msgid "Client configurations"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:102
+#: js/src/clientRegistration/Clients.js:127
 msgid ""
 "Be sure to check if server's IP address provided in configuration file "
 "actually matches the public IP address of your router. You can set this "
@@ -107,86 +109,95 @@ msgid ""
 "configuration being currently downloaded."
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:136
+#: js/src/clientRegistration/Clients.js:167
 msgid "Override server address"
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:142
+#: js/src/clientRegistration/Clients.js:173
 msgid "Router's public IPv4 address"
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:49
+#: js/src/clientSettings/AddSettingsForm.js:55
 msgid "Add settings"
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:50
+#: js/src/clientSettings/AddSettingsForm.js:57
 msgid ""
 "Please select a file with OpenVPN client settings you wish to add. New "
 "settings will be enabled after uploading. Please note that network will "
 "be restarted automatically."
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:64
+#: js/src/clientSettings/AddSettingsForm.js:66
+msgid "Choose settings file..."
+msgstr ""
+
+#: js/src/clientSettings/AddSettingsForm.js:81
 msgid "Upload settings"
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:78
+#: js/src/clientSettings/AddSettingsForm.js:96
 msgid "File is too big. Maximum size is 1 MB"
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:83
+#: js/src/clientSettings/AddSettingsForm.js:102
 msgid "Filename must be at least 1 and at most 50 characters long."
 msgstr ""
 
-#: js/src/clientSettings/AddSettingsForm.js:86
+#: js/src/clientSettings/AddSettingsForm.js:109
 msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
 
-#: js/src/clientSettings/ClientSettings.js:16
+#: js/src/clientSettings/ClientSettings.js:19
 msgid "Client Settings"
 msgstr ""
 
-#: js/src/clientSettings/ClientSettings.js:17
+#: js/src/clientSettings/ClientSettings.js:21
 msgid ""
 "In order to use OpenVPN client you need to prepare text file with client "
 "settings. If you want to connect to another Turris device, download "
 "appropriate file from \"Client Registration\" page."
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:27
+#: js/src/clientSettings/SettingsTable.js:36
 msgid "Available settings"
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:28
+#: js/src/clientSettings/SettingsTable.js:38
 msgid ""
 "For each uploaded file a new OpenVPN client instance is created. Please "
 "check settings file for errors if instance is enabled and not running few"
 " minutes after setup."
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:45
+#: js/src/clientSettings/SettingsTable.js:62
 msgid "There are no settings added yet."
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:103
+#: js/src/clientSettings/SettingsTable.js:72
+msgid "Instances"
+msgstr ""
+
+#: js/src/clientSettings/SettingsTable.js:160
 msgid "Delete"
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:131
+#: js/src/clientSettings/SettingsTable.js:191
 msgid "Cannot refresh status"
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:136
+#: js/src/clientSettings/SettingsTable.js:198
 msgid "Running"
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:136
+#: js/src/clientSettings/SettingsTable.js:200
 msgid "Not running"
 msgstr ""
 
-#: js/src/clientSettings/SettingsTable.js:137
+#: js/src/clientSettings/SettingsTable.js:204
+#: js/src/clientSettings/SettingsTable.js:206
 msgid "Check status"
 msgstr ""
 
@@ -201,46 +212,46 @@ msgid ""
 "is ready."
 msgstr ""
 
-#: js/src/serverSettings/AuthorityMissing.js:29
+#: js/src/serverSettings/AuthorityMissing.js:33
 msgid "Cannot generate certificate authority"
 msgstr ""
 
-#: js/src/serverSettings/AuthorityMissing.js:35
+#: js/src/serverSettings/AuthorityMissing.js:39
 msgid "No certification authority"
 msgstr ""
 
-#: js/src/serverSettings/AuthorityMissing.js:36
+#: js/src/serverSettings/AuthorityMissing.js:41
 msgid ""
 "Currently there is no OpenVPN certificate authority (CA). A CA is "
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
 
-#: js/src/serverSettings/AuthorityMissing.js:42
+#: js/src/serverSettings/AuthorityMissing.js:51
 msgid "Generate CA"
 msgstr ""
 
-#: js/src/serverSettings/AuthorityReady.js:30 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:28 reforis_openvpn/__init__.py:50
 msgid "Cannot delete certificate authority"
 msgstr ""
 
-#: js/src/serverSettings/AuthorityReady.js:36
+#: js/src/serverSettings/AuthorityReady.js:34
 msgid "Certificate authority"
 msgstr ""
 
-#: js/src/serverSettings/AuthorityReady.js:38
+#: js/src/serverSettings/AuthorityReady.js:37
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA you need to disable the server configuration first."
 msgstr ""
 
-#: js/src/serverSettings/AuthorityReady.js:41
+#: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it all clients will have their access revoked."
 msgstr ""
 
-#: js/src/serverSettings/AuthorityReady.js:47
+#: js/src/serverSettings/AuthorityReady.js:56
 msgid "Delete CA"
 msgstr ""
 
@@ -248,89 +259,89 @@ msgstr ""
 msgid "Server Settings"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:30
+#: js/src/serverSettings/ServerSettingsForm.js:43
 msgid "Cannot save server settings"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:61
+#: js/src/serverSettings/ServerSettingsForm.js:82
 msgid "Server settings"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:62
+#: js/src/serverSettings/ServerSettingsForm.js:84
 msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of VPN server."
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:65
+#: js/src/serverSettings/ServerSettingsForm.js:90
 msgid "Server enabled"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:71
+#: js/src/serverSettings/ServerSettingsForm.js:100
 msgid "Device"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:73
+#: js/src/serverSettings/ServerSettingsForm.js:105
 msgid "Listen on IPv6"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:76
+#: js/src/serverSettings/ServerSettingsForm.js:110
 msgid ""
 "Useful if you don't have public IPv4 address. Disable if your IPv6 "
 "connection is broken."
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:79
+#: js/src/serverSettings/ServerSettingsForm.js:115
 msgid "Protocol"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:83
+#: js/src/serverSettings/ServerSettingsForm.js:121
 msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:86
+#: js/src/serverSettings/ServerSettingsForm.js:126
 msgid "VPN network address"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:90
+#: js/src/serverSettings/ServerSettingsForm.js:132
 msgid ""
 "This network should be different than any network directly reachable by "
 "the router and the clients."
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:93
+#: js/src/serverSettings/ServerSettingsForm.js:137
 msgid "VPN network mask"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:100
+#: js/src/serverSettings/ServerSettingsForm.js:146
 msgid "Port"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:102
+#: js/src/serverSettings/ServerSettingsForm.js:151
 msgid "Route all traffic via VPN"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:107
+#: js/src/serverSettings/ServerSettingsForm.js:156
 msgid "Clients will access the Internet via VPN"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:110
+#: js/src/serverSettings/ServerSettingsForm.js:161
 msgid "Use DNS via VPN"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:113
+#: js/src/serverSettings/ServerSettingsForm.js:166
 msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:123
+#: js/src/serverSettings/ServerSettingsForm.js:179
 msgid "Save"
 msgstr ""
 
-#: js/src/serverSettings/ServerSettingsForm.js:126
+#: js/src/serverSettings/ServerSettingsForm.js:186
 msgid ""
 "<strong>Advanced users:</strong> if you already configured OpenVPN server"
 " manually your configuration will be extended (rather than  overwritten)."
@@ -361,31 +372,31 @@ msgstr ""
 msgid "Cannot get client"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:115
+#: reforis_openvpn/__init__.py:117
 msgid "Cannot revoke certificate"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:131
+#: reforis_openvpn/__init__.py:133
 msgid "Requested settings do not exist"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:138
+#: reforis_openvpn/__init__.py:140
 msgid "Missing data for 'settings' file"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:146
+#: reforis_openvpn/__init__.py:148
 msgid "Client settings '{}' already exist"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:154
+#: reforis_openvpn/__init__.py:156
 msgid "Cannot add OpenVPN client settings"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:168
+#: reforis_openvpn/__init__.py:170
 msgid "Cannot change OpenVPN client settings"
 msgstr ""
 
-#: reforis_openvpn/__init__.py:177
+#: reforis_openvpn/__init__.py:179
 msgid "Cannot delete OpenVPN client settings"
 msgstr ""
 

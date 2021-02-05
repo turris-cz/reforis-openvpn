@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-01 13:15+0100\n"
-"PO-Revision-Date: 2021-02-03 06:41+0000\n"
+"PO-Revision-Date: 2021-02-06 17:50+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -160,7 +160,7 @@ msgstr "Filen er for stor. Maksimal størrelse er 1 MB"
 
 #: js/src/clientSettings/AddSettingsForm.js:102
 msgid "Filename must be at least 1 and at most 50 characters long."
-msgstr "Filnavn må være fra 1 til 50 tegn langt."
+msgstr "Filnavnet må være minst 1 og høyst 50 tegn langt."
 
 #: js/src/clientSettings/AddSettingsForm.js:109
 msgid ""

@@ -2,11 +2,11 @@
     "name": "reforis_openvpn",
     "author": "CZ.NIC, z.s.p.o.",
     "license": "GPL-3.0",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "description": "",
     "main": "./src/app.js",
     "dependencies": {
-        "foris": "^5.1.5",
+        "foris": "^5.1.12",
         "react-uid": "^2.2.0"
     },
     "peerDependencies": {
@@ -23,7 +23,7 @@
         "@babel/preset-react": "^7.9.4",
         "@testing-library/react": "^8.0.9",
         "babel-loader": "^8.1.0",
-        "css-loader": "^3.4.2",
+        "css-loader": "^5.2.6",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.12.0",
         "eslint-config-reforis": "^1.0.0",

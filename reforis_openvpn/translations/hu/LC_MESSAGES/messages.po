@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-01 13:15+0100\n"
-"PO-Revision-Date: 2021-01-08 16:32+0000\n"
+"PO-Revision-Date: 2021-05-30 16:32+0000\n"
 "Last-Translator: Zoli <boritek@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/hu/>\n"
 "Language: hu\n"
-"Language-Team: Hungarian <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/hu/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7-dev\n"
 "Generated-By: Babel 2.8.0\n"
 
 #: js/src/app.js:14
@@ -147,7 +148,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:66
 msgid "Choose settings file..."
-msgstr ""
+msgstr "Válassza ki a beállításokat tartalmazó fájlt..."
 
 #: js/src/clientSettings/AddSettingsForm.js:81
 msgid "Upload settings"
@@ -204,7 +205,7 @@ msgstr "Még nincsenek hozzáadva beállítások."
 
 #: js/src/clientSettings/SettingsTable.js:72
 msgid "Instances"
-msgstr ""
+msgstr "Példányok"
 
 #: js/src/clientSettings/SettingsTable.js:160
 msgid "Delete"
@@ -471,4 +472,3 @@ msgstr "Az OpenVPN-ügyfél beállításai nem törölhetők"
 
 #~ msgid "An error occurred during loading OpenVPN server settings"
 #~ msgstr ""
-

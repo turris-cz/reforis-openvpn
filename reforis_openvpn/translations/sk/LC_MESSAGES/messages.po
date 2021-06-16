@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-01 13:15+0100\n"
-"PO-Revision-Date: 2021-06-16 11:42+0000\n"
+"PO-Revision-Date: 2021-06-17 15:33+0000\n"
 "Last-Translator: Atec <nil.maho@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/sk/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.7\n"
 "Generated-By: Babel 2.8.0\n"
 
 #: js/src/app.js:14
@@ -80,9 +80,9 @@ msgid ""
 " the OpenVPN configuration directory or alternatively open it using your "
 "OpenVPN client. You might need to restart your client afterwards."
 msgstr ""
-"Klienta nastavíte tak, že jeho konfiguračný súbor stiahnete do priečinku s "
-"nastavením OpenVPN klienta, alebo v ňom konfiguračný súbor otvoríte. Potom "
-"môže byť potrebné klienta reštartovať.."
+"Klienta nastavíte tak, že jeho konfiguračný súbor uložíte do priečinku s "
+"nastaveniami OpenVPN klienta, alebo v klientovi tento konfiguračný súbor "
+"otvoríte. Potom môže byť potrebné klienta reštartovať."
 
 #: js/src/clientRegistration/ClientTable.js:42
 msgid "There are no clients registered."
@@ -100,7 +100,7 @@ msgstr "Prístup odvolaný"
 
 #: js/src/clientRegistration/ClientTable.js:132
 msgid "Download"
-msgstr "Sťahovanie"
+msgstr "Stiahnuť"
 
 #: js/src/clientRegistration/ClientTable.js:139
 msgid "Revoke"
@@ -118,11 +118,10 @@ msgid ""
 "<strong>not</strong> stored anywhere and is applicable only to the "
 "configuration being currently downloaded."
 msgstr ""
-"Skontrolujte, či sa IP adresa servera uvedená v konfiguračnom súbore "
-"skutočne zhoduje s verejnou IP adresou vášho routera. Ak je automatická "
-"detekcia neúspešná, môžete túto adresu nastaviť ručne. Táto zmena sa "
-"<strong> nikam neukladá </strong> a dá sa použiť len pre aktuálne sťahovanú "
-"konfiguráciu."
+"Skontrolujte, či sa IP adresa servera uvedená v konfiguračnom súbore zhoduje "
+"so skutočnou verejnou IP adresou vášho routera. Ak je automatická detekcia "
+"neúspešná, môžete túto adresu nastaviť ručne. Táto zmena sa <strong> nikam "
+"neuloží </strong> a dá sa použiť len pre aktuálne sťahovanú konfiguráciu."
 
 #: js/src/clientRegistration/Clients.js:167
 msgid "Override server address"
@@ -142,9 +141,9 @@ msgid ""
 "settings will be enabled after uploading. Please note that network will "
 "be restarted automatically."
 msgstr ""
-"Vyberte, prosím, konfiguračný súbor klienta OpenVPN, ktorého chcete pridať. "
-"Nové nastavenia sa aktivujú po nahratí súboru. Nezabudnite, prosím, že sieť "
-"sa automaticky reštartuje."
+"Prosím, vyberte konfiguračný súbor klienta OpenVPN, ktorého chcete pridať. "
+"Nové nastavenia sa aktivujú po nahratí súboru. Pripomíname, že sieť sa "
+"automaticky reštartuje."
 
 #: js/src/clientSettings/AddSettingsForm.js:66
 msgid "Choose settings file..."
@@ -168,7 +167,7 @@ msgid ""
 "underscores."
 msgstr ""
 "Názov súboru môže obsahovať len písmená, číslice, bodky, pomlčky a "
-"podčiarknutia."
+"podčiarkovník."
 
 #: js/src/clientSettings/ClientSettings.js:19
 msgid "Client Settings"
@@ -194,9 +193,9 @@ msgid ""
 "check settings file for errors if instance is enabled and not running few"
 " minutes after setup."
 msgstr ""
-"Pre každý nahratý súbor sa vytvorí nová inštancia OpenVPN klienta. Ak je "
-"inštancia povolená a niekoľko minút po nastavení stále nebeží, skontrolujte, "
-"či konfiguračný súbor neobsahuje chyby."
+"Pre každý nahratý súbor sa vytvorí nová inštancia klienta OpenVPN. Ak je "
+"inštancia povolená a po niekoľkých minútach stále nebeží, skontrolujte, či "
+"konfiguračný súbor neobsahuje chyby."
 
 #: js/src/clientSettings/SettingsTable.js:62
 msgid "There are no settings added yet."
@@ -237,8 +236,8 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Teraz sa generuje vaša certifikačná autorita. Obvykle to trvá niekoľko "
-"minút. Nastavenia sa tu objavia hneď ako bude pripravená."
+"Teraz sa generuje certifikačná autorita. Obvykle to trvá niekoľko minút. Po "
+"jej vytvorení sa tu zobrazia nastavenia."
 
 #: js/src/serverSettings/AuthorityMissing.js:33
 msgid "Cannot generate certificate authority"
@@ -261,7 +260,7 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityMissing.js:51
 msgid "Generate CA"
-msgstr "Vygenerovať certifikačnú autoritu"
+msgstr "Generovať certifikačnú autoritu"
 
 #: js/src/serverSettings/AuthorityReady.js:28 reforis_openvpn/__init__.py:50
 msgid "Cannot delete certificate authority"
@@ -276,7 +275,7 @@ msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA you need to disable the server configuration first."
 msgstr ""
-"Kým je OpenVPN server povolený, nie je možné certifikačnú autoritu vymazať. "
+"Kým je OpenVPN server povolený, certifikačnú autoritu nie je možné vymazať. "
 "Na jej vymazanie je najskôr potrebné zakázať OpenVPN server."
 
 #: js/src/serverSettings/AuthorityReady.js:43
@@ -407,7 +406,7 @@ msgstr "Nastavenia servera OpenVPN sa nedajú zmeniť"
 
 #: reforis_openvpn/__init__.py:85
 msgid "Client '{}' is already registered"
-msgstr "Klient '{}' je už registrovaný"
+msgstr "Klient '{}' je už zaregistrovaný"
 
 #: reforis_openvpn/__init__.py:89
 msgid "Cannot register client"
@@ -427,7 +426,7 @@ msgstr "Certifikát sa nedá odvolať"
 
 #: reforis_openvpn/__init__.py:133
 msgid "Requested settings do not exist"
-msgstr "Vyžadované nastavenia neexistujú"
+msgstr "Požadované nastavenia neexistujú"
 
 #: reforis_openvpn/__init__.py:140
 msgid "Missing data for 'settings' file"

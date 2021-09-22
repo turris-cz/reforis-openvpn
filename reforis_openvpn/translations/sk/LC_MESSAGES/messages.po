@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-01 13:15+0100\n"
-"PO-Revision-Date: 2021-09-21 18:38+0000\n"
+"PO-Revision-Date: 2021-09-23 06:38+0000\n"
 "Last-Translator: Atec <dr.atec@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/sk/>\n"
@@ -38,7 +38,7 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Menej ako 64 znakov. Len písmená, číslice, bodky, pomlčky a podčiarknutia."
+"Menej ako 64 znakov. Len písmená, číslice, bodky, pomlčky a podčiarkovník."
 
 #: js/src/clientRegistration/AddClientForm.js:80
 msgid "Add"
@@ -100,7 +100,7 @@ msgstr "Prístup odvolaný"
 
 #: js/src/clientRegistration/ClientTable.js:132
 msgid "Download"
-msgstr "Sťahovanie"
+msgstr "Stiahnuť"
 
 #: js/src/clientRegistration/ClientTable.js:139
 msgid "Revoke"

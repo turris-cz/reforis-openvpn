@@ -107,7 +107,11 @@ def get_client(client_id):
 
     name = response.get('name')
 
-    return make_response((config, {'Content-Disposition': f'attachment; filename={name}.ovpn'}))
+    response = make_response(config)
+    response.headers['Content-Disposition'] = f'attachment; filename={name}.ovpn'
+    response.headers['Content-Type'] = 'application/x-openvpn-profile'
+
+    return response
 
 
 @blueprint.route('/clients/<client_id>', methods=['DELETE'])

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -15,6 +15,8 @@ import {
     useForm,
     useWSForisModule,
     validateIPv4Address,
+    validateIPv6Address,
+    validateDomain,
     withErrorMessage,
     withSpinnerOnSending,
     API_STATE,
@@ -145,8 +147,11 @@ function Configurations({ clients }) {
 }
 
 function serverAddressValidator(formData) {
-    const error = validateIPv4Address(formData.address);
-    if (error) {
+    const { address } = formData;
+
+    const error = validateDomain(address);
+
+    if (error && validateIPv4Address(address) && validateIPv6Address(address)) {
         return { address: error };
     }
     return undefined;
@@ -170,7 +175,7 @@ function ServerOverride({ address, error, handleChange }) {
             />
             {serverOverride && (
                 <TextInput
-                    label={_("Router's public IPv4 address")}
+                    label={_("Router's public IP address or DNS name")}
                     value={address}
                     error={error}
                     onChange={handleChange((value) => ({

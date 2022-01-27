@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -33,7 +33,7 @@ export default function SettingsTable() {
 
     return (
         <>
-            <h2>{_("Available settings")}</h2>
+            <h2>{_("Available Settings")}</h2>
             <p>
                 {_(
                     "For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup."

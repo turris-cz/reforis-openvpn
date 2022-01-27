@@ -31,7 +31,7 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
 
     return (
         <div className="card p-4">
-            <h2>{_("Certificate authority")}</h2>
+            <h2>{_("Certificate Authority")}</h2>
             {serverEnabled ? (
                 <p>
                     {_(

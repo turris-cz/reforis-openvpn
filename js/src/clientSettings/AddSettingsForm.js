@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -52,7 +52,7 @@ export default function AddSettingsForm() {
 
     return (
         <>
-            <h2>{_("Add settings")}</h2>
+            <h2>{_("Add Settings")}</h2>
             <p>
                 {_(
                     "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically."

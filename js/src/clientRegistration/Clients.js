@@ -181,6 +181,9 @@ function ServerOverride({ address, error, handleChange }) {
                     onChange={handleChange((value) => ({
                         address: { $set: value },
                     }))}
+                    helpText={_(
+                        "Make sure that this device is accessible from the public internet using this domain name, IPv4 or IPv6 address."
+                    )}
                 />
             )}
         </>

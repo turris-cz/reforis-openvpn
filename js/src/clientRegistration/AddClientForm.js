@@ -88,13 +88,13 @@ export default function AddClientForm({ generating, setGenerating }) {
 function addClientFormValidator(formData) {
     const { name } = formData;
     if (!name) {
-        return { name: _("Name cannot be empty") };
+        return { name: _("Name cannot be empty.") };
     }
     if (name.length > 64) {
-        return { name: _("Name is too long") };
+        return { name: _("Name is too long.") };
     }
     if (!/^[a-zA-Z0-9.\-_]+$/.test(name)) {
-        return { name: _("Name contains invalid characters") };
+        return { name: _("Name contains invalid characters.") };
     }
     return undefined;
 }

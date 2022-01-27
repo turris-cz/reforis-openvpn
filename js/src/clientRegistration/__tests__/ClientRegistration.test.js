@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -118,7 +118,7 @@ describe("<ClientRegistration />", () => {
         function enableOverride() {
             const checkbox = getByLabelText(
                 componentContainer,
-                "Override server address"
+                "Override Server Address"
             );
             fireEvent.click(checkbox);
         }
@@ -129,22 +129,16 @@ describe("<ClientRegistration />", () => {
                 getByText(componentContainer, "Client Registration")
             );
             mockAxios.mockResponse({ data: clients });
-            await wait(() => getByText(componentContainer, "Add new client"));
+            await wait(() => getByText(componentContainer, "Add New Client"));
         });
 
         it("should display address input when checkbox is selected", () => {
             expect(
-                queryByLabelText(
-                    componentContainer,
-                    "Router's public IPv4 address"
-                )
+                queryByLabelText(componentContainer, /Router's public/)
             ).toBeNull();
             enableOverride();
             expect(
-                getByLabelText(
-                    componentContainer,
-                    "Router's public IPv4 address"
-                )
+                getByLabelText(componentContainer, /Router's public/)
             ).toBeDefined();
         });
 
@@ -155,7 +149,7 @@ describe("<ClientRegistration />", () => {
             enableOverride();
             const addressInput = getByLabelText(
                 componentContainer,
-                "Router's public IPv4 address"
+                /Router's public/
             );
             // Since "a" element is replaced with "button" we have to query for "Download" anew
             expect(getFirstDownload().href).toBe(
@@ -192,7 +186,7 @@ describe("<ClientRegistration />", () => {
                 expect.anything()
             );
             mockAxios.mockResponse({ data: { task_id: "1234" } });
-            await wait(() => getByText(componentContainer, "Add new client"));
+            await wait(() => getByText(componentContainer, "Add New Client"));
 
             expect(queryByText(componentContainer, name)).toBeDefined(); // New client not yet visible
             // Generating new client

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -47,19 +47,21 @@ describe("<AddClientForm />", () => {
         // Empty name
         fireEvent.change(nameInput, { target: { value: "" } });
         expect(
-            getByText(componentContainer, "Name cannot be empty")
+            getByText(componentContainer, "Name cannot be empty.")
         ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
 
         // Name too long
         fireEvent.change(nameInput, { target: { value: "q".repeat(65) } });
-        expect(getByText(componentContainer, "Name is too long")).toBeDefined();
+        expect(
+            getByText(componentContainer, "Name is too long.")
+        ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
 
         // Invalid characters
         fireEvent.change(nameInput, { target: { value: "!@#$%" } });
         expect(
-            getByText(componentContainer, "Name contains invalid characters")
+            getByText(componentContainer, "Name contains invalid characters.")
         ).toBeDefined();
         expect(submitButton.disabled).toBe(true);
     });

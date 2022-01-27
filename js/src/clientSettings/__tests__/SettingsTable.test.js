@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -26,7 +26,7 @@ describe("<SettingsTable />", () => {
     async function renderTable(clients = []) {
         const { container } = render(<SettingsTable />);
         mockAxios.mockResponse({ data: clients });
-        await waitForElement(() => getByText(container, "Available settings"));
+        await waitForElement(() => getByText(container, "Available Settings"));
         return container;
     }
 

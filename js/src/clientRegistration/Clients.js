@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 
 import {
     TextInput,
-    CheckBox,
+    Switch,
     useAPIGet,
     useForm,
     useWSForisModule,
@@ -168,8 +168,8 @@ function ServerOverride({ address, error, handleChange }) {
 
     return (
         <>
-            <CheckBox
-                label={_("Override server address")}
+            <Switch
+                label={_("Override Server Address")}
                 value={serverOverride}
                 onChange={(event) => setServerOverride(event.target.checked)}
             />

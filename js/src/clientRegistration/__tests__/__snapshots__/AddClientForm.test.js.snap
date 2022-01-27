@@ -3,7 +3,7 @@
 exports[`<AddClientForm /> should be rendered 1`] = `
 <div>
   <h2>
-    Add new client
+    Add New Client
   </h2>
   <form>
     <div
@@ -27,7 +27,7 @@ exports[`<AddClientForm /> should be rendered 1`] = `
       <div
         class="invalid-feedback"
       >
-        Name cannot be empty
+        Name cannot be empty.
       </div>
       <small
         class="form-text text-muted"

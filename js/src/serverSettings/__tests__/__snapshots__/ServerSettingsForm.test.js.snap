@@ -8,10 +8,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
     <h2
       class="mb-3"
     >
-      Server settings
+      Server Settings
     </h2>
     <p>
-      Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+      Please note that you need a public (preferably static) IP address and your network configured to make use of a VPN server.
     </p>
     <form>
       <div
@@ -30,7 +30,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             class="custom-control-label"
             for="1"
           >
-            Server enabled
+            Enable Server
           </label>
         </div>
       </div>
@@ -91,14 +91,14 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
           id="4"
         >
           <option
-            value="tcp"
-          >
-            TCP
-          </option>
-          <option
             value="udp"
           >
             UDP
+          </option>
+          <option
+            value="tcp"
+          >
+            TCP
           </option>
         </select>
         <small
@@ -233,10 +233,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
     </form>
   </div>
   <p>
-    <strong>
-      Advanced users:
-    </strong>
-     if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+    <b>
+      Advanced users
+    </b>
+    : if you already configured the OpenVPN server manually, your configuration will be extended rather than overwritten. In case of conflict, you must fix previous settings by yourself.
   </p>
 </div>
 `;
@@ -249,10 +249,10 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
     <h2
       class="mb-3"
     >
-      Server settings
+      Server Settings
     </h2>
     <p>
-      Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server.
+      Please note that you need a public (preferably static) IP address and your network configured to make use of a VPN server.
     </p>
     <form>
       <div
@@ -270,7 +270,7 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
             class="custom-control-label"
             for="1"
           >
-            Server enabled
+            Enable Server
           </label>
         </div>
       </div>
@@ -287,10 +287,10 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
     </form>
   </div>
   <p>
-    <strong>
-      Advanced users:
-    </strong>
-     if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself.
+    <b>
+      Advanced users
+    </b>
+    : if you already configured the OpenVPN server manually, your configuration will be extended rather than overwritten. In case of conflict, you must fix previous settings by yourself.
   </p>
 </div>
 `;

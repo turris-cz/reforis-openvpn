@@ -36,7 +36,7 @@ export default function SettingsTable() {
             <h2>{_("Available Settings")}</h2>
             <p>
                 {_(
-                    "For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup."
+                    "For each uploaded file, a new OpenVPN client instance is created. Please check the settings file for errors if the instance is enabled and not running a few minutes after setup."
                 )}
             </p>
             <ClientTableWithErrorAndSpinner

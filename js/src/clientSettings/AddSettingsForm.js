@@ -55,7 +55,7 @@ export default function AddSettingsForm() {
             <h2>{_("Add Settings")}</h2>
             <p>
                 {_(
-                    "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that network will be restarted automatically."
+                    "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that the network will be restarted automatically."
                 )}
             </p>
             <form onSubmit={handleSubmit} className="col px-0">

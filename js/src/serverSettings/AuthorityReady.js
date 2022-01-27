@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -35,13 +35,13 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
             {serverEnabled ? (
                 <p>
                     {_(
-                        "You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first."
+                        "You can't delete the CA while the OpenVPN server is enabled. To delete the CA, you need to disable the server configuration first."
                     )}
                 </p>
             ) : (
                 <p>
                     {_(
-                        "Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked."
+                        "Your certificate authority (CA) is set up properly. Please note that if you delete it, all clients will have their access revoked."
                     )}
                 </p>
             )}

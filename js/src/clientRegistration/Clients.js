@@ -127,7 +127,7 @@ function Configurations({ clients }) {
             <p
                 dangerouslySetInnerHTML={{
                     __html: _(
-                        "Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded."
+                        "Be sure to check if the server's IP address provided in the configuration file matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <b>not</b> stored anywhere and applies only to the configuration being currently downloaded."
                     ),
                 }}
             />

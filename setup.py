@@ -1,4 +1,4 @@
-#  Copyright (C) 2020-2021 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+#  Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
 #
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
@@ -36,10 +36,11 @@ setuptools.setup(
     packages=setuptools.find_packages(exclude=['tests']),
     include_package_data=True,
 
-    description='OpenVPN client and server plugin',
+    description='reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.',
+    url='https://gitlab.nic.cz/turris/reforis/reforis-openvpn',
     author='CZ.NIC, z.s.p.o.',
+    author_email='software@nic.cz',
 
-    # All versions are fixed just for case. Once in while try to check for new versions.
     install_requires=[
         'flask',
         'Babel',

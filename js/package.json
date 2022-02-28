@@ -6,7 +6,7 @@
     "description": "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.",
     "main": "./src/app.js",
     "dependencies": {
-        "foris": "^5.1.12",
+        "foris": "^5.3.0",
         "react-uid": "^2.2.0"
     },
     "peerDependencies": {

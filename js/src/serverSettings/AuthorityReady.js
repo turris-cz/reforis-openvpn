@@ -8,7 +8,13 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { Button, useAPIDelete, useAlert, API_STATE } from "foris";
+import {
+    Button,
+    useAPIDelete,
+    useAlert,
+    API_STATE,
+    formFieldsSize,
+} from "foris";
 
 import API_URLs from "API";
 
@@ -19,8 +25,8 @@ AuthorityReady.propTypes = {
 
 export default function AuthorityReady({ serverEnabled, onReload }) {
     const [setAlert] = useAlert();
-
     const [deleteResponse, deleteCA] = useAPIDelete(API_URLs.authority);
+
     useEffect(() => {
         if (deleteResponse.state === API_STATE.SUCCESS) {
             onReload();
@@ -30,7 +36,7 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
     }, [deleteResponse, onReload, setAlert]);
 
     return (
-        <div className="card p-4">
+        <div className={formFieldsSize}>
             <h2>{_("Certificate Authority")}</h2>
             {serverEnabled ? (
                 <p>

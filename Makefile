@@ -1,9 +1,13 @@
-#  Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+#  Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
 #
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
 
-.PHONY: all venv prepare-dev install install-js install-local-reforis watch-js build-js lint lint-js lint-js-fix lint-web test test-js test-web test-js-update-snapshots create-messages update-messages compile-messages clean
+PROJECT="reForis OpenVPN Plugin"
+# Retrieve version from setup.py 
+VERSION= $(shell sed -En "s/.*version=['\"](.+)['\"].*/\1/p" setup.py)
+COPYRIGHT_HOLDER="CZ.NIC, z.s.p.o. (https://www.nic.cz/)"
+MSGID_BUGS_ADDRESS="tech.support@turris.cz"
 
 VENV_NAME?=venv
 VENV_BIN=$(shell pwd)/$(VENV_NAME)/bin
@@ -12,6 +16,7 @@ PYTHON=python3
 
 JS_DIR=./js
 
+.PHONY: all
 all:
 	@echo "make prepare-dev"
 	@echo "    Create python virtual environment and install dependencies."
@@ -34,65 +39,118 @@ all:
 	@echo "make clean"
 	@echo "    Remove python artifacts and virtualenv."
 
-venv: $(VENV_NAME)/bin/activate
-$(VENV_NAME)/bin/activate: setup.py
-	test -d $(VENV_NAME) || $(PYTHON) -m virtualenv -p $(PYTHON) $(VENV_NAME)
-	# Some problem in latest version of setuptools during extracting translations.
-	$(VENV_BIN)/$(PYTHON) -m pip install -U pip setuptools==39.1.0
-	$(VENV_BIN)/$(PYTHON) -m pip install -e .[devel]
-	touch $(VENV_NAME)/bin/activate
+# Preparation
 
+.PHONY: prepare-dev
 prepare-dev:
-	which npm || curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-	which npm || sudo apt install -y nodejs
+	which npm || curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+	which npm || sudo apt-get install -y nodejs
 	cd $(JS_DIR); npm install
 
-	which $(PYTHON) || sudo apt install -y $(PYTHON) $(PYTHON)-pip
+	which $(PYTHON) || sudo apt-get install -y $(PYTHON) $(PYTHON)-pip
 	which virtualenv || sudo $(PYTHON) -m pip install virtualenv
 	make venv
 
+.PHONY: venv
+venv: $(VENV_NAME)/bin/activate
+$(VENV_NAME)/bin/activate: setup.py
+	test -d $(VENV_NAME) || $(PYTHON) -m virtualenv -p $(PYTHON) $(VENV_NAME)
+	# upgrade pip to latest releases
+	$(VENV_BIN)/$(PYTHON) -m pip install --upgrade pip
+	$(VENV_BIN)/$(PYTHON) -m pip install -e .[devel]
+	touch $(VENV_NAME)/bin/activate
+
+
+# Installation
+
+.PHONY: install
 install:
-	opkg install foris-controller-openvpn-module foris-controller-openvpn_client-module
+	opkg update && opkg install foris-controller-openvpn-module foris-controller-openvpn_client-module
 	$(PYTHON) -m pip install -e .
 	ln -sf /tmp/reforis-openvpn/reforis_static/reforis_openvpn /tmp/reforis/reforis_static/
 	/etc/init.d/lighttpd restart
+
+.PHONY: install-js
 install-js: js/package.json
 	cd $(JS_DIR); npm install --save-dev
+
+.PHONY: install-local-reforis
 install-local-reforis:
 	$(VENV_BIN)/$(PYTHON) -m pip install -e ../reforis
 
-watch-js:
-	cd $(JS_DIR); npm run-script watch
+
+# JavaScript
+
+.PHONY: build-js
 build-js:
 	cd $(JS_DIR); npm run-script build
 
+.PHONY: watch-js
+watch-js:
+	cd $(JS_DIR); npm run-script watch
+
+
+# Linting
+
+.PHONY: lint
 lint: lint-js lint-web
+
+.PHONY: lint-js
 lint-js:
 	cd $(JS_DIR); npm run lint
+
+.PHONY: lint-js-fix
 lint-js-fix:
 	cd $(JS_DIR); npm run lint:fix
+
+.PHONY: lint-web
 lint-web: venv
 	$(VENV_BIN)/$(PYTHON) -m pylint --rcfile=pylintrc reforis_openvpn
 	$(VENV_BIN)/$(PYTHON) -m pycodestyle --config=pycodestyle reforis_openvpn
 
+
+# Testing
+
+.PHONY: test
 test: test-js test-web
+
+.PHONY: test-js
 test-js:
 	cd $(JS_DIR); npm test
-test-web: venv
-	$(VENV_BIN)/$(PYTHON) -m pytest -vv tests
+
+.PHONY: test-js-watch
+test-js-watch:
+	cd $(JS_DIR); npm test -- --watch
+
+.PHONY: test-js-update-snapshots
 test-js-update-snapshots:
 	cd $(JS_DIR); npm test -- -u
 
-create-messages:
-	$(VENV_BIN)/pybabel extract -F babel.cfg -o ./reforis_openvpn/translations/messages.pot .
-update-messages:
-	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/messages.pot -d ./reforis_openvpn/translations
-compile-messages:
+.PHONY: test-web
+test-web: venv
+	$(VENV_BIN)/$(PYTHON) -m pytest -vv tests
+
+# Translations
+
+.PHONY: create-messages
+create-messages: venv
+	$(VENV_BIN)/pybabel extract -F babel.cfg -o ./reforis_openvpn/translations/messages.pot . --project=$(PROJECT) --version=$(VERSION) --copyright-holder=$(COPYRIGHT_HOLDER) --msgid-bugs-address=$(MSGID_BUGS_ADDRESS)
+
+.PHONY: update-messages
+update-messages: venv
+	$(VENV_BIN)/pybabel update -i ./reforis_openvpn/translations/messages.pot -d ./reforis_openvpn/translations --update-header-comment
+
+.PHONY: compile-messages
+compile-messages: venv install-js
 	$(VENV_BIN)/pybabel compile -f -d ./reforis_openvpn/translations
 
+
+# Other
+
+.PHONY: clean
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
-	rm -rf $(VENV_NAME) *.eggs *.egg-info dist build .cache
-	rm -rf dist build *.egg-info
+	rm -rf $(VENV_NAME) *.eggs *.egg-info dist build docs/_build .cache
 	rm -rf $(JS_DIR)/node_modules/ reforis_static/reforis_openvpn/js/app.min.js
 	$(PYTHON) -m pip uninstall -y reforis_openvpn
+

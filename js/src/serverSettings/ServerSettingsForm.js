@@ -172,14 +172,6 @@ export default function ServerSettingsForm({ settingsData }) {
                         />
                     </>
                 )}
-                <p
-                    className="text-muted"
-                    dangerouslySetInnerHTML={{
-                        __html: _(
-                            "<strong>For advanced users:</strong> If you already configured the OpenVPN server manually, your configuration will be extended (rather than overwritten). In case of conflict, you must fix previous settings by yourself."
-                        ),
-                    }}
-                />
                 <div className="text-right">
                     <Button
                         type="submit"

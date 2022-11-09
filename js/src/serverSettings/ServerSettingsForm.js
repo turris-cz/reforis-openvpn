@@ -9,7 +9,6 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
 import {
-    CheckBox,
     Button,
     useForm,
     useAPIPut,
@@ -90,7 +89,7 @@ export default function ServerSettingsForm({ settingsData }) {
             </p>
             <form onSubmit={handleSubmit}>
                 <Switch
-                    label={_("Server enabled")}
+                    label={_("Enable Server")}
                     checked={formData.enabled}
                     onChange={formChangeHandler((value) => ({
                         enabled: { $set: value },
@@ -104,7 +103,7 @@ export default function ServerSettingsForm({ settingsData }) {
                             value={formData.device}
                             disabled
                         />
-                        <CheckBox
+                        <Switch
                             label={_("Listen on IPv6")}
                             checked={formData.ipv6}
                             onChange={formChangeHandler((value) => ({
@@ -150,7 +149,7 @@ export default function ServerSettingsForm({ settingsData }) {
                             value={formData.port}
                             disabled
                         />
-                        <CheckBox
+                        <Switch
                             label={_("Route all traffic via VPN")}
                             checked={formData.route_all}
                             onChange={formChangeHandler((value) => ({
@@ -160,7 +159,7 @@ export default function ServerSettingsForm({ settingsData }) {
                                 "Clients will access the Internet via VPN"
                             )}
                         />
-                        <CheckBox
+                        <Switch
                             label={_("Use DNS via VPN")}
                             checked={formData.use_dns}
                             onChange={formChangeHandler((value) => ({

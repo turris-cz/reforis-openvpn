@@ -22,10 +22,23 @@ import mockAxios from "jest-mock-axios";
 import AvailableSettings from "../AvailableSettings/AvailableSettings";
 
 describe("<AvailableSettings />", () => {
-    const singleClient = { id: "A1", enabled: true, running: true };
+    const singleClient = {
+        id: "A1",
+        enabled: true,
+        running: true,
+        credentials: {
+            username: "user",
+            password: "password",
+        },
+    };
 
     async function renderTable(clients = []) {
-        const { container } = render(<AvailableSettings />);
+        const { container } = render(
+            <>
+                <AvailableSettings />
+                <div id="modal-container" />
+            </>
+        );
         mockAxios.mockResponse({ data: clients });
         await waitForElement(() => getByText(container, "Available Settings"));
         return container;
@@ -61,6 +74,54 @@ describe("<AvailableSettings />", () => {
             { id: "B2", enabled: false, running: false },
         ];
         const container = await renderTable(settings);
+        expect(container).toMatchSnapshot();
+    });
+
+    it("should render a modal of a particular settings after hititng 'Edit' button", async () => {
+        const container = await renderTable([singleClient]);
+
+        fireEvent.click(getByText(container, "Edit"));
+
+        expect(container).toMatchSnapshot();
+    });
+
+    it("should handle PUT ruequest in a modal after hititng 'Save' button", async () => {
+        const container = await renderTable([singleClient]);
+
+        fireEvent.click(getByText(container, "Edit"));
+
+        fireEvent.change(getByLabelText(container, "Username"), {
+            target: { value: "new_user" },
+        });
+
+        fireEvent.change(getByLabelText(container, "Password"), {
+            target: { value: "testpass" },
+        });
+
+        fireEvent.click(getByText(container, "Save"));
+
+        expect(mockAxios.put).toHaveBeenCalledWith(
+            `/reforis/openvpn/api/client-settings/${singleClient.id}`,
+            {
+                id: "A1",
+                enabled: true,
+                credentials: {
+                    username: "new_user",
+                    password: "testpass",
+                },
+            },
+            expect.anything()
+        );
+
+        mockAxios.mockResponse({
+            data: {
+                ...singleClient,
+                credentials: {
+                    username: "new_user",
+                    password: "testpass",
+                },
+            },
+        });
         expect(container).toMatchSnapshot();
     });
 

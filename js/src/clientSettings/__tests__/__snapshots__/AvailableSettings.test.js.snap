@@ -1,0 +1,1058 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvailableSettings /> should display spinner 1`] = `
+<div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
+    <h2>
+      Available Settings
+    </h2>
+    <p>
+      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+    </p>
+    <div
+      class="spinner-wrapper my-3 text-center"
+    >
+      <div
+        class="spinner-border"
+        role="status"
+      >
+        <span
+          class="sr-only"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hititng 'Save' button 1`] = `
+<div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
+    <h2>
+      Available Settings
+    </h2>
+    <p>
+      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+    </p>
+    <div
+      class="table-responsive"
+    >
+      <table
+        class="table table-hover mb-0"
+      >
+        <thead
+          class="thead-light"
+        >
+          <tr>
+            <th>
+              Instances
+            </th>
+            <th
+              aria-label="Actions"
+              class="text-center"
+              scope="col"
+            />
+            <th
+              aria-label="Actions"
+              class="text-right"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    checked=""
+                    class="custom-control-input"
+                    id="1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="1"
+                  >
+                    A1
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            >
+              Running
+              <button
+                aria-label="Check status"
+                class="btn btn btn-sm"
+                title="Check status"
+                type="button"
+              >
+                <i
+                  class="fa fa-redo"
+                />
+              </button>
+            </td>
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    id="modal-container"
+  >
+    <div
+      class="modal fade show"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        role="document"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <h5
+              class="modal-title"
+            >
+              Edit Client Settings
+            </h5>
+            <button
+              class="close"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <div
+              class="form-group"
+            >
+              <label
+                for="3"
+              >
+                Username
+              </label>
+              <div
+                class="input-group"
+              >
+                <input
+                  class="form-control"
+                  disabled=""
+                  id="3"
+                  type="text"
+                  value="new_user"
+                />
+              </div>
+            </div>
+            <div
+              class="form-group"
+            >
+              <label
+                for="4"
+              >
+                Password
+              </label>
+              <div
+                class="input-group"
+              >
+                <input
+                  autocomplete="current-password"
+                  class="form-control"
+                  disabled=""
+                  id="4"
+                  type="password"
+                  value="testpass"
+                />
+                <div
+                  class="input-group-append"
+                >
+                  <button
+                    class="input-group-text"
+                    type="button"
+                  >
+                    <i
+                      class="fa fa-eye"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary "
+              type="button"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AvailableSettings /> should render a modal of a particular settings after hititng 'Edit' button 1`] = `
+<div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
+    <h2>
+      Available Settings
+    </h2>
+    <p>
+      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+    </p>
+    <div
+      class="table-responsive"
+    >
+      <table
+        class="table table-hover mb-0"
+      >
+        <thead
+          class="thead-light"
+        >
+          <tr>
+            <th>
+              Instances
+            </th>
+            <th
+              aria-label="Actions"
+              class="text-center"
+              scope="col"
+            />
+            <th
+              aria-label="Actions"
+              class="text-right"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    checked=""
+                    class="custom-control-input"
+                    id="1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="1"
+                  >
+                    A1
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            >
+              Running
+              <button
+                aria-label="Check status"
+                class="btn btn btn-sm"
+                title="Check status"
+                type="button"
+              >
+                <i
+                  class="fa fa-redo"
+                />
+              </button>
+            </td>
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    id="modal-container"
+  >
+    <div
+      class="modal fade show"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        role="document"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <h5
+              class="modal-title"
+            >
+              Edit Client Settings
+            </h5>
+            <button
+              class="close"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <div
+              class="form-group"
+            >
+              <label
+                for="3"
+              >
+                Username
+              </label>
+              <div
+                class="input-group"
+              >
+                <input
+                  class="form-control"
+                  id="3"
+                  type="text"
+                  value="user"
+                />
+              </div>
+            </div>
+            <div
+              class="form-group"
+            >
+              <label
+                for="4"
+              >
+                Password
+              </label>
+              <div
+                class="input-group"
+              >
+                <input
+                  autocomplete="current-password"
+                  class="form-control"
+                  id="4"
+                  type="password"
+                  value="password"
+                />
+                <div
+                  class="input-group-append"
+                >
+                  <button
+                    class="input-group-text"
+                    type="button"
+                  >
+                    <i
+                      class="fa fa-eye"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary "
+              type="button"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AvailableSettings /> should render info when there are no clients 1`] = `
+<div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
+    <h2>
+      Available Settings
+    </h2>
+    <p>
+      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+    </p>
+    <p
+      class="text-muted text-center"
+    >
+      There are no settings added yet.
+    </p>
+  </div>
+  <div
+    id="modal-container"
+  >
+    <div
+      class="modal fade"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        role="document"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <h5
+              class="modal-title"
+            >
+              Edit Client Settings
+            </h5>
+            <button
+              class="close"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <div
+              class="spinner-wrapper text-center"
+            >
+              <div
+                class="spinner-border"
+                role="status"
+              >
+                <span
+                  class="sr-only"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary "
+              disabled=""
+              type="button"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AvailableSettings /> should render table of settings 1`] = `
+<div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
+    <h2>
+      Available Settings
+    </h2>
+    <p>
+      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+    </p>
+    <div
+      class="table-responsive"
+    >
+      <table
+        class="table table-hover mb-0"
+      >
+        <thead
+          class="thead-light"
+        >
+          <tr>
+            <th>
+              Instances
+            </th>
+            <th
+              aria-label="Actions"
+              class="text-center"
+              scope="col"
+            />
+            <th
+              aria-label="Actions"
+              class="text-right"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    checked=""
+                    class="custom-control-input"
+                    id="1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="1"
+                  >
+                    A1
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            >
+              Running
+              <button
+                aria-label="Check status"
+                class="btn btn btn-sm"
+                title="Check status"
+                type="button"
+              >
+                <i
+                  class="fa fa-redo"
+                />
+              </button>
+            </td>
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    class="custom-control-input"
+                    id="2"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="2"
+                  >
+                    A2
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            />
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    checked=""
+                    class="custom-control-input"
+                    id="3"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="3"
+                  >
+                    B1
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            >
+              Running
+              <button
+                aria-label="Check status"
+                class="btn btn btn-sm"
+                title="Check status"
+                type="button"
+              >
+                <i
+                  class="fa fa-redo"
+                />
+              </button>
+            </td>
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="align-middle"
+            >
+              <div
+                class="form-group"
+              >
+                <div
+                  class="custom-control custom-switch custom-control-inline"
+                >
+                  <input
+                    class="custom-control-input"
+                    id="4"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label"
+                    for="4"
+                  >
+                    B2
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td
+              class="align-middle text-center"
+            />
+            <td
+              class="text-right"
+            >
+              <div
+                aria-label="Actions"
+                class="btn-group btn-group-sm mb-0"
+                role="group"
+              >
+                <button
+                  class="btn btn-primary "
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-edit fa-sm mr-1"
+                    />
+                    Edit
+                  </span>
+                </button>
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                >
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fas fa-trash fa-sm mr-1"
+                    />
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    id="modal-container"
+  >
+    <div
+      class="modal fade"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+        role="document"
+      >
+        <div
+          class="modal-content"
+        >
+          <div
+            class="modal-header"
+          >
+            <h5
+              class="modal-title"
+            >
+              Edit Client Settings
+            </h5>
+            <button
+              class="close"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body"
+          >
+            <div
+              class="spinner-wrapper text-center"
+            >
+              <div
+                class="spinner-border"
+                role="status"
+              >
+                <span
+                  class="sr-only"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer"
+          >
+            <button
+              class="btn btn-secondary"
+              type="button"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-primary "
+              disabled=""
+              type="button"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

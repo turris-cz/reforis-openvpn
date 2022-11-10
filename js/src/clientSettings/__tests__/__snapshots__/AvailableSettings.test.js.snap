@@ -9,7 +9,7 @@ exports[`<AvailableSettings /> should display spinner 1`] = `
       Available Settings
     </h2>
     <p>
-      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+      A new OpenVPN client instance is created for each uploaded file. Please recheck the settings file if the instance is enabled and not running in a few minutes after the setup.
     </p>
     <div
       class="spinner-wrapper my-3 text-center"
@@ -36,7 +36,7 @@ exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hitit
       Available Settings
     </h2>
     <p>
-      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+      A new OpenVPN client instance is created for each uploaded file. Please recheck the settings file if the instance is enabled and not running in a few minutes after the setup.
     </p>
     <div
       class="table-responsive"
@@ -281,7 +281,7 @@ exports[`<AvailableSettings /> should render a modal of a particular settings af
       Available Settings
     </h2>
     <p>
-      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+      A new OpenVPN client instance is created for each uploaded file. Please recheck the settings file if the instance is enabled and not running in a few minutes after the setup.
     </p>
     <div
       class="table-responsive"
@@ -524,7 +524,7 @@ exports[`<AvailableSettings /> should render info when there are no clients 1`] 
       Available Settings
     </h2>
     <p>
-      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+      A new OpenVPN client instance is created for each uploaded file. Please recheck the settings file if the instance is enabled and not running in a few minutes after the setup.
     </p>
     <p
       class="text-muted text-center"
@@ -614,7 +614,7 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
       Available Settings
     </h2>
     <p>
-      For each uploaded file, a new OpenVPN client instance is created. Please check settings file for errors if the instance is enabled and not running few minutes after setup.
+      A new OpenVPN client instance is created for each uploaded file. Please recheck the settings file if the instance is enabled and not running in a few minutes after the setup.
     </p>
     <div
       class="table-responsive"

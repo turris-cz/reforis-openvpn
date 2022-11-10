@@ -6,6 +6,7 @@
  */
 
 import React from "react";
+
 import {
     render,
     fireEvent,
@@ -18,13 +19,13 @@ import { mockSetAlert } from "foris/testUtils/alertContextMock";
 import { mockJSONError } from "foris/testUtils/network";
 import mockAxios from "jest-mock-axios";
 
-import SettingsTable from "../SettingsTable";
+import AvailableSettings from "../AvailableSettings/AvailableSettings";
 
-describe("<SettingsTable />", () => {
+describe("<AvailableSettings />", () => {
     const singleClient = { id: "A1", enabled: true, running: true };
 
     async function renderTable(clients = []) {
-        const { container } = render(<SettingsTable />);
+        const { container } = render(<AvailableSettings />);
         mockAxios.mockResponse({ data: clients });
         await waitForElement(() => getByText(container, "Available Settings"));
         return container;
@@ -35,12 +36,12 @@ describe("<SettingsTable />", () => {
     }
 
     it("should display spinner", () => {
-        const { container } = render(<SettingsTable />);
+        const { container } = render(<AvailableSettings />);
         expect(container).toMatchSnapshot();
     });
 
     it("should handle GET error", async () => {
-        const { container } = render(<SettingsTable />);
+        const { container } = render(<AvailableSettings />);
         mockJSONError();
         await waitForElement(() =>
             getByText(container, "An error occurred while fetching data.")

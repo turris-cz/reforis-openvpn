@@ -109,7 +109,7 @@ def test_put_client_settings_backend_error(client):
 
 @mock_backend_response({'openvpn_client': {'set': {}}})
 def test_put_client_settings_invalid_json(client):
-    response = client.put('/openvpn/api/client-settings/A1A2B1B2')
+    response = client.put('/openvpn/api/client-settings/A1A2B1B2', json={})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Invalid JSON'
 

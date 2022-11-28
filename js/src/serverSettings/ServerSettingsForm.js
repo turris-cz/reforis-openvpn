@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -79,15 +79,15 @@ export default function ServerSettingsForm({ settingsData }) {
     return (
         <>
             <div className="card p-4 mb-3">
-                <h2 className="mb-3">{_("Server settings")}</h2>
+                <h2 className="mb-3">{_("Server Settings")}</h2>
                 <p>
                     {_(
-                        "Please note that you need a public (preferably static) IP address and your network configured to make use of VPN server."
+                        "Please note that you need a public (preferably static) IP address and your network configured to make use of a VPN server."
                     )}
                 </p>
                 <form onSubmit={handleSubmit}>
                     <Switch
-                        label={_("Server enabled")}
+                        label={_("Enable Server")}
                         checked={formData.enabled}
                         onChange={formChangeHandler((value) => ({
                             enabled: { $set: value },
@@ -184,7 +184,7 @@ export default function ServerSettingsForm({ settingsData }) {
             <p
                 dangerouslySetInnerHTML={{
                     __html: _(
-                        "<strong>Advanced users:</strong> if you already configured OpenVPN server manually your configuration will be extended (rather than  overwritten). In case of conflict you must fix previous settings by yourself."
+                        "<b>Advanced users</b>: if you already configured the OpenVPN server manually, your configuration will be extended rather than overwritten. In case of conflict, you must fix previous settings by yourself."
                     ),
                 }}
             />

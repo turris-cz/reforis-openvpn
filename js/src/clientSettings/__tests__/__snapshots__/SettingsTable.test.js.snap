@@ -3,10 +3,10 @@
 exports[`<SettingsTable /> should display spinner 1`] = `
 <div>
   <h2>
-    Available settings
+    Available Settings
   </h2>
   <p>
-    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+    For each uploaded file, a new OpenVPN client instance is created. Please check the settings file for errors if the instance is enabled and not running a few minutes after setup.
   </p>
   <div
     class="spinner-wrapper my-3 text-center"
@@ -26,10 +26,10 @@ exports[`<SettingsTable /> should display spinner 1`] = `
 exports[`<SettingsTable /> should render info when there are no clients 1`] = `
 <div>
   <h2>
-    Available settings
+    Available Settings
   </h2>
   <p>
-    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+    For each uploaded file, a new OpenVPN client instance is created. Please check the settings file for errors if the instance is enabled and not running a few minutes after setup.
   </p>
   <p
     class="text-muted text-center"
@@ -42,10 +42,10 @@ exports[`<SettingsTable /> should render info when there are no clients 1`] = `
 exports[`<SettingsTable /> should render table of settings 1`] = `
 <div>
   <h2>
-    Available settings
+    Available Settings
   </h2>
   <p>
-    For each uploaded file a new OpenVPN client instance is created. Please check settings file for errors if instance is enabled and not running few minutes after setup.
+    For each uploaded file, a new OpenVPN client instance is created. Please check the settings file for errors if the instance is enabled and not running a few minutes after setup.
   </p>
   <div
     class="table-responsive"

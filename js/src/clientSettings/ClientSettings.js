@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -19,7 +19,7 @@ export default function ClientSettings() {
             <h1>{_("Client Settings")}</h1>
             <p>
                 {_(
-                    'In order to use OpenVPN client you need to prepare text file with client settings. If you want to connect to another Turris device, download appropriate file from "Client Registration" page.'
+                    'To use the OpenVPN client, you need to prepare a text file with client settings. If you want to connect to another Turris device, download the appropriate file from the "Client Registration" page.'
                 )}
             </p>
             <div className={formFieldsSize}>

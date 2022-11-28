@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -60,7 +60,7 @@ describe("<ServerSettings />", () => {
         );
         mockAxios.mockResponse({ data: { enabled: false } });
         await waitForElement(() =>
-            getByText(componentContainer, "Certificate authority")
+            getByText(componentContainer, "Certificate Authority")
         );
 
         fireEvent.click(getByText(componentContainer, "Delete CA"));

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -102,7 +102,7 @@ describe("<ServerSettingsForm />", () => {
 
     it("should disable server", async () => {
         const container = renderSettings(enabledFormData);
-        fireEvent.click(getByLabelText(container, "Server enabled"));
+        fireEvent.click(getByLabelText(container, "Enable Server"));
         submitForm(container);
         expect(mockAxios.put).toBeCalledWith(
             "/reforis/openvpn/api/server-settings",

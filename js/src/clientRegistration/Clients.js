@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+ * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -10,11 +10,13 @@ import PropTypes from "prop-types";
 
 import {
     TextInput,
-    CheckBox,
+    Switch,
     useAPIGet,
     useForm,
     useWSForisModule,
     validateIPv4Address,
+    validateIPv6Address,
+    validateDomain,
     withErrorMessage,
     withSpinnerOnSending,
     API_STATE,
@@ -88,7 +90,7 @@ export default function Clients({ ws, setGenerating }) {
 
     return (
         <>
-            <h2>{_("Client configurations")}</h2>
+            <h2>{_("Client Configurations")}</h2>
             <ConfigurationsWithErrorAndSpinner
                 apiState={getClientsResponse.state}
                 clients={clients}
@@ -125,7 +127,7 @@ function Configurations({ clients }) {
             <p
                 dangerouslySetInnerHTML={{
                     __html: _(
-                        "Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <strong>not</strong> stored anywhere and is applicable only to the configuration being currently downloaded."
+                        "Be sure to check if the server's IP address provided in the configuration file matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is <b>not</b> stored anywhere and applies only to the configuration being currently downloaded."
                     ),
                 }}
             />
@@ -145,8 +147,11 @@ function Configurations({ clients }) {
 }
 
 function serverAddressValidator(formData) {
-    const error = validateIPv4Address(formData.address);
-    if (error) {
+    const { address } = formData;
+
+    const error = validateDomain(address);
+
+    if (error && validateIPv4Address(address) && validateIPv6Address(address)) {
         return { address: error };
     }
     return undefined;
@@ -163,19 +168,22 @@ function ServerOverride({ address, error, handleChange }) {
 
     return (
         <>
-            <CheckBox
-                label={_("Override server address")}
+            <Switch
+                label={_("Override Server Address")}
                 value={serverOverride}
                 onChange={(event) => setServerOverride(event.target.checked)}
             />
             {serverOverride && (
                 <TextInput
-                    label={_("Router's public IPv4 address")}
+                    label={_("Router's public IP address or DNS name")}
                     value={address}
                     error={error}
                     onChange={handleChange((value) => ({
                         address: { $set: value },
                     }))}
+                    helpText={_(
+                        "Make sure that this device is accessible from the public internet using this domain name, IPv4 or IPv6 address."
+                    )}
                 />
             )}
         </>

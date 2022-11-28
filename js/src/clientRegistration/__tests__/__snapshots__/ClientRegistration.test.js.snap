@@ -9,13 +9,13 @@ exports[`<ClientRegistration /> should display clients 1`] = `
     You need to generate a configuration file for each client that you wish to connect to your OpenVPN server.
   </p>
   <p>
-    To apply the client configuration you need to download it and put it into the OpenVPN configuration directory or alternatively open it using your OpenVPN client. You might need to restart your client afterwards.
+    To apply the client configuration, you need to download it and put it into the OpenVPN configuration directory or open it using your OpenVPN client. You might need to restart your client afterward.
   </p>
   <div
     class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
   >
     <h2>
-      Add new client
+      Add New Client
     </h2>
     <form>
       <div
@@ -39,7 +39,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
         <div
           class="invalid-feedback"
         >
-          Name cannot be empty
+          Name cannot be empty.
         </div>
         <small
           class="form-text text-muted"
@@ -60,21 +60,21 @@ exports[`<ClientRegistration /> should display clients 1`] = `
       </div>
     </form>
     <h2>
-      Client configurations
+      Client Configurations
     </h2>
     <p>
-      Be sure to check if server's IP address provided in configuration file actually matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is 
-      <strong>
+      Be sure to check if the server's IP address provided in the configuration file matches the public IP address of your router. You can set this address manually if the autodetection fails. This change is 
+      <b>
         not
-      </strong>
-       stored anywhere and is applicable only to the configuration being currently downloaded.
+      </b>
+       stored anywhere and applies only to the configuration being currently downloaded.
     </p>
     <div>
       <div
         class="form-group"
       >
         <div
-          class="custom-control custom-checkbox "
+          class="custom-control custom-switch custom-control-inline"
         >
           <input
             class="custom-control-input"
@@ -86,7 +86,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
             class="custom-control-label"
             for="2"
           >
-            Override server address
+            Override Server Address
           </label>
         </div>
       </div>

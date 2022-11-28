@@ -47,7 +47,7 @@ def test_post_client_missing_field(client):
 
 @mock_backend_response({'openvpn': {'get_status': {}}})
 def test_post_client_invalid_json(client):
-    response = client.post('/openvpn/api/clients')
+    response = client.post('/openvpn/api/clients', json={})
     assert response.status_code == HTTPStatus.BAD_REQUEST
     assert response.json == 'Invalid JSON'
 

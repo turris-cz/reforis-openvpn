@@ -6,10 +6,10 @@ exports[`<AuthorityReady /> should match snapshot 1`] = `
     class="card p-4"
   >
     <h2>
-      Certificate authority
+      Certificate Authority
     </h2>
     <p>
-      Your certificate authority (CA) is set up properly. Please note that if you delete it all clients will have their access revoked.
+      Your certificate authority (CA) is set up properly. Please note that if you delete it, all clients will have their access revoked.
     </p>
     <div
       class="text-right"
@@ -31,10 +31,10 @@ exports[`<AuthorityReady /> should prevent deletion when server is enabled 1`] =
     class="card p-4"
   >
     <h2>
-      Certificate authority
+      Certificate Authority
     </h2>
     <p>
-      You can't delete the CA while the OpenVPN server is enabled. To delete the CA you need to disable the server configuration first.
+      You can't delete the CA while the OpenVPN server is enabled. To delete the CA, you need to disable the server configuration first.
     </p>
     <div
       class="text-right"

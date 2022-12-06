@@ -32,14 +32,14 @@ class CustomBuild(build_py):
 
 setuptools.setup(
     name=NAME,
-    version='1.5.0',
+    version='1.6.0',
     packages=setuptools.find_packages(exclude=['tests']),
     include_package_data=True,
 
     description='reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.',
     url='https://gitlab.nic.cz/turris/reforis/reforis-openvpn',
     author='CZ.NIC, z.s.p.o.',
-    author_email='software@nic.cz',
+    author_email='software@turris.com',
 
     install_requires=[
         'flask',

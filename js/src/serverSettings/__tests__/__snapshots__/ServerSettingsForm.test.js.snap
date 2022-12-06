@@ -3,7 +3,7 @@
 exports[`<ServerSettingsForm /> should render form 1`] = `
 <div>
   <div
-    class="card p-4 mb-3"
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
   >
     <h2
       class="mb-3"
@@ -58,7 +58,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         class="form-group"
       >
         <div
-          class="custom-control custom-checkbox "
+          class="custom-control custom-switch"
         >
           <input
             class="custom-control-input"
@@ -70,12 +70,12 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             for="3"
           >
             Listen on IPv6
-            <small
-              class="form-text text-muted"
-            >
-              Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
-            </small>
           </label>
+          <small
+            class="form-text text-muted mt-0 mb-3"
+          >
+            Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
+          </small>
         </div>
       </div>
       <div
@@ -174,7 +174,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         class="form-group"
       >
         <div
-          class="custom-control custom-checkbox "
+          class="custom-control custom-switch"
         >
           <input
             checked=""
@@ -187,19 +187,19 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             for="8"
           >
             Route all traffic via VPN
-            <small
-              class="form-text text-muted"
-            >
-              Clients will access the Internet via VPN
-            </small>
           </label>
+          <small
+            class="form-text text-muted mt-0 mb-3"
+          >
+            Clients will access the Internet via VPN
+          </small>
         </div>
       </div>
       <div
         class="form-group"
       >
         <div
-          class="custom-control custom-checkbox "
+          class="custom-control custom-switch"
         >
           <input
             checked=""
@@ -212,12 +212,12 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             for="9"
           >
             Use DNS via VPN
-            <small
-              class="form-text text-muted"
-            >
-              Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
-            </small>
           </label>
+          <small
+            class="form-text text-muted mt-0 mb-3"
+          >
+            Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
+          </small>
         </div>
       </div>
       <div
@@ -232,19 +232,13 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
       </div>
     </form>
   </div>
-  <p>
-    <b>
-      Advanced users
-    </b>
-    : if you already configured the OpenVPN server manually, your configuration will be extended rather than overwritten. In case of conflict, you must fix previous settings by yourself.
-  </p>
 </div>
 `;
 
 exports[`<ServerSettingsForm /> should render form partially when disabled 1`] = `
 <div>
   <div
-    class="card p-4 mb-3"
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
   >
     <h2
       class="mb-3"
@@ -286,11 +280,5 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
       </div>
     </form>
   </div>
-  <p>
-    <b>
-      Advanced users
-    </b>
-    : if you already configured the OpenVPN server manually, your configuration will be extended rather than overwritten. In case of conflict, you must fix previous settings by yourself.
-  </p>
 </div>
 `;

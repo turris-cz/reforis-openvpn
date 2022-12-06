@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -15,17 +15,18 @@ import {
     useForm,
     API_STATE,
     buttonFormFieldsSize,
+    formFieldsSize,
 } from "foris";
 
 import API_URLs from "API";
 
 export default function AddSettingsForm() {
     const [setAlert] = useAlert();
-
     const [postSettingsResponse, postSettings] = useAPIPost(
         API_URLs.clientSettings,
         "multipart/form-data"
     );
+
     useEffect(() => {
         if (postSettingsResponse.state === API_STATE.ERROR) {
             setAlert(postSettingsResponse.data);
@@ -35,14 +36,17 @@ export default function AddSettingsForm() {
     const [formState, formChangeHandler, reloadForm] = useForm(validator);
     const formData = formState.data;
     const formErrors = formState.errors || {};
+
     useEffect(() => {
         reloadForm({ settings: undefined });
     }, [reloadForm]);
 
     function handleSubmit(event) {
         event.preventDefault();
+
         const postData = new FormData();
         postData.append("settings", formData.settings);
+
         postSettings({ data: postData });
     }
 
@@ -51,11 +55,11 @@ export default function AddSettingsForm() {
     }
 
     return (
-        <>
+        <div className={formFieldsSize}>
             <h2>{_("Add Settings")}</h2>
             <p>
                 {_(
-                    "Please select a file with OpenVPN client settings you wish to add. New settings will be enabled after uploading. Please note that the network will be restarted automatically."
+                    "Please select a file with OpenVPN client settings you wish to add. The new settings will be enabled after the file is uploaded. Note that the network will be restarted automatically."
                 )}
             </p>
             <form onSubmit={handleSubmit} className="col px-0">
@@ -78,11 +82,11 @@ export default function AddSettingsForm() {
                         forisFormSize
                         disabled={formErrors.settings || !formData.settings}
                     >
-                        {_("Upload settings")}
+                        {_("Add")}
                     </Button>
                 </div>
             </form>
-        </>
+        </div>
     );
 }
 

@@ -6,22 +6,23 @@ exports[`<AuthorityStatus /> should handle generating CA 1`] = `
     class="card p-4"
   >
     <h2>
-      Generating certification authority
+      Certificate Authority
     </h2>
     <p>
       Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready.
     </p>
     <div
-      class="spinner-wrapper my-3 text-center"
+      class="text-center text-muted"
     >
       <div
-        class="spinner-border"
+        class="spinner-border spinner-border-sm mr-1"
         role="status"
       >
         <span
           class="sr-only"
         />
       </div>
+      Generating certification authority…
     </div>
   </div>
 </div>
@@ -33,13 +34,18 @@ exports[`<AuthorityStatus /> should handle missing CA 1`] = `
     class="card p-4"
   >
     <h2>
-      No certification authority
+      Certificate Authority
     </h2>
     <p>
       Currently there is no OpenVPN certificate authority (CA). A CA is required to generate client certificates to authenticate to the OpenVPN server. To proceed you need to generate it first.
     </p>
+    <p
+      class="text-center text-muted"
+    >
+      No certification authority.
+    </p>
     <div
-      class="col-sm-12 col-lg-12 p-0 mb-3 text-right"
+      class="text-right"
     >
       <button
         class="btn btn-primary  col-sm-12 col-md-3 col-lg-2"
@@ -55,7 +61,7 @@ exports[`<AuthorityStatus /> should handle missing CA 1`] = `
 exports[`<AuthorityStatus /> should handle ready CA 1`] = `
 <div>
   <div
-    class="card p-4"
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
   >
     <h2>
       Certificate Authority

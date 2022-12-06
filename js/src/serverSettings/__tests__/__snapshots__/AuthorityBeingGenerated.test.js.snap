@@ -6,22 +6,23 @@ exports[`<AuthorityBeingGenerated /> should match snapshot 1`] = `
     class="card p-4"
   >
     <h2>
-      Generating certification authority
+      Certificate Authority
     </h2>
     <p>
       Your certification authority is now being generated. It usually takes a few minutes. Settings will appear here automatically once the authority is ready.
     </p>
     <div
-      class="spinner-wrapper my-3 text-center"
+      class="text-center text-muted"
     >
       <div
-        class="spinner-border"
+        class="spinner-border spinner-border-sm mr-1"
         role="status"
       >
         <span
           class="sr-only"
         />
       </div>
+      Generating certification authority…
     </div>
   </div>
 </div>

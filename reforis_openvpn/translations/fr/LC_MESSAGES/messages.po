@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2022-12-23 12:51+0000\n"
-"Last-Translator: Florian <flo.site@zaclys.net>\n"
+"PO-Revision-Date: 2023-01-08 08:51+0000\n"
+"Last-Translator: h <tachyglossues@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/fr/>\n"
 "Language: fr\n"
@@ -243,21 +243,19 @@ msgstr "Nom d’utilisateur"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
 msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
-#, fuzzy
 msgid "Username cannot be empty."
-msgstr "Le nom ne peut pas être vide"
+msgstr "Le nom d'utilisateur ne peut pas être vide."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
-#, fuzzy
 msgid "Password cannot be empty."
-msgstr "Le nom ne peut pas être vide"
+msgstr "Le mot de passe ne peut pas être vide."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"

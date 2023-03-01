@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2022-12-25 17:51+0000\n"
+"PO-Revision-Date: 2023-03-02 11:39+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -144,10 +144,13 @@ msgid "Router's public IP address or DNS name"
 msgstr "Ruterens offentlige IPv4-adresse"
 
 #: js/src/clientRegistration/Clients.js:184
+#, fuzzy
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
+"Forsikre deg om at enheten kan nås fra Internett ved bruk av dette "
+"domenenavnet, IPv4, eller IPv6-adressen."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 #, fuzzy

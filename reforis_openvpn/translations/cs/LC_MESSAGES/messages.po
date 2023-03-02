@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2021-12-28 08:50+0000\n"
-"Last-Translator: Josef Schlehofer <pepe@bloodkings.eu>\n"
+"PO-Revision-Date: 2023-03-03 13:36+0000\n"
+"Last-Translator: Michal Hrušecký <michal@hrusecky.net>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/turris/reforis-"
-"openvpn-plugin/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -138,31 +139,30 @@ msgid "Override Server Address"
 msgstr "Přepsat adresu serveru"
 
 #: js/src/clientRegistration/Clients.js:178
-#, fuzzy
 msgid "Router's public IP address or DNS name"
-msgstr "Veřejná adresa IPv4 routeru"
+msgstr "Veřejná adresa routeru nebo jeho doménové jméno"
 
 #: js/src/clientRegistration/Clients.js:184
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
+"Ujistěte se že zařízení je dostupné z veřejného internetu použitím tohoto "
+"doménového jména, IPv4 nebo IPv6 adresy."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
-#, fuzzy
 msgid "Add Settings"
 msgstr "Přidat nastavení"
 
 #: js/src/clientSettings/AddSettingsForm.js:61
-#, fuzzy
 msgid ""
 "Please select a file with OpenVPN client settings you wish to add. The "
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Vyberte prosím soubor s nastavením klienta OpenVPN, kterého chcete "
-"přidat. Nové nastavení se aktivuje po nahrání souboru. Pamatujte prosím, "
-"že síť bude automaticky restartována."
+"Vyberte prosím soubor s nastavením klienta OpenVPN, kterého chcete přidat. "
+"Nové nastavení se aktivuje po nahrání souboru. Pamatujte prosím, že síť bude "
+"automaticky restartována."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
@@ -222,7 +222,7 @@ msgstr "Nastavení klienta"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -231,15 +231,15 @@ msgstr "Uložit"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Uživatelské jméno"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
-msgstr ""
+msgstr "Nastavení klienta byla úspěšně uložena."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 #, fuzzy
@@ -253,7 +253,7 @@ msgstr "Název nesmí být prázdný"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -376,7 +376,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Zapnout server"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -541,4 +541,3 @@ msgstr "Nelze odstranit nastavení klienta OpenVPN"
 #~ "vaše konfigurace bude rozšířeba (nikoli "
 #~ "přepsána). V případě konfliktu si budete"
 #~ " muset nastavení vlastnoručně opravit."
-

@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2020-12-23 13:29+0000\n"
-"Last-Translator: Adam Stańczyk <a.stanczyk@onet.pl>\n"
+"PO-Revision-Date: 2023-03-07 15:38+0000\n"
+"Last-Translator: Arusekk <arek_koz@o2.pl>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/pl/>\n"
 "Language: pl\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/pl/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -87,7 +88,7 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
-msgstr ""
+msgstr "Działania"
 
 #: js/src/clientRegistration/ClientTable.js:107
 msgid "Access revoked"
@@ -95,7 +96,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:135
 msgid "Download"
-msgstr ""
+msgstr "Pobierz"
 
 #: js/src/clientRegistration/ClientTable.js:142
 msgid "Revoke"
@@ -185,7 +186,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -194,7 +195,7 @@ msgstr "Zapisz"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
@@ -214,7 +215,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Zmień"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -573,4 +574,3 @@ msgstr ""
 #~ " conflict you must fix previous "
 #~ "settings by yourself."
 #~ msgstr ""
-

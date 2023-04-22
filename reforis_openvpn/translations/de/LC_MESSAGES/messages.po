@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2023-01-03 16:52+0000\n"
-"Last-Translator: Jonas Wiegner <jonas.wiegner@posteo.de>\n"
+"PO-Revision-Date: 2023-04-23 22:47+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/de/>\n"
 "Language: de\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
-msgstr ""
+msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:61
 msgid "Add New Client"
-msgstr ""
+msgstr "Neuen Client hinzufügen"
 
 #: js/src/clientRegistration/AddClientForm.js:64
 #: js/src/clientRegistration/ClientTable.js:56
 msgid "Client name"
-msgstr ""
+msgstr "Client-Name"
 
 #: js/src/clientRegistration/AddClientForm.js:65
 msgid ""
@@ -43,19 +43,19 @@ msgstr ""
 #: js/src/clientRegistration/AddClientForm.js:80
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
-msgstr ""
+msgstr "Hinzufügen"
 
 #: js/src/clientRegistration/AddClientForm.js:91
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "Name darf nicht leer sein."
 
 #: js/src/clientRegistration/AddClientForm.js:94
 msgid "Name is too long."
-msgstr ""
+msgstr "Name ist zu lang."
 
 #: js/src/clientRegistration/AddClientForm.js:97
 msgid "Name contains invalid characters."
-msgstr ""
+msgstr "Name enthält ungültige Zeichen."
 
 #: js/src/clientRegistration/ClientRegistration.js:34
 msgid "Client Registration"
@@ -91,7 +91,7 @@ msgstr "Aktionen"
 
 #: js/src/clientRegistration/ClientTable.js:107
 msgid "Access revoked"
-msgstr ""
+msgstr "Zugang widerrufen"
 
 #: js/src/clientRegistration/ClientTable.js:135
 msgid "Download"
@@ -99,11 +99,11 @@ msgstr "Herunterladen"
 
 #: js/src/clientRegistration/ClientTable.js:142
 msgid "Revoke"
-msgstr ""
+msgstr "Widerrufen"
 
 #: js/src/clientRegistration/Clients.js:93
 msgid "Client Configurations"
-msgstr ""
+msgstr "Client-Konfigurationen"
 
 #: js/src/clientRegistration/Clients.js:129
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 
 #: js/src/clientRegistration/Clients.js:172
 msgid "Override Server Address"
-msgstr ""
+msgstr "Serveradresse überschreiben"
 
 #: js/src/clientRegistration/Clients.js:178
 msgid "Router's public IP address or DNS name"
@@ -141,7 +141,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr ""
+msgstr "Einstellungsdatei auswählen..."
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
@@ -159,7 +159,7 @@ msgstr ""
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
-msgstr ""
+msgstr "Client-Einstellungen"
 
 #: js/src/clientSettings/ClientSettings.js:20
 msgid ""
@@ -170,7 +170,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
-msgstr ""
+msgstr "Verfügbare Einstellungen"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
 msgid ""
@@ -181,11 +181,11 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
 msgid "Edit Client Settings"
-msgstr ""
+msgstr "Client-Einstellungen bearbeiten"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -194,11 +194,11 @@ msgstr "Speichern"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Benutzername"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
@@ -206,15 +206,15 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr ""
+msgstr "Benutzername darf nicht leer sein."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
-msgstr ""
+msgstr "Passwort darf nicht leer sein."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Bearbeiten"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -230,12 +230,12 @@ msgstr "Läuft"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Not running"
-msgstr ""
+msgstr "Läuft nicht"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:53
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
 msgid "Check status"
-msgstr ""
+msgstr "Status überprüfen"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:23
 msgid "There are no settings added yet."
@@ -304,11 +304,11 @@ msgstr ""
 #: js/src/serverSettings/ServerSettings.js:34
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
-msgstr ""
+msgstr "Servereinstellungen"
 
 #: js/src/serverSettings/ServerSettingsForm.js:44
 msgid "Cannot save server settings"
-msgstr ""
+msgstr "Kann Servereinstellungen nicht speichern"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
 msgid ""
@@ -318,7 +318,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Server aktivieren"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -336,7 +336,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:117
 msgid "Protocol"
-msgstr ""
+msgstr "Protokoll"
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
-msgstr ""
+msgstr "VPN-Netzwerkadresse"
 
 #: js/src/serverSettings/ServerSettingsForm.js:134
 msgid ""
@@ -356,23 +356,23 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
-msgstr ""
+msgstr "VPN-Netzwerkmaske"
 
 #: js/src/serverSettings/ServerSettingsForm.js:148
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: js/src/serverSettings/ServerSettingsForm.js:153
 msgid "Route all traffic via VPN"
-msgstr ""
+msgstr "Gesamten Datenverkehr über VPN leiten"
 
 #: js/src/serverSettings/ServerSettingsForm.js:158
 msgid "Clients will access the Internet via VPN"
-msgstr ""
+msgstr "Clients greifen über VPN auf das Internet zu"
 
 #: js/src/serverSettings/ServerSettingsForm.js:163
 msgid "Use DNS via VPN"
-msgstr ""
+msgstr "DNS via VPN verwenden"
 
 #: js/src/serverSettings/ServerSettingsForm.js:168
 msgid ""

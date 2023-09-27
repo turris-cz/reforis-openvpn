@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2021-02-06 17:50+0000\n"
-"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
+"PO-Revision-Date: 2022-12-09 06:53+0000\n"
+"Last-Translator: Алексей Леньшин <alenshin@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -26,7 +27,6 @@ msgid "OpenVPN"
 msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:61
-#, fuzzy
 msgid "Add New Client"
 msgstr "Добавить нового клиента"
 
@@ -49,19 +49,16 @@ msgid "Add"
 msgstr "Добавить"
 
 #: js/src/clientRegistration/AddClientForm.js:91
-#, fuzzy
 msgid "Name cannot be empty."
-msgstr "Имя не может быть пустым"
+msgstr "Имя не может быть пустым."
 
 #: js/src/clientRegistration/AddClientForm.js:94
-#, fuzzy
 msgid "Name is too long."
-msgstr "Имя слишком длинное"
+msgstr "Имя слишком длинное."
 
 #: js/src/clientRegistration/AddClientForm.js:97
-#, fuzzy
 msgid "Name contains invalid characters."
-msgstr "Имя содержит недопустимые символы"
+msgstr "Имя содержит недопустимые символы."
 
 #: js/src/clientRegistration/ClientRegistration.js:34
 msgid "Client Registration"
@@ -80,16 +77,14 @@ msgstr ""
 "хотите подключить к вашему серверу OpenVPN."
 
 #: js/src/clientRegistration/ClientRegistration.js:74
-#, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
-"Чтобы применить конфигурацию клиента, вам необходимо скачать ее и "
-"поместить в каталог конфигурации OpenVPN или, альтернативно, открыть ее с"
-" помощью клиента OpenVPN. Возможно, вам после этого придется "
-"перезапустить клиента."
+"Чтобы применить конфигурацию клиента, вам необходимо загрузить ее и "
+"поместить в каталог конфигурации OpenVPN или открыть с помощью вашего "
+"клиента OpenVPN. После этого вам может потребоваться перезапустить клиент."
 
 #: js/src/clientRegistration/ClientTable.js:42
 msgid "There are no clients registered."
@@ -115,12 +110,10 @@ msgid "Revoke"
 msgstr "Отменить"
 
 #: js/src/clientRegistration/Clients.js:93
-#, fuzzy
 msgid "Client Configurations"
 msgstr "Конфигурации клиентов"
 
 #: js/src/clientRegistration/Clients.js:129
-#, fuzzy
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
 " file matches the public IP address of your router. You can set this "
@@ -128,43 +121,41 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Обязательно проверьте, соответствует ли IP-адрес сервера, указанный в "
-"файле конфигурации, публичному IP-адресу вашего маршрутизатора. Вы можете"
-" установить этот адрес вручную, если автоопределение не выполнено. Это "
-"изменение <strong>не</strong> хранится где-либо и применяется только к "
-"загружаемой конфигурации."
+"Обязательно проверьте, соответствует ли IP-адрес сервера, указанный в файле "
+"конфигурации, публичному IP-адресу вашего маршрутизатора. Вы можете "
+"установить этот адрес вручную, если автоопределение не выполнено. Это "
+"изменение <b>не</b> хранится где-либо и применяется только к загружаемой "
+"конфигурации."
 
 #: js/src/clientRegistration/Clients.js:172
-#, fuzzy
 msgid "Override Server Address"
 msgstr "Переопределить адрес сервера"
 
 #: js/src/clientRegistration/Clients.js:178
-#, fuzzy
 msgid "Router's public IP address or DNS name"
-msgstr "Публичный IPv4-адрес маршрутизатора"
+msgstr "Публичный IP-адрес маршрутизатора или DNS-имя"
 
 #: js/src/clientRegistration/Clients.js:184
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
+"Убедитесь, что это устройство доступно из Интернета с использованием этого "
+"доменного имени, адреса IPv4 или IPv6."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
-#, fuzzy
 msgid "Add Settings"
 msgstr "Добавить настройки"
 
 #: js/src/clientSettings/AddSettingsForm.js:61
-#, fuzzy
 msgid ""
 "Please select a file with OpenVPN client settings you wish to add. The "
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Пожалуйста, выберите файл с настройками клиента OpenVPN, который вы "
-"хотите добавить. Новые настройки будут включены после загрузки. Обратите "
-"внимание, что сеть будет перезапущена автоматически."
+"Выберите файл с настройками клиента OpenVPN, который вы хотите добавить. "
+"Новые настройки будут активированы после загрузки файла. Обратите внимание, "
+"что сеть будет перезапущена автоматически."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
@@ -191,41 +182,36 @@ msgid "Client Settings"
 msgstr "Настройки клиента"
 
 #: js/src/clientSettings/ClientSettings.js:20
-#, fuzzy
 msgid ""
 "To use the OpenVPN client, you need to prepare a text file with client "
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Для использования клиента OpenVPN вам необходимо подготовить текстовый "
-"файл с настройками клиента. Если вы хотите подключиться к другому "
-"устройству Turris, загрузите соответствующий файл со страницы "
-"«Регистрация клиента»."
+"Для использования клиента OpenVPN необходимо подготовить текстовый файл с "
+"настройками клиента. Если вы хотите подключиться к другому устройству "
+"Turris, загрузите соответствующий файл со страницы «Регистрация клиента»."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
-#, fuzzy
 msgid "Available Settings"
 msgstr "Доступные настройки"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
-#, fuzzy
 msgid ""
 "A new OpenVPN client instance is created for each uploaded file. Please "
 "recheck the settings file if the instance is enabled and not running in a"
 " few minutes after the setup."
 msgstr ""
-"Для каждого загруженного файла создается новый экземпляр клиента OpenVPN."
-" Пожалуйста, проверьте файл настроек на наличие ошибок, если экземпляр "
-"включен и не запускается через несколько минут после установки."
+"Для каждого загружаемого файла создается новый экземпляр клиента OpenVPN. "
+"Перепроверьте файл настроек, если экземпляр включен и не запускается через "
+"несколько минут после установки."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
-#, fuzzy
 msgid "Edit Client Settings"
-msgstr "Настройки клиента"
+msgstr "Изменить настройки клиента"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -234,29 +220,27 @@ msgstr "Сохранить"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
-msgstr ""
+msgstr "Настройки клиента успешно сохранены."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
-#, fuzzy
 msgid "Username cannot be empty."
-msgstr "Имя не может быть пустым"
+msgstr "Имя пользователя не может быть пустым."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
-#, fuzzy
 msgid "Password cannot be empty."
-msgstr "Имя не может быть пустым"
+msgstr "Пароль не может быть пустым."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -290,7 +274,6 @@ msgstr "Экземпляры"
 #: js/src/serverSettings/AuthorityBeingGenerated.js:28
 #: js/src/serverSettings/AuthorityMissing.js:33
 #: js/src/serverSettings/AuthorityReady.js:40
-#, fuzzy
 msgid "Certificate Authority"
 msgstr "Центр сертификации"
 
@@ -305,9 +288,8 @@ msgstr ""
 "полномочия будут готовы."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
-#, fuzzy
 msgid "Generating certification authority…"
-msgstr "Создание центра сертификации"
+msgstr "Создание центра сертификации…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
@@ -324,9 +306,8 @@ msgstr ""
 "Чтобы продолжить, вам нужно сначала его сгенерировать."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
-#, fuzzy
 msgid "No certification authority."
-msgstr "Нет центра сертификации"
+msgstr "Нет центра сертификации."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
@@ -337,7 +318,6 @@ msgid "Cannot delete certificate authority"
 msgstr "Невозможно удалить центр сертификации"
 
 #: js/src/serverSettings/AuthorityReady.js:43
-#, fuzzy
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
@@ -346,13 +326,12 @@ msgstr ""
 "необходимо сначала отключить конфигурацию сервера."
 
 #: js/src/serverSettings/AuthorityReady.js:49
-#, fuzzy
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it, all clients will have their access revoked."
 msgstr ""
-"Ваш центр сертификации (ЦС) настроен правильно. Обратите внимание, что "
-"если вы удалите его, все клиенты будут лишены доступа."
+"Ваш центр сертификации (ЦС) настроен правильно. Обратите внимание, что если "
+"вы удалите его, доступ всех клиентов будет аннулирован."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
@@ -368,17 +347,16 @@ msgid "Cannot save server settings"
 msgstr "Не удается сохранить настройки сервера"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
-#, fuzzy
 msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Обратите внимание, что вам нужен публичный (желательно статический) "
-"IP-адрес и ваша сеть настроена на использование VPN-сервера."
+"Обратите внимание, что вам нужен общедоступный (желательно статический) IP-"
+"адрес и ваша сеть настроена на использование VPN-сервера."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Включить сервер"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -544,4 +522,3 @@ msgstr "Невозможно удалить настройки клиента Op
 #~ " перезаписана). В случае конфликта вы "
 #~ "должны самостоятельно исправить предыдущие "
 #~ "настройки."
-

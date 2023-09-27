@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2022-11-18 08:46+0000\n"
+"PO-Revision-Date: 2023-01-17 23:53+0000\n"
 "Last-Translator: Atec <dr.atec@gmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -25,7 +26,6 @@ msgid "OpenVPN"
 msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:61
-#, fuzzy
 msgid "Add New Client"
 msgstr "Pridať nového klienta"
 
@@ -46,19 +46,16 @@ msgid "Add"
 msgstr "Pridať"
 
 #: js/src/clientRegistration/AddClientForm.js:91
-#, fuzzy
 msgid "Name cannot be empty."
-msgstr "Názov nesmie byť prázdny"
+msgstr "Názov nesmie byť prázdny."
 
 #: js/src/clientRegistration/AddClientForm.js:94
-#, fuzzy
 msgid "Name is too long."
-msgstr "Názov je príliš dlhý"
+msgstr "Názov je príliš dlhý."
 
 #: js/src/clientRegistration/AddClientForm.js:97
-#, fuzzy
 msgid "Name contains invalid characters."
-msgstr "Názov obsahuje neplatné znaky"
+msgstr "Názov obsahuje neplatné znaky."
 
 #: js/src/clientRegistration/ClientRegistration.js:34
 msgid "Client Registration"
@@ -79,7 +76,6 @@ msgstr ""
 "potrebné vygenerovať konfiguračný súbor."
 
 #: js/src/clientRegistration/ClientRegistration.js:74
-#, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
 "into the OpenVPN configuration directory or open it using your OpenVPN "
@@ -113,12 +109,10 @@ msgid "Revoke"
 msgstr "Odvolať"
 
 #: js/src/clientRegistration/Clients.js:93
-#, fuzzy
 msgid "Client Configurations"
 msgstr "Nastavenia klientov"
 
 #: js/src/clientRegistration/Clients.js:129
-#, fuzzy
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
 " file matches the public IP address of your router. You can set this "
@@ -126,19 +120,16 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Skontrolujte, či sa IP adresa servera uvedená v konfiguračnom súbore "
-"zhoduje so skutočnou verejnou IP adresou vášho routera. Ak je automatická"
-" detekcia neúspešná, môžete túto adresu nastaviť ručne. Táto zmena sa "
-"nikam <strong> neuloží </strong> a dá sa použiť len pre aktuálne "
-"sťahovanú konfiguráciu."
+"Skontrolujte, či sa IP adresa servera uvedená v konfiguračnom súbore zhoduje "
+"so skutočnou verejnou IP adresou vášho routera. Ak je automatická detekcia "
+"neúspešná, môžete túto adresu nastaviť ručne. Táto zmena sa nikam <b> "
+"neuloží </b> a dá sa použiť len pre aktuálne sťahovanú konfiguráciu."
 
 #: js/src/clientRegistration/Clients.js:172
-#, fuzzy
 msgid "Override Server Address"
 msgstr "Prepísať adresu servera"
 
 #: js/src/clientRegistration/Clients.js:178
-#, fuzzy
 msgid "Router's public IP address or DNS name"
 msgstr "Verejná IPv4 adresa routera"
 
@@ -147,21 +138,21 @@ msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
+"Uistite sa, že toto zariadenie je prístupné z verejného internetu pomocou "
+"názvu domény, adresy IPv4 alebo IPv6."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
-#, fuzzy
 msgid "Add Settings"
 msgstr "Pridať nastavenia"
 
 #: js/src/clientSettings/AddSettingsForm.js:61
-#, fuzzy
 msgid ""
 "Please select a file with OpenVPN client settings you wish to add. The "
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Prosím, vyberte konfiguračný súbor klienta OpenVPN, ktorý sa má pridať. "
-"Nové nastavenia sa aktivujú po nahratí súboru. Pripomíname, že sieť sa "
+"Prosím, vyberte konfiguračný súbor klienta OpenVPN, ktorý sa má pridať. Nové "
+"nastavenia sa aktivujú po nahratí súboru. Nezabudnite, že sieť sa "
 "automaticky reštartuje."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
@@ -189,41 +180,36 @@ msgid "Client Settings"
 msgstr "Nastavenia klienta"
 
 #: js/src/clientSettings/ClientSettings.js:20
-#, fuzzy
 msgid ""
 "To use the OpenVPN client, you need to prepare a text file with client "
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
 "Aby bolo možné používať klienta OpenVPN, je potrebné pripraviť textový "
-"konfiguračný súbor s nastaveniami. Ak sa chcete pripojiť k inému "
-"zariadeniu Turris, stiahnite zodpovedajúci súbor zo stránky „Registrácia "
-"klienta“."
+"konfiguračný súbor s nastaveniami. Ak sa chcete pripojiť k inému zariadeniu "
+"Turris, stiahnite zodpovedajúci súbor zo stránky „Registrácia klienta“."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
-#, fuzzy
 msgid "Available Settings"
 msgstr "Dostupné nastavenia"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
-#, fuzzy
 msgid ""
 "A new OpenVPN client instance is created for each uploaded file. Please "
 "recheck the settings file if the instance is enabled and not running in a"
 " few minutes after the setup."
 msgstr ""
 "Pre každý nahratý súbor sa vytvorí nová inštancia klienta OpenVPN. Ak "
-"povolená inštancia aj po niekoľkých minútach stále neprebieha, "
-"skontrolujte, či konfiguračný súbor neobsahuje chyby."
+"povolená inštancia aj po niekoľkých minútach stále neprebieha, skontrolujte, "
+"či konfiguračný súbor neobsahuje chyby."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
-#, fuzzy
 msgid "Edit Client Settings"
-msgstr "Nastavenia klienta"
+msgstr "Upraviť nastavenia klienta"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -232,29 +218,27 @@ msgstr "Uložiť"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Užívateľské meno"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
-msgstr ""
+msgstr "Nastavenia klienta boli úspešne uložené."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
-#, fuzzy
 msgid "Username cannot be empty."
-msgstr "Názov nesmie byť prázdny"
+msgstr "Užívateľské meno nemôže byť prázdne."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
-#, fuzzy
 msgid "Password cannot be empty."
-msgstr "Názov nesmie byť prázdny"
+msgstr "Heslo nesmie byť prázdne."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -288,7 +272,6 @@ msgstr "Inštancie"
 #: js/src/serverSettings/AuthorityBeingGenerated.js:28
 #: js/src/serverSettings/AuthorityMissing.js:33
 #: js/src/serverSettings/AuthorityReady.js:40
-#, fuzzy
 msgid "Certificate Authority"
 msgstr "Certifikačná autorita"
 
@@ -302,9 +285,8 @@ msgstr ""
 "Po jej vytvorení sa tu zobrazia nastavenia."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
-#, fuzzy
 msgid "Generating certification authority…"
-msgstr "Generuje sa certifikačná autorita"
+msgstr "Generuje sa certifikačná autorita…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
@@ -322,9 +304,8 @@ msgstr ""
 "potrebné CA vytvoriť."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
-#, fuzzy
 msgid "No certification authority."
-msgstr "Žiadna certifikačná autorita"
+msgstr "Žiadna certifikačná autorita."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
@@ -335,22 +316,20 @@ msgid "Cannot delete certificate authority"
 msgstr "Certifikačná autorita sa nedá vymazať"
 
 #: js/src/serverSettings/AuthorityReady.js:43
-#, fuzzy
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Kým je OpenVPN server povolený, certifikačnú autoritu nie je možné "
-"vymazať. Na jej vymazanie je najskôr potrebné zakázať OpenVPN server."
+"Certifikačnú autoritu nie je možné vymazať, kým je OpenVPN server povolený. "
+"Na jej vymazanie je najskôr potrebné zakázať OpenVPN server."
 
 #: js/src/serverSettings/AuthorityReady.js:49
-#, fuzzy
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it, all clients will have their access revoked."
 msgstr ""
-"Vaša certifikačná autorita (CA) je správne nastavená. Upozorňujeme, že po"
-" jej vymazaní sa odvolajú prístupy všetkým klientom."
+"Vaša certifikačná autorita (CA) je správne nastavená. Nezabudnite, že po jej "
+"vymazaní sa odvolajú prístupy všetkým klientom."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
@@ -366,17 +345,16 @@ msgid "Cannot save server settings"
 msgstr "Nastavenia servera sa nedajú uložiť"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
-#, fuzzy
 msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Upozorňujeme, že na používanie VPN servera je potrebná verejná (najlepšie"
-" statická) IP adresa a správne nastavenie siete."
+"Upozorňujeme, že na používanie VPN servera je potrebná verejná (najlepšie "
+"statická) IP adresa a správne nastavenie siete."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Povoliť server"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -541,4 +519,3 @@ msgstr "Nastavenia klienta OpenVPN sa nedajú vymazať"
 #~ "vaša konfigurácia bude rozšírená (nie "
 #~ "prepísaná). V prípade konfliktu budete "
 #~ "musieť nastavenia opraviť ručne."
-

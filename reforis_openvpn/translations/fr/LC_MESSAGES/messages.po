@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2021-12-15 11:50+0000\n"
-"Last-Translator: G. C. <gccom-weblate@yahoo.com>\n"
+"PO-Revision-Date: 2023-01-08 08:51+0000\n"
+"Last-Translator: h <tachyglossues@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -229,7 +230,7 @@ msgstr "Paramètres client"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -238,29 +239,27 @@ msgstr "Enregistrer"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Nom d’utilisateur"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
 msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
-#, fuzzy
 msgid "Username cannot be empty."
-msgstr "Le nom ne peut pas être vide"
+msgstr "Le nom d'utilisateur ne peut pas être vide."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
-#, fuzzy
 msgid "Password cannot be empty."
-msgstr "Le nom ne peut pas être vide"
+msgstr "Le mot de passe ne peut pas être vide."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -551,4 +550,3 @@ msgstr "Impossible de supprimer les paramètres du client OpenVPN"
 #~ " étendue (plutôt qu'écrasée). En cas "
 #~ "de conflit, vous devez corriger vous-"
 #~ "même les paramètres précédents."
-

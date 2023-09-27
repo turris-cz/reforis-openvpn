@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2021-07-06 08:33+0000\n"
+"PO-Revision-Date: 2023-03-02 11:39+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/nb_NO/>\n"
 "Language: nb_NO\n"
-"Language-Team: Norwegian Bokmål "
-"<https://hosted.weblate.org/projects/turris/reforis-openvpn-"
-"plugin/nb_NO/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -144,10 +144,13 @@ msgid "Router's public IP address or DNS name"
 msgstr "Ruterens offentlige IPv4-adresse"
 
 #: js/src/clientRegistration/Clients.js:184
+#, fuzzy
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
+"Forsikre deg om at enheten kan nås fra Internett ved bruk av dette "
+"domenenavnet, IPv4, eller IPv6-adressen."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 #, fuzzy
@@ -223,7 +226,7 @@ msgstr "Klientinnstillinger"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -232,15 +235,16 @@ msgstr "Lagre"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Brukernavn"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
+#, fuzzy
 msgid "Client settings were saved successfully."
-msgstr ""
+msgstr "Klientinnstillinger lagret."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 #, fuzzy
@@ -254,7 +258,7 @@ msgstr "Navnet kan ikke stå tomt"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -377,8 +381,9 @@ msgstr ""
 "oppsatt nettverk for å bruke VPN-tjeneren."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
+#, fuzzy
 msgid "Enable Server"
-msgstr ""
+msgstr "Skru på tjener"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -547,4 +552,3 @@ msgstr "Kan ikke slette OpenVPN-klientinnstillinger"
 #~ " (snarere enn overskrives). I tilfelle "
 #~ "konflikter oppstår må du fikse tidligere"
 #~ " innstillinger selv."
-

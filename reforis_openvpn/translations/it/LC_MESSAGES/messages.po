@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2022-12-31 23:56+0000\n"
+"PO-Revision-Date: 2023-11-03 05:14+0000\n"
 "Last-Translator: Anselmo <anselmo@casinadicornia.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/it/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 5.2-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -87,7 +87,7 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
-msgstr ""
+msgstr "Azioni"
 
 #: js/src/clientRegistration/ClientTable.js:107
 msgid "Access revoked"
@@ -218,7 +218,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
-msgstr ""
+msgstr "Elimina"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:40
 msgid "Cannot refresh status"

@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2020-11-30 19:29+0000\n"
-"Last-Translator: Johan van de Wetering <mail@jvdwetering.nl>\n"
+"PO-Revision-Date: 2024-01-04 23:09+0000\n"
+"Last-Translator: powerburner-nl <peter.mulder.1981@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/turris/reforis-"
-"openvpn-plugin/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 "Generated-By: Babel 2.11.0\n"
 
 #: js/src/app.js:14
@@ -225,7 +226,7 @@ msgstr "Client Instellingen"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -238,7 +239,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
 msgid "Client settings were saved successfully."
@@ -256,7 +257,7 @@ msgstr "Naam kan niet leeg zijn"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Aanpassen"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -545,4 +546,3 @@ msgstr "Kan de OpenVPN client instellingen niet wissen"
 #~ "In het geval van conflicten dient "
 #~ "u deze eerdere instellingen zelf "
 #~ "repareren."
-

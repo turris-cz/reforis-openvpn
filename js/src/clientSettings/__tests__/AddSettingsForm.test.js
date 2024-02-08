@@ -25,7 +25,6 @@ function getFormElements(componentContainer) {
             componentContainer,
             "Choose settings file..."
         ),
-        submitButton: getByText(componentContainer, "Add"),
     };
 }
 
@@ -47,7 +46,10 @@ describe("<AddSettingsForm />", () => {
     });
 
     it("should validate form", () => {
-        const { fileInput, submitButton } = getFormElements(componentContainer);
+        const { fileInput } = getFormElements(componentContainer);
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         // Wrong length of file name
         setFilesProperty(fileInput, [new File([], "q".repeat(51))]);
@@ -86,7 +88,10 @@ describe("<AddSettingsForm />", () => {
     });
 
     it("should add setting", () => {
-        const { fileInput, submitButton } = getFormElements(componentContainer);
+        const { fileInput } = getFormElements(componentContainer);
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         expect(submitButton.disabled).toBe(true);
         setFilesProperty(fileInput, [new File([], "turris.conf")]);
@@ -102,7 +107,10 @@ describe("<AddSettingsForm />", () => {
     });
 
     it("should handle API error", async () => {
-        const { fileInput, submitButton } = getFormElements(componentContainer);
+        const { fileInput } = getFormElements(componentContainer);
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         setFilesProperty(fileInput, [new File([], "turris.conf")]);
         fireEvent.change(fileInput);

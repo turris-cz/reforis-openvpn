@@ -22,7 +22,6 @@ import AddClientForm from "../AddClientForm";
 function getFormElements(componentContainer) {
     return {
         nameInput: getByLabelText(componentContainer, "Client name"),
-        submitButton: getByText(componentContainer, "Add"),
     };
 }
 
@@ -42,7 +41,11 @@ describe("<AddClientForm />", () => {
     });
 
     it("should validate form", () => {
-        const { nameInput, submitButton } = getFormElements(componentContainer);
+        const { nameInput } = getFormElements(componentContainer);
+        // Submit button with class 'btn btn-primary' and button element of type 'submit'
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         // Empty name
         fireEvent.change(nameInput, { target: { value: "" } });
@@ -67,7 +70,10 @@ describe("<AddClientForm />", () => {
     });
 
     it("should add client", () => {
-        const { nameInput, submitButton } = getFormElements(componentContainer);
+        const { nameInput } = getFormElements(componentContainer);
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         expect(submitButton.disabled).toBe(true);
         fireEvent.change(nameInput, { target: { value: "propername" } });
@@ -84,7 +90,10 @@ describe("<AddClientForm />", () => {
     });
 
     it("should handle API error", async () => {
-        const { nameInput, submitButton } = getFormElements(componentContainer);
+        const { nameInput } = getFormElements(componentContainer);
+        const submitButton = componentContainer.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
 
         fireEvent.change(nameInput, { target: { value: "propername" } });
         fireEvent.click(submitButton);

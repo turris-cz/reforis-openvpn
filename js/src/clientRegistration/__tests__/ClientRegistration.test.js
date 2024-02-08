@@ -93,7 +93,7 @@ describe("<ClientRegistration />", () => {
             "/reforis/openvpn/api/clients",
             expect.anything()
         );
-        // Respose to GET clients
+        // Response to GET clients
         mockAxios.mockResponse({ data: clients });
 
         await wait(() => getByText(componentContainer, "First"));
@@ -102,7 +102,9 @@ describe("<ClientRegistration />", () => {
 
     describe("with mocked clients and authority initial requests", () => {
         function getAddButton() {
-            return getByText(componentContainer, "Add");
+            return componentContainer.querySelector(
+                ".btn.btn-primary[type=submit]"
+            );
         }
 
         function submitClientForm(name) {

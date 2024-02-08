@@ -9,6 +9,9 @@
     "version": "1.6.0",
     "description": "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.",
     "main": "./src/app.js",
+    "eslintConfig": {
+        "extends": "eslint-config-reforis"
+    },
     "dependencies": {
         "foris": "^5.5.0",
         "react-uid": "^2.3.1"
@@ -28,10 +31,8 @@
         "@testing-library/react": "^8.0.9",
         "babel-loader": "^8.0.6",
         "css-loader": "^5.2.4",
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-config-reforis": "^1.0.0",
-        "eslint-plugin-prettier": "^3.1.4",
+        "eslint": "^8.56.0",
+        "eslint-config-reforis": "^2.1.0",
         "jest": "^26.4.2",
         "jest-mock-axios": "^3.2.0",
         "moment-timezone": "^0.5.34",

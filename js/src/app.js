@@ -5,9 +5,9 @@
  * See /LICENSE for more information.
  */
 
-import ServerSettings from "./serverSettings/ServerSettings";
 import ClientRegistration from "./clientRegistration/ClientRegistration";
 import ClientSettings from "./clientSettings/ClientSettings";
+import ServerSettings from "./serverSettings/ServerSettings";
 
 const OpenVPNPlugin = {
     submenuId: "opnvpn",

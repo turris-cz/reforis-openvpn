@@ -18,6 +18,7 @@ import {
 import PropTypes from "prop-types";
 
 import API_URLs from "API";
+
 import ClientStatus from "./ClientStatus";
 
 ClientRow.propTypes = {
@@ -104,35 +105,33 @@ function ClientSettingsActions({
     disabled,
 }) {
     return (
-        <>
-            <div
-                className="btn-group btn-group-sm mb-0"
-                role="group"
-                aria-label={_("Actions")}
+        <div
+            className="btn-group btn-group-sm mb-0"
+            role="group"
+            aria-label={_("Actions")}
+        >
+            <Button onClick={() => editClientSettings(client)}>
+                <span className="d-xl-none">
+                    <i className="fas fa-edit fa-sm" />
+                </span>
+                <span className="d-none d-xl-block">
+                    <i className="fas fa-edit fa-sm mr-1" />
+                    {_("Edit")}
+                </span>
+            </Button>
+            <Button
+                onClick={deleteClient}
+                className="btn-danger"
+                disabled={disabled}
             >
-                <Button onClick={() => editClientSettings(client)}>
-                    <span className="d-xl-none">
-                        <i className="fas fa-edit fa-sm" />
-                    </span>
-                    <span className="d-none d-xl-block">
-                        <i className="fas fa-edit fa-sm mr-1" />
-                        {_("Edit")}
-                    </span>
-                </Button>
-                <Button
-                    onClick={deleteClient}
-                    className="btn-danger"
-                    disabled={disabled}
-                >
-                    <span className="d-xl-none">
-                        <i className="fas fa-trash fa-sm" />
-                    </span>
-                    <span className="d-none d-xl-block">
-                        <i className="fas fa-trash fa-sm mr-1" />
-                        {_("Delete")}
-                    </span>
-                </Button>
-            </div>
-        </>
+                <span className="d-xl-none">
+                    <i className="fas fa-trash fa-sm" />
+                </span>
+                <span className="d-none d-xl-block">
+                    <i className="fas fa-trash fa-sm mr-1" />
+                    {_("Delete")}
+                </span>
+            </Button>
+        </div>
     );
 }

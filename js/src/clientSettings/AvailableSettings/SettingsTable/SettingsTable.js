@@ -30,10 +30,10 @@ export default function SettingsTable({ clientSettings }) {
     const [clientToEdit, setClientToEdit] = useState(null);
     const [isClientModalShown, setIsClientModalShown] = useState(false);
 
-    function handleEditClientSettings(client) {
+    const handleEditClientSettings = (client) => {
         setClientToEdit(client);
         setIsClientModalShown(true);
-    }
+    };
 
     return (
         <>

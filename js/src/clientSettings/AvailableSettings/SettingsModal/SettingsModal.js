@@ -10,9 +10,8 @@ import React, { useCallback } from "react";
 import { Modal, ModalBody, ModalHeader, ModalFooter, Button } from "foris";
 import PropTypes from "prop-types";
 
-import SettingsModalForm from "./SettingsModalForm";
-
 import useClientSettingsModalForm from "./hooks";
+import SettingsModalForm from "./SettingsModalForm";
 
 SettingsModal.propTypes = {
     shown: PropTypes.bool,

@@ -1,4 +1,4 @@
-#  Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+#  Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
 #
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
@@ -15,6 +15,8 @@ VENV_BIN=$(shell pwd)/$(VENV_NAME)/bin
 PYTHON=python3
 
 JS_DIR=./js
+
+LANGS = cs da de el en fi fo fr hr hu it ja ko lt nb_NO nl pl ro ru sk sv
 
 .PHONY: all
 all:

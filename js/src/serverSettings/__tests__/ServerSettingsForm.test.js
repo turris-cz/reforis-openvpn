@@ -57,7 +57,9 @@ describe("<ServerSettingsForm />", () => {
     it("should validate form", async () => {
         const container = renderSettings(enabledFormData);
 
-        const submitButton = getByText(container, "Save");
+        const submitButton = container.querySelector(
+            ".btn.btn-primary[type=submit]"
+        );
         // Initially the form is OK
         expect(submitButton.disabled).toBe(false);
 

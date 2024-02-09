@@ -104,10 +104,12 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 Download
               </a>
               <button
-                class="btn btn-danger btn-sm"
+                class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
-                Revoke
+                <span>
+                  Revoke
+                </span>
               </button>
             </div>
           </td>
@@ -152,10 +154,12 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 Download
               </a>
               <button
-                class="btn btn-danger btn-sm"
+                class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
-                Revoke
+                <span>
+                  Revoke
+                </span>
               </button>
             </div>
           </td>
@@ -181,10 +185,12 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 Download
               </a>
               <button
-                class="btn btn-danger btn-sm"
+                class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
-                Revoke
+                <span>
+                  Revoke
+                </span>
               </button>
             </div>
           </td>

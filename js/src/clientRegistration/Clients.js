@@ -6,7 +6,6 @@
  */
 
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 
 import {
     TextInput,
@@ -21,8 +20,10 @@ import {
     withSpinnerOnSending,
     API_STATE,
 } from "foris";
+import PropTypes from "prop-types";
 
 import API_URLs from "API";
+
 import ClientTable from "./ClientTable";
 
 Clients.propTypes = {

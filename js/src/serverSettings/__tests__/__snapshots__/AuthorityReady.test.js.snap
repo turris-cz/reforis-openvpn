@@ -15,10 +15,12 @@ exports[`<AuthorityReady /> should match snapshot 1`] = `
       class="text-right"
     >
       <button
-        class="btn btn-danger col-sm-12 col-md-3 col-lg-2"
+        class="btn btn-danger col-sm-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
         type="button"
       >
-        Delete CA
+        <span>
+          Delete CA
+        </span>
       </button>
     </div>
   </div>
@@ -40,11 +42,13 @@ exports[`<AuthorityReady /> should prevent deletion when server is enabled 1`] =
       class="text-right"
     >
       <button
-        class="btn btn-danger col-sm-12 col-md-3 col-lg-2"
+        class="btn btn-danger col-sm-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
         disabled=""
         type="button"
       >
-        Delete CA
+        <span>
+          Delete CA
+        </span>
       </button>
     </div>
   </div>

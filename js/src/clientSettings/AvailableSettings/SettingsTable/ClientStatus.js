@@ -6,9 +6,9 @@
  */
 
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
 import { useAPIGet, Button, SpinnerElement, API_STATE } from "foris";
+import PropTypes from "prop-types";
 
 import API_URLs from "API";
 

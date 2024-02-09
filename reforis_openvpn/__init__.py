@@ -1,7 +1,9 @@
-#  Copyright (C) 2019-2020 CZ.NIC z.s.p.o. (http://www.nic.cz/)
+#  Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
 #
 #  This is free software, licensed under the GNU General Public License v3.
 #  See /LICENSE for more information.
+
+"""reForis OpenVPN module"""
 
 from http import HTTPStatus
 from pathlib import Path
@@ -16,10 +18,8 @@ from reforis.foris_controller_api.utils import APIError, validate_json
 
 BASE_DIR = Path(__file__).parent
 
-# pylint: disable=invalid-name
 blueprint = Blueprint('OpenVPN', __name__, url_prefix='/openvpn/api')
 
-# pylint: disable=invalid-name
 openvpn = {
     'blueprint': blueprint,
     'js_app_path': 'reforis_openvpn/js/app.min.js',
@@ -31,12 +31,14 @@ openvpn = {
 
 @blueprint.route('/authority', methods=['GET'])
 def get_authority():
+    """Get certificate authority status"""
     response = current_app.backend.perform('openvpn', 'get_status')
     return jsonify({'status': response['status']})
 
 
 @blueprint.route('/authority', methods=['POST'])
 def post_authority():
+    """Generate certificate authority"""
     ca_status = current_app.backend.perform('openvpn', 'get_status').get('status')
     if ca_status == 'ready':
         raise APIError(_('Certificate authority already exists'))
@@ -45,6 +47,7 @@ def post_authority():
 
 @blueprint.route('/authority', methods=['DELETE'])
 def delete_authority():
+    """Delete certificate authority"""
     response = current_app.backend.perform('openvpn', 'delete_ca')
     if response.get('result') is not True:
         raise APIError(_('Cannot delete certificate authority'), HTTPStatus.INTERNAL_SERVER_ERROR)
@@ -55,11 +58,13 @@ def delete_authority():
 
 @blueprint.route('/server-settings', methods=['GET'])
 def get_server_settings():
+    """Get OpenVPN server settings"""
     return jsonify(current_app.backend.perform('openvpn', 'get_settings'))
 
 
 @blueprint.route('/server-settings', methods=['PUT'])
 def put_server_settings():
+    """Update OpenVPN server settings"""
     validate_json(request.json)
     response = current_app.backend.perform('openvpn', 'update_settings', request.json)
     if response.get('result') is not True:
@@ -71,11 +76,13 @@ def put_server_settings():
 
 @blueprint.route('/clients', methods=['GET'])
 def get_clients():
+    """Get OpenVPN clients"""
     return jsonify(current_app.backend.perform('openvpn', 'get_status')['clients'])
 
 
 @blueprint.route('/clients', methods=['POST'])
 def post_clients():
+    """Register new OpenVPN client"""
     validate_json(request.json, {'name': str})
     # Check for conflict (name)
     clients = current_app.backend.perform('openvpn', 'get_status')['clients']
@@ -92,6 +99,7 @@ def post_clients():
 
 @blueprint.route('/clients/<client_id>', methods=['GET'])
 def get_client(client_id):
+    """Get OpenVPN client"""
     config_request = {'id': client_id}
     hostname = request.args.get('address')
     if hostname:
@@ -116,6 +124,7 @@ def get_client(client_id):
 
 @blueprint.route('/clients/<client_id>', methods=['DELETE'])
 def delete_client(client_id):
+    """Revoke OpenVPN client certificate"""
     response = current_app.backend.perform('openvpn', 'revoke', {'id': client_id})
     if response.get('result') is not True:
         raise APIError(_('Cannot revoke certificate'), HTTPStatus.INTERNAL_SERVER_ERROR)
@@ -126,11 +135,13 @@ def delete_client(client_id):
 
 @blueprint.route('/client-settings', methods=['GET'])
 def get_client_settings_list():
+    """Get OpenVPN client settings list"""
     return jsonify(current_app.backend.perform('openvpn_client', 'list')['clients'])
 
 
 @blueprint.route('/client-settings/<settings_id>', methods=['GET'])
 def get_client_settings(settings_id):
+    """Get OpenVPN client settings"""
     settings = current_app.backend.perform('openvpn_client', 'list')['clients']
     search_result = next((s for s in settings if s['id'] == settings_id), None)
     if not search_result:
@@ -140,6 +151,7 @@ def get_client_settings(settings_id):
 
 @blueprint.route('/client-settings', methods=['POST'])
 def post_client_settings():
+    """Add new OpenVPN client settings"""
     if 'settings' not in request.files:
         raise APIError(_('Missing data for \'settings\' file'), HTTPStatus.BAD_REQUEST)
     settings_file = request.files['settings']
@@ -164,6 +176,7 @@ def post_client_settings():
 
 @blueprint.route('/client-settings/<settings_id>', methods=['PUT'])
 def put_client_settings(settings_id):
+    """Update OpenVPN client settings"""
     validate_json(request.json, {'enabled': bool})
 
     settings = deepcopy(request.json)
@@ -178,6 +191,7 @@ def put_client_settings(settings_id):
 
 @blueprint.route('/client-settings/<settings_id>', methods=['DELETE'])
 def delete_client_settings(settings_id):
+    """Delete OpenVPN client settings"""
     response = current_app.backend.perform('openvpn_client', 'del', {'id': settings_id})
     if response.get('result') is not True:
         raise APIError(_('Cannot delete OpenVPN client settings'), HTTPStatus.INTERNAL_SERVER_ERROR)

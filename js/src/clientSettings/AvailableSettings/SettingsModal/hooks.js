@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { ALERT_TYPES, API_STATE, useAlert, useAPIPut, useForm } from "foris";
 
 import API_URLs from "API";
+
 import validator from "./validator";
 
 export default function useClientSettingsModalForm(client, saveClientCallback) {

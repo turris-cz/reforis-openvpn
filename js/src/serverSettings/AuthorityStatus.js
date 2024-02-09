@@ -6,11 +6,12 @@
  */
 
 import React from "react";
+
 import PropTypes from "prop-types";
 
+import AuthorityBeingGenerated from "./AuthorityBeingGenerated";
 import AuthorityMissing from "./AuthorityMissing";
 import AuthorityReady from "./AuthorityReady";
-import AuthorityBeingGenerated from "./AuthorityBeingGenerated";
 
 const CA_STATUS = {
     MISSING: "missing",
@@ -19,6 +20,7 @@ const CA_STATUS = {
 };
 
 AuthorityStatus.propTypes = {
+    children: PropTypes.node.isRequired,
     ws: PropTypes.object.isRequired,
     status: PropTypes.oneOf(Object.values(CA_STATUS)).isRequired,
     serverEnabled: PropTypes.bool.isRequired,

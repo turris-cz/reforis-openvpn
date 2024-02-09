@@ -6,7 +6,6 @@
  */
 
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
 import {
     formFieldsSize,
@@ -14,10 +13,12 @@ import {
     withErrorMessage,
     withSpinnerOnSending,
 } from "foris";
+import PropTypes from "prop-types";
 
 import API_URLs from "API";
-import Clients from "./Clients";
+
 import AddClientForm from "./AddClientForm";
+import Clients from "./Clients";
 
 ClientRegistration.propTypes = {
     ws: PropTypes.object.isRequired,

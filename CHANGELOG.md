@@ -8,6 +8,28 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-03-07
+
+### Added
+
+-   Added & updated Weblate translations
+
+### Changed
+
+-   Updated Makefile
+-   Updated dependencies in package.json
+-   Updated Node.js to v21.x in Makefile
+-   Updated ESLint and Prettier configurations
+-   Updated .gitignore to exclude minified JS files and license files
+-   Updated webpack.config.js with process/browser alias
+-   Updated CI to use shared scripts, build and publish python package
+-   Replaced Pylint & Pycodestyle for Ruff
+-   NPM audit fix
+
+### Removed
+
+-   Removed MANIFEST.in
+
 ## [1.6.0] - 2022-12-06
 
 -   Add & update Weblate translations
@@ -98,30 +120,18 @@ and this project adheres to
 -   Keep functionality of previous Foris OpenVPN plugin
 -   Add clients configuration
 
-[unreleased]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.6.0...master
-[1.6.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.5.0...v1.6.0
-[1.5.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.4.1...v1.5.0
-[1.4.1]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.4.0...v1.4.1
-[1.4.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.3.1...v1.4.0
-[1.3.1]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.3.0...v1.3.1
-[1.3.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.2.0...v1.3.0
-[1.2.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.3...v1.2.0
-[1.1.3]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.1...v1.1.3
-[1.1.1]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.0...v1.1.1
-[1.1.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.0.0...v1.1.0
-[1.0.0]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v0.2.1...v1.0.0
-[0.2.1]:
-    https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v0.2.0...v0.2.1
+[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.0.0...master
+[2.0.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.6.0...v2.0.0
+[1.6.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.5.0...v1.6.0
+[1.5.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.4.1...v1.5.0
+[1.4.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.4.0...v1.4.1
+[1.4.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.3.1...v1.4.0
+[1.3.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.3.0...v1.3.1
+[1.3.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.2.0...v1.3.0
+[1.2.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.3...v1.2.0
+[1.1.3]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.1...v1.1.3
+[1.1.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.1.0...v1.1.1
+[1.1.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.0.0...v1.1.0
+[1.0.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v0.2.1...v1.0.0
+[0.2.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v0.2.0...v0.2.1
 [0.2.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/tags/v0.2.0

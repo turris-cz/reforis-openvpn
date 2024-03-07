@@ -108,8 +108,7 @@ lint-js-fix:
 
 .PHONY: lint-web
 lint-web: venv
-	$(VENV_BIN)/$(PYTHON) -m pylint --rcfile=pylintrc reforis_openvpn
-	$(VENV_BIN)/$(PYTHON) -m pycodestyle --config=pycodestyle reforis_openvpn
+	$(VENV_BIN)/$(PYTHON) -m ruff check reforis_openvpn
 
 
 # Testing

@@ -1,25 +1,24 @@
 # German translations for reForis OpenVPN Plugin.
-# Copyright (C) 2022 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-06 13:29+0100\n"
+"POT-Creation-Date: 2024-03-07 13:47+0100\n"
 "PO-Revision-Date: 2023-09-08 12:51+0000\n"
 "Last-Translator: Erik Pfannenstein <debianignatz@gmx.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/de/>\n"
 "Language: de\n"
+"Language-Team: German <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -59,17 +58,17 @@ msgstr "Name ist zu lang."
 msgid "Name contains invalid characters."
 msgstr "Name enthält ungültige Zeichen."
 
-#: js/src/clientRegistration/ClientRegistration.js:34
+#: js/src/clientRegistration/ClientRegistration.js:35
 msgid "Client Registration"
 msgstr "Client-Registrierung"
 
-#: js/src/clientRegistration/ClientRegistration.js:60
+#: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to generate certificate authority in order to register clients."
 msgstr ""
-"Sie müssen eine Zertifizierungsstelle anlegen, um Clients registrieren zu "
-"können."
+"Sie müssen eine Zertifizierungsstelle anlegen, um Clients registrieren zu"
+" können."
 
-#: js/src/clientRegistration/ClientRegistration.js:69
+#: js/src/clientRegistration/ClientRegistration.js:70
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -77,15 +76,16 @@ msgstr ""
 "Sie müssen für jeden Client, der sich mit Ihrem OpenVPN-Server verbinden "
 "soll, eine Konfigurationsdatei erzeugen."
 
-#: js/src/clientRegistration/ClientRegistration.js:74
+#: js/src/clientRegistration/ClientRegistration.js:75
 msgid ""
 "To apply the client configuration, you need to download it and put it "
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
-"Um die Client-Konfiguration anzuwenden, laden Sie sie herunter und speichern "
-"Sie sie im OpenVPN-Konfigurationsverzeichnis bzw. öffnen Sie sie im OpenVPN-"
-"Client. Gegebenenfalls müssen Sie danach den Client neu starten."
+"Um die Client-Konfiguration anzuwenden, laden Sie sie herunter und "
+"speichern Sie sie im OpenVPN-Konfigurationsverzeichnis bzw. öffnen Sie "
+"sie im OpenVPN-Client. Gegebenenfalls müssen Sie danach den Client neu "
+"starten."
 
 #: js/src/clientRegistration/ClientTable.js:42
 msgid "There are no clients registered."
@@ -110,11 +110,11 @@ msgstr "Herunterladen"
 msgid "Revoke"
 msgstr "Widerrufen"
 
-#: js/src/clientRegistration/Clients.js:93
+#: js/src/clientRegistration/Clients.js:94
 msgid "Client Configurations"
 msgstr "Client-Konfigurationen"
 
-#: js/src/clientRegistration/Clients.js:129
+#: js/src/clientRegistration/Clients.js:130
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
 " file matches the public IP address of your router. You can set this "
@@ -122,27 +122,28 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Achten Sie darauf, dass die Server-IP-Adresse in den Konfigurationsdateien "
-"mit der öffentlichen IP-Adresse Ihres Routers übereinstimmt. Sie können "
-"diese Adresse auch per Hand setzen, falls die automatische Erkennung "
-"fehlschlägt. Diese Änderung wird <b>nicht</b> gespeichert und wirkt sich nur "
-"auf die Konfiguration aus, die gerade heruntergeladen wird."
+"Achten Sie darauf, dass die Server-IP-Adresse in den "
+"Konfigurationsdateien mit der öffentlichen IP-Adresse Ihres Routers "
+"übereinstimmt. Sie können diese Adresse auch per Hand setzen, falls die "
+"automatische Erkennung fehlschlägt. Diese Änderung wird <b>nicht</b> "
+"gespeichert und wirkt sich nur auf die Konfiguration aus, die gerade "
+"heruntergeladen wird."
 
-#: js/src/clientRegistration/Clients.js:172
+#: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
 msgstr "Serveradresse überschreiben"
 
-#: js/src/clientRegistration/Clients.js:178
+#: js/src/clientRegistration/Clients.js:179
 msgid "Router's public IP address or DNS name"
 msgstr "Öffentliche IP-Adresse oder DNS-Name des Routers"
 
-#: js/src/clientRegistration/Clients.js:184
+#: js/src/clientRegistration/Clients.js:185
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
-"Stellen Sie sicher, dass dieses Gerät vom öffentlichen Internet aus unter "
-"seinen Domainnamen bzw. der IPv4- oder IPv6-Adresse erreichbar ist."
+"Stellen Sie sicher, dass dieses Gerät vom öffentlichen Internet aus unter"
+" seinen Domainnamen bzw. der IPv4- oder IPv6-Adresse erreichbar ist."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
@@ -176,8 +177,8 @@ msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
-"Dateiname darf nur alphanumerische Zeichen, Punkte, Binde- und Unterstriche "
-"enthalten."
+"Dateiname darf nur alphanumerische Zeichen, Punkte, Binde- und "
+"Unterstriche enthalten."
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
@@ -189,10 +190,10 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Um den OpenVPN-Client verwenden zu können, müssen Sie eine Textdatei mit den "
-"Einstellungen zusammenstellen. Falls Sie sich mit einem anderen Turris-Gerät "
-"verbinden möchten, laden Sie die passende Datei von seiner Client-"
-"Registrierungsseite herunter."
+"Um den OpenVPN-Client verwenden zu können, müssen Sie eine Textdatei mit "
+"den Einstellungen zusammenstellen. Falls Sie sich mit einem anderen "
+"Turris-Gerät verbinden möchten, laden Sie die passende Datei von seiner "
+"Client-Registrierungsseite herunter."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -208,15 +209,15 @@ msgstr ""
 "erzeugt. Falls die Instanz aktiviert ist und ein paar Minuten nach dem "
 "Einrichten immer noch nicht läuft, überprüfen Sie die Einstellungsdatei."
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
 msgstr "Client-Einstellungen bearbeiten"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
 msgstr "Speichern"
@@ -229,7 +230,7 @@ msgstr "Benutzername"
 msgid "Password"
 msgstr "Passwort"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
+#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
 msgstr "Client-Einstellungen wurden erfolgreich gespeichert."
 
@@ -286,8 +287,8 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Ihre Zertifizierungsstelle wird jetzt angelegt. Das dauert üblicherweise ein "
-"paar Minuten. Sobald sie fertig ist, werden hier automatisch die "
+"Ihre Zertifizierungsstelle wird jetzt angelegt. Das dauert üblicherweise "
+"ein paar Minuten. Sobald sie fertig ist, werden hier automatisch die "
 "Einstellungen zu sehen sein."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
@@ -306,8 +307,8 @@ msgid ""
 msgstr ""
 "Zur Zeit gibt es noch keine OpenVPN-Zertifizierungsstelle (Certificate "
 "Authority, CA). Eine CA ist aber nötig, um Client-Zertifikate für die "
-"Authentifizierung beim OpenVPN-Server erzeugen zu können. Sie müssen die CA "
-"anlegen, um fortfahren zu können."
+"Authentifizierung beim OpenVPN-Server erzeugen zu können. Sie müssen die "
+"CA anlegen, um fortfahren zu können."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -317,7 +318,7 @@ msgstr "Keine Zertifizierungsstelle."
 msgid "Generate CA"
 msgstr "CA erzeugen"
 
-#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
 msgstr "Zertifizierungsstelle kann nicht gelöscht werden"
 
@@ -336,14 +337,14 @@ msgid ""
 "you delete it, all clients will have their access revoked."
 msgstr ""
 "Ihre Zertifizierungsstelle (Certificate Authority, CA) ist ordnungsgemäß "
-"eingerichtet. Bitte beachten Sie, dass, wenn Sie sie löschen, alle Clients "
-"ihren Zugriff verlieren."
+"eingerichtet. Bitte beachten Sie, dass, wenn Sie sie löschen, alle "
+"Clients ihren Zugriff verlieren."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
 msgstr "CA löschen"
 
-#: js/src/serverSettings/ServerSettings.js:34
+#: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
 msgstr "Servereinstellungen"
@@ -357,9 +358,9 @@ msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Bitte beachten Sie, dass Sie eine öffentliche (vorzugsweise statische) IP-"
-"Adresse und ein entsprechend eingerichtetes Netzwerk benötigen, um einen VPN-"
-"Server betreiben zu können."
+"Bitte beachten Sie, dass Sie eine öffentliche (vorzugsweise statische) "
+"IP-Adresse und ein entsprechend eingerichtetes Netzwerk benötigen, um "
+"einen VPN-Server betreiben zu können."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
@@ -390,8 +391,8 @@ msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
-"Clients werden sich mittels diesen Protokolls mit dem VPN-Server verbinden. "
-"Verwenden Sie TCP, falls Ihr Internetanbieter UDP blockiert."
+"Clients werden sich mittels diesen Protokolls mit dem VPN-Server "
+"verbinden. Verwenden Sie TCP, falls Ihr Internetanbieter UDP blockiert."
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
@@ -433,55 +434,55 @@ msgstr ""
 "Clients werden zum Auflösen von Adressen den DNS des Routers verwenden. "
 "Notwendig, wenn Sie auf lokale Server wie my-nas.lan zugreifen möchten"
 
-#: reforis_openvpn/__init__.py:42
+#: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Zertifizierungsstelle existiert bereits"
 
-#: reforis_openvpn/__init__.py:66
+#: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
 msgstr "OpenVPN-Servereinstellungen können nicht geändert werden"
 
-#: reforis_openvpn/__init__.py:85
+#: reforis_openvpn/__init__.py:92
 msgid "Client '{}' is already registered"
 msgstr "Client '{}' ist bereits registriert"
 
-#: reforis_openvpn/__init__.py:89
+#: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
 msgstr "Client kann nicht registriert werden"
 
-#: reforis_openvpn/__init__.py:102
+#: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
 msgstr "Angefragter Client existiert nicht"
 
-#: reforis_openvpn/__init__.py:106
+#: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
 msgstr "Client kann nicht abgefragt werden"
 
-#: reforis_openvpn/__init__.py:121
+#: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
 msgstr "Zertifikat kann nicht widerrufen werden"
 
-#: reforis_openvpn/__init__.py:137
+#: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
 msgstr "Die angefragten Einstellungen existieren nicht"
 
-#: reforis_openvpn/__init__.py:144
+#: reforis_openvpn/__init__.py:156
 msgid "Missing data for 'settings' file"
 msgstr "Für die 'settings'-Datei fehlen Daten"
 
-#: reforis_openvpn/__init__.py:152
+#: reforis_openvpn/__init__.py:164
 msgid "Client settings '{}' already exist"
 msgstr "Client-Einstellungen '{}' sind bereits vorhanden"
 
-#: reforis_openvpn/__init__.py:160
+#: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
 msgstr "OpenVPN-Client-Einstellungen können nicht hinzugefügt werden"
 
-#: reforis_openvpn/__init__.py:174
+#: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
 msgstr "OpenVPN-Client-Einstellungen können nicht geändert werden"
 
-#: reforis_openvpn/__init__.py:183
+#: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
 msgstr "OpenVPN-Client-Einstellungen können nicht gelöscht werden"
 
@@ -626,3 +627,4 @@ msgstr "OpenVPN-Client-Einstellungen können nicht gelöscht werden"
 #~ " conflict you must fix previous "
 #~ "settings by yourself."
 #~ msgstr ""
+

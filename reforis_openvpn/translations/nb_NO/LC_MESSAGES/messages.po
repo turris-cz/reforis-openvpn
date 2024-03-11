@@ -1,25 +1,25 @@
 # Norwegian Bokmål (Norway) translations for reForis OpenVPN Plugin.
-# Copyright (C) 2022 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-06 13:29+0100\n"
+"POT-Creation-Date: 2024-03-07 13:47+0100\n"
 "PO-Revision-Date: 2023-03-02 11:39+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/nb_NO/>\n"
 "Language: nb_NO\n"
+"Language-Team: Norwegian Bokmål "
+"<https://hosted.weblate.org/projects/turris/reforis-openvpn-"
+"plugin/nb_NO/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -63,15 +63,15 @@ msgstr "Navnet er for langt"
 msgid "Name contains invalid characters."
 msgstr "Navnet inneholder ugyldige tegn"
 
-#: js/src/clientRegistration/ClientRegistration.js:34
+#: js/src/clientRegistration/ClientRegistration.js:35
 msgid "Client Registration"
 msgstr "Klientregistrering"
 
-#: js/src/clientRegistration/ClientRegistration.js:60
+#: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to generate certificate authority in order to register clients."
 msgstr "Du må generere sertifikatsmyndighet for å kunne registrere klienter."
 
-#: js/src/clientRegistration/ClientRegistration.js:69
+#: js/src/clientRegistration/ClientRegistration.js:70
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -79,7 +79,7 @@ msgstr ""
 "Du må generere en oppsettsfil for hver klient som du ønsker å koble til "
 "din OpenVPN-tjener."
 
-#: js/src/clientRegistration/ClientRegistration.js:74
+#: js/src/clientRegistration/ClientRegistration.js:75
 #, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
@@ -113,12 +113,12 @@ msgstr "Last ned"
 msgid "Revoke"
 msgstr "Tilbakekall"
 
-#: js/src/clientRegistration/Clients.js:93
+#: js/src/clientRegistration/Clients.js:94
 #, fuzzy
 msgid "Client Configurations"
 msgstr "Klientoppsett"
 
-#: js/src/clientRegistration/Clients.js:129
+#: js/src/clientRegistration/Clients.js:130
 #, fuzzy
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
@@ -133,17 +133,17 @@ msgstr ""
 "<strong>ikke</strong> noensteds hen, og gjelder kun for oppsettet som "
 "blir lastet ned."
 
-#: js/src/clientRegistration/Clients.js:172
+#: js/src/clientRegistration/Clients.js:173
 #, fuzzy
 msgid "Override Server Address"
 msgstr "Overstyr tjeneradresse"
 
-#: js/src/clientRegistration/Clients.js:178
+#: js/src/clientRegistration/Clients.js:179
 #, fuzzy
 msgid "Router's public IP address or DNS name"
 msgstr "Ruterens offentlige IPv4-adresse"
 
-#: js/src/clientRegistration/Clients.js:184
+#: js/src/clientRegistration/Clients.js:185
 #, fuzzy
 msgid ""
 "Make sure that this device is accessible from the public internet using "
@@ -219,16 +219,16 @@ msgstr ""
 "innstillingsfilen for feil hvis instansen er påskrudd og ikke kjører noen"
 " minutter etter oppsett."
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 #, fuzzy
 msgid "Edit Client Settings"
 msgstr "Klientinnstillinger"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
 msgstr "Lagre"
@@ -241,7 +241,7 @@ msgstr "Brukernavn"
 msgid "Password"
 msgstr "Passord"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
+#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 #, fuzzy
 msgid "Client settings were saved successfully."
 msgstr "Klientinnstillinger lagret."
@@ -335,7 +335,7 @@ msgstr "Ingen sertifikatsmyndighet"
 msgid "Generate CA"
 msgstr "Generer sertifikatsmyndighet"
 
-#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
 msgstr "Kan ikke slette sertifikatsmyndighet"
 
@@ -362,7 +362,7 @@ msgstr ""
 msgid "Delete CA"
 msgstr "Slett sertifikatsmyndighet"
 
-#: js/src/serverSettings/ServerSettings.js:34
+#: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
 msgstr "Tjenerinnstillinger"
@@ -453,58 +453,58 @@ msgstr ""
 "Klienter utleder adresser ved bruk av ruterens DNS. Påkrevd ved tilgang "
 "til lokale tjenere som «my-nas.lan»."
 
-#: reforis_openvpn/__init__.py:42
+#: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Sertifikatsmyndigheten finnes allerede"
 
-#: reforis_openvpn/__init__.py:66
+#: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
 msgstr "Kan ikke endre OpenVPN-tjenerinnstillinger"
 
-#: reforis_openvpn/__init__.py:85
+#: reforis_openvpn/__init__.py:92
 msgid "Client '{}' is already registered"
 msgstr "Klienten «{}» er allerede registrert"
 
-#: reforis_openvpn/__init__.py:89
+#: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
 msgstr "Kan ikke registrere klient"
 
-#: reforis_openvpn/__init__.py:102
+#: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
 msgstr "Forespurt klient finnes ikke"
 
-#: reforis_openvpn/__init__.py:106
+#: reforis_openvpn/__init__.py:114
 #, fuzzy
 msgid "Cannot get client"
 msgstr "Kan ikke hente klient"
 
-#: reforis_openvpn/__init__.py:121
+#: reforis_openvpn/__init__.py:130
 #, fuzzy
 msgid "Cannot revoke certificate"
 msgstr "Kan ikke tilbakekalle setifikat"
 
-#: reforis_openvpn/__init__.py:137
+#: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
 msgstr "Forespurte innstillinger finnes ikke"
 
-#: reforis_openvpn/__init__.py:144
+#: reforis_openvpn/__init__.py:156
 #, fuzzy
 msgid "Missing data for 'settings' file"
 msgstr "Manglende data for «settings»-fil"
 
-#: reforis_openvpn/__init__.py:152
+#: reforis_openvpn/__init__.py:164
 msgid "Client settings '{}' already exist"
 msgstr "Klientinnstillingene «{}» finnes allerede"
 
-#: reforis_openvpn/__init__.py:160
+#: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
 msgstr "Kan ikke legge til OpenVPN-klientinnstillinger"
 
-#: reforis_openvpn/__init__.py:174
+#: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
 msgstr "Kan ikke endre OpenVPN-klientinnstillinger"
 
-#: reforis_openvpn/__init__.py:183
+#: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
 msgstr "Kan ikke slette OpenVPN-klientinnstillinger"
 
@@ -552,3 +552,4 @@ msgstr "Kan ikke slette OpenVPN-klientinnstillinger"
 #~ " (snarere enn overskrives). I tilfelle "
 #~ "konflikter oppstår må du fikse tidligere"
 #~ " innstillinger selv."
+

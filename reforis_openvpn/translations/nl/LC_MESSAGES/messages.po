@@ -1,16 +1,16 @@
 # Dutch translations for reForis OpenVPN Plugin.
-# Copyright (C) 2022 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-06 13:29+0100\n"
-"PO-Revision-Date: 2020-11-30 19:29+0000\n"
-"Last-Translator: Johan van de Wetering <mail@jvdwetering.nl>\n"
+"POT-Creation-Date: 2024-03-07 13:47+0100\n"
+"PO-Revision-Date: 2024-01-04 23:09+0000\n"
+"Last-Translator: powerburner-nl <peter.mulder.1981@gmail.com>\n"
 "Language: nl\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/turris/reforis-"
 "openvpn-plugin/nl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -62,15 +62,15 @@ msgstr "Naam is te lang"
 msgid "Name contains invalid characters."
 msgstr "Naam bevat niet-toegestane karakters"
 
-#: js/src/clientRegistration/ClientRegistration.js:34
+#: js/src/clientRegistration/ClientRegistration.js:35
 msgid "Client Registration"
 msgstr "Client Registratie"
 
-#: js/src/clientRegistration/ClientRegistration.js:60
+#: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to generate certificate authority in order to register clients."
 msgstr "U moet een 'Certificate Authority' genereren om clients te registreren."
 
-#: js/src/clientRegistration/ClientRegistration.js:69
+#: js/src/clientRegistration/ClientRegistration.js:70
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -78,7 +78,7 @@ msgstr ""
 "U moet een configuratiebestand genereren voor iedere client die u wilt "
 "verbinden met uw OpenVPN server."
 
-#: js/src/clientRegistration/ClientRegistration.js:74
+#: js/src/clientRegistration/ClientRegistration.js:75
 #, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
@@ -113,12 +113,12 @@ msgstr "Download"
 msgid "Revoke"
 msgstr "Intrekken"
 
-#: js/src/clientRegistration/Clients.js:93
+#: js/src/clientRegistration/Clients.js:94
 #, fuzzy
 msgid "Client Configurations"
 msgstr "Client configuraties"
 
-#: js/src/clientRegistration/Clients.js:129
+#: js/src/clientRegistration/Clients.js:130
 #, fuzzy
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
@@ -133,17 +133,17 @@ msgstr ""
 "gedetecteerd. Deze wijziging wordt <strong>nergens</strong> opgeslagen en"
 " is alleen van toepassing op de configuratie die nu wordt gedownloaded."
 
-#: js/src/clientRegistration/Clients.js:172
+#: js/src/clientRegistration/Clients.js:173
 #, fuzzy
 msgid "Override Server Address"
 msgstr "Omzeil serveradres"
 
-#: js/src/clientRegistration/Clients.js:178
+#: js/src/clientRegistration/Clients.js:179
 #, fuzzy
 msgid "Router's public IP address or DNS name"
 msgstr "Publiek IPv4-adres van router"
 
-#: js/src/clientRegistration/Clients.js:184
+#: js/src/clientRegistration/Clients.js:185
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
@@ -218,16 +218,16 @@ msgstr ""
 " wel is ingeschakeld maar na een paar minuten na de installatie nog niet "
 "is gestart."
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 #, fuzzy
 msgid "Edit Client Settings"
 msgstr "Client Instellingen"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
 msgstr "Opslaan"
@@ -238,9 +238,9 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
+#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
 msgstr ""
 
@@ -256,7 +256,7 @@ msgstr "Naam kan niet leeg zijn"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
 msgid "Edit"
-msgstr ""
+msgstr "Aanpassen"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
 msgid "Delete"
@@ -332,7 +332,7 @@ msgstr "Geen certificaatautoriteit"
 msgid "Generate CA"
 msgstr "Genereer CA"
 
-#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
 msgstr "Kan certificaatautoriteit niet verwijderen"
 
@@ -358,7 +358,7 @@ msgstr ""
 msgid "Delete CA"
 msgstr "Verwijder CA"
 
-#: js/src/serverSettings/ServerSettings.js:34
+#: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
 msgstr "Server Instellingen"
@@ -448,55 +448,55 @@ msgstr ""
 "Clients zullen de DNS resolver van de router gebruiken. Dit is nodig "
 "wanneer deze lokale servers moeten kunnen bereiken, zoals my-nas.lan"
 
-#: reforis_openvpn/__init__.py:42
+#: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Certificaatautoriteit bestaat al"
 
-#: reforis_openvpn/__init__.py:66
+#: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
 msgstr "Kan de OpenVPN server instellingen niet wijzigen"
 
-#: reforis_openvpn/__init__.py:85
+#: reforis_openvpn/__init__.py:92
 msgid "Client '{}' is already registered"
 msgstr "Client '{}' is al geregistreerd"
 
-#: reforis_openvpn/__init__.py:89
+#: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
 msgstr "Kan client niet registreren"
 
-#: reforis_openvpn/__init__.py:102
+#: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
 msgstr "Vereiste client bestaat niet"
 
-#: reforis_openvpn/__init__.py:106
+#: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
 msgstr "Kan client niet verkrijgen"
 
-#: reforis_openvpn/__init__.py:121
+#: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
 msgstr "Kan certificaat niet intrekken"
 
-#: reforis_openvpn/__init__.py:137
+#: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
 msgstr "Opgevraagde instellingen bestaan niet"
 
-#: reforis_openvpn/__init__.py:144
+#: reforis_openvpn/__init__.py:156
 msgid "Missing data for 'settings' file"
 msgstr "Ontbrekende data voor configuratiebestand"
 
-#: reforis_openvpn/__init__.py:152
+#: reforis_openvpn/__init__.py:164
 msgid "Client settings '{}' already exist"
 msgstr "Client instellingen '{}' bestaan al"
 
-#: reforis_openvpn/__init__.py:160
+#: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
 msgstr "Kan de OpenVPN client instellingen niet toevoegen"
 
-#: reforis_openvpn/__init__.py:174
+#: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
 msgstr "Kan de OpenVPN instellingen niet wijzigen"
 
-#: reforis_openvpn/__init__.py:183
+#: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
 msgstr "Kan de OpenVPN client instellingen niet wissen"
 

@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reforis-openvpn"
+version = "2.0.0"
+description = "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+authors = [
+    { name = "CZ.NIC, z.s.p.o. (https://www.nic.cz/)", email = "software@turris.com" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Flask",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+]
+dependencies = [
+    "Babel",
+    "flask",
+    "Flask-Babel",
+    "reforis",
+]
+
+[project.optional-dependencies]
+devel = [
+    "pytest",
+    "ruff",
+    "werkzeug",
+]
+
+[project.entry-points."foris.plugins"]
+reforis_openvpn = "reforis_openvpn:openvpn"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/js",
+    "/reforis_openvpn",
+    "/reforis_static",
+]
+
+[tool.hatch.build.targets.wheel.hooks.reforis]
+dependencies = ["hatch-reforis"]
+reforis_module = "reforis_openvpn"
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "/reforis_openvpn",
+    "/reforis_static",
+]
+exclude = [
+    "**/*.po",
+    "**/*.pot",
+]
+
+[tool.ruff]
+line-length = 120

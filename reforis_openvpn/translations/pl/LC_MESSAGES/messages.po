@@ -1,26 +1,25 @@
 # Polish translations for reForis OpenVPN Plugin.
-# Copyright (C) 2022 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-06 13:29+0100\n"
+"POT-Creation-Date: 2024-03-07 13:47+0100\n"
 "PO-Revision-Date: 2023-04-13 13:51+0000\n"
 "Last-Translator: Arusekk <arek_koz@o2.pl>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.17-dev\n"
-"Generated-By: Babel 2.11.0\n"
+"Generated-By: Babel 2.14.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -60,15 +59,15 @@ msgstr "Nazwa jest za długa."
 msgid "Name contains invalid characters."
 msgstr "Nazwa zawiera nieprawidłowe znaki."
 
-#: js/src/clientRegistration/ClientRegistration.js:34
+#: js/src/clientRegistration/ClientRegistration.js:35
 msgid "Client Registration"
 msgstr "Rejestracja klienta"
 
-#: js/src/clientRegistration/ClientRegistration.js:60
+#: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to generate certificate authority in order to register clients."
 msgstr "Do rejestrowania klientów trzeba wygenerować urząd certyfikacji."
 
-#: js/src/clientRegistration/ClientRegistration.js:69
+#: js/src/clientRegistration/ClientRegistration.js:70
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -76,7 +75,7 @@ msgstr ""
 "Trzeba wygenerować plik konfiguracyjny każdemu klientowi, który ma się "
 "łączyć z tym serwerem OpenVPN."
 
-#: js/src/clientRegistration/ClientRegistration.js:74
+#: js/src/clientRegistration/ClientRegistration.js:75
 msgid ""
 "To apply the client configuration, you need to download it and put it "
 "into the OpenVPN configuration directory or open it using your OpenVPN "
@@ -106,11 +105,11 @@ msgstr "Pobierz"
 msgid "Revoke"
 msgstr "Odwołaj"
 
-#: js/src/clientRegistration/Clients.js:93
+#: js/src/clientRegistration/Clients.js:94
 msgid "Client Configurations"
 msgstr "Konfiguracje klientów"
 
-#: js/src/clientRegistration/Clients.js:129
+#: js/src/clientRegistration/Clients.js:130
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
 " file matches the public IP address of your router. You can set this "
@@ -119,15 +118,15 @@ msgid ""
 "downloaded."
 msgstr ""
 
-#: js/src/clientRegistration/Clients.js:172
+#: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
 msgstr "Nadpisz adres serwera"
 
-#: js/src/clientRegistration/Clients.js:178
+#: js/src/clientRegistration/Clients.js:179
 msgid "Router's public IP address or DNS name"
 msgstr "Publiczny adres IP routera lub jego nazwa domeny"
 
-#: js/src/clientRegistration/Clients.js:184
+#: js/src/clientRegistration/Clients.js:185
 msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
@@ -186,15 +185,15 @@ msgid ""
 " few minutes after the setup."
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:35
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
 msgstr "Zmień ustawienia klienta"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:52
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
 msgstr "Zapisz"
@@ -207,7 +206,7 @@ msgstr "Nazwa użytkownika"
 msgid "Password"
 msgstr "Hasło"
 
-#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:28
+#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
 msgstr "Ustawienia klienta zostały pomyślnie zapisane."
 
@@ -288,7 +287,7 @@ msgstr "Brak urzędu certyfikacji (CA)."
 msgid "Generate CA"
 msgstr "Wygeneruj CA"
 
-#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:50
+#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
 msgstr "Nie można usunąć urzędu certyfikacji"
 
@@ -308,7 +307,7 @@ msgstr ""
 msgid "Delete CA"
 msgstr "Usuń CA"
 
-#: js/src/serverSettings/ServerSettings.js:34
+#: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
 msgstr "Ustawienia serwera"
@@ -340,8 +339,8 @@ msgid ""
 "Useful if you don't have public IPv4 address. Disable if your IPv6 "
 "connection is broken."
 msgstr ""
-"Przydatne, jeśli nie ma publicznego adresu IPv4. Wyłącz, jeśli połączenie "
-"IPv6 nie działa."
+"Przydatne, jeśli nie ma publicznego adresu IPv4. Wyłącz, jeśli połączenie"
+" IPv6 nie działa."
 
 #: js/src/serverSettings/ServerSettingsForm.js:117
 msgid "Protocol"
@@ -391,55 +390,55 @@ msgstr ""
 "Klienci będą rozwiązywać adresy za pomocą DNS routera. Wymagane przy "
 "dostępie do lokalnych serwerów, takich jak my-nas.lan"
 
-#: reforis_openvpn/__init__.py:42
+#: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Urząd certyfikacji już istnieje"
 
-#: reforis_openvpn/__init__.py:66
+#: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
 msgstr "Nie można zmienić ustawień serwera OpenVPN"
 
-#: reforis_openvpn/__init__.py:85
+#: reforis_openvpn/__init__.py:92
 msgid "Client '{}' is already registered"
 msgstr "Klient „{}” jest już zarejestrowany"
 
-#: reforis_openvpn/__init__.py:89
+#: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
 msgstr "Nie można zarejestrować klienta"
 
-#: reforis_openvpn/__init__.py:102
+#: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
 msgstr "Żądany klient nie istnieje"
 
-#: reforis_openvpn/__init__.py:106
+#: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
 msgstr "Nie można uzyskać klienta"
 
-#: reforis_openvpn/__init__.py:121
+#: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
 msgstr "Nie można odwołać certyfikatu"
 
-#: reforis_openvpn/__init__.py:137
+#: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
 msgstr "Żądane ustawienia nie istnieją"
 
-#: reforis_openvpn/__init__.py:144
+#: reforis_openvpn/__init__.py:156
 msgid "Missing data for 'settings' file"
 msgstr "Brak przesłanego pliku „settings”"
 
-#: reforis_openvpn/__init__.py:152
+#: reforis_openvpn/__init__.py:164
 msgid "Client settings '{}' already exist"
 msgstr "Ustawienia klienta „{}” już istnieją"
 
-#: reforis_openvpn/__init__.py:160
+#: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
 msgstr "Nie można dodać ustawień klienta OpenVPN"
 
-#: reforis_openvpn/__init__.py:174
+#: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
 msgstr "Nie można zmienić ustawień klienta OpenVPN"
 
-#: reforis_openvpn/__init__.py:183
+#: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
 msgstr "Nie można usunąć ustawień klienta OpenVPN"
 
@@ -584,3 +583,4 @@ msgstr "Nie można usunąć ustawień klienta OpenVPN"
 #~ " conflict you must fix previous "
 #~ "settings by yourself."
 #~ msgstr ""
+

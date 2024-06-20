@@ -15,29 +15,27 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
     </p>
     <form>
       <div
-        class="form-group"
+        class="form-check form-switch mb-3 null"
       >
-        <div
-          class="custom-control custom-switch custom-control-inline"
+        <input
+          checked=""
+          class="form-check-input"
+          id="1"
+          role="switch"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="1"
         >
-          <input
-            checked=""
-            class="custom-control-input"
-            id="1"
-            type="checkbox"
-          />
-          <label
-            class="custom-control-label"
-            for="1"
-          >
-            Enable Server
-          </label>
-        </div>
+          Enable Server
+        </label>
       </div>
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
+          class="form-label"
           for="2"
         >
           Device
@@ -55,39 +53,39 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         </div>
       </div>
       <div
-        class="form-group"
+        class="form-check form-switch mb-3 null"
       >
-        <div
-          class="custom-control custom-switch"
+        <input
+          class="form-check-input"
+          id="3"
+          role="switch"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="3"
         >
-          <input
-            class="custom-control-input"
-            id="3"
-            type="checkbox"
-          />
-          <label
-            class="custom-control-label"
-            for="3"
-          >
-            Listen on IPv6
-          </label>
-          <small
-            class="form-text text-muted mt-0 mb-3"
-          >
+          Listen on IPv6
+        </label>
+        <div
+          class="form-text"
+        >
+          <small>
             Useful if you don't have public IPv4 address. Disable if your IPv6 connection is broken.
           </small>
         </div>
       </div>
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
+          class="form-label"
           for="4"
         >
           Protocol
         </label>
         <select
-          class="custom-select"
+          class="form-select"
           id="4"
         >
           <option
@@ -101,16 +99,19 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             TCP
           </option>
         </select>
-        <small
-          class="form-text text-muted"
+        <div
+          class="form-text"
         >
-          Clients will connect to the VPN server via this protocol. Use TCP if your ISP blocks UDP.
-        </small>
+          <small>
+            Clients will connect to the VPN server via this protocol. Use TCP if your ISP blocks UDP.
+          </small>
+        </div>
       </div>
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
+          class="form-label"
           for="5"
         >
           VPN network address
@@ -125,16 +126,19 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
             value="10.111.111.0"
           />
         </div>
-        <small
-          class="form-text text-muted"
+        <div
+          class="form-text"
         >
-          This network should be different than any network directly reachable by the router and the clients.
-        </small>
+          <small>
+            This network should be different than any network directly reachable by the router and the clients.
+          </small>
+        </div>
       </div>
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
+          class="form-label"
           for="6"
         >
           VPN network mask
@@ -151,9 +155,10 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         </div>
       </div>
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
+          class="form-label"
           for="7"
         >
           Port
@@ -171,51 +176,49 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         </div>
       </div>
       <div
-        class="form-group"
+        class="form-check form-switch mb-3 null"
       >
-        <div
-          class="custom-control custom-switch"
+        <input
+          checked=""
+          class="form-check-input"
+          id="8"
+          role="switch"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="8"
         >
-          <input
-            checked=""
-            class="custom-control-input"
-            id="8"
-            type="checkbox"
-          />
-          <label
-            class="custom-control-label"
-            for="8"
-          >
-            Route all traffic via VPN
-          </label>
-          <small
-            class="form-text text-muted mt-0 mb-3"
-          >
+          Route all traffic via VPN
+        </label>
+        <div
+          class="form-text"
+        >
+          <small>
             Clients will access the Internet via VPN
           </small>
         </div>
       </div>
       <div
-        class="form-group"
+        class="form-check form-switch mb-3 null"
       >
-        <div
-          class="custom-control custom-switch"
+        <input
+          checked=""
+          class="form-check-input"
+          id="9"
+          role="switch"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="9"
         >
-          <input
-            checked=""
-            class="custom-control-input"
-            id="9"
-            type="checkbox"
-          />
-          <label
-            class="custom-control-label"
-            for="9"
-          >
-            Use DNS via VPN
-          </label>
-          <small
-            class="form-text text-muted mt-0 mb-3"
-          >
+          Use DNS via VPN
+        </label>
+        <div
+          class="form-text"
+        >
+          <small>
             Clients will resolve addresses using router's DNS. Required when accessing local servers like my-nas.lan
           </small>
         </div>
@@ -224,7 +227,7 @@ exports[`<ServerSettingsForm /> should render form 1`] = `
         class="text-right"
       >
         <button
-          class="btn btn-primary col-sm-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
+          class="btn btn-primary col-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
           type="submit"
         >
           <span>
@@ -252,29 +255,26 @@ exports[`<ServerSettingsForm /> should render form partially when disabled 1`] =
     </p>
     <form>
       <div
-        class="form-group"
+        class="form-check form-switch mb-3 null"
       >
-        <div
-          class="custom-control custom-switch custom-control-inline"
+        <input
+          class="form-check-input"
+          id="1"
+          role="switch"
+          type="checkbox"
+        />
+        <label
+          class="form-check-label"
+          for="1"
         >
-          <input
-            class="custom-control-input"
-            id="1"
-            type="checkbox"
-          />
-          <label
-            class="custom-control-label"
-            for="1"
-          >
-            Enable Server
-          </label>
-        </div>
+          Enable Server
+        </label>
       </div>
       <div
         class="text-right"
       >
         <button
-          class="btn btn-primary col-sm-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
+          class="btn btn-primary col-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
           type="submit"
         >
           <span>

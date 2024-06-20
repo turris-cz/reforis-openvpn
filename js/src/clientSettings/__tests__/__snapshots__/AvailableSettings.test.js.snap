@@ -69,24 +69,21 @@ exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hitit
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="1"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="1"
                 >
-                  <input
-                    checked=""
-                    class="custom-control-input"
-                    id="1"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="1"
-                  >
-                    A1
-                  </label>
-                </div>
+                  A1
+                </label>
               </div>
             </td>
             <td
@@ -188,23 +185,19 @@ exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hitit
               Edit Client Settings
             </h5>
             <button
-              class="close"
+              aria-label="Close"
+              class="btn-close"
               type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </button>
+            />
           </div>
           <div
             class="modal-body"
           >
             <div
-              class="form-group"
+              class="mb-3"
             >
               <label
+                class="form-label"
                 for="2"
               >
                 Username
@@ -222,9 +215,10 @@ exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hitit
               </div>
             </div>
             <div
-              class="form-group"
+              class="mb-3"
             >
               <label
+                class="form-label"
                 for="3"
               >
                 Password
@@ -240,18 +234,14 @@ exports[`<AvailableSettings /> should handle PUT ruequest in a modal after hitit
                   type="password"
                   value="testpass"
                 />
-                <div
-                  class="input-group-append"
+                <button
+                  class="input-group-text"
+                  type="button"
                 >
-                  <button
-                    class="input-group-text"
-                    type="button"
-                  >
-                    <i
-                      class="fa fa-eye"
-                    />
-                  </button>
-                </div>
+                  <i
+                    class="fa fa-eye"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -324,24 +314,21 @@ exports[`<AvailableSettings /> should render a modal of a particular settings af
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="1"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="1"
                 >
-                  <input
-                    checked=""
-                    class="custom-control-input"
-                    id="1"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="1"
-                  >
-                    A1
-                  </label>
-                </div>
+                  A1
+                </label>
               </div>
             </td>
             <td
@@ -443,23 +430,19 @@ exports[`<AvailableSettings /> should render a modal of a particular settings af
               Edit Client Settings
             </h5>
             <button
-              class="close"
+              aria-label="Close"
+              class="btn-close"
               type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </button>
+            />
           </div>
           <div
             class="modal-body"
           >
             <div
-              class="form-group"
+              class="mb-3"
             >
               <label
+                class="form-label"
                 for="2"
               >
                 Username
@@ -476,9 +459,10 @@ exports[`<AvailableSettings /> should render a modal of a particular settings af
               </div>
             </div>
             <div
-              class="form-group"
+              class="mb-3"
             >
               <label
+                class="form-label"
                 for="3"
               >
                 Password
@@ -493,18 +477,14 @@ exports[`<AvailableSettings /> should render a modal of a particular settings af
                   type="password"
                   value="password"
                 />
-                <div
-                  class="input-group-append"
+                <button
+                  class="input-group-text"
+                  type="button"
                 >
-                  <button
-                    class="input-group-text"
-                    type="button"
-                  >
-                    <i
-                      class="fa fa-eye"
-                    />
-                  </button>
-                </div>
+                  <i
+                    class="fa fa-eye"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -575,15 +555,10 @@ exports[`<AvailableSettings /> should render info when there are no clients 1`] 
               Edit Client Settings
             </h5>
             <button
-              class="close"
+              aria-label="Close"
+              class="btn-close"
               type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </button>
+            />
           </div>
           <div
             class="modal-body"
@@ -671,24 +646,21 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="1"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="1"
                 >
-                  <input
-                    checked=""
-                    class="custom-control-input"
-                    id="1"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="1"
-                  >
-                    A1
-                  </label>
-                </div>
+                  A1
+                </label>
               </div>
             </td>
             <td
@@ -768,23 +740,20 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  class="form-check-input"
+                  id="2"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="2"
                 >
-                  <input
-                    class="custom-control-input"
-                    id="2"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="2"
-                  >
-                    A2
-                  </label>
-                </div>
+                  A2
+                </label>
               </div>
             </td>
             <td
@@ -850,24 +819,21 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  checked=""
+                  class="form-check-input"
+                  id="3"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="3"
                 >
-                  <input
-                    checked=""
-                    class="custom-control-input"
-                    id="3"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="3"
-                  >
-                    B1
-                  </label>
-                </div>
+                  B1
+                </label>
               </div>
             </td>
             <td
@@ -947,23 +913,20 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
               class="align-middle"
             >
               <div
-                class="form-group"
+                class="form-check form-switch mb-3 null"
               >
-                <div
-                  class="custom-control custom-switch custom-control-inline"
+                <input
+                  class="form-check-input"
+                  id="4"
+                  role="switch"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="4"
                 >
-                  <input
-                    class="custom-control-input"
-                    id="4"
-                    type="checkbox"
-                  />
-                  <label
-                    class="custom-control-label"
-                    for="4"
-                  >
-                    B2
-                  </label>
-                </div>
+                  B2
+                </label>
               </div>
             </td>
             <td
@@ -1051,15 +1014,10 @@ exports[`<AvailableSettings /> should render table of settings 1`] = `
               Edit Client Settings
             </h5>
             <button
-              class="close"
+              aria-label="Close"
+              class="btn-close"
               type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </button>
+            />
           </div>
           <div
             class="modal-body"

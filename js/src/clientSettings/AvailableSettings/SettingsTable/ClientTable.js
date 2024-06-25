@@ -39,7 +39,7 @@ export default function ClientTable({ clientSettings, editClientSettings }) {
                         <th
                             scope="col"
                             aria-label={_("Actions")}
-                            className="text-right"
+                            className="text-end"
                         />
                     </tr>
                 </thead>

@@ -39,7 +39,7 @@ export default function AuthorityMissing({ onReload }) {
             <p className="text-center text-muted">
                 {_("No certification authority.")}
             </p>
-            <div className="text-right">
+            <div className="text-end">
                 <Button
                     onClick={() => createCA()}
                     forisFormSize

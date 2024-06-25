@@ -83,7 +83,7 @@ function ClientRow({ client, address }) {
     return (
         <tr>
             <td className="align-middle">{client.name}</td>
-            <td className="text-right">
+            <td className="text-end">
                 <ActionsWithGeneratingAndRevoked
                     apiState={deleteClientResponse.state}
                     client={client}

@@ -32,7 +32,7 @@ export default function AuthorityBeingGenerated({ ws, onReload }) {
                 )}
             </p>
             <div className="text-center text-muted">
-                <SpinnerElement small className="mr-1" />
+                <SpinnerElement small className="me-1" />
                 {_("Generating certification authority…")}
             </div>
         </div>

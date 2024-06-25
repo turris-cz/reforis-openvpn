@@ -51,7 +51,7 @@ export default function AuthorityReady({ serverEnabled, onReload }) {
                     )}
                 </p>
             )}
-            <div className="text-right">
+            <div className="text-end">
                 <Button
                     onClick={() => deleteCA()}
                     className="btn-danger"

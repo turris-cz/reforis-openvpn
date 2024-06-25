@@ -71,7 +71,7 @@ export default function AddClientForm({ generating, setGenerating }) {
                         name: { $set: value },
                     }))}
                 />
-                <div className="text-right">
+                <div className="text-end">
                     <Button
                         type="submit"
                         forisFormSize

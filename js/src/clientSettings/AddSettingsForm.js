@@ -76,7 +76,7 @@ export default function AddSettingsForm() {
                     }))}
                     accept=".conf,.ovpn"
                 />
-                <div className={`${buttonFormFieldsSize} text-right`}>
+                <div className={`${buttonFormFieldsSize} text-end`}>
                     <Button
                         type="submit"
                         forisFormSize

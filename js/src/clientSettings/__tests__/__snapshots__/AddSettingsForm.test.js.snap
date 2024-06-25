@@ -36,7 +36,7 @@ exports[`<AddSettingsForm /> should be rendered 1`] = `
         </div>
       </div>
       <div
-        class="col-sm-12 col-lg-12 p-0 mb-3 text-right"
+        class="col-sm-12 col-lg-12 p-0 mb-3 text-end"
       >
         <button
           class="btn btn-primary col-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"

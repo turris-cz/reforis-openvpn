@@ -15,7 +15,7 @@ exports[`<AuthorityBeingGenerated /> should match snapshot 1`] = `
       class="text-center text-muted"
     >
       <div
-        class="spinner-border spinner-border-sm mr-1"
+        class="spinner-border spinner-border-sm me-1"
         role="status"
       >
         <span

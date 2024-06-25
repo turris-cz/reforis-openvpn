@@ -31,7 +31,7 @@ exports[`<ClientTable /> should display spinner on delete request 1`] = `
             First
           </td>
           <td
-            class="text-right"
+            class="text-end"
           >
             <div
               class="spinner-border spinner-border-sm"
@@ -90,7 +90,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             First
           </td>
           <td
-            class="text-right"
+            class="text-end"
           >
             <div
               class="btn-group mb-0"
@@ -121,7 +121,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             Second
           </td>
           <td
-            class="text-right"
+            class="text-end"
           >
             <div
               class="spinner-border spinner-border-sm"
@@ -140,7 +140,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             Third
           </td>
           <td
-            class="text-right"
+            class="text-end"
           >
             <div
               class="btn-group mb-0"
@@ -171,7 +171,7 @@ exports[`<ClientTable /> should render table of clients 1`] = `
             Last
           </td>
           <td
-            class="text-right"
+            class="text-end"
           >
             <div
               class="btn-group mb-0"

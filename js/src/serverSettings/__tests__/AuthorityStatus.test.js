@@ -22,7 +22,9 @@ describe("<AuthorityStatus />", () => {
                 status={status}
                 serverEnabled={false}
                 onReload={jest.fn()}
-            />
+            >
+                <div>Some child</div>
+            </AuthorityStatus>
         );
         return container;
     }

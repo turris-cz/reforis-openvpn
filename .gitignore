@@ -112,3 +112,6 @@ venv.bak/
 reforis_static/reforis_openvpn/js/*.min.js
 reforis_static/reforis_openvpn/js/*.LICENSE
 reforis_static/reforis_openvpn/js/*.txt
+
+## Ruff
+.ruff_cache/

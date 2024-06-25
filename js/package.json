@@ -6,14 +6,14 @@
         "url": "https://gitlab.nic.cz/turris/reforis/reforis-openvpn.git"
     },
     "license": "GPL-3.0",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.",
     "main": "./src/app.js",
     "eslintConfig": {
         "extends": "eslint-config-reforis"
     },
     "dependencies": {
-        "foris": "^5.6.1",
+        "foris": "^6.0.0",
         "react-uid": "^2.3.3"
     },
     "peerDependencies": {
@@ -23,11 +23,11 @@
         "react-router-dom": "5.1.2"
     },
     "devDependencies": {
-        "@babel/cli": "^7.23.9",
-        "@babel/core": "^7.24.0",
-        "@babel/plugin-transform-runtime": "^7.24.0",
-        "@babel/preset-env": "^7.24.0",
-        "@babel/preset-react": "^7.23.3",
+        "@babel/cli": "^7.24.7",
+        "@babel/core": "^7.24.7",
+        "@babel/plugin-transform-runtime": "^7.24.7",
+        "@babel/preset-env": "^7.24.7",
+        "@babel/preset-react": "^7.24.7",
         "@testing-library/react": "^8.0.9",
         "babel-loader": "^8.0.6",
         "css-loader": "^5.2.4",
@@ -36,14 +36,14 @@
         "jest": "^26.4.2",
         "jest-mock-axios": "^3.2.0",
         "moment-timezone": "^0.5.45",
-        "prettier": "^3.2.5",
+        "prettier": "^3.3.2",
         "process": "^0.11.10",
         "prop-types": "^15.8.1",
         "react": "16.9.0",
         "react-dom": "16.9.0",
         "react-router-dom": "5.1.2",
         "style-loader": "^0.23.1",
-        "webpack": "^5.90.3",
+        "webpack": "^5.92.1",
         "webpack-cli": "^5.1.4"
     },
     "scripts": {

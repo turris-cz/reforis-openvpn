@@ -15,10 +15,10 @@ exports[`<AddSettingsForm /> should be rendered 1`] = `
       class="col px-0"
     >
       <div
-        class="form-group"
+        class="mb-3"
       >
         <label
-          class="custom-file-label"
+          class="form-label custom-file-label"
           for="1"
         >
           Choose settings file...
@@ -39,7 +39,7 @@ exports[`<AddSettingsForm /> should be rendered 1`] = `
         class="col-sm-12 col-lg-12 p-0 mb-3 text-right"
       >
         <button
-          class="btn btn-primary col-sm-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
+          class="btn btn-primary col-12 col-md-3 col-lg-2 d-inline-flex justify-content-center align-items-center"
           disabled=""
           type="submit"
         >

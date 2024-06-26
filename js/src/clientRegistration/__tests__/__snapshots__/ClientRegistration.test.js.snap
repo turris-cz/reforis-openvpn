@@ -76,7 +76,7 @@ exports[`<ClientRegistration /> should display clients 1`] = `
     </p>
     <div>
       <div
-        class="form-check form-switch mb-3 null"
+        class="form-check form-switch mb-3"
       >
         <input
           class="form-check-input"

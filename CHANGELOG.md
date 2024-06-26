@@ -8,6 +8,17 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.1.1] - 2024-06-26
+
+### Added
+
+-   Added margin-bottom zero class to a Switch in ClientRow component
+
+### Changed
+
+-   Updated CSS class names per Bootstrap 5
+-   Updated Foris JS library to v6.0.1
+
 ## [2.1.0] - 2024-06-25
 
 ### Changed
@@ -129,7 +140,8 @@ and this project adheres to
 -   Keep functionality of previous Foris OpenVPN plugin
 -   Add clients configuration
 
-[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.0...master
+[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.1...master
+[2.1.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.0...v2.1.1
 [2.1.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.0.0...v2.1.0
 [2.0.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.6.0...v2.0.0
 [1.6.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.5.0...v1.6.0

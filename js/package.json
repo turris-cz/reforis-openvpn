@@ -13,7 +13,7 @@
         "extends": "eslint-config-reforis"
     },
     "dependencies": {
-        "foris": "^6.0.0",
+        "foris": "^6.0.1",
         "react-uid": "^2.3.3"
     },
     "peerDependencies": {

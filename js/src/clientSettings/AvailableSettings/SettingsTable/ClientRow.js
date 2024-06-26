@@ -69,6 +69,7 @@ export default function ClientRow({ client, editClientSettings }) {
                         });
                     }}
                     disabled={buttonDisabled}
+                    className="mb-0"
                 />
             </td>
             <td className="align-middle text-center">

@@ -171,7 +171,7 @@ export default function ServerSettingsForm({ settingsData }) {
                         />
                     </>
                 )}
-                <div className="text-right">
+                <div className="text-end">
                     <Button
                         type="submit"
                         forisFormSize

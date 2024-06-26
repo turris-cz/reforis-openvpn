@@ -69,6 +69,7 @@ export default function ClientRow({ client, editClientSettings }) {
                         });
                     }}
                     disabled={buttonDisabled}
+                    className="mb-0"
                 />
             </td>
             <td className="align-middle text-center">
@@ -79,7 +80,7 @@ export default function ClientRow({ client, editClientSettings }) {
                     />
                 )}
             </td>
-            <td className="text-right">
+            <td className="text-end">
                 <ClientSettingsActions
                     client={client}
                     editClientSettings={editClientSettings}
@@ -115,7 +116,7 @@ function ClientSettingsActions({
                     <i className="fas fa-edit fa-sm" />
                 </span>
                 <span className="d-none d-xl-block">
-                    <i className="fas fa-edit fa-sm mr-1" />
+                    <i className="fas fa-edit fa-sm me-1" />
                     {_("Edit")}
                 </span>
             </Button>
@@ -128,7 +129,7 @@ function ClientSettingsActions({
                     <i className="fas fa-trash fa-sm" />
                 </span>
                 <span className="d-none d-xl-block">
-                    <i className="fas fa-trash fa-sm mr-1" />
+                    <i className="fas fa-trash fa-sm me-1" />
                     {_("Delete")}
                 </span>
             </Button>

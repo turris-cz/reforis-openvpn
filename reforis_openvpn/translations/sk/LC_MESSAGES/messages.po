@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-07 13:47+0100\n"
-"PO-Revision-Date: 2023-01-17 23:53+0000\n"
+"PO-Revision-Date: 2024-08-03 21:09+0000\n"
 "Last-Translator: Atec <dr.atec@gmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.7-dev\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: js/src/app.js:14
@@ -37,7 +38,9 @@ msgstr "Názov klienta"
 msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
-msgstr "Menej ako 64 znakov. Len písmená, číslice, bodky, pomlčky a podčiarkovník."
+msgstr ""
+"Menej ako 64 znakov. Len alfanumerické znaky, bodka, spojovník a znak "
+"podčiarkutia."
 
 #: js/src/clientRegistration/AddClientForm.js:80
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -219,7 +222,7 @@ msgstr "Uložiť"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr "Užívateľské meno"
+msgstr "Používateľské meno"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
@@ -231,7 +234,7 @@ msgstr "Nastavenia klienta boli úspešne uložené."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr "Užívateľské meno nemôže byť prázdne."
+msgstr "Používateľské meno nesmie byť prázdne."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
@@ -520,4 +523,3 @@ msgstr "Nastavenia klienta OpenVPN sa nedajú vymazať"
 #~ "vaša konfigurácia bude rozšírená (nie "
 #~ "prepísaná). V prípade konfliktu budete "
 #~ "musieť nastavenia opraviť ručne."
-

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -77,7 +77,7 @@ describe("<AvailableSettings />", () => {
         expect(container).toMatchSnapshot();
     });
 
-    it("should render a modal of a particular settings after hititng 'Edit' button", async () => {
+    it("should render a modal of a particular settings after hitting 'Edit' button", async () => {
         const container = await renderTable([singleClient]);
 
         fireEvent.click(getByText(container, "Edit"));
@@ -85,7 +85,7 @@ describe("<AvailableSettings />", () => {
         expect(container).toMatchSnapshot();
     });
 
-    it("should handle PUT ruequest in a modal after hititng 'Save' button", async () => {
+    it("should handle PUT request in a modal after hitting 'Save' button", async () => {
         const container = await renderTable([singleClient]);
 
         fireEvent.click(getByText(container, "Edit"));

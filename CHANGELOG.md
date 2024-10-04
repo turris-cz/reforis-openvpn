@@ -8,6 +8,20 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.2.0] - 2024-10-04
+
+### Added
+
+-   Added & updated Weblate translations
+-   Added subnet validation to ServerSettingsForm component
+
+### Changed
+
+-   Migrated to FontAwesome v6
+-   Updated Foris JS library to v6.4.0
+-   Refactored AddClientForm to handle error feedback
+-   Refactored ClientRegistration to visually separate AddClientForm and Clients
+
 ## [2.1.1] - 2024-06-26
 
 ### Added
@@ -140,7 +154,8 @@ and this project adheres to
 -   Keep functionality of previous Foris OpenVPN plugin
 -   Add clients configuration
 
-[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.1...master
+[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.2.0...master
+[2.2.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.1...v2.2.0
 [2.1.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.0...v2.1.1
 [2.1.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.0.0...v2.1.0
 [2.0.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v1.6.0...v2.0.0

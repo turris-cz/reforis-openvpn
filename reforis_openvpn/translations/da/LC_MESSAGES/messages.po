@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-07 13:47+0100\n"
+"POT-Creation-Date: 2024-10-04 15:20+0200\n"
 "PO-Revision-Date: 2019-10-22 14:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -28,7 +28,7 @@ msgid "Add New Client"
 msgstr ""
 
 #: js/src/clientRegistration/AddClientForm.js:64
-#: js/src/clientRegistration/ClientTable.js:56
+#: js/src/clientRegistration/ClientTable.js:58
 msgid "Client name"
 msgstr ""
 
@@ -38,64 +38,72 @@ msgid ""
 "and underscores."
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:80
+#: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:91
+#: js/src/clientRegistration/AddClientForm.js:92
 msgid "Name cannot be empty."
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:94
+#: js/src/clientRegistration/AddClientForm.js:95
 msgid "Name is too long."
 msgstr ""
 
-#: js/src/clientRegistration/AddClientForm.js:97
+#: js/src/clientRegistration/AddClientForm.js:98
 msgid "Name contains invalid characters."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:35
+#: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
 msgstr ""
 
 #: js/src/clientRegistration/ClientRegistration.js:61
-msgid "You need to generate certificate authority in order to register clients."
+msgid "You need to "
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:70
+#: js/src/clientRegistration/ClientRegistration.js:63
+msgid "generate certificate authority"
+msgstr ""
+
+#: js/src/clientRegistration/ClientRegistration.js:65
+msgid " in order to register clients."
+msgstr ""
+
+#: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:75
+#: js/src/clientRegistration/ClientRegistration.js:77
 msgid ""
 "To apply the client configuration, you need to download it and put it "
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:42
+#: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:57
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:111
+#: js/src/clientRegistration/ClientTable.js:59
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:114
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:107
+#: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:135
+#: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
 msgstr ""
 
-#: js/src/clientRegistration/ClientTable.js:142
+#: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
 msgstr ""
 
@@ -210,28 +218,28 @@ msgstr ""
 msgid "Password cannot be empty."
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:40
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:47
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
 msgstr ""
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:53
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
 msgid "Check status"
 msgstr ""
 
@@ -376,6 +384,10 @@ msgstr ""
 msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
+msgstr ""
+
+#: js/src/serverSettings/ServerSettingsForm.js:204
+msgid "Invalid subnet. Please check the network address and mask."
 msgstr ""
 
 #: reforis_openvpn/__init__.py:44
@@ -570,5 +582,10 @@ msgstr ""
 #~ "(rather than  overwritten). In case of"
 #~ " conflict you must fix previous "
 #~ "settings by yourself."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You need to generate certificate "
+#~ "authority in order to register clients."
 #~ msgstr ""
 

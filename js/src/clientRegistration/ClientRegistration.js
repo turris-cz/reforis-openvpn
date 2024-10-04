@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -14,6 +14,7 @@ import {
     withSpinnerOnSending,
 } from "foris";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import API_URLs from "API";
 
@@ -33,7 +34,6 @@ export default function ClientRegistration({ ws }) {
     return (
         <>
             <h1>{_("Client Registration")}</h1>
-
             <RegistrationWithErrorAndSpinner
                 apiState={authority.state}
                 ws={ws}
@@ -58,9 +58,11 @@ function Registration({ ws, certificateAuthority }) {
     if (certificateAuthority.status !== "ready") {
         return (
             <p>
-                {_(
-                    "You need to generate certificate authority in order to register clients."
-                )}
+                {_("You need to ")}
+                <Link to="/openvpn/server-settings">
+                    {_("generate certificate authority")}
+                </Link>
+                {_(" in order to register clients.")}
             </p>
         );
     }
@@ -81,6 +83,8 @@ function Registration({ ws, certificateAuthority }) {
                     generating={generating}
                     setGenerating={setGenerating}
                 />
+            </div>
+            <div className={formFieldsSize}>
                 <Clients ws={ws} setGenerating={setGenerating} />
             </div>
         </>

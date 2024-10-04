@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -31,7 +31,17 @@ describe("<ServerSettingsForm />", () => {
         route_all: true,
         use_dns: true,
     };
-    const disabledFormData = { enabled: false };
+    const disabledFormData = {
+        enabled: false,
+        device: "my_device",
+        ipv6: false,
+        protocol: "UDP",
+        network: "10.111.111.0",
+        network_netmask: "255.255.255.0",
+        port: 1194,
+        route_all: true,
+        use_dns: true,
+    };
 
     function renderSettings(formData) {
         const { container } = render(
@@ -70,7 +80,7 @@ describe("<ServerSettingsForm />", () => {
         });
         expect(submitButton.disabled).toBe(true);
         // Set valid value
-        fireEvent.change(networkInput, { target: { value: "80.90.30.60" } });
+        fireEvent.change(networkInput, { target: { value: "10.111.111.0" } });
         expect(submitButton.disabled).toBe(false);
 
         // Invalid netmask
@@ -80,7 +90,7 @@ describe("<ServerSettingsForm />", () => {
         });
         expect(submitButton.disabled).toBe(true);
         // Set valid value
-        fireEvent.change(netmaskInput, { target: { value: "80.90.30.60" } });
+        fireEvent.change(netmaskInput, { target: { value: "255.255.255.0" } });
         expect(submitButton.disabled).toBe(false);
     });
 
@@ -108,7 +118,7 @@ describe("<ServerSettingsForm />", () => {
         submitForm(container);
         expect(mockAxios.put).toBeCalledWith(
             "/reforis/openvpn/api/server-settings",
-            disabledFormData,
+            { enabled: false },
             expect.anything()
         );
     });

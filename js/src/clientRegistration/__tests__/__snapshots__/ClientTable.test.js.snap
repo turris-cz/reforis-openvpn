@@ -101,14 +101,42 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 download=""
                 href="/reforis/openvpn/api/clients/A1?address="
               >
-                Download
+                <span
+                  class="d-xl-none"
+                >
+                  <i
+                    class="fa"
+                  />
+                </span>
+                <span
+                  class="d-none d-xl-block"
+                >
+                  <i
+                    class="fa"
+                  />
+                  Download
+                </span>
               </a>
               <button
                 class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
                 <span>
-                  Revoke
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fa"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fa"
+                    />
+                    Revoke
+                  </span>
                 </span>
               </button>
             </div>
@@ -151,14 +179,42 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 download=""
                 href="/reforis/openvpn/api/clients/B1?address="
               >
-                Download
+                <span
+                  class="d-xl-none"
+                >
+                  <i
+                    class="fa"
+                  />
+                </span>
+                <span
+                  class="d-none d-xl-block"
+                >
+                  <i
+                    class="fa"
+                  />
+                  Download
+                </span>
               </a>
               <button
                 class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
                 <span>
-                  Revoke
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fa"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fa"
+                    />
+                    Revoke
+                  </span>
                 </span>
               </button>
             </div>
@@ -182,14 +238,42 @@ exports[`<ClientTable /> should render table of clients 1`] = `
                 download=""
                 href="/reforis/openvpn/api/clients/B2?address="
               >
-                Download
+                <span
+                  class="d-xl-none"
+                >
+                  <i
+                    class="fa"
+                  />
+                </span>
+                <span
+                  class="d-none d-xl-block"
+                >
+                  <i
+                    class="fa"
+                  />
+                  Download
+                </span>
               </a>
               <button
                 class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                 type="button"
               >
                 <span>
-                  Revoke
+                  <span
+                    class="d-xl-none"
+                  >
+                    <i
+                      class="fa"
+                    />
+                  </span>
+                  <span
+                    class="d-none d-xl-block"
+                  >
+                    <i
+                      class="fa"
+                    />
+                    Revoke
+                  </span>
                 </span>
               </button>
             </div>

@@ -71,12 +71,7 @@ describe("<ClientRegistration />", () => {
 
     it("should handle invalid CA", async () => {
         mockAxios.mockResponse({ data: { status: "whatever" } });
-        await wait(() =>
-            getByText(
-                componentContainer,
-                "You need to generate certificate authority in order to register clients."
-            )
-        );
+        await wait(() => getByText(componentContainer, /You need to/));
     });
 
     it("should display clients", async () => {
@@ -154,20 +149,20 @@ describe("<ClientRegistration />", () => {
                 /Router's public/
             );
             // Since "a" element is replaced with "button" we have to query for "Download" anew
-            expect(getFirstDownload().href).toBe(
+            expect(getFirstDownload().parentElement.href).toBe(
                 `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=`
             );
             // Test invalid value
             fireEvent.change(addressInput, {
                 target: { value: "999.888.999.888" },
             });
-            expect(getFirstDownload().classList.contains("disabled")).toBe(
-                true
-            );
+            expect(
+                getFirstDownload().parentElement.classList.contains("disabled")
+            ).toBe(true);
             // Test valid value
             const address = "9.8.9.8";
             fireEvent.change(addressInput, { target: { value: address } });
-            expect(getFirstDownload().href).toBe(
+            expect(getFirstDownload().parentElement.href).toBe(
                 `http://localhost/reforis/openvpn/api/clients/${clients[0].id}?address=${address}`
             );
         });

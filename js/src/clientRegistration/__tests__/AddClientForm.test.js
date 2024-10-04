@@ -48,6 +48,7 @@ describe("<AddClientForm />", () => {
         );
 
         // Empty name
+        fireEvent.focus(nameInput);
         fireEvent.change(nameInput, { target: { value: "" } });
         expect(
             getByText(componentContainer, "Name cannot be empty.")

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -7,6 +7,8 @@
 
 import React, { useEffect } from "react";
 
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     useAPIDelete,
     useAlert,
@@ -113,10 +115,10 @@ function ClientSettingsActions({
         >
             <Button onClick={() => editClientSettings(client)}>
                 <span className="d-xl-none">
-                    <i className="fas fa-edit fa-sm" />
+                    <FontAwesomeIcon icon={faEdit} className="fa-sm" />
                 </span>
                 <span className="d-none d-xl-block">
-                    <i className="fas fa-edit fa-sm me-1" />
+                    <FontAwesomeIcon icon={faEdit} className="fa-sm me-1" />
                     {_("Edit")}
                 </span>
             </Button>
@@ -126,10 +128,10 @@ function ClientSettingsActions({
                 disabled={disabled}
             >
                 <span className="d-xl-none">
-                    <i className="fas fa-trash fa-sm" />
+                    <FontAwesomeIcon icon={faTrash} className="fa-sm" />
                 </span>
                 <span className="d-none d-xl-block">
-                    <i className="fas fa-trash fa-sm me-1" />
+                    <FontAwesomeIcon icon={faTrash} className="fa-sm me-1" />
                     {_("Delete")}
                 </span>
             </Button>

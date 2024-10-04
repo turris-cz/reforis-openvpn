@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -189,7 +189,36 @@ export default function ServerSettingsForm({ settingsData }) {
 function validator(formData) {
     const errors = {
         network: validateIPv4Address(formData.network),
-        network_netmask: validateIPv4Address(formData.network_netmask),
+        network_netmask:
+            validateIPv4Address(formData.network_netmask) ||
+            validateSubnet(formData.network, formData.network_netmask),
     };
+
     return undefinedIfEmpty(withoutUndefinedKeys(errors));
 }
+
+function validateSubnet(networkAddress, networkMask) {
+    const isValid = isValidSubnet(networkAddress, networkMask);
+    return isValid
+        ? undefined
+        : _("Invalid subnet. Please check the network address and mask.");
+}
+
+/* eslint-disable no-bitwise */
+function isValidSubnet(networkAddress, networkMask) {
+    if (!networkAddress || !networkMask) {
+        return false;
+    }
+    // Helper function to convert an IP address from dot-decimal to a 32-bit number
+    const ipToBinary = (ip) =>
+        ip
+            .split(".")
+            .reduce((acc, octet) => (acc << 8) + parseInt(octet, 10), 0);
+
+    const address = ipToBinary(networkAddress);
+    const mask = ipToBinary(networkMask);
+
+    // Perform bitwise AND and check if it matches the network address
+    return (address & mask) === address;
+}
+/* eslint-enable no-bitwise */

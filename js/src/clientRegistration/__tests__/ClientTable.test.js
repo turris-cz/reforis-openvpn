@@ -52,7 +52,9 @@ describe("<ClientTable />", () => {
         const clients = [{ id: "A1", name: "First", status: "valid" }];
         const container = renderTable(clients, null);
         const downloadButton = getByText(container, "Download");
-        expect(downloadButton.classList.contains("disabled")).toBe(true);
+        expect(
+            downloadButton.parentElement.classList.contains("disabled")
+        ).toBe(true);
     });
 
     it("should display spinner on delete request", () => {

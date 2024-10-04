@@ -58,7 +58,19 @@ describe("<ServerSettings />", () => {
             "/reforis/openvpn/api/server-settings",
             expect.anything()
         );
-        mockAxios.mockResponse({ data: { enabled: false } });
+        mockAxios.mockResponse({
+            data: {
+                enabled: false,
+                device: "my_device",
+                ipv6: false,
+                protocol: "UDP",
+                network: "10.111.111.0",
+                network_netmask: "255.255.255.0",
+                port: 1194,
+                route_all: true,
+                use_dns: true,
+            },
+        });
         await waitForElement(() =>
             getByText(componentContainer, "Certificate Authority")
         );

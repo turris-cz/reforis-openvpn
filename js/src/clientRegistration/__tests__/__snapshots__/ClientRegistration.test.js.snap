@@ -31,17 +31,13 @@ exports[`<ClientRegistration /> should display clients 1`] = `
           class="input-group"
         >
           <input
-            class="form-control is-invalid"
+            class="form-control"
             id="1"
             type="text"
             value=""
           />
         </div>
-        <div
-          class="invalid-feedback"
-        >
-          Name cannot be empty.
-        </div>
+        
         <div
           class="form-text"
         >
@@ -64,6 +60,10 @@ exports[`<ClientRegistration /> should display clients 1`] = `
         </button>
       </div>
     </form>
+  </div>
+  <div
+    class="card p-4 col-sm-12 col-lg-12 p-0 mb-4"
+  >
     <h2>
       Client Configurations
     </h2>
@@ -132,14 +132,42 @@ exports[`<ClientRegistration /> should display clients 1`] = `
                     download=""
                     href="/reforis/openvpn/api/clients/A1?address="
                   >
-                    Download
+                    <span
+                      class="d-xl-none"
+                    >
+                      <i
+                        class="fa"
+                      />
+                    </span>
+                    <span
+                      class="d-none d-xl-block"
+                    >
+                      <i
+                        class="fa"
+                      />
+                      Download
+                    </span>
                   </a>
                   <button
                     class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                     type="button"
                   >
                     <span>
-                      Revoke
+                      <span
+                        class="d-xl-none"
+                      >
+                        <i
+                          class="fa"
+                        />
+                      </span>
+                      <span
+                        class="d-none d-xl-block"
+                      >
+                        <i
+                          class="fa"
+                        />
+                        Revoke
+                      </span>
                     </span>
                   </button>
                 </div>
@@ -182,14 +210,42 @@ exports[`<ClientRegistration /> should display clients 1`] = `
                     download=""
                     href="/reforis/openvpn/api/clients/B1?address="
                   >
-                    Download
+                    <span
+                      class="d-xl-none"
+                    >
+                      <i
+                        class="fa"
+                      />
+                    </span>
+                    <span
+                      class="d-none d-xl-block"
+                    >
+                      <i
+                        class="fa"
+                      />
+                      Download
+                    </span>
                   </a>
                   <button
                     class="btn btn-danger btn-sm d-inline-flex justify-content-center align-items-center"
                     type="button"
                   >
                     <span>
-                      Revoke
+                      <span
+                        class="d-xl-none"
+                      >
+                        <i
+                          class="fa"
+                        />
+                      </span>
+                      <span
+                        class="d-none d-xl-block"
+                      >
+                        <i
+                          class="fa"
+                        />
+                        Revoke
+                      </span>
                     </span>
                   </button>
                 </div>

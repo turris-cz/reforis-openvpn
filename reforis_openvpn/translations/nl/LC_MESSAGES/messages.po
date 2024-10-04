@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-07 13:47+0100\n"
+"POT-Creation-Date: 2024-10-04 15:20+0200\n"
 "PO-Revision-Date: 2024-01-04 23:09+0000\n"
 "Last-Translator: powerburner-nl <peter.mulder.1981@gmail.com>\n"
 "Language: nl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -30,7 +30,7 @@ msgid "Add New Client"
 msgstr "Voeg nieuwe client toe"
 
 #: js/src/clientRegistration/AddClientForm.js:64
-#: js/src/clientRegistration/ClientTable.js:56
+#: js/src/clientRegistration/ClientTable.js:58
 msgid "Client name"
 msgstr "Clientnaam"
 
@@ -42,35 +42,45 @@ msgstr ""
 "Korter dan 64 karakters. Alleen alfanummerieke karakters, punten, "
 "streepjes en underscores."
 
-#: js/src/clientRegistration/AddClientForm.js:80
+#: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
 msgstr "Toevoegen"
 
-#: js/src/clientRegistration/AddClientForm.js:91
+#: js/src/clientRegistration/AddClientForm.js:92
 #, fuzzy
 msgid "Name cannot be empty."
 msgstr "Naam kan niet leeg zijn"
 
-#: js/src/clientRegistration/AddClientForm.js:94
+#: js/src/clientRegistration/AddClientForm.js:95
 #, fuzzy
 msgid "Name is too long."
 msgstr "Naam is te lang"
 
-#: js/src/clientRegistration/AddClientForm.js:97
+#: js/src/clientRegistration/AddClientForm.js:98
 #, fuzzy
 msgid "Name contains invalid characters."
 msgstr "Naam bevat niet-toegestane karakters"
 
-#: js/src/clientRegistration/ClientRegistration.js:35
+#: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
 msgstr "Client Registratie"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
-msgid "You need to generate certificate authority in order to register clients."
-msgstr "U moet een 'Certificate Authority' genereren om clients te registreren."
+msgid "You need to "
+msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:70
+#: js/src/clientRegistration/ClientRegistration.js:63
+#, fuzzy
+msgid "generate certificate authority"
+msgstr "Kan certificaatautoriteit niet genereren"
+
+#: js/src/clientRegistration/ClientRegistration.js:65
+#, fuzzy
+msgid " in order to register clients."
+msgstr "Kan client niet registreren"
+
+#: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -78,7 +88,7 @@ msgstr ""
 "U moet een configuratiebestand genereren voor iedere client die u wilt "
 "verbinden met uw OpenVPN server."
 
-#: js/src/clientRegistration/ClientRegistration.js:75
+#: js/src/clientRegistration/ClientRegistration.js:77
 #, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
@@ -90,26 +100,26 @@ msgstr ""
 "openen met uw OpenVPN client. U moet wellicht uw client nadien opnieuw "
 "opstarten."
 
-#: js/src/clientRegistration/ClientTable.js:42
+#: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
 msgstr "Er zijn geen clients geregistreerd."
 
-#: js/src/clientRegistration/ClientTable.js:57
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:111
+#: js/src/clientRegistration/ClientTable.js:59
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:114
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
 msgstr "Acties"
 
-#: js/src/clientRegistration/ClientTable.js:107
+#: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
 msgstr "Toegang ingetrokken"
 
-#: js/src/clientRegistration/ClientTable.js:135
+#: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
 msgstr "Download"
 
-#: js/src/clientRegistration/ClientTable.js:142
+#: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
 msgstr "Intrekken"
 
@@ -254,28 +264,28 @@ msgstr "Naam kan niet leeg zijn"
 msgid "Password cannot be empty."
 msgstr "Naam kan niet leeg zijn"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
 msgstr "Aanpassen"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:40
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
 msgstr "Kan status niet verversen"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:47
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
 msgstr "Actief"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
 msgstr "Niet actief"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:53
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
 msgid "Check status"
 msgstr "Controleer status"
 
@@ -448,6 +458,10 @@ msgstr ""
 "Clients zullen de DNS resolver van de router gebruiken. Dit is nodig "
 "wanneer deze lokale servers moeten kunnen bereiken, zoals my-nas.lan"
 
+#: js/src/serverSettings/ServerSettingsForm.js:204
+msgid "Invalid subnet. Please check the network address and mask."
+msgstr ""
+
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Certificaatautoriteit bestaat al"
@@ -545,4 +559,9 @@ msgstr "Kan de OpenVPN client instellingen niet wissen"
 #~ "In het geval van conflicten dient "
 #~ "u deze eerdere instellingen zelf "
 #~ "repareren."
+
+#~ msgid ""
+#~ "You need to generate certificate "
+#~ "authority in order to register clients."
+#~ msgstr "U moet een 'Certificate Authority' genereren om clients te registreren."
 

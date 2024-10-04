@@ -8,18 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-07 13:47+0100\n"
+"POT-Creation-Date: 2024-10-04 15:20+0200\n"
 "PO-Revision-Date: 2024-06-16 18:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/nb_NO/>\n"
 "Language: nb_NO\n"
+"Language-Team: Norwegian Bokmål "
+"<https://hosted.weblate.org/projects/turris/reforis-openvpn-"
+"plugin/nb_NO/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
-"Generated-By: Babel 2.14.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -31,7 +31,7 @@ msgid "Add New Client"
 msgstr "Legg til ny klient"
 
 #: js/src/clientRegistration/AddClientForm.js:64
-#: js/src/clientRegistration/ClientTable.js:56
+#: js/src/clientRegistration/ClientTable.js:58
 msgid "Client name"
 msgstr "Klientnavn"
 
@@ -40,37 +40,48 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kortere enn 64 tegn. Kun alfanumeriske tegn, punktum, under- og bindestrek."
+"Kortere enn 64 tegn. Kun alfanumeriske tegn, punktum, under- og "
+"bindestrek."
 
-#: js/src/clientRegistration/AddClientForm.js:80
+#: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
 msgstr "Legg til"
 
-#: js/src/clientRegistration/AddClientForm.js:91
+#: js/src/clientRegistration/AddClientForm.js:92
 #, fuzzy
 msgid "Name cannot be empty."
 msgstr "Navnet kan ikke stå tomt"
 
-#: js/src/clientRegistration/AddClientForm.js:94
+#: js/src/clientRegistration/AddClientForm.js:95
 #, fuzzy
 msgid "Name is too long."
 msgstr "Navnet er for langt"
 
-#: js/src/clientRegistration/AddClientForm.js:97
+#: js/src/clientRegistration/AddClientForm.js:98
 #, fuzzy
 msgid "Name contains invalid characters."
 msgstr "Navnet inneholder ugyldige tegn"
 
-#: js/src/clientRegistration/ClientRegistration.js:35
+#: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
 msgstr "Klientregistrering"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
-msgid "You need to generate certificate authority in order to register clients."
-msgstr "Du må generere sertifikatsmyndighet for å kunne registrere klienter."
+msgid "You need to "
+msgstr ""
 
-#: js/src/clientRegistration/ClientRegistration.js:70
+#: js/src/clientRegistration/ClientRegistration.js:63
+#, fuzzy
+msgid "generate certificate authority"
+msgstr "Kan ikke generere sertifikatsmyndighet"
+
+#: js/src/clientRegistration/ClientRegistration.js:65
+#, fuzzy
+msgid " in order to register clients."
+msgstr "Kan ikke registrere klient"
+
+#: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
@@ -78,7 +89,7 @@ msgstr ""
 "Du må generere en oppsettsfil for hver klient som du ønsker å koble til "
 "din OpenVPN-tjener."
 
-#: js/src/clientRegistration/ClientRegistration.js:75
+#: js/src/clientRegistration/ClientRegistration.js:77
 #, fuzzy
 msgid ""
 "To apply the client configuration, you need to download it and put it "
@@ -89,26 +100,26 @@ msgstr ""
 "oppsettsmappen til OpenVPN, eller åpne den med din OpenVPN-klient. Det "
 "kan hende du vil måtte starte klienten din på nytt etterpå."
 
-#: js/src/clientRegistration/ClientTable.js:42
+#: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
 msgstr "Ingen registrerte klienter."
 
-#: js/src/clientRegistration/ClientTable.js:57
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:111
+#: js/src/clientRegistration/ClientTable.js:59
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:114
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
 msgstr "Handlinger"
 
-#: js/src/clientRegistration/ClientTable.js:107
+#: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
 msgstr "Tilgang tilbakekalt"
 
-#: js/src/clientRegistration/ClientTable.js:135
+#: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
 msgstr "Last ned"
 
-#: js/src/clientRegistration/ClientTable.js:142
+#: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
 msgstr "Tilbakekall"
 
@@ -255,29 +266,29 @@ msgstr "Navnet kan ikke stå tomt"
 msgid "Password cannot be empty."
 msgstr "Navnet kan ikke stå tomt"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:119
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
 msgstr "Rediger"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:132
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
 msgstr "Slett"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:40
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
 msgstr "Kan ikke gjenoppfriske status"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:47
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 #, fuzzy
 msgid "Running"
 msgstr "Kjører"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
 msgstr "Kjører ikke"
 
-#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:53
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
 msgid "Check status"
 msgstr "Sjekk status"
 
@@ -452,6 +463,10 @@ msgstr ""
 "Klienter utleder adresser ved bruk av ruterens DNS. Påkrevd ved tilgang "
 "til lokale tjenere som «my-nas.lan»."
 
+#: js/src/serverSettings/ServerSettingsForm.js:204
+msgid "Invalid subnet. Please check the network address and mask."
+msgstr ""
+
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
 msgstr "Sertifikatsmyndigheten finnes allerede"
@@ -551,3 +566,9 @@ msgstr "Kan ikke slette OpenVPN-klientinnstillinger"
 #~ " (snarere enn overskrives). I tilfelle "
 #~ "konflikter oppstår må du fikse tidligere"
 #~ " innstillinger selv."
+
+#~ msgid ""
+#~ "You need to generate certificate "
+#~ "authority in order to register clients."
+#~ msgstr "Du må generere sertifikatsmyndighet for å kunne registrere klienter."
+

@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2020-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2020-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
  */
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
     TextInput,
@@ -27,7 +27,7 @@ AddClientForm.propTypes = {
 
 export default function AddClientForm({ generating, setGenerating }) {
     const [setAlert] = useAlert();
-
+    const [errorFeedback, setErrorFeedback] = useState(null);
     const [postClientsResponse, postClients] = useAPIPost(API_URLs.clients);
     useEffect(() => {
         if (postClientsResponse.state === API_STATE.ERROR) {
@@ -66,10 +66,11 @@ export default function AddClientForm({ generating, setGenerating }) {
                         "Shorter than 64 characters. Only alphanumeric characters, dots, dashes and underscores."
                     )}
                     value={formData.name}
-                    error={formErrors.name}
+                    error={errorFeedback ? formErrors.name : ""}
                     onChange={formChangeHandler((value) => ({
                         name: { $set: value },
                     }))}
+                    onFocus={() => setErrorFeedback(true)}
                 />
                 <div className="text-end">
                     <Button

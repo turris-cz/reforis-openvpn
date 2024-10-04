@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2022 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -7,6 +7,8 @@
 
 import React, { useEffect, useState } from "react";
 
+import { faRedo } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useAPIGet, Button, SpinnerElement, API_STATE } from "foris";
 import PropTypes from "prop-types";
 
@@ -54,7 +56,7 @@ export default function ClientStatus({ id, defaultStatus }) {
                 onClick={getSettings}
                 title={_("Check status")}
             >
-                <i className="fa fa-redo" />
+                <FontAwesomeIcon icon={faRedo} />
             </Button>
         </>
     );

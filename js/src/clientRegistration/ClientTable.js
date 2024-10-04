@@ -7,6 +7,8 @@
 
 import React, { useEffect } from "react";
 
+import { faUndo, faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     SpinnerElement,
     useAlert,
@@ -132,14 +134,32 @@ function Actions({ client, address, onRevoke, disabled }) {
                     downloadDisabled ? (event) => event.preventDefault() : null
                 }
             >
-                {_("Download")}
+                <span className="d-xl-none">
+                    <FontAwesomeIcon
+                        icon={faCloudArrowDown}
+                        className="fa-sm"
+                    />
+                </span>
+                <span className="d-none d-xl-block">
+                    <FontAwesomeIcon
+                        icon={faCloudArrowDown}
+                        className="fa-sm me-1"
+                    />
+                    {_("Download")}
+                </span>
             </DownloadButton>
             <Button
                 onClick={onRevoke}
                 className="btn-danger btn-sm"
                 disabled={disabled}
             >
-                {_("Revoke")}
+                <span className="d-xl-none">
+                    <FontAwesomeIcon icon={faUndo} className="fa-sm" />
+                </span>
+                <span className="d-none d-xl-block">
+                    <FontAwesomeIcon icon={faUndo} className="fa-sm me-1" />
+                    {_("Revoke")}
+                </span>
             </Button>
         </div>
     );

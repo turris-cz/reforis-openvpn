@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-04 15:20+0200\n"
-"PO-Revision-Date: 2024-10-06 07:35+0000\n"
+"PO-Revision-Date: 2024-10-23 02:15+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/de/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
@@ -39,7 +39,7 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Binde- und "
+"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Bindestriche und "
 "Unterstriche."
 
 #: js/src/clientRegistration/AddClientForm.js:81
@@ -68,9 +68,8 @@ msgid "You need to "
 msgstr "Sie müssen "
 
 #: js/src/clientRegistration/ClientRegistration.js:63
-#, fuzzy
 msgid "generate certificate authority"
-msgstr "Die Zertifizierungsstelle kann nicht angelegt werden"
+msgstr "Zertifizierungsstelle generieren"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
 msgid " in order to register clients."

@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-04 15:20+0200\n"
-"PO-Revision-Date: 2024-08-03 21:09+0000\n"
+"PO-Revision-Date: 2024-10-30 19:02+0000\n"
 "Last-Translator: Atec <dr.atec@gmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/sk/>\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
@@ -64,17 +65,15 @@ msgstr "Registrácia klienta"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to "
-msgstr ""
+msgstr "Musíte "
 
 #: js/src/clientRegistration/ClientRegistration.js:63
-#, fuzzy
 msgid "generate certificate authority"
-msgstr "Certifikačná autorita sa nedá vygenerovať"
+msgstr "vygenerovať certifikačnú autoritu"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
-#, fuzzy
 msgid " in order to register clients."
-msgstr "Klient sa nedá zaregistrovať"
+msgstr " aby bolo možné zaregistrovať klientov."
 
 #: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
@@ -437,7 +436,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
+msgstr "Neplatná podsieť. Prosím, skontrolujte sieťovú adresu a masku."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
@@ -541,4 +540,3 @@ msgstr "Nastavenia klienta OpenVPN sa nedajú vymazať"
 #~ msgstr ""
 #~ "Aby bolo možné registrovať klientov, je"
 #~ " potrebné vygenerovať certifikačnú autoritu."
-

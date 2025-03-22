@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-04 15:20+0200\n"
-"PO-Revision-Date: 2024-10-06 07:35+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2025-03-23 04:01+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/es/>\n"
 "Language: es\n"
@@ -18,21 +18,21 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 "Generated-By: Babel 2.16.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
-msgstr ""
+msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:61
 msgid "Add New Client"
-msgstr ""
+msgstr "Añadir cliente nuevo"
 
 #: js/src/clientRegistration/AddClientForm.js:64
 #: js/src/clientRegistration/ClientTable.js:58
 msgid "Client name"
-msgstr ""
+msgstr "Nombre de cliente"
 
 #: js/src/clientRegistration/AddClientForm.js:65
 msgid ""
@@ -45,41 +45,43 @@ msgstr ""
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
-msgstr ""
+msgstr "Añadir"
 
 #: js/src/clientRegistration/AddClientForm.js:92
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "El nombre no puede quedar vacío."
 
 #: js/src/clientRegistration/AddClientForm.js:95
 msgid "Name is too long."
-msgstr ""
+msgstr "El nombre es demasiado extenso."
 
 #: js/src/clientRegistration/AddClientForm.js:98
 msgid "Name contains invalid characters."
-msgstr ""
+msgstr "El nombre contiene caracteres no válidos."
 
 #: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
-msgstr ""
+msgstr "Registro de cliente"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to "
-msgstr ""
+msgstr "Debe "
 
 #: js/src/clientRegistration/ClientRegistration.js:63
 msgid "generate certificate authority"
-msgstr ""
+msgstr "generar la autoridad certificadora"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
 msgid " in order to register clients."
-msgstr ""
+msgstr " para poder registrar clientes."
 
 #: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
+"Debe generar un archivo configurador para cada cliente que quiera conectar "
+"con su servidor OpenVPN."
 
 #: js/src/clientRegistration/ClientRegistration.js:77
 msgid ""
@@ -87,10 +89,13 @@ msgid ""
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
+"Para aplicar la configuración del cliente, necesita descargarla y ponerla en "
+"el directorio de configuraciones de OpenVPN o abrirla con el cliente de "
+"OpenVPN. Puede que deba reiniciar el cliente después."
 
 #: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
-msgstr ""
+msgstr "No hay ningún cliente registrado."
 
 #: js/src/clientRegistration/ClientTable.js:59
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:114
@@ -101,7 +106,7 @@ msgstr "Actuaciones"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
-msgstr ""
+msgstr "Se revocó el acceso"
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
@@ -109,11 +114,11 @@ msgstr "Descargar"
 
 #: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
-msgstr ""
+msgstr "Revocar"
 
 #: js/src/clientRegistration/Clients.js:94
 msgid "Client Configurations"
-msgstr ""
+msgstr "Configuraciones de clientes"
 
 #: js/src/clientRegistration/Clients.js:130
 msgid ""
@@ -140,7 +145,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
-msgstr ""
+msgstr "Añadir configuraciones"
 
 #: js/src/clientSettings/AddSettingsForm.js:61
 msgid ""
@@ -151,11 +156,11 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr ""
+msgstr "Seleccionar archivo de configuraciones..."
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
-msgstr ""
+msgstr "El archivo es demasiado grande. El tamaño máximo es de 1 MB"
 
 #: js/src/clientSettings/AddSettingsForm.js:106
 msgid "Filename must be at least 1 and at most 50 characters long."
@@ -169,7 +174,7 @@ msgstr ""
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
-msgstr ""
+msgstr "Configuración de cliente"
 
 #: js/src/clientSettings/ClientSettings.js:20
 msgid ""
@@ -177,10 +182,14 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
+"Para usar el cliente de OpenVPN, debe preparar un archivo de texto con las "
+"configuraciones del cliente. Si quiere establecer una conexión con otro "
+"dispositivo Turris, descargue el archivo apropiado de la página «Registro de "
+"clientes»."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
-msgstr ""
+msgstr "Configuraciones disponibles"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
 msgid ""
@@ -191,24 +200,24 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
-msgstr ""
+msgstr "Editar configuraciones de cliente"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
@@ -216,23 +225,23 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr ""
+msgstr "El nombre de usuario no puede quedar vacío."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
-msgstr ""
+msgstr "La contraseña no puede quedar vacía."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
-msgstr ""
+msgstr "No se puede actualizar el estado"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
@@ -245,11 +254,11 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
 msgid "Check status"
-msgstr ""
+msgstr "Comprobar estado"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:23
 msgid "There are no settings added yet."
-msgstr ""
+msgstr "Aún no se ha añadido ninguna configuración."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:33
 msgid "Instances"
@@ -270,11 +279,11 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 msgid "Generating certification authority…"
-msgstr ""
+msgstr "Generando organismo certificador…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
-msgstr ""
+msgstr "No se puede generar el organismo certificador"
 
 #: js/src/serverSettings/AuthorityMissing.js:35
 msgid ""
@@ -285,15 +294,15 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
-msgstr ""
+msgstr "No hay ningún organismo certificador."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
-msgstr ""
+msgstr "Generar CA"
 
 #: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
-msgstr ""
+msgstr "No se puede eliminar el organismo certificador"
 
 #: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
@@ -309,16 +318,16 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
-msgstr ""
+msgstr "Eliminar CA"
 
 #: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
-msgstr ""
+msgstr "Configuración del servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:44
 msgid "Cannot save server settings"
-msgstr ""
+msgstr "No se pueden guardar las configuraciones del servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
 msgid ""
@@ -328,15 +337,15 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Activar servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
-msgstr ""
+msgstr "Dispositivo"
 
 #: js/src/serverSettings/ServerSettingsForm.js:107
 msgid "Listen on IPv6"
-msgstr ""
+msgstr "Escuchar en IPv6"
 
 #: js/src/serverSettings/ServerSettingsForm.js:112
 msgid ""
@@ -346,7 +355,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:117
 msgid "Protocol"
-msgstr ""
+msgstr "Protocolo"
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid ""
@@ -356,7 +365,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
-msgstr ""
+msgstr "Dirección de la red VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:134
 msgid ""
@@ -366,7 +375,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
-msgstr ""
+msgstr "Máscara de red de la VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:148
 msgid "Port"
@@ -374,7 +383,7 @@ msgstr "Puerto"
 
 #: js/src/serverSettings/ServerSettingsForm.js:153
 msgid "Route all traffic via VPN"
-msgstr ""
+msgstr "Encaminar todo el tráfico a través de la VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:158
 msgid "Clients will access the Internet via VPN"
@@ -382,7 +391,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:163
 msgid "Use DNS via VPN"
-msgstr ""
+msgstr "Usar DNS a través de la VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:168
 msgid ""
@@ -396,55 +405,55 @@ msgstr ""
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
-msgstr ""
+msgstr "El organismo certificador ya existe"
 
 #: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
-msgstr ""
+msgstr "No se pueden cambiar las configuraciones del servidor OpenVPN"
 
 #: reforis_openvpn/__init__.py:92
 msgid "Client '{}' is already registered"
-msgstr ""
+msgstr "El cliente «{}» ya se ha registrado"
 
 #: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
-msgstr ""
+msgstr "No se puede registrar el cliente"
 
 #: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
-msgstr ""
+msgstr "El cliente solicitado no existe"
 
 #: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
-msgstr ""
+msgstr "No se puede obtener el cliente"
 
 #: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
-msgstr ""
+msgstr "No se puede revocar el certificado"
 
 #: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
-msgstr ""
+msgstr "Las configuraciones solicitadas no existen"
 
 #: reforis_openvpn/__init__.py:156
 msgid "Missing data for 'settings' file"
-msgstr ""
+msgstr "Faltan datos para el archivo «settings»"
 
 #: reforis_openvpn/__init__.py:164
 msgid "Client settings '{}' already exist"
-msgstr ""
+msgstr "Las configuraciones del cliente «{}» ya existen"
 
 #: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
-msgstr ""
+msgstr "No se pueden añadir las configuraciones del cliente OpenVPN"
 
 #: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
-msgstr ""
+msgstr "No se pueden cambiar las configuraciones del cliente OpenVPN"
 
 #: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
-msgstr ""
+msgstr "No se pueden eliminar las configuraciones del cliente OpenVPN"
 
 #~ msgid "Add new client"
 #~ msgstr ""

@@ -1,25 +1,24 @@
 # Czech translations for reForis OpenVPN Plugin.
-# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 15:20+0200\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
 "PO-Revision-Date: 2024-11-15 13:00+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/turris/reforis-"
+"openvpn-plugin/cs/>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 5.9-dev\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -129,10 +128,10 @@ msgid ""
 "downloaded."
 msgstr ""
 "Nezapomeňte zkontrolovat, zda se IP adresa serveru uvedená v souboru s "
-"nastaveními skutečně shoduje s veřejnou IP adresou vašeho směrovače. Pokud "
-"se nezdaří automatické zjišťování, je možné tuto adresu nastavit ručně. Tato "
-"změna <strong>není</strong> nikde uložena a je použitelná pouze pro aktuálně "
-"stahované nastavení."
+"nastaveními skutečně shoduje s veřejnou IP adresou vašeho směrovače. "
+"Pokud se nezdaří automatické zjišťování, je možné tuto adresu nastavit "
+"ručně. Tato změna <strong>není</strong> nikde uložena a je použitelná "
+"pouze pro aktuálně stahované nastavení."
 
 #: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
@@ -195,8 +194,8 @@ msgid ""
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
 "Abyste mohli používat klienta OpenVPN, budete potřebovat si připravit "
-"textový soubor s nastavením. Chcete-li se připojit na jiné zařízení Turris, "
-"stáhněte si příslušný soubor ze stránky „Registrace klienta“."
+"textový soubor s nastavením. Chcete-li se připojit na jiné zařízení "
+"Turris, stáhněte si příslušný soubor ze stránky „Registrace klienta“."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -307,9 +306,10 @@ msgid ""
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
-"V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro OpenVPN. "
-"CA je potřeba k vytváření klientských certifikátů k ověřování vůči OpenVPN "
-"serveru. Aby bylo možné pokračovat, je třeba ji nejprve vytvořit."
+"V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro "
+"OpenVPN. CA je potřeba k vytváření klientských certifikátů k ověřování "
+"vůči OpenVPN serveru. Aby bylo možné pokračovat, je třeba ji nejprve "
+"vytvořit."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -328,8 +328,8 @@ msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Nemůžete smazat CA, pokud je OpenVPN server povolený. Ke smazání CA je třeba "
-"server nejdříve zakázat."
+"Nemůžete smazat CA, pokud je OpenVPN server povolený. Ke smazání CA je "
+"třeba server nejdříve zakázat."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 msgid ""
@@ -430,8 +430,8 @@ msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
 msgstr ""
-"Klienti budou řešit překlad adres prostřednictvím DNS na routeru. Nutné při "
-"přístupu k místním serverů, například muj-nas.internal"
+"Klienti budou řešit překlad adres prostřednictvím DNS na routeru. Nutné "
+"při přístupu k místním serverů, například muj-nas.internal"
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
@@ -446,6 +446,7 @@ msgid "Cannot change OpenVPN server settings"
 msgstr "Nelze změnit nastavení serveru OpenVPN"
 
 #: reforis_openvpn/__init__.py:92
+#, python-brace-format
 msgid "Client '{}' is already registered"
 msgstr "Klient „{}“ už je zaregistrován"
 
@@ -474,6 +475,7 @@ msgid "Missing data for 'settings' file"
 msgstr "Chybějí data pro soubor nastavení"
 
 #: reforis_openvpn/__init__.py:164
+#, python-brace-format
 msgid "Client settings '{}' already exist"
 msgstr "Nastavení klienta „{}“ už existuje"
 
@@ -537,3 +539,4 @@ msgstr "Nelze odstranit nastavení klienta OpenVPN"
 #~ "You need to generate certificate "
 #~ "authority in order to register clients."
 #~ msgstr "Pro vytváření tokenů potřebujete vygenerovat certifikační autoritu."
+

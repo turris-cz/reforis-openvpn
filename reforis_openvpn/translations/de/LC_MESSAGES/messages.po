@@ -1,25 +1,24 @@
 # German translations for reForis OpenVPN Plugin.
-# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 15:20+0200\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
 "PO-Revision-Date: 2024-10-23 02:15+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/de/>\n"
 "Language: de\n"
+"Language-Team: German <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -39,8 +38,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Bindestriche und "
-"Unterstriche."
+"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Bindestriche "
+"und Unterstriche."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -443,8 +442,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
-"Ungültiges Subnetz. Bitte überprüfen Sie die Netzwerkadresse und -maske."
+msgstr "Ungültiges Subnetz. Bitte überprüfen Sie die Netzwerkadresse und -maske."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
@@ -455,6 +453,7 @@ msgid "Cannot change OpenVPN server settings"
 msgstr "OpenVPN-Servereinstellungen können nicht geändert werden"
 
 #: reforis_openvpn/__init__.py:92
+#, python-brace-format
 msgid "Client '{}' is already registered"
 msgstr "Client '{}' ist bereits registriert"
 
@@ -483,6 +482,7 @@ msgid "Missing data for 'settings' file"
 msgstr "Für die 'settings'-Datei fehlen Daten"
 
 #: reforis_openvpn/__init__.py:164
+#, python-brace-format
 msgid "Client settings '{}' already exist"
 msgstr "Client-Einstellungen '{}' sind bereits vorhanden"
 
@@ -646,3 +646,4 @@ msgstr "OpenVPN-Client-Einstellungen können nicht gelöscht werden"
 #~ msgstr ""
 #~ "Sie müssen eine Zertifizierungsstelle anlegen,"
 #~ " um Clients registrieren zu können."
+

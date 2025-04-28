@@ -1,25 +1,24 @@
 # Spanish translations for reForis OpenVPN Plugin.
-# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 15:20+0200\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
 "PO-Revision-Date: 2025-03-23 04:01+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/es/>\n"
 "Language: es\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/es/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -80,8 +79,8 @@ msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
-"Debe generar un archivo configurador para cada cliente que quiera conectar "
-"con su servidor OpenVPN."
+"Debe generar un archivo configurador para cada cliente que quiera "
+"conectar con su servidor OpenVPN."
 
 #: js/src/clientRegistration/ClientRegistration.js:77
 msgid ""
@@ -89,9 +88,9 @@ msgid ""
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
-"Para aplicar la configuración del cliente, necesita descargarla y ponerla en "
-"el directorio de configuraciones de OpenVPN o abrirla con el cliente de "
-"OpenVPN. Puede que deba reiniciar el cliente después."
+"Para aplicar la configuración del cliente, necesita descargarla y ponerla"
+" en el directorio de configuraciones de OpenVPN o abrirla con el cliente "
+"de OpenVPN. Puede que deba reiniciar el cliente después."
 
 #: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
@@ -182,10 +181,10 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Para usar el cliente de OpenVPN, debe preparar un archivo de texto con las "
-"configuraciones del cliente. Si quiere establecer una conexión con otro "
-"dispositivo Turris, descargue el archivo apropiado de la página «Registro de "
-"clientes»."
+"Para usar el cliente de OpenVPN, debe preparar un archivo de texto con "
+"las configuraciones del cliente. Si quiere establecer una conexión con "
+"otro dispositivo Turris, descargue el archivo apropiado de la página "
+"«Registro de clientes»."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -412,6 +411,7 @@ msgid "Cannot change OpenVPN server settings"
 msgstr "No se pueden cambiar las configuraciones del servidor OpenVPN"
 
 #: reforis_openvpn/__init__.py:92
+#, python-brace-format
 msgid "Client '{}' is already registered"
 msgstr "El cliente «{}» ya se ha registrado"
 
@@ -440,6 +440,7 @@ msgid "Missing data for 'settings' file"
 msgstr "Faltan datos para el archivo «settings»"
 
 #: reforis_openvpn/__init__.py:164
+#, python-brace-format
 msgid "Client settings '{}' already exist"
 msgstr "Las configuraciones del cliente «{}» ya existen"
 
@@ -580,3 +581,4 @@ msgstr "No se pueden eliminar las configuraciones del cliente OpenVPN"
 #~ "You need to generate certificate "
 #~ "authority in order to register clients."
 #~ msgstr ""
+

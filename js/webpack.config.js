@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2024 CZ.NIC z.s.p.o. (https://www.nic.cz/)
+ * Copyright (C) 2019-2025 CZ.NIC z.s.p.o. (https://www.nic.cz/)
  *
  * This is free software, licensed under the GNU General Public License v3.
  * See /LICENSE for more information.
@@ -23,9 +23,6 @@ module.exports = () => ({
             path.resolve(__dirname, "./src"),
             path.resolve(__dirname, "./node_modules"),
         ],
-        alias: {
-            process: "process/browser",
-        },
     },
     module: {
         rules: [
@@ -42,7 +39,7 @@ module.exports = () => ({
     },
     plugins: [
         new webpack.ProvidePlugin({
-            process: "process/browser",
+            process: "process/browser.js",
         }),
     ],
     // Equal to peerDependencies in package.json

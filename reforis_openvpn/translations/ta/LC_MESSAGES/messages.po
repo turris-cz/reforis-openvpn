@@ -1,0 +1,501 @@
+# Tamil translations for reForis OpenVPN Plugin.
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# This file is distributed under the same license as the reForis OpenVPN
+# Plugin project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: reForis OpenVPN Plugin 2.2.0\n"
+"Report-Msgid-Bugs-To: tech.support@turris.cz\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
+"PO-Revision-Date: 2025-03-16 09:18+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language: ta\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/turris/reforis-"
+"openvpn-plugin/ta/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: js/src/app.js:14
+msgid "OpenVPN"
+msgstr "OpenVpn"
+
+#: js/src/clientRegistration/AddClientForm.js:61
+msgid "Add New Client"
+msgstr "புதிய கிளையண்டைச் சேர்க்கவும்"
+
+#: js/src/clientRegistration/AddClientForm.js:64
+#: js/src/clientRegistration/ClientTable.js:58
+msgid "Client name"
+msgstr "கிளையன்ட் பெயர்"
+
+#: js/src/clientRegistration/AddClientForm.js:65
+msgid ""
+"Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
+"and underscores."
+msgstr ""
+"64 எழுத்துகளுக்கு குறைவாக. எண்ணெழுத்து எழுத்துக்கள், புள்ளிகள், கோடுகள் "
+"மற்றும் அடிக்கோடிட்டுக் காட்டுகின்றன."
+
+#: js/src/clientRegistration/AddClientForm.js:81
+#: js/src/clientSettings/AddSettingsForm.js:85
+msgid "Add"
+msgstr "கூட்டு"
+
+#: js/src/clientRegistration/AddClientForm.js:92
+msgid "Name cannot be empty."
+msgstr "பெயர் காலியாக இருக்க முடியாது."
+
+#: js/src/clientRegistration/AddClientForm.js:95
+msgid "Name is too long."
+msgstr "பெயர் மிக நீளமானது."
+
+#: js/src/clientRegistration/AddClientForm.js:98
+msgid "Name contains invalid characters."
+msgstr "பெயரில் தவறான எழுத்துக்கள் உள்ளன."
+
+#: js/src/clientRegistration/ClientRegistration.js:36
+msgid "Client Registration"
+msgstr "வாங்கி பதிவு"
+
+#: js/src/clientRegistration/ClientRegistration.js:61
+msgid "You need to "
+msgstr "நீங்கள் வேண்டும் "
+
+#: js/src/clientRegistration/ClientRegistration.js:63
+msgid "generate certificate authority"
+msgstr "சான்றிதழ் அதிகாரத்தை உருவாக்குங்கள்"
+
+#: js/src/clientRegistration/ClientRegistration.js:65
+msgid " in order to register clients."
+msgstr " வாடிக்கையாளர்களை பதிவு செய்ய."
+
+#: js/src/clientRegistration/ClientRegistration.js:72
+msgid ""
+"You need to generate a configuration file for each client that you wish "
+"to connect to your OpenVPN server."
+msgstr ""
+"உங்கள் OpenVPN சேவையகத்துடன் இணைக்க விரும்பும் ஒவ்வொரு "
+"வாடிக்கையாளருக்கும் நீங்கள் ஒரு உள்ளமைவு கோப்பை உருவாக்க வேண்டும்."
+
+#: js/src/clientRegistration/ClientRegistration.js:77
+msgid ""
+"To apply the client configuration, you need to download it and put it "
+"into the OpenVPN configuration directory or open it using your OpenVPN "
+"client. You might need to restart your client afterward."
+msgstr ""
+"கிளையன்ட் உள்ளமைவைப் பயன்படுத்த, நீங்கள் அதை பதிவிறக்கம் செய்து OpenVPN "
+"உள்ளமைவு கோப்பகத்தில் வைக்க வேண்டும் அல்லது உங்கள் OpenVPN கிளையண்டைப் "
+"பயன்படுத்தி திறக்க வேண்டும். பின்னர் உங்கள் வாடிக்கையாளரை மறுதொடக்கம் "
+"செய்ய வேண்டியிருக்கும்."
+
+#: js/src/clientRegistration/ClientTable.js:44
+msgid "There are no clients registered."
+msgstr "வாடிக்கையாளர்கள் பதிவு செய்யப்படவில்லை."
+
+#: js/src/clientRegistration/ClientTable.js:59
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:114
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
+msgid "Actions"
+msgstr "செயல்கள்"
+
+#: js/src/clientRegistration/ClientTable.js:109
+msgid "Access revoked"
+msgstr "அணுகல் ரத்து செய்யப்பட்டது"
+
+#: js/src/clientRegistration/ClientTable.js:148
+msgid "Download"
+msgstr "பதிவிறக்கம்"
+
+#: js/src/clientRegistration/ClientTable.js:161
+msgid "Revoke"
+msgstr "ரத்து செய்யுங்கள்"
+
+#: js/src/clientRegistration/Clients.js:94
+msgid "Client Configurations"
+msgstr "கிளையன்ட் உள்ளமைவுகள்"
+
+#: js/src/clientRegistration/Clients.js:130
+msgid ""
+"Be sure to check if the server's IP address provided in the configuration"
+" file matches the public IP address of your router. You can set this "
+"address manually if the autodetection fails. This change is <b>not</b> "
+"stored anywhere and applies only to the configuration being currently "
+"downloaded."
+msgstr ""
+"உள்ளமைவு கோப்பில் வழங்கப்பட்ட சேவையகத்தின் ஐபி முகவரி உங்கள் திசைவியின் "
+"பொது ஐபி முகவரியுடன் பொருந்துமா என்பதை சரிபார்க்கவும். தன்னியக்க தொடர்பு "
+"தோல்வியுற்றால் இந்த முகவரியை கைமுறையாக அமைக்கலாம். இந்த மாற்றம் <b> இல்லை"
+" </b> எங்கும் சேமிக்கப்படுகிறது மற்றும் தற்போது பதிவிறக்கம் செய்யப்பட்ட "
+"உள்ளமைவுக்கு மட்டுமே பொருந்தும்."
+
+#: js/src/clientRegistration/Clients.js:173
+msgid "Override Server Address"
+msgstr "சேவையக முகவரியை மேலெழுதவும்"
+
+#: js/src/clientRegistration/Clients.js:179
+msgid "Router's public IP address or DNS name"
+msgstr "திசைவியின் பொது ஐபி முகவரி அல்லது டிஎன்எச் பெயர்"
+
+#: js/src/clientRegistration/Clients.js:185
+msgid ""
+"Make sure that this device is accessible from the public internet using "
+"this domain name, IPv4 or IPv6 address."
+msgstr ""
+"இந்த டொமைன் பெயர், ஐபிவி 4 அல்லது ஐபிவி 6 முகவரியைப் பயன்படுத்தி இந்த "
+"சாதனம் பொது இணையத்திலிருந்து அணுகக்கூடியது என்பதை உறுதிப்படுத்திக் "
+"கொள்ளுங்கள்."
+
+#: js/src/clientSettings/AddSettingsForm.js:59
+msgid "Add Settings"
+msgstr "விளம்பர அமைப்புகள்"
+
+#: js/src/clientSettings/AddSettingsForm.js:61
+msgid ""
+"Please select a file with OpenVPN client settings you wish to add. The "
+"new settings will be enabled after the file is uploaded. Note that the "
+"network will be restarted automatically."
+msgstr ""
+"நீங்கள் சேர்க்க விரும்பும் OpenVPN கிளையன்ட் அமைப்புகளுடன் ஒரு கோப்பைத் "
+"தேர்ந்தெடுக்கவும். கோப்பு பதிவேற்றப்பட்ட பிறகு புதிய அமைப்புகள் "
+"இயக்கப்படும். பிணையம் தானாக மறுதொடக்கம் செய்யப்படும் என்பதை நினைவில் "
+"கொள்க."
+
+#: js/src/clientSettings/AddSettingsForm.js:70
+msgid "Choose settings file..."
+msgstr "அமைப்புகள் கோப்பைத் தேர்வுசெய்க ..."
+
+#: js/src/clientSettings/AddSettingsForm.js:100
+msgid "File is too big. Maximum size is 1 MB"
+msgstr "கோப்பு மிகப் பெரியது. அதிகபட்ச அளவு 1 எம்பி"
+
+#: js/src/clientSettings/AddSettingsForm.js:106
+msgid "Filename must be at least 1 and at most 50 characters long."
+msgstr ""
+"கோப்பு பெயர் குறைந்தது 1 மற்றும் அதிகபட்சம் 50 எழுத்துக்கள் நீளமாக இருக்க"
+" வேண்டும்."
+
+#: js/src/clientSettings/AddSettingsForm.js:113
+msgid ""
+"Filename can contain only alphanumeric characters, dots, dashes and "
+"underscores."
+msgstr ""
+"கோப்பு பெயரில் எண்ணெழுத்து எழுத்துக்கள், புள்ளிகள், கோடுகள் மற்றும் "
+"அடிக்கோடிட்டுக் காட்டுதல் மட்டுமே இருக்க முடியும்."
+
+#: js/src/clientSettings/ClientSettings.js:18
+msgid "Client Settings"
+msgstr "வாங்கி அமைப்புகள்"
+
+#: js/src/clientSettings/ClientSettings.js:20
+msgid ""
+"To use the OpenVPN client, you need to prepare a text file with client "
+"settings. If you want to connect to another Turris device, download the "
+"appropriate file from the \"Client Registration\" page."
+msgstr ""
+"OpenVPN கிளையண்டைப் பயன்படுத்த, நீங்கள் கிளையன்ட் அமைப்புகளுடன் உரை "
+"கோப்பைத் தயாரிக்க வேண்டும். நீங்கள் மற்றொரு டர்ரிச் சாதனத்துடன் இணைக்க "
+"விரும்பினால், \"கிளையன்ட் பதிவு\" பக்கத்திலிருந்து பொருத்தமான கோப்பைப் "
+"பதிவிறக்கவும்."
+
+#: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
+msgid "Available Settings"
+msgstr "கிடைக்கும் அமைப்புகள்"
+
+#: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
+msgid ""
+"A new OpenVPN client instance is created for each uploaded file. Please "
+"recheck the settings file if the instance is enabled and not running in a"
+" few minutes after the setup."
+msgstr ""
+"பதிவேற்றிய ஒவ்வொரு கோப்பிற்கும் ஒரு புதிய OpenVPN கிளையன்ட் நிகழ்வு "
+"உருவாக்கப்படுகிறது. நிகழ்வு இயக்கப்பட்டிருந்தால் மற்றும் அமைப்புக்குப் "
+"பிறகு சில நிமிடங்களில் இயங்காவிட்டால் அமைப்புகள் கோப்பை மீண்டும் "
+"சரிபார்க்கவும்."
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
+msgid "Edit Client Settings"
+msgstr "கிளையன்ட் அமைப்புகளைத் திருத்தவும்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
+#: js/src/serverSettings/ServerSettingsForm.js:181
+msgid "Save"
+msgstr "சேமி"
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
+msgid "Username"
+msgstr "பயனர்பெயர்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
+msgid "Client settings were saved successfully."
+msgstr "வாடிக்கையாளர் அமைப்புகள் வெற்றிகரமாக சேமிக்கப்பட்டன."
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
+msgid "Username cannot be empty."
+msgstr "பயனர்பெயர் காலியாக இருக்க முடியாது."
+
+#: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
+msgid "Password cannot be empty."
+msgstr "கடவுச்சொல் காலியாக இருக்க முடியாது."
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
+msgid "Edit"
+msgstr "தொகு"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
+msgid "Cannot refresh status"
+msgstr "நிலையை புதுப்பிக்க முடியாது"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
+msgid "Running"
+msgstr "இயங்கும்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
+msgid "Not running"
+msgstr "ஓடவில்லை"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
+msgid "Check status"
+msgstr "நிலையை சரிபார்க்கவும்"
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:23
+msgid "There are no settings added yet."
+msgstr "இன்னும் அமைப்புகள் எதுவும் சேர்க்கப்படவில்லை."
+
+#: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:33
+msgid "Instances"
+msgstr "நிகழ்வுகள்"
+
+#: js/src/serverSettings/AuthorityBeingGenerated.js:28
+#: js/src/serverSettings/AuthorityMissing.js:33
+#: js/src/serverSettings/AuthorityReady.js:40
+msgid "Certificate Authority"
+msgstr "சான்றிதழ் ஆணையம்"
+
+#: js/src/serverSettings/AuthorityBeingGenerated.js:30
+msgid ""
+"Your certification authority is now being generated. It usually takes a "
+"few minutes. Settings will appear here automatically once the authority "
+"is ready."
+msgstr ""
+"உங்கள் சான்றிதழ் ஆணையம் இப்போது உருவாக்கப்பட்டு வருகிறது. இது பொதுவாக சில"
+" நிமிடங்கள் ஆகும். அதிகாரம் தயாரானவுடன் அமைப்புகள் தானாகவே இங்கு "
+"தோன்றும்."
+
+#: js/src/serverSettings/AuthorityBeingGenerated.js:36
+msgid "Generating certification authority…"
+msgstr "சான்றிதழ் அதிகாரத்தை உருவாக்குதல்…"
+
+#: js/src/serverSettings/AuthorityMissing.js:27
+msgid "Cannot generate certificate authority"
+msgstr "சான்றிதழ் அதிகாரத்தை உருவாக்க முடியாது"
+
+#: js/src/serverSettings/AuthorityMissing.js:35
+msgid ""
+"Currently there is no OpenVPN certificate authority (CA). A CA is "
+"required to generate client certificates to authenticate to the OpenVPN "
+"server. To proceed you need to generate it first."
+msgstr ""
+"தற்போது OpenVPN சான்றிதழ் ஆணையம் (CA) இல்லை. OpenVPN சேவையகத்தை "
+"அங்கீகரிக்க கிளையன்ட் சான்றிதழ்களை உருவாக்க CA தேவைப்படுகிறது. தொடர "
+"நீங்கள் முதலில் அதை உருவாக்க வேண்டும்."
+
+#: js/src/serverSettings/AuthorityMissing.js:40
+msgid "No certification authority."
+msgstr "சான்றிதழ் அதிகாரம் இல்லை."
+
+#: js/src/serverSettings/AuthorityMissing.js:48
+msgid "Generate CA"
+msgstr "Ca ஐ உருவாக்கவும்"
+
+#: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
+msgid "Cannot delete certificate authority"
+msgstr "சான்றிதழ் அதிகாரத்தை நீக்க முடியாது"
+
+#: js/src/serverSettings/AuthorityReady.js:43
+msgid ""
+"You can't delete the CA while the OpenVPN server is enabled. To delete "
+"the CA, you need to disable the server configuration first."
+msgstr ""
+"OpenVPN சேவையகம் இயக்கப்பட்டிருக்கும் போது நீங்கள் CA ஐ நீக்க முடியாது. "
+"CA ஐ நீக்க, நீங்கள் முதலில் சேவையக உள்ளமைவை முடக்க வேண்டும்."
+
+#: js/src/serverSettings/AuthorityReady.js:49
+msgid ""
+"Your certificate authority (CA) is set up properly. Please note that if "
+"you delete it, all clients will have their access revoked."
+msgstr ""
+"உங்கள் சான்றிதழ் ஆணையம் (CA) சரியாக அமைக்கப்பட்டுள்ளது. நீங்கள் அதை "
+"நீக்கினால், எல்லா வாடிக்கையாளர்களும் தங்கள் அணுகல் ரத்து "
+"செய்யப்படுவார்கள் என்பதை நினைவில் கொள்க."
+
+#: js/src/serverSettings/AuthorityReady.js:62
+msgid "Delete CA"
+msgstr "என நீக்கு"
+
+#: js/src/serverSettings/ServerSettings.js:35
+#: js/src/serverSettings/ServerSettingsForm.js:84
+msgid "Server Settings"
+msgstr "சேவையக அமைப்புகள்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:44
+msgid "Cannot save server settings"
+msgstr "சேவையக அமைப்புகளை சேமிக்க முடியாது"
+
+#: js/src/serverSettings/ServerSettingsForm.js:86
+msgid ""
+"Please note that you need a public (preferably static) IP address and "
+"your network configured to make use of a VPN server."
+msgstr ""
+"உங்களுக்கு ஒரு பொது (முன்னுரிமை நிலையான) ஐபி முகவரி தேவை என்பதை நினைவில் "
+"கொள்க மற்றும் உங்கள் பிணையம் ஒரு VPN சேவையகத்தைப் பயன்படுத்த "
+"கட்டமைக்கப்பட்டுள்ளது."
+
+#: js/src/serverSettings/ServerSettingsForm.js:92
+msgid "Enable Server"
+msgstr "சேவையகத்தை இயக்கவும்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:102
+msgid "Device"
+msgstr "சாதனம்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:107
+msgid "Listen on IPv6"
+msgstr "IPv6 இல் கேளுங்கள்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:112
+msgid ""
+"Useful if you don't have public IPv4 address. Disable if your IPv6 "
+"connection is broken."
+msgstr ""
+"உங்களிடம் பொது ஐபிவி 4 முகவரி இல்லையென்றால் பயனுள்ளதாக இருக்கும். உங்கள் "
+"ஐபிவி 6 இணைப்பு உடைந்தால் முடக்கு."
+
+#: js/src/serverSettings/ServerSettingsForm.js:117
+msgid "Protocol"
+msgstr "நெறிமுறை"
+
+#: js/src/serverSettings/ServerSettingsForm.js:123
+msgid ""
+"Clients will connect to the VPN server via this protocol. Use TCP if your"
+" ISP blocks UDP."
+msgstr ""
+"வாடிக்கையாளர்கள் இந்த நெறிமுறை வழியாக VPN சேவையகத்துடன் இணைவார்கள். "
+"உங்கள் ISP UDP ஐத் தடுத்தால் TCP ஐப் பயன்படுத்தவும்."
+
+#: js/src/serverSettings/ServerSettingsForm.js:128
+msgid "VPN network address"
+msgstr "VPN பிணைய முகவரி"
+
+#: js/src/serverSettings/ServerSettingsForm.js:134
+msgid ""
+"This network should be different than any network directly reachable by "
+"the router and the clients."
+msgstr ""
+"இந்த பிணையம் திசைவி மற்றும் வாடிக்கையாளர்களால் நேரடியாக அடையக்கூடிய "
+"எந்தவொரு பிணையத்தையும் விட வித்தியாசமாக இருக்க வேண்டும்."
+
+#: js/src/serverSettings/ServerSettingsForm.js:139
+msgid "VPN network mask"
+msgstr "VPN பிணையம் முகமூடி"
+
+#: js/src/serverSettings/ServerSettingsForm.js:148
+msgid "Port"
+msgstr "துறைமுகம்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:153
+msgid "Route all traffic via VPN"
+msgstr "VPN வழியாக அனைத்து போக்குவரத்தையும் வழிநடத்துங்கள்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:158
+msgid "Clients will access the Internet via VPN"
+msgstr "வாடிக்கையாளர்கள் VPN வழியாக இணையத்தை அணுகுவார்கள்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:163
+msgid "Use DNS via VPN"
+msgstr "VPN வழியாக DNS ஐப் பயன்படுத்தவும்"
+
+#: js/src/serverSettings/ServerSettingsForm.js:168
+msgid ""
+"Clients will resolve addresses using router's DNS. Required when "
+"accessing local servers like my-nas.lan"
+msgstr ""
+"திசைவியின் டி.என்.எச் பயன்படுத்தி வாடிக்கையாளர்கள் முகவரிகளைத் "
+"தீர்ப்பார்கள். My-NAS.lan போன்ற உள்ளக சேவையகங்களை அணுகும்போது தேவை"
+
+#: js/src/serverSettings/ServerSettingsForm.js:204
+msgid "Invalid subnet. Please check the network address and mask."
+msgstr "தவறான சப்நெட். பிணைய முகவரி மற்றும் முகமூடியைச் சரிபார்க்கவும்."
+
+#: reforis_openvpn/__init__.py:44
+msgid "Certificate authority already exists"
+msgstr "சான்றிதழ் அதிகாரம் ஏற்கனவே உள்ளது"
+
+#: reforis_openvpn/__init__.py:71
+msgid "Cannot change OpenVPN server settings"
+msgstr "OpenVPN சேவையக அமைப்புகளை மாற்ற முடியாது"
+
+#: reforis_openvpn/__init__.py:92
+#, python-brace-format
+msgid "Client '{}' is already registered"
+msgstr "கிளையன்ட் '{}' ஏற்கனவே பதிவு செய்யப்பட்டுள்ளது"
+
+#: reforis_openvpn/__init__.py:96
+msgid "Cannot register client"
+msgstr "கிளையண்டை பதிவு செய்ய முடியாது"
+
+#: reforis_openvpn/__init__.py:110
+msgid "Requested client does not exist"
+msgstr "கோரப்பட்ட கிளையன்ட் இல்லை"
+
+#: reforis_openvpn/__init__.py:114
+msgid "Cannot get client"
+msgstr "கிளையண்டைப் பெற முடியாது"
+
+#: reforis_openvpn/__init__.py:130
+msgid "Cannot revoke certificate"
+msgstr "சான்றிதழை ரத்து செய்ய முடியாது"
+
+#: reforis_openvpn/__init__.py:148
+msgid "Requested settings do not exist"
+msgstr "கோரப்பட்ட அமைப்புகள் இல்லை"
+
+#: reforis_openvpn/__init__.py:156
+msgid "Missing data for 'settings' file"
+msgstr "'அமைப்புகள்' கோப்பிற்கான தரவை காணவில்லை"
+
+#: reforis_openvpn/__init__.py:164
+#, python-brace-format
+msgid "Client settings '{}' already exist"
+msgstr "கிளையன்ட் அமைப்புகள் '{}' ஏற்கனவே உள்ளன"
+
+#: reforis_openvpn/__init__.py:172
+msgid "Cannot add OpenVPN client settings"
+msgstr "OpenVPN கிளையன்ட் அமைப்புகளைச் சேர்க்க முடியாது"
+
+#: reforis_openvpn/__init__.py:187
+msgid "Cannot change OpenVPN client settings"
+msgstr "OpenVPN கிளையன்ட் அமைப்புகளை மாற்ற முடியாது"
+
+#: reforis_openvpn/__init__.py:197
+msgid "Cannot delete OpenVPN client settings"
+msgstr "OpenVPN கிளையன்ட் அமைப்புகளை நீக்க முடியாது"
+

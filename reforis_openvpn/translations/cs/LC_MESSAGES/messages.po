@@ -1,16 +1,16 @@
 # Czech translations for reForis OpenVPN Plugin.
-# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 15:20+0200\n"
-"PO-Revision-Date: 2024-06-06 16:09+0000\n"
-"Last-Translator: Lukas Jelinek <lukas.jelinek@nic.cz>\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
+"PO-Revision-Date: 2024-11-15 13:00+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language: cs\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/turris/reforis-"
 "openvpn-plugin/cs/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -48,7 +48,7 @@ msgstr "Přidat"
 
 #: js/src/clientRegistration/AddClientForm.js:92
 msgid "Name cannot be empty."
-msgstr "Název nesmí být prázdný."
+msgstr "Název nemůže zůstat nevyplněný."
 
 #: js/src/clientRegistration/AddClientForm.js:95
 msgid "Name is too long."
@@ -64,17 +64,15 @@ msgstr "Registrace klienta"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to "
-msgstr ""
+msgstr "Potřebujete "
 
 #: js/src/clientRegistration/ClientRegistration.js:63
-#, fuzzy
 msgid "generate certificate authority"
-msgstr "Nelze vygenerovat certifikační autoritu"
+msgstr "vytvořit certifikační autoritu"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
-#, fuzzy
 msgid " in order to register clients."
-msgstr "Nelze zaregistrovat klienta"
+msgstr " pro registraci klientů."
 
 #: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
@@ -82,7 +80,7 @@ msgid ""
 "to connect to your OpenVPN server."
 msgstr ""
 "Pro každého klienta, kterého chcete připojovat k OpenVPN serveru, "
-"potřebujete vygenerovat konfigurační soubor."
+"potřebujete vytvořit soubor s nastaveními."
 
 #: js/src/clientRegistration/ClientRegistration.js:77
 msgid ""
@@ -129,11 +127,11 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Nezapomeňte zkontrolovat, zda se IP adresa serveru uvedená v "
-"konfiguračním souboru skutečně shoduje s veřejnou IP adresou vašeho "
-"routeru. Pokud selže automatická detekce, můžete tuto adresu nastavit "
+"Nezapomeňte zkontrolovat, zda se IP adresa serveru uvedená v souboru s "
+"nastaveními skutečně shoduje s veřejnou IP adresou vašeho směrovače. "
+"Pokud se nezdaří automatické zjišťování, je možné tuto adresu nastavit "
 "ručně. Tato změna <strong>není</strong> nikde uložena a je použitelná "
-"pouze pro aktuálně stahovanou konfiguraci."
+"pouze pro aktuálně stahované nastavení."
 
 #: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
@@ -141,7 +139,7 @@ msgstr "Přepsat adresu serveru"
 
 #: js/src/clientRegistration/Clients.js:179
 msgid "Router's public IP address or DNS name"
-msgstr "Veřejná adresa routeru nebo jeho doménové jméno"
+msgstr "Veřejná adresa směrovače nebo jeho doménové jméno"
 
 #: js/src/clientRegistration/Clients.js:185
 msgid ""
@@ -167,7 +165,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr "Vybrat soubor s nastavením..."
+msgstr "Vybrat soubor s nastavením…"
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
@@ -175,7 +173,7 @@ msgstr "Soubor je příliš velký. Maximální velikost je 1 MB"
 
 #: js/src/clientSettings/AddSettingsForm.js:106
 msgid "Filename must be at least 1 and at most 50 characters long."
-msgstr "Název souboru musí mít délku 1 až 50 znaků."
+msgstr "Je třeba, aby délka názvu souboru byla 1 až 50 znaků."
 
 #: js/src/clientSettings/AddSettingsForm.js:113
 msgid ""
@@ -197,7 +195,7 @@ msgid ""
 msgstr ""
 "Abyste mohli používat klienta OpenVPN, budete potřebovat si připravit "
 "textový soubor s nastavením. Chcete-li se připojit na jiné zařízení "
-"Turris, stáhněte si příslušný soubor ze stránky \"Registrace klienta\"."
+"Turris, stáhněte si příslušný soubor ze stránky „Registrace klienta“."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -240,11 +238,11 @@ msgstr "Nastavení klienta byla úspěšně uložena."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr "Uživatelské jméno nesmí být prázdné."
+msgstr "Uživatelské jméno nemůže zůstat nevyplněné."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
-msgstr "Heslo nesmí být prázdné."
+msgstr "Heslo nemůže zůstat nevyplněné."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
@@ -260,7 +258,7 @@ msgstr "Nelze aktualizovat stav"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
-msgstr "Běží"
+msgstr "Spuštěné"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
@@ -296,11 +294,11 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 msgid "Generating certification authority…"
-msgstr "Generování certifikační autority…"
+msgstr "Vytváření certifikační autority…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
-msgstr "Nelze vygenerovat certifikační autoritu"
+msgstr "Nedaří se vytvořit certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityMissing.js:35
 msgid ""
@@ -309,8 +307,8 @@ msgid ""
 "server. To proceed you need to generate it first."
 msgstr ""
 "V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro "
-"OpenVPN. CA je potřeba k vygenerování klientských certifikátů k ověřování"
-" vůči OpenVPN serveru. Aby bylo možné pokračovat, je třeba ji nejprve "
+"OpenVPN. CA je potřeba k vytváření klientských certifikátů k ověřování "
+"vůči OpenVPN serveru. Aby bylo možné pokračovat, je třeba ji nejprve "
 "vytvořit."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
@@ -319,19 +317,19 @@ msgstr "Žádná certifikační autorita."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
-msgstr "Vygenerovat CA"
+msgstr "Vytvořit CA"
 
 #: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
-msgstr "Nelze smazat certifikační autoritu"
+msgstr "Nedaří se smazat certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Nemůžete smazat CA, pokud je OpenVPN server povolený. Ke smazání CA "
-"musíte server nejdřív server zakázat."
+"Nemůžete smazat CA, pokud je OpenVPN server povolený. Ke smazání CA je "
+"třeba server nejdříve zakázat."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 msgid ""
@@ -352,7 +350,7 @@ msgstr "Nastavení serveru"
 
 #: js/src/serverSettings/ServerSettingsForm.js:44
 msgid "Cannot save server settings"
-msgstr "Nelze uložit nastavení serveru"
+msgstr "Nedaří se uložit nastavení serveru"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
 msgid ""
@@ -433,11 +431,11 @@ msgid ""
 "accessing local servers like my-nas.lan"
 msgstr ""
 "Klienti budou řešit překlad adres prostřednictvím DNS na routeru. Nutné "
-"při přístupu k místním serverů, například my-nas.lan"
+"při přístupu k místním serverů, například muj-nas.internal"
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
+msgstr "Neplatná podsíť. Zkontrolujte prosím adresu sítě a masku."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
@@ -448,8 +446,9 @@ msgid "Cannot change OpenVPN server settings"
 msgstr "Nelze změnit nastavení serveru OpenVPN"
 
 #: reforis_openvpn/__init__.py:92
+#, python-brace-format
 msgid "Client '{}' is already registered"
-msgstr "Klient '{}' je již zaregistrován"
+msgstr "Klient „{}“ už je zaregistrován"
 
 #: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
@@ -476,8 +475,9 @@ msgid "Missing data for 'settings' file"
 msgstr "Chybějí data pro soubor nastavení"
 
 #: reforis_openvpn/__init__.py:164
+#, python-brace-format
 msgid "Client settings '{}' already exist"
-msgstr "Nastavení klienta „{}“ již existuje"
+msgstr "Nastavení klienta „{}“ už existuje"
 
 #: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"

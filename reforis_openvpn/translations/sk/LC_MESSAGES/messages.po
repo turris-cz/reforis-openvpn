@@ -1,15 +1,15 @@
 # Slovak translations for reForis OpenVPN Plugin.
-# Copyright (C) 2024 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-10-04 15:20+0200\n"
-"PO-Revision-Date: 2024-08-03 21:09+0000\n"
+"POT-Creation-Date: 2025-04-28 14:05+0200\n"
+"PO-Revision-Date: 2024-10-30 19:02+0000\n"
 "Last-Translator: Atec <dr.atec@gmail.com>\n"
 "Language: sk\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/turris"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -64,17 +64,15 @@ msgstr "Registrácia klienta"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to "
-msgstr ""
+msgstr "Musíte "
 
 #: js/src/clientRegistration/ClientRegistration.js:63
-#, fuzzy
 msgid "generate certificate authority"
-msgstr "Certifikačná autorita sa nedá vygenerovať"
+msgstr "vygenerovať certifikačnú autoritu"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
-#, fuzzy
 msgid " in order to register clients."
-msgstr "Klient sa nedá zaregistrovať"
+msgstr " aby bolo možné zaregistrovať klientov."
 
 #: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""
@@ -437,7 +435,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
+msgstr "Neplatná podsieť. Prosím, skontrolujte sieťovú adresu a masku."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
@@ -448,6 +446,7 @@ msgid "Cannot change OpenVPN server settings"
 msgstr "Nastavenia servera OpenVPN sa nedajú zmeniť"
 
 #: reforis_openvpn/__init__.py:92
+#, python-brace-format
 msgid "Client '{}' is already registered"
 msgstr "Klient '{}' je už zaregistrovaný"
 
@@ -476,6 +475,7 @@ msgid "Missing data for 'settings' file"
 msgstr "Chýbajú dáta pre konfiguračný súbor"
 
 #: reforis_openvpn/__init__.py:164
+#, python-brace-format
 msgid "Client settings '{}' already exist"
 msgstr "Nastavenia klienta '{}' už existujú"
 

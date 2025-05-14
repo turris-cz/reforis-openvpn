@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-28 14:05+0200\n"
-"PO-Revision-Date: 2024-11-15 13:00+0000\n"
+"PO-Revision-Date: 2025-05-14 22:02+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/turris/"
+"reforis-openvpn-plugin/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/turris/reforis-"
-"openvpn-plugin/cs/>\n"
-"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.12-dev\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
@@ -38,7 +39,7 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kratší než 64 znaků. Pouze alfanumerické znaky, tečky, spojovníky a "
+"Kratší než 64 znaků. Pouze písmena a číslice, dále tečky, spojovníky a "
 "podtržítka."
 
 #: js/src/clientRegistration/AddClientForm.js:81
@@ -180,8 +181,8 @@ msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
-"Název souboru může obsahovat jen alfanumerické znaky, tečky, spojovníky a"
-" podtržítka."
+"Název souboru může obsahovat jen písmena a číslice, dále tečky, spojovníky a "
+"podtržítka."
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
@@ -207,9 +208,9 @@ msgid ""
 "recheck the settings file if the instance is enabled and not running in a"
 " few minutes after the setup."
 msgstr ""
-"Pro každý nahraný soubor se vytvoří nová instance klienta OpenVPN. Pokud "
-"je instance povolena a několik minut po instalaci neběží, ověřte prosím, "
-"zda neobsahuje chyby."
+"Pro každý nahraný soubor bude vytvořena nová instance klienta OpenVPN. Pokud "
+"je instance povolena a přesto ani několik minut po instalaci není funkční, "
+"ověřte zda nastavení neobsahuje chyby."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
@@ -254,7 +255,7 @@ msgstr "Smazat"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
-msgstr "Nelze aktualizovat stav"
+msgstr "Nebylo možné aktualizovat stav"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
@@ -262,7 +263,7 @@ msgstr "Spuštěné"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
-msgstr "Neběží"
+msgstr "Nespuštěné"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
@@ -539,4 +540,3 @@ msgstr "Nelze odstranit nastavení klienta OpenVPN"
 #~ "You need to generate certificate "
 #~ "authority in order to register clients."
 #~ msgstr "Pro vytváření tokenů potřebujete vygenerovat certifikační autoritu."
-

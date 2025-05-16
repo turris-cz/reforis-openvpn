@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-04-28 14:05+0200\n"
-"PO-Revision-Date: 2025-05-14 22:02+0000\n"
+"PO-Revision-Date: 2025-05-17 19:01+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/cs/>\n"
@@ -106,7 +106,7 @@ msgstr "Akce"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
-msgstr "Přístup odvolán"
+msgstr "Udělení přístupu zrušeno"
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
@@ -147,8 +147,8 @@ msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
-"Ujistěte se že zařízení je dostupné z veřejného internetu použitím tohoto"
-" doménového jména, IPv4 nebo IPv6 adresy."
+"Ujistěte se že zařízení je dostupné z veřejného Internetu pod tímto "
+"doménovým jménem, IPv4 nebo IPv6 adresou."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
@@ -160,13 +160,13 @@ msgid ""
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Vyberte prosím soubor s nastavením klienta OpenVPN, kterého chcete "
-"přidat. Nové nastavení se aktivuje po nahrání souboru. Pamatujte prosím, "
-"že síť bude automaticky restartována."
+"Vyberte soubor s nastaveními pro klienta OpenVPN, kterého chcete přidat. "
+"Nové nastavení bude aktivováno po nahrání souboru. Upozorňujeme, že síť bude "
+"automaticky restartována."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr "Vybrat soubor s nastavením…"
+msgstr "Vybrat soubor s nastaveními…"
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
@@ -194,13 +194,13 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Abyste mohli používat klienta OpenVPN, budete potřebovat si připravit "
-"textový soubor s nastavením. Chcete-li se připojit na jiné zařízení "
-"Turris, stáhněte si příslušný soubor ze stránky „Registrace klienta“."
+"Abyste mohli používat klienta OpenVPN, budete si potřebovat připravit "
+"textový soubor s nastavením. Chcete-li se připojit na jiné zařízení Turris, "
+"stáhněte si příslušný soubor ze stránky „Registrace klienta“."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
-msgstr "Dostupná nastavení"
+msgstr "Nastavení k dispozici"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
 msgid ""
@@ -290,8 +290,8 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Vaše certifikační autorita se nyní generuje. Obvykle to zabere několik "
-"minut. Nastavení se objeví, jakmile bude autorita připravena."
+"Vaše certifikační autorita je nyní generována. Obvykle to zabere několik "
+"minut. Nastavení se zde objeví, jakmile bude autorita připravena."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 msgid "Generating certification authority…"
@@ -299,7 +299,7 @@ msgstr "Vytváření certifikační autority…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
-msgstr "Nedaří se vytvořit certifikační autoritu"
+msgstr "Nebylo možné vytvořit certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityMissing.js:35
 msgid ""
@@ -307,10 +307,9 @@ msgid ""
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
-"V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro "
-"OpenVPN. CA je potřeba k vytváření klientských certifikátů k ověřování "
-"vůči OpenVPN serveru. Aby bylo možné pokračovat, je třeba ji nejprve "
-"vytvořit."
+"V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro OpenVPN. "
+"CA je potřeba k vytváření klientských certifikátů k ověřování vůči OpenVPN "
+"serveru. Aby bylo možné pokračovat, je třeba ji nejprve nechat vytvořit."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -322,7 +321,7 @@ msgstr "Vytvořit CA"
 
 #: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
-msgstr "Nedaří se smazat certifikační autoritu"
+msgstr "Nebylo možné smazat certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityReady.js:43
 msgid ""

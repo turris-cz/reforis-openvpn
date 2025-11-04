@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-28 14:05+0200\n"
-"PO-Revision-Date: 2024-11-15 13:00+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"POT-Creation-Date: 2025-11-04 12:31+0300\n"
+"PO-Revision-Date: 2025-07-08 13:01+0000\n"
+"Last-Translator: Lukas Jelinek <lukas.jelinek@nic.cz>\n"
 "Language: cs\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/turris/reforis-"
 "openvpn-plugin/cs/>\n"
@@ -38,7 +38,7 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kratší než 64 znaků. Pouze alfanumerické znaky, tečky, spojovníky a "
+"Kratší než 64 znaků. Pouze písmena a číslice, dále tečky, spojovníky a "
 "podtržítka."
 
 #: js/src/clientRegistration/AddClientForm.js:81
@@ -105,7 +105,7 @@ msgstr "Akce"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
-msgstr "Přístup odvolán"
+msgstr "Udělení přístupu zrušeno"
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
@@ -146,8 +146,8 @@ msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
-"Ujistěte se že zařízení je dostupné z veřejného internetu použitím tohoto"
-" doménového jména, IPv4 nebo IPv6 adresy."
+"Ujistěte se že zařízení je dostupné z veřejného Internetu pod tímto "
+"doménovým jménem, IPv4 nebo IPv6 adresou."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
@@ -159,13 +159,13 @@ msgid ""
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Vyberte prosím soubor s nastavením klienta OpenVPN, kterého chcete "
-"přidat. Nové nastavení se aktivuje po nahrání souboru. Pamatujte prosím, "
-"že síť bude automaticky restartována."
+"Vyberte soubor s nastaveními pro klienta OpenVPN, kterého chcete přidat. "
+"Nové nastavení bude aktivováno po nahrání souboru. Upozorňujeme, že síť "
+"bude automaticky restartována."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr "Vybrat soubor s nastavením…"
+msgstr "Vybrat soubor s nastaveními…"
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
@@ -180,8 +180,8 @@ msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
-"Název souboru může obsahovat jen alfanumerické znaky, tečky, spojovníky a"
-" podtržítka."
+"Název souboru může obsahovat jen písmena, číslice, tečky, spojovníky a "
+"podtržítka."
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
@@ -193,13 +193,13 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Abyste mohli používat klienta OpenVPN, budete potřebovat si připravit "
+"Abyste mohli používat klienta OpenVPN, budete si potřebovat připravit "
 "textový soubor s nastavením. Chcete-li se připojit na jiné zařízení "
 "Turris, stáhněte si příslušný soubor ze stránky „Registrace klienta“."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
-msgstr "Dostupná nastavení"
+msgstr "Nastavení k dispozici"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
 msgid ""
@@ -207,9 +207,9 @@ msgid ""
 "recheck the settings file if the instance is enabled and not running in a"
 " few minutes after the setup."
 msgstr ""
-"Pro každý nahraný soubor se vytvoří nová instance klienta OpenVPN. Pokud "
-"je instance povolena a několik minut po instalaci neběží, ověřte prosím, "
-"zda neobsahuje chyby."
+"Pro každý nahraný soubor bude vytvořena nová instance klienta OpenVPN. "
+"Pokud je instance povolena a přesto ani několik minut po instalaci není "
+"funkční, ověřte zda nastavení neobsahuje chyby."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
@@ -254,7 +254,7 @@ msgstr "Smazat"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
-msgstr "Nelze aktualizovat stav"
+msgstr "Nebylo možné aktualizovat stav"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
@@ -262,7 +262,7 @@ msgstr "Spuštěné"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:51
 msgid "Not running"
-msgstr "Neběží"
+msgstr "Nespuštěné"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:55
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:57
@@ -289,8 +289,8 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Vaše certifikační autorita se nyní generuje. Obvykle to zabere několik "
-"minut. Nastavení se objeví, jakmile bude autorita připravena."
+"Vaše certifikační autorita je nyní generována. Obvykle to zabere několik "
+"minut. Nastavení se zde objeví, jakmile bude autorita připravena."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 msgid "Generating certification authority…"
@@ -298,7 +298,7 @@ msgstr "Vytváření certifikační autority…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
-msgstr "Nedaří se vytvořit certifikační autoritu"
+msgstr "Nebylo možné vytvořit certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityMissing.js:35
 msgid ""
@@ -309,7 +309,7 @@ msgstr ""
 "V tuto chvíli není k dispozici žádná certifikační autorita (CA) pro "
 "OpenVPN. CA je potřeba k vytváření klientských certifikátů k ověřování "
 "vůči OpenVPN serveru. Aby bylo možné pokračovat, je třeba ji nejprve "
-"vytvořit."
+"nechat vytvořit."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -321,15 +321,16 @@ msgstr "Vytvořit CA"
 
 #: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
-msgstr "Nedaří se smazat certifikační autoritu"
+msgstr "Nebylo možné smazat certifikační autoritu"
 
 #: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Nemůžete smazat CA, pokud je OpenVPN server povolený. Ke smazání CA je "
-"třeba server nejdříve zakázat."
+"Certifikační autoritu není možné smazat, pokud je povolený OpenVPN "
+"server. Ten (jeho nastavení) je tedy třeba nejdříve zakázat a až pak "
+"půjde CA smazat."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 msgid ""
@@ -357,9 +358,8 @@ msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Vezměte prosím na vědomí, že potřebujete veřejnou (pokud možno statickou)"
-" IP adresu a že vaše síť musí být nakonfigurována pro použití VPN "
-"serveru."
+"Vezměte prosím na vědomí, že k využití VPN serveru potřebujete veřejnou "
+"(nejlépe statickou) IP adresu a nastavenou síť."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"

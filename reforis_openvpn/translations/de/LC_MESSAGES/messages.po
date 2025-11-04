@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-28 14:05+0200\n"
-"PO-Revision-Date: 2024-10-23 02:15+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"POT-Creation-Date: 2025-11-04 12:31+0300\n"
+"PO-Revision-Date: 2025-07-16 23:01+0000\n"
+"Last-Translator: Erik Pfannenstein <debianignatz@gmx.de>\n"
 "Language: de\n"
 "Language-Team: German <https://hosted.weblate.org/projects/turris"
 "/reforis-openvpn-plugin/de/>\n"
@@ -72,7 +72,7 @@ msgstr "Zertifizierungsstelle generieren"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
 msgid " in order to register clients."
-msgstr ""
+msgstr " um Clients zu registrieren."
 
 #: js/src/clientRegistration/ClientRegistration.js:72
 msgid ""

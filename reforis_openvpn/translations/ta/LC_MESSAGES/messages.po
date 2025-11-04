@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.2.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
-"POT-Creation-Date: 2025-04-28 14:05+0200\n"
-"PO-Revision-Date: 2025-03-16 09:18+0000\n"
+"POT-Creation-Date: 2025-11-04 12:31+0300\n"
+"PO-Revision-Date: 2025-06-13 14:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language: ta\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/turris/reforis-"
@@ -177,8 +177,8 @@ msgstr "கோப்பு மிகப் பெரியது. அதிக�
 #: js/src/clientSettings/AddSettingsForm.js:106
 msgid "Filename must be at least 1 and at most 50 characters long."
 msgstr ""
-"கோப்பு பெயர் குறைந்தது 1 மற்றும் அதிகபட்சம் 50 எழுத்துக்கள் நீளமாக இருக்க"
-" வேண்டும்."
+"கோப்புப் பெயர் குறைந்தது 1 மற்றும் அதிகபட்சம் 50 எழுத்துக்கள் நீளமாக "
+"இருக்க வேண்டும்."
 
 #: js/src/clientSettings/AddSettingsForm.js:113
 msgid ""

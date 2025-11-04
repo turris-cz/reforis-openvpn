@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "reforis-openvpn"
-version = "2.3.0"
+version = "2.4.0"
 description = "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers."
 readme = "README.md"
 license = "GPL-3.0-or-later"

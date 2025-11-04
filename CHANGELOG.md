@@ -8,6 +8,16 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [2.4.0] - 2025-11-04
+
+### Added
+
+- Added & updated Weblate translations
+
+### Changed
+
+- Updated several dependencies in package.json
+
 ## [2.3.0] - 2025-04-28
 
 ### Added
@@ -166,7 +176,8 @@ and this project adheres to
 - Keep functionality of previous Foris OpenVPN plugin
 - Add clients configuration
 
-[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.3.0...master
+[unreleased]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.4.0...master
+[2.4.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.3.0...v2.4.0
 [2.3.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.2.0...v2.3.0
 [2.2.0]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.1...v2.2.0
 [2.1.1]: https://gitlab.nic.cz/turris/reforis/reforis-openvpn/-/compare/v2.1.0...v2.1.1

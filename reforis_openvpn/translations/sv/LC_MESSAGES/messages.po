@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2024-12-29 10:00+0000\n"
-"Last-Translator: Kristoffer Grundström "
-"<swedishsailfishosuser@tutanota.com>\n"
+"PO-Revision-Date: 2026-01-08 18:01+0000\n"
+"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/turris/reforis-"
+"openvpn-plugin/sv/>\n"
 "Language: sv\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/sv/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.1\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
@@ -39,8 +39,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kortare än 64 tecken. Endast alfanumeriska tecken, punkter, bindestreck "
-"och understreck."
+"Kortare än 64 tecken. Endast alfanumeriska tecken, punkter, streck och "
+"understreck."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -115,7 +115,7 @@ msgstr "Återkalla"
 
 #: js/src/clientRegistration/Clients.js:94
 msgid "Client Configurations"
-msgstr ""
+msgstr "Klientkonfigurationer"
 
 #: js/src/clientRegistration/Clients.js:130
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 
 #: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
-msgstr ""
+msgstr "Skriv över server-adress"
 
 #: js/src/clientRegistration/Clients.js:179
 msgid "Router's public IP address or DNS name"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
-msgstr ""
+msgstr "Lägg till inställningar"
 
 #: js/src/clientSettings/AddSettingsForm.js:61
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
-msgstr ""
+msgstr "Välj inställningsfil..."
 
 #: js/src/clientSettings/AddSettingsForm.js:100
 msgid "File is too big. Maximum size is 1 MB"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
-msgstr ""
+msgstr "Tillgängliga inställningar"
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:33
 msgid ""
@@ -193,7 +193,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
-msgstr ""
+msgstr "Redigera klient-inställningar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
@@ -206,7 +206,7 @@ msgstr "Spara"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Användarnamn"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
@@ -234,7 +234,7 @@ msgstr "Ta bort"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
-msgstr ""
+msgstr "Kan inte uppdatera status"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:49
 msgid "Running"
@@ -261,7 +261,7 @@ msgstr "Instanser"
 #: js/src/serverSettings/AuthorityMissing.js:33
 #: js/src/serverSettings/AuthorityReady.js:40
 msgid "Certificate Authority"
-msgstr ""
+msgstr "Certifikatets auktoritet"
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:30
 msgid ""
@@ -330,7 +330,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Aktivera server"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -338,7 +338,7 @@ msgstr "Enhet"
 
 #: js/src/serverSettings/ServerSettingsForm.js:107
 msgid "Listen on IPv6"
-msgstr ""
+msgstr "Lyssna på IPv6"
 
 #: js/src/serverSettings/ServerSettingsForm.js:112
 msgid ""
@@ -358,7 +358,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
-msgstr ""
+msgstr "Nätverksadress för VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:134
 msgid ""
@@ -368,7 +368,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
-msgstr ""
+msgstr "Nätverksmask för VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:148
 msgid "Port"
@@ -411,7 +411,7 @@ msgstr ""
 
 #: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
-msgstr ""
+msgstr "Kan inte registrera klient"
 
 #: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
@@ -419,11 +419,11 @@ msgstr ""
 
 #: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
-msgstr ""
+msgstr "Kan inte hämta klient"
 
 #: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
-msgstr ""
+msgstr "Kan inte återkalla certifikatet"
 
 #: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
@@ -596,4 +596,3 @@ msgstr ""
 #~ "You need to generate certificate "
 #~ "authority in order to register clients."
 #~ msgstr ""
-

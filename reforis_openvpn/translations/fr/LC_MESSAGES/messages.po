@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2023-01-08 08:51+0000\n"
-"Last-Translator: h <tachyglossues@gmail.com>\n"
+"PO-Revision-Date: 2026-03-22 18:09+0000\n"
+"Last-Translator: XVI <social-xvi@protonmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/turris/reforis-"
+"openvpn-plugin/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://hosted.weblate.org/projects/turris"
-"/reforis-openvpn-plugin/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
@@ -48,19 +49,16 @@ msgid "Add"
 msgstr "Ajouter"
 
 #: js/src/clientRegistration/AddClientForm.js:92
-#, fuzzy
 msgid "Name cannot be empty."
-msgstr "Le nom ne peut pas être vide"
+msgstr "Le nom ne peut pas être vide."
 
 #: js/src/clientRegistration/AddClientForm.js:95
-#, fuzzy
 msgid "Name is too long."
-msgstr "Le nom est trop long"
+msgstr "Le nom est trop long."
 
 #: js/src/clientRegistration/AddClientForm.js:98
-#, fuzzy
 msgid "Name contains invalid characters."
-msgstr "Le nom contient des caractères non valides"
+msgstr "Le nom contient des caractères non valides."
 
 #: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
@@ -129,7 +127,6 @@ msgid "Client Configurations"
 msgstr "Configurations des clients"
 
 #: js/src/clientRegistration/Clients.js:130
-#, fuzzy
 msgid ""
 "Be sure to check if the server's IP address provided in the configuration"
 " file matches the public IP address of your router. You can set this "
@@ -137,12 +134,11 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Assurez-vous de vérifier si l'adresse IP du serveur fournie dans le "
-"fichier de configuration correspond effectivement à l'adresse IP publique"
-" de votre routeur. Vous pouvez définir cette adresse manuellement si "
-"l'autodétection échoue. Cette modification n'est <strong>pas</strong> "
-"stockée n'importe où et n'est applicable qu'à la configuration en cours "
-"de téléchargement."
+"Assurez-vous de vérifier si l'adresse IP du serveur fournie dans le fichier "
+"de configuration correspond effectivement à l'adresse IP publique de votre "
+"routeur. Vous pouvez définir cette adresse manuellement si l'autodétection "
+"échoue. Cette modification n'est <strong>pas</strong> stockée n'importe où "
+"et n'est applicable qu'à la configuration en cours de téléchargement."
 
 #: js/src/clientRegistration/Clients.js:173
 #, fuzzy
@@ -315,9 +311,8 @@ msgstr ""
 "automatiquement une fois que l'autorité sera prête."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
-#, fuzzy
 msgid "Generating certification authority…"
-msgstr "Génération de l'autorité de certification"
+msgstr "Génération de l'autorité de certification…"
 
 #: js/src/serverSettings/AuthorityMissing.js:27
 msgid "Cannot generate certificate authority"
@@ -335,9 +330,8 @@ msgstr ""
 "d'abord les générer."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
-#, fuzzy
 msgid "No certification authority."
-msgstr "Aucune autorité de certification"
+msgstr "Aucune autorité de certification."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
@@ -570,4 +564,3 @@ msgstr "Impossible de supprimer les paramètres du client OpenVPN"
 #~ msgstr ""
 #~ "Vous devez générer une autorité de "
 #~ "certification pour enregistrer des clients."
-

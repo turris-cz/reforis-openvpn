@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-03-15 19:09+0000\n"
+"PO-Revision-Date: 2026-03-31 21:09+0000\n"
 "Last-Translator: Fln <weblate.org@fln.lt>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/lt/>\n"
@@ -98,7 +98,7 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
-msgstr ""
+msgstr "Veiksmai"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
@@ -196,7 +196,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Atšaukti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -225,11 +225,11 @@ msgstr "Slaptažodis negali būti tuščias."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
-msgstr ""
+msgstr "Pakeisti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
-msgstr ""
+msgstr "Šalinti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"

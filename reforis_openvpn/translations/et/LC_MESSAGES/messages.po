@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-04-06 21:09+0000\n"
+"PO-Revision-Date: 2026-04-22 15:13+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/turris/reforis-"
 "openvpn-plugin/et/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
@@ -95,7 +95,7 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
-msgstr ""
+msgstr "Tegevused"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
-msgstr ""
+msgstr "Allalaadimine"
 
 #: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
@@ -193,7 +193,7 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
@@ -222,11 +222,11 @@ msgstr "Salasõna ei saa olla tühi."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
-msgstr ""
+msgstr "Muuda"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
-msgstr ""
+msgstr "Kustuta"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"

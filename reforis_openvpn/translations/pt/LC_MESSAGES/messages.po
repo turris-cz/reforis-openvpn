@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-05-08 09:11+0000\n"
+"PO-Revision-Date: 2026-05-09 20:11+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/pt/>\n"
@@ -193,20 +193,20 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Nome de utilizador"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Palavra passe"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
@@ -214,15 +214,15 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr ""
+msgstr "Nome de utilizador não pode ser vazio."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
-msgstr ""
+msgstr "Palavra passe não pode ser vazia."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"

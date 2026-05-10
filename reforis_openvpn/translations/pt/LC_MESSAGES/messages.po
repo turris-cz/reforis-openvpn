@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-05-09 20:11+0000\n"
+"PO-Revision-Date: 2026-05-11 11:12+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/pt/>\n"
@@ -103,7 +103,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
-msgstr "Descarregar"
+msgstr "Descarga"
 
 #: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"

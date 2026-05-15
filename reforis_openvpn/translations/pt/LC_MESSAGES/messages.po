@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-05-11 11:12+0000\n"
+"PO-Revision-Date: 2026-05-16 05:11+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/pt/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: js/src/app.js:14
@@ -43,7 +43,7 @@ msgstr ""
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
-msgstr ""
+msgstr "Adicionar"
 
 #: js/src/clientRegistration/AddClientForm.js:92
 msgid "Name cannot be empty."
@@ -67,7 +67,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientRegistration.js:63
 msgid "generate certificate authority"
-msgstr ""
+msgstr "gerar autoridade de certificado"
 
 #: js/src/clientRegistration/ClientRegistration.js:65
 msgid " in order to register clients."
@@ -99,7 +99,7 @@ msgstr "Ações"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
-msgstr ""
+msgstr "Acesso revogado"
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
@@ -107,7 +107,7 @@ msgstr "Descarga"
 
 #: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
-msgstr ""
+msgstr "Revogar"
 
 #: js/src/clientRegistration/Clients.js:94
 msgid "Client Configurations"
@@ -257,7 +257,7 @@ msgstr ""
 #: js/src/serverSettings/AuthorityMissing.js:33
 #: js/src/serverSettings/AuthorityReady.js:40
 msgid "Certificate Authority"
-msgstr ""
+msgstr "Autoridade de Certificado"
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:30
 msgid ""
@@ -368,7 +368,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:148
 msgid "Port"
-msgstr ""
+msgstr "Porto"
 
 #: js/src/serverSettings/ServerSettingsForm.js:153
 msgid "Route all traffic via VPN"

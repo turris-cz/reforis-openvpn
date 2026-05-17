@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-05-16 05:11+0000\n"
+"PO-Revision-Date: 2026-05-18 21:11+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/pt/>\n"
@@ -39,6 +39,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
+"Inferior a 64 caracteres. Apenas caracteres alfanuméricos, pontos, traços e "
+"underscores."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85

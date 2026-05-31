@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2026-05-30 23:01+0000\n"
+"PO-Revision-Date: 2026-06-01 01:01+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/pt/>\n"
@@ -316,50 +316,56 @@ msgstr ""
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
-msgstr ""
+msgstr "Nenhuma autoridade de certificado."
 
 #: js/src/serverSettings/AuthorityMissing.js:48
 msgid "Generate CA"
-msgstr ""
+msgstr "Gerar CA"
 
 #: js/src/serverSettings/AuthorityReady.js:34 reforis_openvpn/__init__.py:53
 msgid "Cannot delete certificate authority"
-msgstr ""
+msgstr "Não pode apagar autoridade de certificado"
 
 #: js/src/serverSettings/AuthorityReady.js:43
 msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
+"Não pode apagar a CA enquanto o servidor OpenVPN está ativo. Para apagar a "
+"CA, precisa de desativar a configuração do servidor primeiro."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it, all clients will have their access revoked."
 msgstr ""
+"A sua autoridade de certificado (CA) está configurada apropriadamente. Por "
+"favor note que se a apagar, todos os clientes vão ter o acesso revogado."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
-msgstr ""
+msgstr "Apagar CA"
 
 #: js/src/serverSettings/ServerSettings.js:35
 #: js/src/serverSettings/ServerSettingsForm.js:84
 msgid "Server Settings"
-msgstr ""
+msgstr "Definições de Servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:44
 msgid "Cannot save server settings"
-msgstr ""
+msgstr "Não pode salvar definições de servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:86
 msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
+"Por favor note que precisa de um endereço IP público (de preferência "
+"estático) e a sua rede configurada para fazer uso de um servidor VPN."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
-msgstr ""
+msgstr "Ativar Servidor"
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
@@ -367,37 +373,43 @@ msgstr "Dispositivo"
 
 #: js/src/serverSettings/ServerSettingsForm.js:107
 msgid "Listen on IPv6"
-msgstr ""
+msgstr "Escutar em IPv6"
 
 #: js/src/serverSettings/ServerSettingsForm.js:112
 msgid ""
 "Useful if you don't have public IPv4 address. Disable if your IPv6 "
 "connection is broken."
 msgstr ""
+"Útil se não tiver um endereço IPv4 público. Desative-o se a sua ligação IPv6 "
+"estiver estragada."
 
 #: js/src/serverSettings/ServerSettingsForm.js:117
 msgid "Protocol"
-msgstr ""
+msgstr "Protocolo"
 
 #: js/src/serverSettings/ServerSettingsForm.js:123
 msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
+"Os clientes vão ligar ao servidor VPN via este protocolo. Use TCP se o seu "
+"ISP bloquear UDP."
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
-msgstr ""
+msgstr "Endereço de rede VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:134
 msgid ""
 "This network should be different than any network directly reachable by "
 "the router and the clients."
 msgstr ""
+"Esta rede deve ser diferente de qualquer outra rede alcançável diretamente "
+"pelo router e pelos clientes."
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
-msgstr ""
+msgstr "Máscara de rede da VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:148
 msgid "Port"
@@ -405,76 +417,78 @@ msgstr "Porto"
 
 #: js/src/serverSettings/ServerSettingsForm.js:153
 msgid "Route all traffic via VPN"
-msgstr ""
+msgstr "Rotear todo o tráfego via VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:158
 msgid "Clients will access the Internet via VPN"
-msgstr ""
+msgstr "Clientes vão aceder à Internet via VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:163
 msgid "Use DNS via VPN"
-msgstr ""
+msgstr "Usar DNS via VPN"
 
 #: js/src/serverSettings/ServerSettingsForm.js:168
 msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
 msgstr ""
+"Clientes vão resolver endereços usando o DNS do router. Requerido quado se "
+"acede a servidores locais como my-nas.lan"
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
+msgstr "Sub-rede inválida. Por favor verifique o endereço e máscara de rede."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
-msgstr ""
+msgstr "Autoridade de certificado já existe"
 
 #: reforis_openvpn/__init__.py:71
 msgid "Cannot change OpenVPN server settings"
-msgstr ""
+msgstr "Não pode mudar as definições do servidor OpenVPN"
 
 #: reforis_openvpn/__init__.py:92
 #, python-brace-format
 msgid "Client '{}' is already registered"
-msgstr ""
+msgstr "Cliente '{}' já está registrado"
 
 #: reforis_openvpn/__init__.py:96
 msgid "Cannot register client"
-msgstr ""
+msgstr "Não pode registrar cliente"
 
 #: reforis_openvpn/__init__.py:110
 msgid "Requested client does not exist"
-msgstr ""
+msgstr "Cliente registrado não existe"
 
 #: reforis_openvpn/__init__.py:114
 msgid "Cannot get client"
-msgstr ""
+msgstr "Não pode obter cliente"
 
 #: reforis_openvpn/__init__.py:130
 msgid "Cannot revoke certificate"
-msgstr ""
+msgstr "Não pode revogar certificado"
 
 #: reforis_openvpn/__init__.py:148
 msgid "Requested settings do not exist"
-msgstr ""
+msgstr "As definições requisitadas não existem"
 
 #: reforis_openvpn/__init__.py:156
 msgid "Missing data for 'settings' file"
-msgstr ""
+msgstr "Dados em falta para ficheiro 'settings'"
 
 #: reforis_openvpn/__init__.py:164
 #, python-brace-format
 msgid "Client settings '{}' already exist"
-msgstr ""
+msgstr "Definições de cliente '{}' já existem"
 
 #: reforis_openvpn/__init__.py:172
 msgid "Cannot add OpenVPN client settings"
-msgstr ""
+msgstr "Não pode adicionar definições de cliente OpenVPN"
 
 #: reforis_openvpn/__init__.py:187
 msgid "Cannot change OpenVPN client settings"
-msgstr ""
+msgstr "Não pode modificar definições de cliente OpenVPN"
 
 #: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
-msgstr ""
+msgstr "Não pode apagar definições de cliente OpenVPN"

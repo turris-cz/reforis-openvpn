@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
 "PO-Revision-Date: 2026-09-04 13:52+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: nb_NO\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/turris/"
 "reforis-openvpn-plugin/nb_NO/>\n"
@@ -96,8 +96,8 @@ msgid ""
 "client. You might need to restart your client afterward."
 msgstr ""
 "For å bruke klientoppsettet må du laste det ned og putte det i "
-"oppsettsmappen til OpenVPN, eller åpne den med din OpenVPN-klient. Det "
-"kan hende du vil måtte starte klienten din på nytt etterpå."
+"oppsettsmappen til OpenVPN, eller åpne den med din OpenVPN-klient. Det kan "
+"hende du vil måtte starte klienten din på nytt etterpå."
 
 #: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
@@ -139,8 +139,8 @@ msgstr ""
 "Forsikre deg om at tjenerens IP-adresse som er å finne i oppsettsfilen "
 "faktisk samsvarer med ruterens offentlige IP-adresse. Du kan sette denne "
 "adressen manuelt hvis automatisk oppdaging mislykkes. Endringen lagres "
-"<strong>ikke</strong> noensteds hen, og gjelder kun for oppsettet som "
-"blir lastet ned."
+"<strong>ikke</strong> noensteds hen, og gjelder kun for oppsettet som blir "
+"lastet ned."
 
 #: js/src/clientRegistration/Clients.js:173
 #, fuzzy
@@ -209,8 +209,8 @@ msgid ""
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
 "For å bruke OpenVPN-klienten må du forbedrede en tekstfil med "
-"klientinnstillinger. Hvis du ønsker å koble til en annen Turris-enhet, "
-"last ned egnet fil fra «Klientregistrering»-siden."
+"klientinnstillinger. Hvis du ønsker å koble til en annen Turris-enhet, last "
+"ned egnet fil fra «Klientregistrering»-siden."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 #, fuzzy
@@ -225,8 +225,8 @@ msgid ""
 " few minutes after the setup."
 msgstr ""
 "En OpenVPN-instans vil bli opprettet for hver nedlastede fil. Sjekk "
-"innstillingsfilen for feil hvis instansen er påskrudd og ikke kjører noen"
-" minutter etter oppsett."
+"innstillingsfilen for feil hvis instansen er påskrudd og ikke kjører noen "
+"minutter etter oppsett."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 #, fuzzy
@@ -353,9 +353,8 @@ msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Du kan ikke slette sertifikatsmyndigheten mens OpenVPN-tjeneren er "
-"påskrudd. For å slette sertifikatsmyndigheten må du skru av "
-"tjeneroppsettet først."
+"Du kan ikke slette sertifikatsmyndigheten mens OpenVPN-tjeneren er påskrudd. "
+"For å slette sertifikatsmyndigheten må du skru av tjeneroppsettet først."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 #, fuzzy
@@ -363,8 +362,8 @@ msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it, all clients will have their access revoked."
 msgstr ""
-"Din sertifikatsmyndighet (CA) er satt opp rett. Merk deg at hvis du "
-"sletter den vil alle klientene miste sin tilgang."
+"Din sertifikatsmyndighet (CA) er satt opp rett. Merk deg at hvis du sletter "
+"den vil alle klientene miste sin tilgang."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
@@ -385,8 +384,8 @@ msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Merk deg at du trenger en offentlig (helst statisk) IP-adresse og et "
-"oppsatt nettverk for å bruke VPN-tjeneren."
+"Merk deg at du trenger en offentlig (helst statisk) IP-adresse og et oppsatt "
+"nettverk for å bruke VPN-tjeneren."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 #, fuzzy

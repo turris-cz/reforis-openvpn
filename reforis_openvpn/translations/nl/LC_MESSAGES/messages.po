@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2024-01-04 23:09+0000\n"
-"Last-Translator: powerburner-nl <peter.mulder.1981@gmail.com>\n"
+"PO-Revision-Date: 2026-09-04 13:52+0000\n"
+"Last-Translator: Johan van de Wetering <accounts@weterberg.nl>\n"
 "Language: nl\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/turris/reforis-"
 "openvpn-plugin/nl/>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+"X-Generator: Weblate 2026.9\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -39,8 +40,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Korter dan 64 karakters. Alleen alfanummerieke karakters, punten, "
-"streepjes en underscores."
+"Korter dan 64 karakters. Alleen alfanummerieke karakters, punten, streepjes "
+"en underscores."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -310,9 +311,9 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Uw certificaatautoriteit wordt nu gegenereerd. Dit neemt normaal "
-"gesproken een paar minuten in beslag. De instellingen worden hier "
-"automatisch weergegeven nadat de autoriteit gereed is."
+"Uw certificaatautoriteit wordt nu gegenereerd. Dit neemt normaal gesproken "
+"een paar minuten in beslag. De instellingen worden hier automatisch "
+"weergegeven nadat de autoriteit gereed is."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 #, fuzzy
@@ -329,9 +330,9 @@ msgid ""
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
-"Er is momenteel geen OpenVPN certificaatautoriteit (CA). Een CA is "
-"benodigd om client certificaten te genereren om te authenticeren met de "
-"OpenVPN server. Om verder te gaan dient u deze eerst te genereren."
+"Er is momenteel geen OpenVPN certificaatautoriteit (CA). Een CA is benodigd "
+"om client certificaten te genereren om te authenticeren met de OpenVPN "
+"server. Om verder te gaan dient u deze eerst te genereren."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 #, fuzzy
@@ -415,8 +416,8 @@ msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
-"Clients zullen verbinden met de VPN server via dit protocol. Gebruik TCP "
-"als uw internetprovider UDP blokkeert."
+"Clients zullen verbinden met de VPN server via dit protocol. Gebruik TCP als "
+"uw internetprovider UDP blokkeert."
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
@@ -427,8 +428,8 @@ msgid ""
 "This network should be different than any network directly reachable by "
 "the router and the clients."
 msgstr ""
-"Dit netwerk moet verschillend zijn ten opzichte van andere direct "
-"bereikbare netwerken vanuit de router en de clients."
+"Dit netwerk moet verschillend zijn ten opzichte van andere direct bereikbare "
+"netwerken vanuit de router en de clients."
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
@@ -455,8 +456,8 @@ msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
 msgstr ""
-"Clients zullen de DNS resolver van de router gebruiken. Dit is nodig "
-"wanneer deze lokale servers moeten kunnen bereiken, zoals my-nas.lan"
+"Clients zullen de DNS resolver van de router gebruiken. Dit is nodig wanneer "
+"deze lokale servers moeten kunnen bereiken, zoals my-nas.lan"
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
@@ -566,4 +567,3 @@ msgstr "Kan de OpenVPN client instellingen niet wissen"
 #~ "You need to generate certificate "
 #~ "authority in order to register clients."
 #~ msgstr "U moet een 'Certificate Authority' genereren om clients te registreren."
-

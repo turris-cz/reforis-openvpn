@@ -1,64 +1,67 @@
 # Lithuanian translations for reForis OpenVPN Plugin.
-# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2026 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-04 12:31+0300\n"
-"PO-Revision-Date: 2019-10-22 14:40+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2026-10-15 21:02+0300\n"
+"PO-Revision-Date: 2026-09-04 13:52+0000\n"
+"Last-Translator: Fln <weblate.org@fln.lt>\n"
 "Language: lt\n"
-"Language-Team: lt <LL@li.org>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/lt/>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
-msgstr ""
+msgstr "OpenVPN"
 
 #: js/src/clientRegistration/AddClientForm.js:61
 msgid "Add New Client"
-msgstr ""
+msgstr "Pridėti naują klientą"
 
 #: js/src/clientRegistration/AddClientForm.js:64
 #: js/src/clientRegistration/ClientTable.js:58
 msgid "Client name"
-msgstr ""
+msgstr "Kliento vardas"
 
 #: js/src/clientRegistration/AddClientForm.js:65
 msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
+"Trumpesnis nei 64 simboliai. Tik raidės, skaičiai, taškai, brūkšniai ir "
+"apatiniai brūkšniai."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
 msgid "Add"
-msgstr ""
+msgstr "Pridėti"
 
 #: js/src/clientRegistration/AddClientForm.js:92
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "Vardas negali būti tuščias."
 
 #: js/src/clientRegistration/AddClientForm.js:95
 msgid "Name is too long."
-msgstr ""
+msgstr "Vardas per ilgas."
 
 #: js/src/clientRegistration/AddClientForm.js:98
 msgid "Name contains invalid characters."
-msgstr ""
+msgstr "Varde panaudoti neleistini simboliai."
 
 #: js/src/clientRegistration/ClientRegistration.js:36
 msgid "Client Registration"
-msgstr ""
+msgstr "Kliento registracija"
 
 #: js/src/clientRegistration/ClientRegistration.js:61
 msgid "You need to "
@@ -94,7 +97,7 @@ msgstr ""
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:36
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientTable.js:41
 msgid "Actions"
-msgstr ""
+msgstr "Veiksmai"
 
 #: js/src/clientRegistration/ClientTable.js:109
 msgid "Access revoked"
@@ -102,7 +105,7 @@ msgstr ""
 
 #: js/src/clientRegistration/ClientTable.js:148
 msgid "Download"
-msgstr ""
+msgstr "Atsisiuntimas"
 
 #: js/src/clientRegistration/ClientTable.js:161
 msgid "Revoke"
@@ -192,20 +195,20 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:48
 msgid "Cancel"
-msgstr ""
+msgstr "Atšaukti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:51
 #: js/src/serverSettings/ServerSettingsForm.js:181
 msgid "Save"
-msgstr ""
+msgstr "Išsaugoti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:31
 msgid "Username"
-msgstr ""
+msgstr "Naudotojo vardas"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModalForm.js:42
 msgid "Password"
-msgstr ""
+msgstr "Slaptažodis"
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/hooks.js:29
 msgid "Client settings were saved successfully."
@@ -213,19 +216,19 @@ msgstr ""
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:14
 msgid "Username cannot be empty."
-msgstr ""
+msgstr "Naudotojo vardas negali būti tuščias."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/validator.js:18
 msgid "Password cannot be empty."
-msgstr ""
+msgstr "Slaptažodis negali būti tuščias."
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:122
 msgid "Edit"
-msgstr ""
+msgstr "Pakeisti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientRow.js:135
 msgid "Delete"
-msgstr ""
+msgstr "Šalinti"
 
 #: js/src/clientSettings/AvailableSettings/SettingsTable/ClientStatus.js:42
 msgid "Cannot refresh status"
@@ -329,7 +332,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:102
 msgid "Device"
-msgstr ""
+msgstr "Įrenginys"
 
 #: js/src/serverSettings/ServerSettingsForm.js:107
 msgid "Listen on IPv6"

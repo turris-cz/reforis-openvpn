@@ -5,16 +5,14 @@
 
 """reForis OpenVPN module"""
 
-from http import HTTPStatus
-from pathlib import Path
 from copy import deepcopy
+from http import HTTPStatus
 from os.path import splitext
+from pathlib import Path
 
-from flask import Blueprint, current_app, jsonify, request, make_response
+from flask import Blueprint, current_app, jsonify, make_response, request
 from flask_babel import gettext as _
-
 from reforis.foris_controller_api.utils import APIError, validate_json
-
 
 BASE_DIR = Path(__file__).parent
 

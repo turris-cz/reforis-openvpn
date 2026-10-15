@@ -1,25 +1,24 @@
 # German translations for reForis OpenVPN Plugin.
-# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Copyright (C) 2026 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-04 12:31+0300\n"
+"POT-Creation-Date: 2026-10-15 21:02+0300\n"
 "PO-Revision-Date: 2026-09-04 13:51+0000\n"
 "Last-Translator: Jonas Wiegner <jonas.wiegner@posteo.de>\n"
 "Language: de\n"
-"Language-Team: German <https://hosted.weblate.org/projects/turris/reforis-"
-"openvpn-plugin/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/de/>\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
-"X-Generator: Weblate 2026.9\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -39,8 +38,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Bindestriche und "
-"Unterstriche."
+"Kürzer als 64 Zeichen. Nur alphanumerische Zeichen, Punkte, Bindestriche "
+"und Unterstriche."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -89,9 +88,10 @@ msgid ""
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
-"Um die Client-Konfiguration anzuwenden, laden Sie sie herunter und speichern "
-"Sie sie im OpenVPN-Konfigurationsverzeichnis bzw. öffnen Sie sie im OpenVPN-"
-"Client. Gegebenenfalls müssen Sie danach den Client neu starten."
+"Um die Client-Konfiguration anzuwenden, laden Sie sie herunter und "
+"speichern Sie sie im OpenVPN-Konfigurationsverzeichnis bzw. öffnen Sie "
+"sie im OpenVPN-Client. Gegebenenfalls müssen Sie danach den Client neu "
+"starten."
 
 #: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
@@ -128,11 +128,12 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Achten Sie darauf, dass die Server-IP-Adresse in den Konfigurationsdateien "
-"mit der öffentlichen IP-Adresse Ihres Routers übereinstimmt. Sie können "
-"diese Adresse auch per Hand setzen, falls die automatische Erkennung "
-"fehlschlägt. Diese Änderung wird <b>nicht</b> gespeichert und wirkt sich nur "
-"auf die Konfiguration aus, die gerade heruntergeladen wird."
+"Achten Sie darauf, dass die Server-IP-Adresse in den "
+"Konfigurationsdateien mit der öffentlichen IP-Adresse Ihres Routers "
+"übereinstimmt. Sie können diese Adresse auch per Hand setzen, falls die "
+"automatische Erkennung fehlschlägt. Diese Änderung wird <b>nicht</b> "
+"gespeichert und wirkt sich nur auf die Konfiguration aus, die gerade "
+"heruntergeladen wird."
 
 #: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
@@ -147,8 +148,8 @@ msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
-"Stellen Sie sicher, dass dieses Gerät vom öffentlichen Internet aus unter "
-"seinen Domainnamen bzw. der IPv4- oder IPv6-Adresse erreichbar ist."
+"Stellen Sie sicher, dass dieses Gerät vom öffentlichen Internet aus unter"
+" seinen Domainnamen bzw. der IPv4- oder IPv6-Adresse erreichbar ist."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
@@ -182,8 +183,8 @@ msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
-"Dateiname darf nur alphanumerische Zeichen, Punkte, Binde- und Unterstriche "
-"enthalten."
+"Dateiname darf nur alphanumerische Zeichen, Punkte, Binde- und "
+"Unterstriche enthalten."
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
@@ -195,10 +196,10 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Um den OpenVPN-Client verwenden zu können, müssen Sie eine Textdatei mit den "
-"Einstellungen zusammenstellen. Falls Sie sich mit einem anderen Turris-Gerät "
-"verbinden möchten, laden Sie die passende Datei von seiner Client-"
-"Registrierungsseite herunter."
+"Um den OpenVPN-Client verwenden zu können, müssen Sie eine Textdatei mit "
+"den Einstellungen zusammenstellen. Falls Sie sich mit einem anderen "
+"Turris-Gerät verbinden möchten, laden Sie die passende Datei von seiner "
+"Client-Registrierungsseite herunter."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -292,8 +293,8 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"Ihre Zertifizierungsstelle wird jetzt angelegt. Das dauert üblicherweise ein "
-"paar Minuten. Sobald sie fertig ist, werden hier automatisch die "
+"Ihre Zertifizierungsstelle wird jetzt angelegt. Das dauert üblicherweise "
+"ein paar Minuten. Sobald sie fertig ist, werden hier automatisch die "
 "Einstellungen zu sehen sein."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
@@ -312,8 +313,8 @@ msgid ""
 msgstr ""
 "Zur Zeit gibt es noch keine OpenVPN-Zertifizierungsstelle (Certificate "
 "Authority, CA). Eine CA ist aber nötig, um Client-Zertifikate für die "
-"Authentifizierung beim OpenVPN-Server erzeugen zu können. Sie müssen die CA "
-"anlegen, um fortfahren zu können."
+"Authentifizierung beim OpenVPN-Server erzeugen zu können. Sie müssen die "
+"CA anlegen, um fortfahren zu können."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -342,8 +343,8 @@ msgid ""
 "you delete it, all clients will have their access revoked."
 msgstr ""
 "Ihre Zertifizierungsstelle (Certificate Authority, CA) ist ordnungsgemäß "
-"eingerichtet. Bitte beachten Sie, dass, wenn Sie sie löschen, alle Clients "
-"ihren Zugriff verlieren."
+"eingerichtet. Bitte beachten Sie, dass, wenn Sie sie löschen, alle "
+"Clients ihren Zugriff verlieren."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
@@ -363,9 +364,9 @@ msgid ""
 "Please note that you need a public (preferably static) IP address and "
 "your network configured to make use of a VPN server."
 msgstr ""
-"Bitte beachten Sie, dass Sie eine öffentliche (vorzugsweise statische) IP-"
-"Adresse und ein entsprechend eingerichtetes Netzwerk benötigen, um einen VPN-"
-"Server betreiben zu können."
+"Bitte beachten Sie, dass Sie eine öffentliche (vorzugsweise statische) "
+"IP-Adresse und ein entsprechend eingerichtetes Netzwerk benötigen, um "
+"einen VPN-Server betreiben zu können."
 
 #: js/src/serverSettings/ServerSettingsForm.js:92
 msgid "Enable Server"
@@ -396,8 +397,8 @@ msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
-"Clients werden sich mittels diesen Protokolls mit dem VPN-Server verbinden. "
-"Verwenden Sie TCP, falls Ihr Internetanbieter UDP blockiert."
+"Clients werden sich mittels diesen Protokolls mit dem VPN-Server "
+"verbinden. Verwenden Sie TCP, falls Ihr Internetanbieter UDP blockiert."
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
@@ -441,8 +442,7 @@ msgstr ""
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
-msgstr ""
-"Ungültiges Subnetz. Bitte überprüfen Sie die Netzwerkadresse und -maske."
+msgstr "Ungültiges Subnetz. Bitte überprüfen Sie die Netzwerkadresse und -maske."
 
 #: reforis_openvpn/__init__.py:44
 msgid "Certificate authority already exists"
@@ -646,3 +646,4 @@ msgstr "OpenVPN-Client-Einstellungen können nicht gelöscht werden"
 #~ msgstr ""
 #~ "Sie müssen eine Zertifizierungsstelle anlegen,"
 #~ " um Clients registrieren zu können."
+

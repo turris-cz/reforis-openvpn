@@ -1,25 +1,24 @@
-# Translations template for reForis OpenVPN Plugin.
-# Copyright (C) 2025 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
+# Portuguese translations for reForis OpenVPN Plugin.
+# Copyright (C) 2026 CZ.NIC, z.s.p.o. (https://www.nic.cz/)
 # This file is distributed under the same license as the reForis OpenVPN
 # Plugin project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: reForis OpenVPN Plugin 2.3.0\n"
 "Report-Msgid-Bugs-To: tech.support@turris.cz\n"
-"POT-Creation-Date: 2025-11-04 12:31+0300\n"
+"POT-Creation-Date: 2026-10-15 21:02+0300\n"
 "PO-Revision-Date: 2026-09-04 13:52+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@gmx.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/turris/"
-"reforis-openvpn-plugin/pt/>\n"
 "Language: pt\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/turris"
+"/reforis-openvpn-plugin/pt/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.9\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: js/src/app.js:14
 msgid "OpenVPN"
@@ -39,8 +38,8 @@ msgid ""
 "Shorter than 64 characters. Only alphanumeric characters, dots, dashes "
 "and underscores."
 msgstr ""
-"Inferior a 64 caracteres. Apenas caracteres alfanuméricos, pontos, traços e "
-"underscores."
+"Inferior a 64 caracteres. Apenas caracteres alfanuméricos, pontos, traços"
+" e underscores."
 
 #: js/src/clientRegistration/AddClientForm.js:81
 #: js/src/clientSettings/AddSettingsForm.js:85
@@ -80,8 +79,8 @@ msgid ""
 "You need to generate a configuration file for each client that you wish "
 "to connect to your OpenVPN server."
 msgstr ""
-"Precisa de gerar um ficheiro de configuração para cada cliente que deseja "
-"ligar ao seu servidor OpenVPN."
+"Precisa de gerar um ficheiro de configuração para cada cliente que deseja"
+" ligar ao seu servidor OpenVPN."
 
 #: js/src/clientRegistration/ClientRegistration.js:77
 msgid ""
@@ -89,9 +88,10 @@ msgid ""
 "into the OpenVPN configuration directory or open it using your OpenVPN "
 "client. You might need to restart your client afterward."
 msgstr ""
-"Para aplicar a configuração de cliente, precisa de descarrega-la e coloca-la "
-"no diretório de configuração do OpenVPN ou abri-la usando o seu cliente de "
-"OpenVPN. Pode precisar de reiniciar o seu cliente depois disso."
+"Para aplicar a configuração de cliente, precisa de descarrega-la e "
+"coloca-la no diretório de configuração do OpenVPN ou abri-la usando o seu"
+" cliente de OpenVPN. Pode precisar de reiniciar o seu cliente depois "
+"disso."
 
 #: js/src/clientRegistration/ClientTable.js:44
 msgid "There are no clients registered."
@@ -128,11 +128,11 @@ msgid ""
 "stored anywhere and applies only to the configuration being currently "
 "downloaded."
 msgstr ""
-"Certifique de verificar se o endereço IP do servidor fornecido no ficheiro "
-"de configuração corresponde ao endereço IP público do seu router. Pode "
-"definir este endereço manualmente se a auto-detecção falhar. Esta alteração "
-"<b>não é</b> guardada em lugar nenhum e aplica-se apenas à configuração a "
-"ser descarregada atualmente."
+"Certifique de verificar se o endereço IP do servidor fornecido no "
+"ficheiro de configuração corresponde ao endereço IP público do seu "
+"router. Pode definir este endereço manualmente se a auto-detecção falhar."
+" Esta alteração <b>não é</b> guardada em lugar nenhum e aplica-se apenas "
+"à configuração a ser descarregada atualmente."
 
 #: js/src/clientRegistration/Clients.js:173
 msgid "Override Server Address"
@@ -147,8 +147,8 @@ msgid ""
 "Make sure that this device is accessible from the public internet using "
 "this domain name, IPv4 or IPv6 address."
 msgstr ""
-"Certifique que este dispositivo está acessível a partir da internet pública "
-"usando este nome de domínio, endereço IPv4 ou IPv6."
+"Certifique que este dispositivo está acessível a partir da internet "
+"pública usando este nome de domínio, endereço IPv4 ou IPv6."
 
 #: js/src/clientSettings/AddSettingsForm.js:59
 msgid "Add Settings"
@@ -160,9 +160,9 @@ msgid ""
 "new settings will be enabled after the file is uploaded. Note that the "
 "network will be restarted automatically."
 msgstr ""
-"Por favor selecione um ficheiro com definições de cliente OpenVPN que deseja "
-"adicionar. As novas definições serão ativadas após o ficheiro ser enviado. "
-"Note que a rede vai ser reiniciada automaticamente."
+"Por favor selecione um ficheiro com definições de cliente OpenVPN que "
+"deseja adicionar. As novas definições serão ativadas após o ficheiro ser "
+"enviado. Note que a rede vai ser reiniciada automaticamente."
 
 #: js/src/clientSettings/AddSettingsForm.js:70
 msgid "Choose settings file..."
@@ -183,8 +183,8 @@ msgid ""
 "Filename can contain only alphanumeric characters, dots, dashes and "
 "underscores."
 msgstr ""
-"O nome de ficheiro só pode conter caracteres alfanuméricos, pontos, traços e "
-"underscores."
+"O nome de ficheiro só pode conter caracteres alfanuméricos, pontos, "
+"traços e underscores."
 
 #: js/src/clientSettings/ClientSettings.js:18
 msgid "Client Settings"
@@ -196,9 +196,10 @@ msgid ""
 "settings. If you want to connect to another Turris device, download the "
 "appropriate file from the \"Client Registration\" page."
 msgstr ""
-"Para usar o cliente OpenVPN, precisa de preparar um ficheiro de texto com as "
-"definições de cliente. Se deseja ligar a outro dispositivo Turris, "
-"descarregue o ficheiro apropriado a partir da página \"Registro de Cliente\"."
+"Para usar o cliente OpenVPN, precisa de preparar um ficheiro de texto com"
+" as definições de cliente. Se deseja ligar a outro dispositivo Turris, "
+"descarregue o ficheiro apropriado a partir da página \"Registro de "
+"Cliente\"."
 
 #: js/src/clientSettings/AvailableSettings/AvailableSettings.js:31
 msgid "Available Settings"
@@ -210,9 +211,10 @@ msgid ""
 "recheck the settings file if the instance is enabled and not running in a"
 " few minutes after the setup."
 msgstr ""
-"Uma nova instância de cliente OpenVPN é criada para cada ficheiro enviado. "
-"Por favor volte a verificar o ficheiro de definições se a instância estiver "
-"ativa e não a correr alguns minutos depois da configuração."
+"Uma nova instância de cliente OpenVPN é criada para cada ficheiro "
+"enviado. Por favor volte a verificar o ficheiro de definições se a "
+"instância estiver ativa e não a correr alguns minutos depois da "
+"configuração."
 
 #: js/src/clientSettings/AvailableSettings/SettingsModal/SettingsModal.js:34
 msgid "Edit Client Settings"
@@ -292,9 +294,9 @@ msgid ""
 "few minutes. Settings will appear here automatically once the authority "
 "is ready."
 msgstr ""
-"A sua autoridade de certificação está agora a ser gerada. Geralmente demora "
-"uns minutos. As definições vão aparecer aqui automaticamente assim que a "
-"autoridade esteja pronta."
+"A sua autoridade de certificação está agora a ser gerada. Geralmente "
+"demora uns minutos. As definições vão aparecer aqui automaticamente assim"
+" que a autoridade esteja pronta."
 
 #: js/src/serverSettings/AuthorityBeingGenerated.js:36
 msgid "Generating certification authority…"
@@ -310,9 +312,9 @@ msgid ""
 "required to generate client certificates to authenticate to the OpenVPN "
 "server. To proceed you need to generate it first."
 msgstr ""
-"Atualmente não há nenhuma autoridade de certificado do OpenVPN (CA). Uma CA "
-"é requerida para gerar certificados de cliente para autenticação no servidor "
-"OpenVPN. Para prosseguir precisa de a gerar primeiro."
+"Atualmente não há nenhuma autoridade de certificado do OpenVPN (CA). Uma "
+"CA é requerida para gerar certificados de cliente para autenticação no "
+"servidor OpenVPN. Para prosseguir precisa de a gerar primeiro."
 
 #: js/src/serverSettings/AuthorityMissing.js:40
 msgid "No certification authority."
@@ -331,16 +333,17 @@ msgid ""
 "You can't delete the CA while the OpenVPN server is enabled. To delete "
 "the CA, you need to disable the server configuration first."
 msgstr ""
-"Não pode apagar a CA enquanto o servidor OpenVPN está ativo. Para apagar a "
-"CA, precisa de desativar a configuração do servidor primeiro."
+"Não pode apagar a CA enquanto o servidor OpenVPN está ativo. Para apagar "
+"a CA, precisa de desativar a configuração do servidor primeiro."
 
 #: js/src/serverSettings/AuthorityReady.js:49
 msgid ""
 "Your certificate authority (CA) is set up properly. Please note that if "
 "you delete it, all clients will have their access revoked."
 msgstr ""
-"A sua autoridade de certificado (CA) está configurada apropriadamente. Por "
-"favor note que se a apagar, todos os clientes vão ter o acesso revogado."
+"A sua autoridade de certificado (CA) está configurada apropriadamente. "
+"Por favor note que se a apagar, todos os clientes vão ter o acesso "
+"revogado."
 
 #: js/src/serverSettings/AuthorityReady.js:62
 msgid "Delete CA"
@@ -380,8 +383,8 @@ msgid ""
 "Useful if you don't have public IPv4 address. Disable if your IPv6 "
 "connection is broken."
 msgstr ""
-"Útil se não tiver um endereço IPv4 público. Desative-o se a sua ligação IPv6 "
-"estiver estragada."
+"Útil se não tiver um endereço IPv4 público. Desative-o se a sua ligação "
+"IPv6 estiver estragada."
 
 #: js/src/serverSettings/ServerSettingsForm.js:117
 msgid "Protocol"
@@ -392,8 +395,8 @@ msgid ""
 "Clients will connect to the VPN server via this protocol. Use TCP if your"
 " ISP blocks UDP."
 msgstr ""
-"Os clientes vão ligar ao servidor VPN via este protocolo. Use TCP se o seu "
-"ISP bloquear UDP."
+"Os clientes vão ligar ao servidor VPN via este protocolo. Use TCP se o "
+"seu ISP bloquear UDP."
 
 #: js/src/serverSettings/ServerSettingsForm.js:128
 msgid "VPN network address"
@@ -404,8 +407,8 @@ msgid ""
 "This network should be different than any network directly reachable by "
 "the router and the clients."
 msgstr ""
-"Esta rede deve ser diferente de qualquer outra rede alcançável diretamente "
-"pelo router e pelos clientes."
+"Esta rede deve ser diferente de qualquer outra rede alcançável "
+"diretamente pelo router e pelos clientes."
 
 #: js/src/serverSettings/ServerSettingsForm.js:139
 msgid "VPN network mask"
@@ -432,8 +435,8 @@ msgid ""
 "Clients will resolve addresses using router's DNS. Required when "
 "accessing local servers like my-nas.lan"
 msgstr ""
-"Clientes vão resolver endereços usando o DNS do router. Requerido quado se "
-"acede a servidores locais como my-nas.lan"
+"Clientes vão resolver endereços usando o DNS do router. Requerido quado "
+"se acede a servidores locais como my-nas.lan"
 
 #: js/src/serverSettings/ServerSettingsForm.js:204
 msgid "Invalid subnet. Please check the network address and mask."
@@ -492,3 +495,4 @@ msgstr "Não pode modificar definições de cliente OpenVPN"
 #: reforis_openvpn/__init__.py:197
 msgid "Cannot delete OpenVPN client settings"
 msgstr "Não pode apagar definições de cliente OpenVPN"
+

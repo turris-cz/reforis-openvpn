@@ -6,7 +6,7 @@
         "url": "https://gitlab.nic.cz/turris/reforis/reforis-openvpn.git"
     },
     "license": "GPL-3.0",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "description": "reForis OpenVPN client and server plugin allows easy setup VPN on Turris routers.",
     "main": "./src/app.js",
     "eslintConfig": {
@@ -15,7 +15,7 @@
     "dependencies": {
         "@fortawesome/free-solid-svg-icons": "^6.7.2",
         "@fortawesome/react-fontawesome": "^0.2.2",
-        "foris": "^6.8.0",
+        "foris": "^6.12.0",
         "react-uid": "^2.4.0"
     },
     "peerDependencies": {
@@ -34,18 +34,18 @@
         "babel-loader": "^8.0.6",
         "css-loader": "^5.2.4",
         "eslint": "^8.57.0",
-        "eslint-config-reforis": "^2.2.1",
+        "eslint-config-reforis": "^2.3.0",
         "jest": "^26.4.2",
         "jest-mock-axios": "^3.2.0",
-        "moment-timezone": "^0.5.48",
-        "prettier": "^3.6.2",
+        "moment-timezone": "^0.6.5",
+        "prettier": "^3.9.10",
         "process": "^0.11.10",
         "prop-types": "^15.8.1",
         "react": "16.9.0",
         "react-dom": "16.9.0",
         "react-router-dom": "5.1.2",
         "style-loader": "^0.23.1",
-        "webpack": "^5.102.1",
+        "webpack": "^5.112.2",
         "webpack-cli": "^5.1.4"
     },
     "scripts": {
